@@ -39,10 +39,10 @@ if (empty($_SESSION['login'])) {
 	insere($questao3,$Login,$date,$hora);
 	insere($questao4,$Login,$date,$hora);
   	//inserindo do check box
-  	$_checkbox = $_POST['qtd5'];
-	  foreach($_checkbox as $_valor){
-		 insere($_valor,$Login,$date,$hora);
-	  }
+  	// $_checkbox = $_POST['qtd5'];
+	  // foreach($_checkbox as $_valor){
+		 // insere($_valor,$Login,$date,$hora);
+	  // }
 	//----------------------
 	insere($questao6,$Login,$date,$hora);
 	
@@ -81,9 +81,9 @@ if (empty($_SESSION['login'])) {
 ?>
 <?
 
-//$sql = "SELECT * FROM pesquisa;";
-//		$consulta = mysql_query($sql) or die("Erro: " . mysql_error());
-//		while ($array_exibir = mysql_fetch_array($consulta )) {
-//		echo($array_exibir['respostas']);
-//		}
+$sql = "SELECT * FROM pesquisa;";
+		$consulta = mysql_query($sql) or die("Erro: " . mysql_error());
+		while ($array_exibir = mysql_fetch_array($consulta )) {
+		echo($array_exibir['respostas']);
+		}
 ?>

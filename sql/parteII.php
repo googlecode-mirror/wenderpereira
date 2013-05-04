@@ -1,6 +1,12 @@
-
 <?
-	session_start();
+session_start();
+if (empty($_SESSION['login'])) {
+	?> <script>
+     alert("Acesso Negado!");
+	 window.location = 'index.php';
+	 </script>
+	<?php
+}else{
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
@@ -63,21 +69,19 @@
  	  insere($questao12,$Login,$date,$hora);
  	  insere($questao14,$Login,$date,$hora);
  	  insere($questao15,$Login,$date,$hora);
-	  
-//função insere---------------------------------------------  
+	//função insere---------------------------------------------  
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
-		
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 		 VALUES ('$resposta1','$usuario','2','$date','$hora')";
-		 
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//função insere---------------------------------------------
+	//função insere---------------------------------------------
 		
 	}
+}
 	?>
 	  <script language="JavaScript">
          alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
-         </script>
+      </script>
 	 <?
 ?>
