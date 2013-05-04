@@ -45,9 +45,8 @@
                     <td width="89"><div align="center"></div></td>
                     </tr>
                   <tr>
-                    <td width="133">&nbsp;</td>
-                    <td width="168">&nbsp;</td>
-                    <td width="89"><div align="center"></div></td>
+                    <td colspan="3"><font face="verdana" size="2" color="#666666">
+                      <div align="center"><b>Administração do sistema:</b> </div></td>
                     </tr>
                   <tr>
                     <td width="133" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
@@ -66,7 +65,7 @@
                   <tr>
                     <td align="center">&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td><div align="left"><a href="novoUsuario.php">Novo</a></div></td>
+                    <td></td>
                   </tr>
                   
                   <tr>
