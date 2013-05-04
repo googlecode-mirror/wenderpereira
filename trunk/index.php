@@ -19,7 +19,7 @@
 
 
 </head>
-<body onLoad="document.form.login.focus()" bgcolor="white">
+<body onLoad="document.form1.login.focus()" bgcolor="white">
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
