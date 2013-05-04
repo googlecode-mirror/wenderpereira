@@ -128,13 +128,13 @@ include("paginacao/paginator.inc.php");
 	<img src=\"imagebox/excluir.jpg\" alt=\"Excluir\" height=\"16\" border=\"0\"></a></td>"; ?>
 <? } else { echo "<td></td>"; } ?>
 	<td align="left" style="padding-left:10px;">
-	<? echo $cod; ?></td>
+	<? echo "<a href='alunos.php?cod=$cod'>".$cod."</a>"; ?></td>
 	<td align="left" style="padding-left:10px;">
-    <? echo $login; ?></td>
+    <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
-    <? echo $login; ?></td>
+    <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
-    <? echo $email; ?></td>
+     <? echo "<a href='alunos.php?cod=$cod'>".$email."</a>"; ?></td>
   </tr>
 <? } ?>
 </TABLE>
