@@ -1,6 +1,12 @@
-
 <?
-	session_start();
+session_start();
+if (empty($_SESSION['login'])) {
+	?> <script>
+     alert("Acesso Negado!");
+	 window.location = 'index.php';
+	 </script>
+	<?php
+}else{
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
@@ -69,7 +75,9 @@
 	$resultado = mysql_query($consulta)
 	or die (mysql_error());
 	
-		  ?>
+	}
+}
+	?>
 	  <script language="JavaScript">
          alert("ParteIV cadastradra!");
          </script>

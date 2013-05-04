@@ -1,13 +1,17 @@
-
 <?
-	session_start();
+session_start();
+if (empty($_SESSION['login'])) {
+	?> <script>
+     alert("Acesso Negado!");
+	 window.location = 'index.php';
+	 </script>
+	<?php
+}else{
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
 	$date = date("d/m/y");
 	$hora = date("H:i");
-	
-//	echo($Login);
 	  $questao1 = $_POST[qtd1];
 	  $questao2 = $_POST[qtd2];
   	  $questao3 = $_POST[qtd3];
@@ -43,6 +47,7 @@
 		or die (mysql_error());
 		//função insere---------------------------------------------
 	}
+}
 	?>
 	 <script language="JavaScript">
      alert("ParteIII cadastradra, clique na parteIV para realizar o cadastro!");
