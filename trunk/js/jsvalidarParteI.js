@@ -44,7 +44,7 @@ $(document).ready( function() {
 				},
 				qtd5:
 				{
-					checkable: qtd5 /* Campo obrigatório */
+					required: true /* Campo obrigatório */
 		
 				},
 				qtd6:
@@ -79,7 +79,7 @@ $(document).ready( function() {
 				required: "*"
 				},
 			qtd5:{
-				checkable: "*"
+				required: "*"
 				},
 			qtd6:{
 				required: "*"
