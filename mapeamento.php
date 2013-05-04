@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<? 
+	session_start();
+	header("Cache-Control: no-cache, must-revalidate");
+	include "conexao.php";
+	connect();
+	
+?>
+
+   <script src="js/jsValidate.js" type="text/javascript"></script>
+   <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
+   <script src="js/jquery.validate.js" type="text/javascript"></script>
+   <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
+  
+         
+	 <style type="text/css">
+      /* Estilizar os alertas */
+      label.error{
+          padding-left: 2px;
+          color: red;
+          font-weight: bold;
+           }
+      </style>
+
+<title>Funarte - Portal das Artes</title>
+</head>
+
+
+<body>
+<form id="form1" name="form1" method="post" action="sql\mapeamento.php">
+ <div>
+ 
+  <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
+       <tr>
+      <th colspan="4" align="left" scope="row">
+        <p align="center">
+        <strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong></p>
+        <p align="center">
+        </p>
+      </th>
+      </tr>
+      <tr>
+      <th width="136" align="center" scope="row"> <label id="lblnome">Nome:</label></th>
+      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $_POST[txtNome];?>" type="text" size="94"/></td>
+      </tr>
+      <tr>
+      <th height="32" align="center" scope="row"><label id="lblCargoInstituicao">Cargo na instituição:</label></th>
+      <td colspan="3"><input name="txtCargoInstituicao" id="idFrmCargoIntituicao"
+       value="<?php echo $_POST[txtCargoInstituicao];?>" type="text" size="94" /></td>
+      </tr>
+      <tr>
+      <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
+      <td width="151">
+          <input name="txtCpf"  maxlength="14" value="<?php echo $_POST[txtCpf];?>" type="text"
+          onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
+      </td>
+      <td width="74"><label id="email">
+      <div align="center">Email:</div>
+      </label>
+      </td>
+      <td width="375">
+      <input type="text" name="txtEmail" value="<?php echo $_POST[txtEmail];?>" size="54"/>
+      </td>
+      </tr>
+      <tr>
+      <th align="center" scope="row">
+      <label id="telefone">Telefone:( )</label>
+      <td>
+        <input name="txtTelefone" maxlength="15" value="<?php echo $_POST[txtTelefone];?>" type="text" 
+         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
+       </td>
+      <td>
+   <!--<img src="captcha.php" name="capcha" id="capcha" />-->
+  
+     </td>
+      <td>
+<!--      <input name="txtCapcha" type="text" id="txtCapcha" size="16" maxlength="40" value="Diferencie as Letras" 
+      onFocus="if(this.value=='Diferencie as Letras')this.value='';"/>-->
+      
+     <!--   <input type="submit" name="button" id="button" value="trocar" />-->
+
+        </td>
+        
+      </tr>
+      <tr>
+      <td width="136"></td>
+      </tr>
+      <tr>
+      <th align="left" scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td width="0"></td>
+      </tr>
+      <tr>
+      <th align="left" scope="row">&nbsp;</th>
+      <td>	
+       </td>
+      <td>
+        <span class="formu2">
+        <input type="submit" name="cadastrar" value="avancar" class="botao" 
+      onKeyPress="return handleEnter(this, event)">
+        </span></td>
+      <td>
+      <input type="reset" value="Limpar" />
+      </td>
+      <td></td>
+    </tr>
+      <tr>
+        <th align="left" scope="row">&nbsp;</th>
+        <td></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td></td>
+      </tr>
+  </table>
+  </div>
+</form>
+</body>
+</html>
