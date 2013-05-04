@@ -13,7 +13,8 @@
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
 <script src="js/jquery.validate.js" type="text/javascript"></script>
 <script src="js/jsvalidarParteI.js" type="text/javascript"></script>
-   	 <style type="text/css">
+        
+	 <style type="text/css">
      /* Estilizar os alertas */
      label.error{
        padding-left: 2px;
@@ -183,7 +184,7 @@
         <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3k") echo "checked";?> value="3a" class="radio" />
         Outras</label>
         <label>Quais?</label>
-        <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text"/>
+        <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
         <br/>
         </p>
         </tr>
