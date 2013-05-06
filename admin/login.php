@@ -14,7 +14,7 @@
 
     $sQuery = "select login, senha
                from usuarios
-               where  login = '" . $user . "' and senha = '" . $pwd . "' and ativo = '0'";
+               where  login = '" . $user . "' and senha = '" . $pwd . "' and ativo = '0' and tipo='adm' or tipo='avan'";
 	
     $oUser = mysql_query($sQuery)
              or die("Query invalida: " . mysql_error());
