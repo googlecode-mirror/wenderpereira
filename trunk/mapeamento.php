@@ -8,6 +8,24 @@
 	header("Cache-Control: no-cache, must-revalidate");
 	include "conexao.php";
 	connect();
+	$Login 	=  trim($_SESSION["login"]);
+	$_POST[txtNome] = $txtNome;
+	$_POST[txtCpf] = $txtCpf;
+	$_POST[txtCargoInstituicao] = $txtCargoInstituicao;
+	$_POST[txtTelefone] = $txtTelefone;
+	$_POST[txtEmail] = $txtEmail;
+
+	$sql = "select * from mapeamento = ".$Login."";
+	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+
+	while ($array_exibir = mysql_fetch_array($Resultado)) {
+		$txtNome = ($array_exibir['nome']);
+		$txtCargoInstituicao = ($array_exibir['cargointituicao']);
+		$txtCpf = ($array_exibir['cpf']);
+		$txtTelefone = ($array_exibir['telefone']);
+		$txtEmail = ($array_exibir['email']);
+	}
+
 	
 ?>
 
@@ -45,17 +63,17 @@
       </tr>
       <tr>
       <th width="136" align="center" scope="row"> <label id="lblnome">Nome:</label></th>
-      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $_POST[txtNome];?>" type="text" size="94"/></td>
+      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94"/></td>
       </tr>
       <tr>
       <th height="32" align="center" scope="row"><label id="lblCargoInstituicao">Cargo na instituição:</label></th>
       <td colspan="3"><input name="txtCargoInstituicao" id="idFrmCargoIntituicao"
-       value="<?php echo $_POST[txtCargoInstituicao];?>" type="text" size="94" /></td>
+       value="<?php echo $txtCargoInstituicao;?>" type="text" size="94" /></td>
       </tr>
       <tr>
       <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
       <td width="151">
-          <input name="txtCpf"  maxlength="14" value="<?php echo $_POST[txtCpf];?>" type="text"
+          <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
           onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
       </td>
       <td width="74"><label id="email">
@@ -63,14 +81,14 @@
       </label>
       </td>
       <td width="375">
-      <input type="text" name="txtEmail" value="<?php echo $_POST[txtEmail];?>" size="54"/>
+      <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="54"/>
       </td>
       </tr>
       <tr>
       <th align="center" scope="row">
       <label id="telefone">Telefone:( )</label>
       <td>
-        <input name="txtTelefone" maxlength="15" value="<?php echo $_POST[txtTelefone];?>" type="text" 
+        <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
          onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
        </td>
       <td>
