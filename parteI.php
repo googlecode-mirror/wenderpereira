@@ -7,6 +7,29 @@
       header("Cache-Control: no-cache, must-revalidate");
       include "conexao.php";
       connect();
+	  $Login 	=  trim($_SESSION["login"]);
+	  $_POST[txtNome] = $txtNome;
+	  $_POST[txtCnpj] = $txtCnpj;
+	  $_POST[txtEndereco] = $txtEndereco;
+	  $_POST[txtMunicipio] = $txtMunicipio;
+	  $_POST[txtCep] = $txtCep;
+	  $_POST[txtTelefone] =  $txtTelefone;
+	  $_POST[txtEmail] = $txtEmail;
+	  $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
+	  
+	  	$sql = "select * from mapeamentopartei = ".$Login."";
+		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+  		 while ($array_exibir = mysql_fetch_array($Resultado)) {
+			$txtNome = ($array_exibir['nomeintituicao']);
+			$txtCnpj = ($array_exibir['cnpj']);
+			$txtEndereco = ($array_exibir['endereco']);
+			$txtMunicipio = ($array_exibir['municipio']);
+			$txtCep = ($array_exibir['cep']);
+			$txtTelefone = ($array_exibir['telefone']);
+			$txtEmail = ($array_exibir['email']);
+			$cmbUnidadeFederativa = ($array_exibir['unidadefederativa']);
+		}
+	  
    ?>
 <title>Funarte - Portal das Artes</title>
 <script src="js/jsValidate.js" type="text/javascript"></script>
@@ -37,7 +60,7 @@
         <td width="25%"><label id=lblNomeInstituicao">• Nome da instituição:</label>
         </td>
         <td width="75%">
-       <input name="txtNome" id="idFrmNome" value="<?php echo $_POST[txtNome];?>" type="text" size="94"/>
+       <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94"/>
         </td>
         </tr>
         <tr>
@@ -45,21 +68,21 @@
         <label>• CNPJ:</label>
         </td>
         <td>
-        <input name="txtCnpj" maxlength="18" value="<?php echo $_POST[txtCnpj];?>" type="text" size="17"/>
+        <input name="txtCnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"/>
         </td>
         </tr>
         <tr>
         <td>
         <label>• Endereço:</label></td>
         <td>
-       <input name="txtEndereco" id="idFrmEndereco" value="<?php echo $_POST[txtEndereco];?>" type="text" size="94"/>
+       <input name="txtEndereco" id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="94"/>
         </td>
         </tr>
         <tr>
         <td>
         <label id="municipio">• Município:</label></td>
         <td>
-        <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $_POST[txtMunicipio];?>" type="text" size="50"/>
+        <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text" size="50"/>
         </td>
         </tr>
         <tr>
@@ -101,14 +124,14 @@
         <label>• CEP:</label>
         </td>
         <td>
-        <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $_POST[txtCep];?>" type="text"
+        <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
         onKeyPress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"/>
         </td>
         </tr>
         <tr>
         <td><label>• Telefone:</label></td>
         <td>
-        <input name="txtTelefone" maxlength="15" value="<?php echo $_POST[txtTelefone];?>" type="text" 
+        <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone')";/>
         </td>
         </tr>
@@ -117,7 +140,7 @@
         <label>• Correio eletrônico (e-mail):</label>
         </td>
         <td>
-        <input name="txtEmail" id="idEmail" value="<?php echo $_POST[txtEmail];?>" 
+        <input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" 
         type="text" size="80"/>
         </td>
 	    <tr>
