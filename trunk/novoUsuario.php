@@ -46,9 +46,7 @@
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;</td>
-                          <td width="71">&nbsp;</td>
+                          <td colspan="3"><b><label>Cadastro de novo usuário:</label></b></td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>

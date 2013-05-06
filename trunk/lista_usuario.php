@@ -1,7 +1,7 @@
 <? 
 session_start();
 include "conexao.php";
-include "valida_user.php";
+//include "valida_user.php";
 connect();
 function SomarData($data, $dias, $meses, $ano)
 {
@@ -37,12 +37,28 @@ $data_atual = mktime(0,0,0,$mes_atual,$dia_atual,$ano_atual);
 				<table align="center" width="70%" cellpadding="0" cellspacing="0"> 
 					<tr align='center'>
 						<td align="center" colspan="2" class="caixadestaque"></strong> 
-						<div align="center">&nbsp;<font size="-2">RELAÇÃO DE USUÁRIOS CADASTRADOS</font></strong></div>
+						<div align="center">&nbsp;
+                        <font size="-2">RELAÇÃO DE USUÁRIOS CADASTRADOS</font>
+                        </strong>
+                        </div>
 						</td>
-				</table><br><br>
+				</table>
+                <br>
+                <br>
 				<table align="center" border="1" width="70%" cellpadding="0" cellspacing="0"> 
 					<tr> 
-						<td class="caixadestaque" width="31%"><center>NOME</center></td><td class="caixadestaque" width="16%"><center>LOGIN</center></td><td class="caixadestaque" width="31%"><center>SETOR</center></td><td class="caixadestaque" width="11%"><center>PERFIL</center></td><td class="caixadestaque" width="15%"><center>VALIDADE</center></td>
+						<td class="caixadestaque" width="31%">
+                        <center>NOME</center>
+                        </td>
+                        <td class="caixadestaque" width="16%">
+                        <center>LOGIN</center>
+                        </td><td class="caixadestaque" width="31%">
+                        <center>SETOR</center>
+                        </td><td class="caixadestaque" width="11%">
+                        <center>PERFIL</center></td>
+                        <td class="caixadestaque" width="15%">
+                        <center>VALIDADE</center>
+                        </td>
 					</tr>						
 				</table>
 						<table align="center" border="1" width="70%" cellpadding="0" cellspacing="0"> 
@@ -74,14 +90,40 @@ $data_atual = mktime(0,0,0,$mes_atual,$dia_atual,$ano_atual);
 						$dias = ceil($dias);
 						?>
 							<tr> 
-								<td class="caixatitpesq" width="30%"><a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>"><? echo $nome_usuario; ?></a></td><td class="caixatitpesq"  width="15%"><a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>"><center><? echo $login_usuario; ?></center></a></td><td class="caixatitpesq" width="30%"><a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>"><center><? if ($setor!='') { echo $setor; } else { echo ' - '; } ?></center></a></td><td class="caixatitpesq" width="10%"><a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>"><center><? echo $perfila; ?></center></a></td><td class="caixatitpesq"  width="10%"><a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>"><center><? if ($dias > 45) { ?><font color="#FF0000"><? } ?><? echo SomarData(tdate($data,1), 45, 0, 0); ?></font></center></a></td></tr>
+								<td class="caixatitpesq" width="30%">
+                                <a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>">
+								<? echo $nome_usuario; ?>
+                                </a>
+                                </td>
+                                <td class="caixatitpesq"  width="15%">
+                                <a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>">
+                                <center><? echo $login_usuario; ?></center>
+                                </a></td><td class="caixatitpesq" width="30%">
+                                <a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>">
+                                <center><? if ($setor!='') { echo $setor; } else { echo ' - '; } ?>
+                                </center></a></td><td class="caixatitpesq" width="10%">
+                                <0a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>">
+                                <center><? echo $perfila; ?>
+                                </center></a></td><td class="caixatitpesq"  width="10%">
+                                <a href="detalhes_usuario.php?idusu=<? echo $idusuario; ?>">
+                                <center>
+								<? if ($dias > 45) { ?>
+                                <font color="#FF0000"><? } ?>
+								<? echo SomarData(tdate($data,1), 45, 0, 0); ?>
+                                </font>
+                                </center>
+                                </a>
+                                </td>
+                                </tr>
 				<?	} ?>														
 			</table>
 				
 			<BR><BR>	
 			<table align="center" border="1" width="70%" cellpadding="0" cellspacing="0"> 				
 			<tr>
-				<td align="center" colspan="10" class="caixaazul"><center>Clique na linha do usuário para visualizar detalhes.</center></td>
+				<td align="center" colspan="10" class="caixaazul">
+                <center>Clique na linha do usuário para visualizar detalhes.</center>
+                </td>
 			</tr>
 			</table>
 			<br><br>
