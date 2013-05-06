@@ -65,6 +65,10 @@
 		or die (mysql_error());
 		//função insere---------------------------------------------
 	}
+	     $consulta = "UPDATE usuarios SET parte='3' WHERE login='$Login';";
+      $resultado = mysql_query($consulta)
+      or die ("--");
+      //---------------------------
 	
 	?>
 	 <script language="JavaScript">

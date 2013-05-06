@@ -79,6 +79,11 @@
 	  <?
 	}
 
+     $consulta = "UPDATE usuarios SET parte='1' WHERE login='$Login';";
+     $resultado = mysql_query($consulta)
+     or die ("--");
+      //---------------------------
+
 ?>
 <?
 
