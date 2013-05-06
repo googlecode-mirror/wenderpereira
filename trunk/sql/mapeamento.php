@@ -6,6 +6,8 @@
 	  $date = date("d/m/y");
 	  $hora = date("H:i");
       $Login 	=  $_SESSION["login"]; //recebe a sessão do login
+	  
+	  
       //--------------------------------------------------------
       // recebe os valores do form mapeamento
       $nome = trim($_POST["txtNome"]);
@@ -22,6 +24,8 @@
       //$erro = "Preencha o cargo na instituição"."<br />";
       //}
       //--------------------------------------------------------
+	  
+	  
       $textoCapcha=trim($_POST['txtCapcha']); // Variaveis de validação
       $palavraCapcha=trim($_SESSION["palavra"]); // seção da capcha
   
