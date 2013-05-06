@@ -69,7 +69,10 @@ campo.value = campo.value + ') ';
 
 if (campo.value.length == 9)
 campo.value = campo.value + '-';
+
 }
+
+
 }
 
 function SoNumero() {
@@ -78,6 +81,7 @@ function SoNumero() {
 	if (event.keyCode==13)
 		event.returnValue = true;
 }
+
 //DESABILITA O ENTER ----------------------------------------------------------------------------
 function handleEnter (field, event) {
         var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
@@ -99,28 +103,28 @@ function send(codigo){
 	document.form1.submit();
 }
 function validateEmail_(form_id,email) {
-   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
    var address = document.forms[form_id].elements[email].value;
    if(reg.test(address) == false) {
-       alert('Email invalido');
+ 
+      alert('Email invalido');
       return false;
    }
 }
-function validaCheckbox(name) {
-    var frm = document.form1;
-    //Percorre os elementos do formulário 
-    for(i=0; i < frm.length; i++){
-        //Verifica se o elemento do formulário corresponde a um checkbox e se é o checkbox desejado
-        if (frm.elements[i].type == "checkbox" &&  frm.elements[i].name == name ) {
-                //Verifica se o checkbox foi selecionado
-                if(frm.elements[i].checked) {
-                    alert("Exite ao menos um checkbox selecionado!");
-                    return true;
-                }                    
-        }    
-    } 
-    alert("Nenhum checkbox foi selecionado!");
-    return false;
-  }
-		
 
+//    function validacheck(form_id,campo) {
+// 	if (jQuery("input[name='campo[]']:checked").length > 0) {
+//		return true;
+//	} else {
+//		//alert("Marque pelo menos uma opção 'campo'");
+//		return false;
+//	}
+//   }
+//    function validaRadio(form_id,campo) {
+// 	if (jQuery("input[name='campo']:checked").length > 0) {
+//		return true;
+//	} else {
+//		//alert("Marque pelo menos uma opção 'campo'!");
+//		return false;
+//	}
+//   }

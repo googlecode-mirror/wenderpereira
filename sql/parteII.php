@@ -1,87 +1,112 @@
 <?
-session_start();
-if (empty($_SESSION['login'])) {
-	?> <script>
-     alert("Acesso Negado!");
-	 window.location = 'index.php';
-	 </script>
-	<?php
-}else{
+	session_start();
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
 	$date = date("d/m/y");
 	$hora = date("H:i");
-
-	//----------------------------
-	  $_checkbox = $_POST['qtd1'];
-		foreach($_checkbox as $_valor){
-			insere($_valor,$Login,$date,$hora);
-	  }
-	  //----------------------------
-	  $questao1Quais = $_POST[qtd1quais];
+  	  //----------------------------
 	  $questao2 = $_POST[qtd2];
-	  $questao3 = $_POST[qtd3];
-	  $questao3Quais = $_POST[qtd3quais];
- 	  $questao4 = $_POST[qtd4];
-	  //----------------------------
-	  $_checkbox = $_POST['qtd5'];
-		foreach($_checkbox as $_valor){
-			insere($_valor,$Login,$date,$hora);
-	  }
-	  //----------------------------
- 	  $questao6 = $_POST[qtd6];	  
-	  	  //----------------------------
-	  $_checkbox = $_POST['qtd7'];
-		foreach($_checkbox as $_valor){
-			insere($_valor,$Login,$date,$hora);
-	  }
-	  //----------------------------
-	  $_checkbox = $_POST['qtd8'];
-		foreach($_checkbox as $_valor){
-			insere($_valor,$Login,$date,$hora);
-	  }
-	  //----------------------------
+	  $questao4 = $_POST[qtd4];
+	  $questao6 = $_POST[qtd6];	  
 	  $questao9 = $_POST[qtd9];
   	  $questao10 = $_POST[qtd10];
-	  $questao11 = $_POST[qtd11];
   	  $questao12 = $_POST[qtd12];
-	  $questao12Quais = $_POST[qtd12quais];
-	  	  //----------------------------
+   	  $questao14 = $_POST[qtd14];
+	  // Recuperando campos Quais	    
+	  $questao1Quais = $_POST[qtd1quais];
+	  $questao3Quais = $_POST[qtd3quais];
+ 	  $questao7Quais = $_POST[qtd7quais];
+	  $questao8Quais = $_POST[qtd8Quais];
+   	  $questao8Quais1 = $_POST[qtd8Quais1];
+  	  $questao12Quais = $_POST[qtd12quais];
+	  // inserindo CheckBox	 
+	  $_checkbox = $_POST['qtd1'];
+	  foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }	  
+	  $_checkbox = $_POST['qtd3'];
+	  foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }	  
+	  $_checkbox = $_POST['qtd5'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
+	  $_checkbox = $_POST['qtd7'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
+	  $_checkbox = $_POST['qtd8'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
 	  $_checkbox = $_POST['qtd13'];
 		foreach($_checkbox as $_valor){
-			insere($_valor,$Login,$date,$hora);
+		insere($_valor,$Login,$date,$hora);
 	  }
-	  //----------------------------
-   	  $questao14 = $_POST[qtd14];
-	  $questao15 = $_POST[qtd15];
-	  //----------------------------------------------------	
+	  $_checkbox = $_POST['qtd15'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }
 	  // inserindo informaçoes
-	  insere($questao1Quais,$Login,$date,$hora);
- 	  insere($questao2,$Login,$date,$hora);
- 	  insere($questao3,$Login,$date,$hora);
- 	  insere($questao3Quais,$Login,$date,$hora);
- 	  insere($questao4,$Login,$date,$hora);
- 	  insere($questao6,$Login,$date,$hora);
- 	  insere($questao9,$Login,$date,$hora);
- 	  insere($questao10,$Login,$date,$hora);
- 	  insere($questao11,$Login,$date,$hora);
- 	  insere($questao12,$Login,$date,$hora);
- 	  insere($questao14,$Login,$date,$hora);
- 	  insere($questao15,$Login,$date,$hora);
-	//função insere---------------------------------------------  
+ 	  if(empty($questao2)) {}else{
+	  insere($questao2,$Login,$date,$hora);}
+	  if(empty($questao4)) {}else{	  
+      insere($questao4,$Login,$date,$hora);}
+ 	  if(empty($questao6)) {}else{	  
+ 	  insere($questao6,$Login,$date,$hora);}
+ 	  if(empty($questao9)) {}else{
+	  insere($questao9,$Login,$date,$hora);}
+	  if(empty($questao10)) {}else{	  
+ 	  insere($questao10,$Login,$date,$hora);}
+ 	  if(empty($questao11)) {}else{	  
+ 	  insere($questao11,$Login,$date,$hora);}
+ 	  if(empty($questao12)) {}else{	  
+ 	  insere($questao12,$Login,$date,$hora);}
+	  if(empty($questao14)) {}else{	  
+	  insere($questao14,$Login,$date,$hora);}
+
+  	  // inserindo se não branco
+      if(empty($questao1Quais)) {
+		  }else{
+		   $qtdQuestao = qtd1;
+		 inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}	  
+	  if(empty($questao3Quais)) {}else{
+ 		   $qtdQuestao = qtd3;
+		 inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
+	  if(empty($questao7Quais)) {}else{
+  		   $qtdQuestao = qtd7;
+	 	 inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
+      if(empty($questao8Quais)) {}else{
+		   $qtdQuestao = qtd8;
+	 	 inserequais($qtdQuestao,$questao8Quais,$Login,$date,$hora);}
+      if(empty($questao8Quais1)) {}else{
+		   $qtdQuestao = qtd81;
+	    inserequais($qtdQuestao,$questao8Quais1,$Login,$date,$hora);}
+      if(empty($questao12Quais)) {}else{
+		   $qtdQuestao = qtd12;
+		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
+    //função insere---------------------------------------------  
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 		 VALUES ('$resposta1','$usuario','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-	//função insere---------------------------------------------
-		
+		//função insere---------------------------------------------
 	}
-}
+	   function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
+		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
+		 VALUES ('$qtdQuestao','$resposta1','$usuario','2','$date','$hora')";
+		$resultado = mysql_query($consulta)
+		or die (mysql_error());
+		//função insere---------------------------------------------
+	}
+	
 	?>
-	  <script language="JavaScript">
-         alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
-      </script>
-	 <?
+    
+    <script language="JavaScript">
+    alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
+    </script>
+	<?
 ?>

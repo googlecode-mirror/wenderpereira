@@ -1055,6 +1055,7 @@ $.extend($.validator, {
 		digits: function(value, element) {
 			return this.optional(element) || /^\d+$/.test(value);
 		},
+
 		// http://docs.jquery.com/Plugins/Validation/Methods/creditcard
 		// based on http://en.wikipedia.org/wiki/Luhn
 		creditcard: function(value, element) {

@@ -52,7 +52,7 @@
         <td>
         <label>• Endereço:</label></td>
         <td>
-       <input name="idEndereco" value="<?php echo $_POST[txtEndereco];?>" type="text" size="80"/>
+       <input name="txtEndereco" id="idFrmEndereco" value="<?php echo $_POST[txtEndereco];?>" type="text" size="94"/>
         </td>
         </tr>
         <tr>
@@ -270,9 +270,7 @@
         </tr>
         <tr>
         <td colspan="2" align="center" class="formu2">
-        <input type="submit" name="buscar" value="buscar"/>
-        <input type="submit" name="enviar" value="avancar" />
-        <input type="submit" name="alterar" value="alterar" />
+        <input type="submit" name="enviar" value="avancar">
         </td>
         </tr>
     </table>

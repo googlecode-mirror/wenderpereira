@@ -304,7 +304,7 @@
       <input name="qtd8[]" type="checkbox" value="8i" />
         2013</label>
       <label>em diante (anos já previstos)</label>
-      <input name="qtd8QuaisI" type="text" />
+      <input name="qtd8Quais1" type="text" />
       <br />
     </p>
   </div>

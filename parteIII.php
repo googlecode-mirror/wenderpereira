@@ -147,7 +147,7 @@
             acima de 2 anos</label>
             <br/>
             <label> Qual período?</label>
-            <input name="qtd1quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
+            <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
             <br />
 		</p>
 	  </div>
