@@ -74,17 +74,9 @@
          onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
        </td>
       <td>
-   <!--<img src="captcha.php" name="capcha" id="capcha" />-->
-  
-     </td>
+       </td>
       <td>
-<!--      <input name="txtCapcha" type="text" id="txtCapcha" size="16" maxlength="40" value="Diferencie as Letras" 
-      onFocus="if(this.value=='Diferencie as Letras')this.value='';"/>-->
-      
-     <!--   <input type="submit" name="button" id="button" value="trocar" />-->
-
         </td>
-        
       </tr>
       <tr>
       <td width="136"></td>
