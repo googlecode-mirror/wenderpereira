@@ -5,6 +5,7 @@
 <title>Furnarte</title>
 
 <? 
+    header("Cache-Control: no-cache, must-revalidate");
 	session_start();
 	include "conexao.php";
 	connect();

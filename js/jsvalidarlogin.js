@@ -11,7 +11,7 @@ $(document).ready( function() {
 				senha:
 				{
 					required: true, /* Campo obrigatório */
-					minlength: 3    /* No mínimo 5 caracteres */
+					minlength: 3    /*No mínimo 5 caracteres */
 				},
 				senha1:
 				{
@@ -33,15 +33,15 @@ $(document).ready( function() {
 			},
 			senha:{
 				required: "*",
-				minlength: "3 digitos"
+				minlength: "3"
 			},
 			senha1:{
 				required: "*",
-				minlength: "3 digitos"
+				minlength: "3"
 			},
 			email:{
 				required: "*",
-				email: "O campo <u>Email</u> só aceita emails válidos"
+				email: "*"
 			}
 		}
 	});
