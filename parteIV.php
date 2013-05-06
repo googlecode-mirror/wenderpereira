@@ -8,6 +8,15 @@
 	session_start();
 	include "conexao.php";
 	connect();
+	  $Login 	=  trim($_SESSION["login"]);
+	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
+	  
+	  	$sql = "select * from pesquisaquais;";
+		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+  		 while ($array_exibir = mysql_fetch_array($Resultado)) {
+			$qtdComentariosGerais = ($array_exibir['respostas']);
+
+		}
 ?>
 
 <script src="js/jsValidate.js" type="text/javascript"></script>
@@ -332,7 +341,8 @@
          <div align="center">Comentários gerais (no máximo em dez linhas)</div>
        </label>
         <div align="center"><br />
-          <textarea name="qtdComentariosGerais" cols="100%" rows="10"></textarea>
+          <textarea name="qtdComentariosGerais" cols="100%" rows="10"><?php echo $qtdComentariosGerais;?>
+          </textarea>
         </div>
        </div>  
        </td>
