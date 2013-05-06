@@ -207,4 +207,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`idusuario`, `login`, `senha`, `nome`, `ativo`, `email`, `data`) VALUES
 (9, 'wender', '123', 'wender', '0', 'wendercorrea@gmail.com', '05/03/2013');
 
+--inclusão de campo novo
 ALTER TABLE `criacao_literaria`.`usuarios` ADD COLUMN `tipo` VARCHAR(6) NULL  AFTER `data` ;
+--Inclusão de comentario no campo novo
+ALTER TABLE `criacao_literaria`.`usuarios` CHANGE COLUMN `tipo` `tipo` VARCHAR(6) 
+NULL DEFAULT NULL COMMENT 'Adm = administrador\nAvan = avançado'  ;
