@@ -33,30 +33,15 @@
       ('$nome','$cargoInstituicao','$cpf','$email','$telefone','$Login','1','$date','$hora')";
        
       $resultado = mysql_query($consulta)
-      or die ("--");
+	  or die ("--");
       //------------------------------------------------------------------------------------
       //} else {
       //echo ("erro na vallidação da imagem");	};
-      
-  
-  //------------------------------------------------------------------------
-  //Funções de Validação
-      function validaCapcha(&$textoCapcha1,&$palavraCapcha1) {
-      
-      if ($textoCapcha1==$palavraCapcha1)
-      {
-          $resultado = true; //Validação Ok
-      } else {
-          $resultado = false; //Validação errada
-      }
-       return $resultado;
-      }
-	  
-	  		?>
-	  <script language="JavaScript">
-         alert("Mapaemtno cadastrado, clique na parteI para iniciar o cadastramento!");
-         </script>
-	 <?
-  //------------------------------------------------------------------------
+
+
+      $consulta = "UPDATE usuarios SET parte='0' WHERE login='$Login';";
+      $resultado = mysql_query($consulta)
+      or die ("--");
+      //---------------------------
   
   ?>
