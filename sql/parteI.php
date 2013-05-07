@@ -83,15 +83,14 @@
 		 VALUES ('$qtdQuestao','$resposta1','$Login','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-	
 	  ?>
 	  <script language="JavaScript">
-      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
       </script>
 	  <?
-	}
+	  }
      function atualizaconcluir(&$Login){
-	 $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
+	 $consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
       //---------------------------
