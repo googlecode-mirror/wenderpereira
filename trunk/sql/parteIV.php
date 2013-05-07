@@ -100,7 +100,7 @@
 		//função insere---------------------------------------------
 	}
 	
-	  $consulta = "UPDATE usuarios SET parte='4' WHERE login='$Login';";
+	  $consulta = "UPDATE usuarios SET concluido='4' WHERE login='$Login';";
       $resultado = mysql_query($consulta)
       or die ("--");
       //---------------------------
