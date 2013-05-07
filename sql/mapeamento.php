@@ -6,7 +6,7 @@
 	  $date = date("d/m/y");
 	  $hora = date("H:i");
       $Login 	=  $_SESSION["login"]; //recebe a sessão do login
-	  $conluido =  $_SESSION["concluido"]; //recebe a sessão do login
+	  $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
       //------------------------------------------------------------------------------------
       // recebe os valores do form mapeamento
       $nome = trim($_POST["txtNome"]);
@@ -21,13 +21,9 @@
 		while ($array_exibir = mysql_fetch_array($Resultado)) {
 	    $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
 		}
-		echo($concluido);
-
 	  //------------------------------------------------------------------------------------
   	  //		
 	  if($concluido < 0) {
-	  			
- 	  echo "menor que zero";	
       //------------------------------------------------------------------------------------
       $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
        VALUES 
@@ -41,9 +37,6 @@
       or die ("--");
       //------------------------------------------------------------------------------------
 	  }else{
-		  
-		echo("else");  
+		echo("Cadastramento já realizado!");  
 	  }
-	  
-  
-  ?>
+ 	 ?>
