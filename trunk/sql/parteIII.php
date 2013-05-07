@@ -84,8 +84,6 @@
 	  <?
 	  }
      function atualizaconcluir(&$Login){
-		 echo("atualiza concluir");
-		 echo($Login);
 	 $consulta = "UPDATE usuarios SET concluido='4' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
