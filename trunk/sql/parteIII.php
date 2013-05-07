@@ -4,9 +4,18 @@
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
+	$conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 	$date = date("d/m/y");
 	$hora = date("H:i");
-	
+	//----------------------------
+	// confirma se o form já foi preenchido
+	$sql = "select * from usuarios where login='wender'";
+	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+	while ($array_exibir = mysql_fetch_array($Resultado)) 
+	{
+	  $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
+	}
+	  //----------------------------
 //	echo($Login);
 	  $questao1 = $_POST[qtd1];
 	  $questao2 = $_POST[qtd2];
@@ -17,7 +26,9 @@
 	  $questao6 = $_POST[qtd6];
 	  $questao7Quais = $_POST[qtd7quais];
 	 // inserindo informaçoes
-	 
+	if($concluido < 3) 
+	{
+	  // inserindo CheckBox	 
 	 if(empty($questao2)) {}else{
 	  insere($questao1,$Login,$date,$hora);}
 	 if(empty($questao2)) {}else{	  
@@ -46,8 +57,11 @@
 	  $_checkbox = $_POST['qtd7'];
 		foreach($_checkbox as $_valor){
 			insere($_valor,$Login,$date,$hora);
+		}
+	atualizaconcluir($Login);		
+	 }else{
+		echo("Cadastramento concluido!");  
 	  }
-	  //----------------------------
 	  //função insere---------------------------------------------  
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		
@@ -63,16 +77,18 @@
 		 VALUES ('$qtdQuestao','$resposta1','$usuario','3','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//função insere---------------------------------------------
-	}
-	     $consulta = "UPDATE usuarios SET concluido='3' WHERE login='$Login';";
-      $resultado = mysql_query($consulta)
-      or die ("--");
+	  ?>
+	  <script language="JavaScript">
+      alert("ParteIII cadastradra, clique na parte IV para realizar o cadastro!");
+      </script>
+	  <?
+	  }
+     function atualizaconcluir(&$Login){
+		 echo("atualiza concluir");
+		 echo($Login);
+	 $consulta = "UPDATE usuarios SET concluido='4' WHERE login='$Login';";
+     $resultado = mysql_query($consulta)
+     or die ("--");
       //---------------------------
-	
-	?>
-	 <script language="JavaScript">
-     alert("ParteIII cadastradra, clique na parteIV para realizar o cadastro!");
-     </script>
-	 <?
-?>
+	 }
+ 	 ?>
