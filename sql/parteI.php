@@ -41,6 +41,19 @@
 		  foreach($_checkbox as $_valor){
 		  insere($_valor,$Login,$date,$hora);
 		}
+	//valida usuario
+	
+  	$sql = "select * from usuarios";
+	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+	$txtParte = ($array_exibir['parte']);
+	}
+	
+	
+	
+	
+	
+	
 	
 	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
@@ -79,9 +92,10 @@
 	  <?
 	}
 
-     $consulta = "UPDATE usuarios SET parte='1' WHERE login='$Login';";
+     $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
+	 
       //---------------------------
 
 ?>
