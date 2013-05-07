@@ -4,6 +4,7 @@
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
+    $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 	$date = date("d/m/y");
 	$hora = date("H:i");
 	$nomeInstituicao = trim($_POST["txtNome"]);
@@ -14,13 +15,22 @@
 	$cep = trim($_POST["txtCep"]);
 	$telefone = trim($_POST["txtTelefone"]);
 	$email = trim($_POST["txtEmail"]);
-		//----------------------------------------------------	
+	//----------------------------------------------------	
+	  // confirma se o form já foi preenchido
+	  	$sql = "select * from usuarios where login='wender'";
+		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+		while ($array_exibir = mysql_fetch_array($Resultado)) 
+		{
+	    $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
+		}
+	
 		$questao1 = $_POST[qtd1];
 		$questao2 = $_POST[qtd2];
 		$questao3 = $_POST[qtd3];
 		$questao3Quais = $_POST[qtd3quais];
 		$questao4 = $_POST[qtd4];
 		$questao6 = $_POST[qtd6];
+		if($concluido < 1) {
 		// inserindo informaçoes
 		if(empty($questao1)) {}else{
 			insere($questao1,$Login,$date,$hora);}
@@ -35,30 +45,18 @@
 		if(empty($questao3Quais)) {}else{
 		   $qtdQuestao = qtd3;
 		inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}	
-			
-		//inserindo do check box
+			//inserindo do check box
 		$_checkbox = $_POST['qtd5'];
 		  foreach($_checkbox as $_valor){
-		  insere($_valor,$Login,$date,$hora);
-		}
-	//valida usuario
-	
-  	$sql = "select * from usuarios";
-	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-    while ($array_exibir = mysql_fetch_array($Resultado)) {
-	$txtParte = ($array_exibir['parte']);
-	}
-	
-	
-	
-	
-	
-	
-	
+		  insere($_valor,$Login,$date,$hora); }
+		  atualizaconcluir($Login);
+		  }else{
+		echo("Cadastramento já realizado!");  
+	  }
 	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 	 $consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
-	 VALUES ('$resposta1','$usuario','1','$date','$hora')";
+	 VALUES ('$resposta1','$Login','1','$date','$hora')";
 	 $resultado = mysql_query($consulta)
 	 or die (mysql_error());
 	//função insere---------------------------------------------
@@ -67,6 +65,7 @@
 	inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
 						   $unidadeFederativa,$cep,$telefone,$email,$Login,
 						   $date,$hora);
+	
 	function inseremapeamentoparte1(&$nomeInstituicao,&$cnpj,&$endereco,&$municipio,
 						   &$unidadeFederativa,&$cep,&$telefone,&$email,&$Login,
 						   &$date,&$hora) 	    {
@@ -81,7 +80,7 @@
 	//função insere Quais	
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
-		 VALUES ('$qtdQuestao','$resposta1','$usuario','1','$date','$hora')";
+		 VALUES ('$qtdQuestao','$resposta1','$Login','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
 	
@@ -91,19 +90,10 @@
       </script>
 	  <?
 	}
-
-     $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
+     function atualizaconcluir(&$Login){
+	 $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
-	 
       //---------------------------
-
-?>
-<?
-
-//$sql = "SELECT * FROM pesquisa;";
-//		$consulta = mysql_query($sql) or die("Erro: " . mysql_error());
-//		while ($array_exibir = mysql_fetch_array($consulta )) {
-//		echo($array_exibir['respostas']);
-//		}
-?>
+	 }
+ 	 ?>

@@ -3,9 +3,18 @@
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
+    $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 	$date = date("d/m/y");
 	$hora = date("H:i");
-  	  //----------------------------
+  	//----------------------------
+	// confirma se o form já foi preenchido
+	$sql = "select * from usuarios where login='wender'";
+	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+	while ($array_exibir = mysql_fetch_array($Resultado)) 
+	{
+	  $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
+	}
+	  //----------------------------
 	  $questao2 = $_POST[qtd2];
 	  $questao4 = $_POST[qtd4];
 	  $questao6 = $_POST[qtd6];	  
@@ -20,6 +29,8 @@
 	  $questao8Quais = $_POST[qtd8Quais];
    	  $questao8Quais1 = $_POST[qtd8Quais1];
   	  $questao12Quais = $_POST[qtd12quais];
+	if($concluido < 2) 
+	{
 	  // inserindo CheckBox	 
 	  $_checkbox = $_POST['qtd1'];
 	  foreach($_checkbox as $_valor){
@@ -66,11 +77,8 @@
  	  insere($questao12,$Login,$date,$hora);}
 	  if(empty($questao14)) {}else{	  
 	  insere($questao14,$Login,$date,$hora);}
-
-  	  // inserindo se não branco
-      if(empty($questao1Quais)) {
-		  }else{
-		   $qtdQuestao = qtd1;
+	  if(empty($questao1Quais)) {}else{  	  
+	  $qtdQuestao = qtd1;
 		 inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}	  
 	  if(empty($questao3Quais)) {}else{
  		   $qtdQuestao = qtd3;
@@ -87,7 +95,12 @@
       if(empty($questao12Quais)) {}else{
 		   $qtdQuestao = qtd12;
 		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
-    //função insere---------------------------------------------  
+	  atualizaconcluir($Login);		
+		
+	 }else{
+		echo("Cadastramento já realizado!");  
+	  }
+	//função insere---------------------------------------------  
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 		 VALUES ('$resposta1','$usuario','2','$date','$hora')";
@@ -95,23 +108,22 @@
 		or die (mysql_error());
 		//função insere---------------------------------------------
 	}
-	   function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
+ 	 function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
 		 VALUES ('$qtdQuestao','$resposta1','$usuario','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
 		//função insere---------------------------------------------
+		  ?>
+	  <script language="JavaScript">
+      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+      </script>
+	  <?
 	}
-	
-	     $consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
-      $resultado = mysql_query($consulta)
-      or die ("--");
+     function atualizaconcluir(&$Login){
+	 $consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
+     $resultado = mysql_query($consulta)
+     or die ("--");
       //---------------------------
-	
-	?>
-    
-    <script language="JavaScript">
-    alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
-    </script>
-	<?
-?>
+	 }
+ 	 ?>
