@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <? 
       session_start();
-      header("Cache-Control: no-cache, must-revalidate");
+
       include "conexao.php";
       connect();
 	  $Login 	=  trim($_SESSION["login"]);
@@ -14,10 +14,10 @@
 	  $_POST[txtMunicipio] = $txtMunicipio;
 	  $_POST[txtCep] = $txtCep;
 	  $_POST[txtTelefone] =  $txtTelefone;
-	  $_POST[txtEmail] = $txtEmail;
+	  $_POST[txtEmail] = $txtEmail; 
 	  $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
 	  
-	  	$sql = "select * from mapeamentoparteI Where usuario= '$Login'";
+	  	$sql = "select * from mapeamentoparteI = ".$Login."";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
 			$txtNome = ($array_exibir['nomeintituicao']);
@@ -35,7 +35,7 @@
 <script src="js/jsValidate.js" type="text/javascript"></script>
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
 <script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jsvalidarParteI.js" type="text/javascript"></script>
+<!--<script src="js/jsvalidarParteI.js" type="text/javascript"></script>-->
         
 	 <style type="text/css">
      /* Estilizar os alertas */
