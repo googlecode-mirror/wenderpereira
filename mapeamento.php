@@ -15,7 +15,7 @@
 	$_POST[txtTelefone] = $txtTelefone;
 	$_POST[txtEmail] = $txtEmail;
 
-	$sql = "select * from mapeamento = ".$Login."";
+	$sql = "select * from mapeamento Where usuario= '$Login'";
 	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 
 	while ($array_exibir = mysql_fetch_array($Resultado)) {

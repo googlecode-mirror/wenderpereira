@@ -17,7 +17,7 @@
 	  $_POST[txtEmail] = $txtEmail;
 	  $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
 	  
-	  	$sql = "select * from mapeamentoparteI = ".$Login."";
+	  	$sql = "select * from mapeamentoparteI Where usuario= '$Login'";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
 			$txtNome = ($array_exibir['nomeintituicao']);
