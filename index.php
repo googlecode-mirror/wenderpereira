@@ -24,7 +24,7 @@
 <p>&nbsp;</p>
 <div align="center">
   <center>
-  <p><img src="images/baner1.jpg" alt="" width="636" height="95" ></p>
+  <p><img src="images/baner1.jpg" alt="" width="836" height="135" ></p>
     <br/>
     <br/>
     <br/>
@@ -42,41 +42,40 @@
           <td>
             <div align="center">
               <center>
-                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="384">
                   <tr>
                     <td width="118">&nbsp;</td>
                     <td width="193">&nbsp;</td>
-                    <td width="79"><div align="center"></div></td>
+                    <td width="73"><div align="center"></div></td>
                     </tr>
                   <tr>
                     <td width="118">&nbsp;</td>
                     <td width="193">&nbsp;</td>
-                    <td width="79"><div align="center"></div></td>
+                    <td width="73"><div align="center"></div></td>
                     </tr>
                   <tr>
                     <td width="118">&nbsp;</td>
                     <td width="193">&nbsp;</td>
-                    <td width="79"><div align="center"></div></td>
+                    <td width="73"><div align="center"></div></td>
                     </tr>
                   <tr>
                     <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
                     <td width="193"><input type="text" class="cor-inativa"  name="login" size="20" tabindex="1"></td>
-                    <td width="79"><div align="left">
+                    <td width="73"><div align="left">
                       <input type="submit" value="Entrar" name="B1" tabindex="3">
                     </div></td>
                     </tr>
                   <tr>
                     <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>
                     <td width="193"><input type="password" class="cor-inativa" name="senha" size="20" tabindex="2"></td>
-                    <td width="79"><div align="left">
+                    <td width="73"><div align="left">
                       <input type="reset" value="Limpar" name="B2" tabindex="4">
                     </div></td>
                     </tr>
                   <tr>
                     <td align="center">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td><div align="left"><a href="novoUsuario.php">Novo</a></div></td>
-                  </tr>
+                    <td colspan="2"><div align="right"><a href="ovoUsuario.php">Novo usuário  </a></div></td>
+                    </tr>
                   
                   <tr>
                     <td colspan="3">

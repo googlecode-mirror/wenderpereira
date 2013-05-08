@@ -82,7 +82,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 	} else {
 			?>
 		    <script>
-               alert("Cadastro realizado com sucesso acesse seu email e ative o usuário!");
+               alert("Foi enviado um email de confirmação para o seu email, é necessario para ativar o cadastro!");
 			   window.location = 'index.php';
              </script>
 			<?php
