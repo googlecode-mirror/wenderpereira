@@ -12,7 +12,7 @@
 </head>
 <body bgcolor="#ffffff">
 <center>
-<img src="images/imagem.jpg" >
+<img src="images/baner1.jpg" width="484" height="88" >
 </center>
 <!--url's used in the movie-->
 <!--text used in the movie-->
