@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <? 
       session_start();
-      header("Cache-Control: no-cache, must-revalidate");
       include "conexao.php";
       connect();
    ?>

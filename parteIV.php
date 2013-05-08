@@ -7,7 +7,6 @@
 <? 
 	session_start();
 	include "conexao.php";
-	header("Cache-Control: no-cache, must-revalidate");
 	connect();
 	  $Login 	=  trim($_SESSION["login"]);
 	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
