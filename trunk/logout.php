@@ -8,6 +8,7 @@
 	@session_start(); // Inicializa a sessão
     @session_write_close();
   	$Login 	=  $_SESSION["login"];
+	session_destroy(); 
 ?>
 
 

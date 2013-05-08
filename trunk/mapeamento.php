@@ -5,10 +5,9 @@
 
 <? 
 	session_start();
-	header("Cache-Control: no-cache, must-revalidate");
 	include "conexao.php";
 	connect();
-	$Login 	=  trim($_SESSION["login"]);
+	$Login = trim($_SESSION["login"]);
 	$_POST[txtNome] = $txtNome;
 	$_POST[txtCpf] = $txtCpf;
 	$_POST[txtCargoInstituicao] = $txtCargoInstituicao;
@@ -28,6 +27,7 @@
 
 	
 ?>
+
 
    <script src="js/jsValidate.js" type="text/javascript"></script>
    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
@@ -88,7 +88,7 @@
       </label>
       </td>
       <td width="375">
-      <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="54"/>
+      <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="46"/>
       </td>
       </tr>
       <tr>
@@ -96,7 +96,8 @@
       <label id="telefone">Telefone:( )</label>
       <td>
         <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
-         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
+         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');
+         validateEmail_('form1','txtEmail');"/>
        </td>
       <td>
        </td>
@@ -115,13 +116,13 @@
       </tr>
       <tr>
       <th align="left" scope="row">&nbsp;</th>
-      <td>	
+      <td>        <input type="submit" name="cadastrar" value="avancar" class="botao" 
+      onkeypress="return handleEnter(this, event);" />
        </td>
-      <td>
-        <span class="formu2">
+      <td><span class="formu2">
         <input type="submit" name="cadastrar" value="avancar" class="botao" 
-      onKeyPress="return handleEnter(this, event)">
-        </span></td>
+      onkeypress="return handleEnter(this, event);" />
+      </span></td>
       <td>
       <input type="reset" value="Limpar" />
       </td>
