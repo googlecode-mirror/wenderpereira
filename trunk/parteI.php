@@ -8,7 +8,6 @@
       include "conexao.php";
       connect();
 	  $Login 	=  trim($_SESSION["login"]);
-	  header("Cache-Control: no-cache, must-revalidate");
 	  $_POST[txtNome] = $txtNome;
 	  $_POST[txtCnpj] = $txtCnpj;
 	  $_POST[txtEndereco] = $txtEndereco;
@@ -18,7 +17,7 @@
 	  $_POST[txtEmail] = $txtEmail; 
 	  $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
 	  
-	  	$sql = "select * from mapeamentoparteI = ".$Login."";
+	  	$sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
 			$txtNome = ($array_exibir['nomeintituicao']);
@@ -37,6 +36,35 @@
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
 <script src="js/jquery.validate.js" type="text/javascript"></script>
 <script src="js/jsvalidarParteI.js" type="text/javascript"></script>
+
+<!--<script src="jquery-1.5.2.min.js" type="text/javascript"></script>-->
+<script src="jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+
+/*		function findCEP() {
+		    if($.trim($("#idFrmCep").val()) != ""){
+		        $("#ajax-loading").css('display','inline');
+				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#idFrmCep").val().replace("-", ""), function(){
+		            if(resultadoCEP["resultado"] == 1){
+		                $("#idFrmEndereco").val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
+		                $("#city").val(unescape(resultadoCEP["cidade"]));
+		                $("#cmbUnidadeFederativa").val(unescape(resultadoCEP["uf"]));
+		         //       $("#number").focus();
+		            }else{
+		                alert("Endereço não encontrado para o cep ");
+		            }
+		            $("#ajax-loading").hide();
+		        });
+		    }
+		}
+		$(document).ready(function(){
+		    $("#zipcode").mask("99999-999")
+		});*/
+
+	</script>
+
         
 	 <style type="text/css">
      /* Estilizar os alertas */
@@ -76,11 +104,13 @@
         <tr>
           <td><label>• CEP*:</label></td>
           <td><input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
-        onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"/></td>
+        onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"/>
+            <div style="display:inline;"><a href="javascript:findCEP()"> <img src="images/busca.png" alt="Pesquisar" border="0" /></a></div>
+          <div id="ajax-loading" style="display:none;"><img src="loading.gif"/></div></td>
         </tr>
         <tr>
           <td><label>• Endereço*:</label></td>
-          <td><input name="txtEndereco" id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84"/>		        <strong>
+          <td><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84"/>		        <strong>
         </strong></td>
         </tr>
         <tr>
@@ -125,21 +155,18 @@
         </td>     
         </tr>
         <tr>
-        <td><label>• Telefone:</label></td>
-        <td>
-        <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
-        onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone')";/>
-        </td>
+        <td><label>• Correio eletrônico (e-mail):</label></td>
+        <td><input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" 
+        type="text" size="80"/></td>
         </tr>
         <tr>
-        <td height="26">
-        <label>• Correio eletrônico (e-mail):</label>
+          <td height="26"><label>• Telefone: </label></td>
+          <td>
+         <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
+         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');
+         validateEmail_('form1','txtEmail');"/>
         </td>
-        <td>
-        <input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" 
-        type="text" size="80"/>
-        </td>
-	    <tr>
+        <tr>
     	<td colspan="2" align="left" class="formu2">
           <p>
             <label>• A instituição tem sede própia*?:</label>
@@ -240,8 +267,8 @@
         <td colspan="2" align="left" class="formu2">
         <div align="left">
         <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
-        <br />
-        <input name="qtd5[]" type="checkbox" value="5a" />
+         <br />
+        <input name="qtd5[]2" type="checkbox" value="5a" />
         <label>orçamento próprio</label>
         <br/>
         <input name="qtd5[]" type="checkbox" value="5b" />
@@ -297,7 +324,8 @@
         <input type="submit" name="enviar" value="avancar">
         </td>
         </tr>
-    </table>
+      
+  </table>
 </form>
 </body>
 </html>
