@@ -14,7 +14,7 @@
 	$Senha1		= anti_sql_injection($_POST["senha1"]);
 	$Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
 	$Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
-	$Ativacao	= "http://www.funarte.gov.br/criacao_literaria/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";	
+	$Ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";	
 	// Pega os valores do campo Mensagem
 	$Agradecimento = "Dúvidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
 	

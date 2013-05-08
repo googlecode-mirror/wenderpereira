@@ -13,11 +13,6 @@ $(document).ready( function() {
 					required: true /* Campo obrigatório */
 					   /* No mínimo 5 caracteres */
 				},
-				qtd3:
-				{
-					required: true /* Campo obrigatório */
-					   /* No mínimo 5 caracteres */
-				},
 				qtd4:
 				{
 					required: true /* Campo obrigatório */
@@ -84,9 +79,6 @@ $(document).ready( function() {
 				required: "*"
 				},
 			qtd2:{
-				required: "*"
-				},
-			qtd3:{
 				required: "*"
 				},
 			qtd4:{
