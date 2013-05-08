@@ -4,7 +4,7 @@
 	include "conexao.php";
 	connect();
 	$Login 	=  trim($_SESSION["login"]);
-    $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
+	$conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 	$date = date("d/m/y");
 	$hora = date("H:i");
 	$nomeInstituicao = trim($_POST["txtNome"]);
@@ -17,7 +17,7 @@
 	$email = trim($_POST["txtEmail"]);
 	//----------------------------------------------------	
 	  // confirma se o form já foi preenchido
-	  	$sql = "select * from usuarios where login='wender'";
+	  	$sql = "select * from usuarios where login='$Login'";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 		while ($array_exibir = mysql_fetch_array($Resultado)) 
 		{
@@ -55,11 +55,11 @@
 	  }
 	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
-	 $consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
-	 VALUES ('$resposta1','$Login','1','$date','$hora')";
-	 $resultado = mysql_query($consulta)
-	 or die (mysql_error());
-	//função insere---------------------------------------------
+		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
+		 VALUES ('$resposta1','$usuario','1','$date','$hora')";
+		$resultado = mysql_query($consulta)
+		or die (mysql_error());
+		//função insere---------------------------------------------
 	}
 	//função insere Parte 1
 	inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
@@ -83,16 +83,16 @@
 		 VALUES ('$qtdQuestao','$resposta1','$Login','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-	  ?>
-	  <script language="JavaScript">
-      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
-      </script>
-	  <?
-	  }
+	}
+
      function atualizaconcluir(&$Login){
-	 $consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
+	 $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
-      //---------------------------
-	 }
- 	 ?>
+		?>
+	  <script language="JavaScript">
+      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+      </script>
+	  <?
+	}
+ 	
