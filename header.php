@@ -8,7 +8,7 @@
 <body marginheight="0" leftmargin="0" rightmargin="0" topmargin="0">
 <table border="0" width="100%" cellspacing="0" cellpadding="0">
 <tr><td>
-<img src="imagebox/intranet.jpg" alt="Intranet Funarte" name="n00000001" border="0" id="n00000001" />
+<img src="imagebox/header.jpg" alt="Intranet Funarte" name="n00000001" width="100%" border="0" id="n00000001" />
 </td>
 </tr></table>
 </body>
