@@ -25,8 +25,7 @@
 
 		<div align="center">
 		<center>
-		<table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; 
-		border: 1px solid silver" bordercolor="#111111" width="500">
+		 <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
 		<tr>
           <td width="420" height="205">
            <div align="center">
@@ -90,7 +89,9 @@
                           <td colspan="3">
                           <font face="verdana"  size="1"color="#666666"> 
                           <br/>
-                          <div align="center"><b>Entre com os dados para realizar um novo cadastro!</b></div></td>
+                          <div align="center"><b>Entre com os dados para realizar um novo cadastro!</b>
+                          <br/> Um email de confirmarção será enviado para ativar o cadastro!
+                          </div></td>
                         </tr>
                       </table>
                     </center>
