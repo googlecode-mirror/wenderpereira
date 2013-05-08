@@ -112,19 +112,23 @@ function validateEmail_(form_id,email) {
    }
 }
 
-//    function validacheck(form_id,campo) {
-// 	if (jQuery("input[name='campo[]']:checked").length > 0) {
-//		return true;
-//	} else {
-//		//alert("Marque pelo menos uma opção 'campo'");
-//		return false;
-//	}
-//   }
-//    function validaRadio(form_id,campo) {
-// 	if (jQuery("input[name='campo']:checked").length > 0) {
-//		return true;
-//	} else {
-//		//alert("Marque pelo menos uma opção 'campo'!");
-//		return false;
-//	}
-//   }
+		function findCEP() {
+		    if($.trim($("#idFrmCep").val()) != ""){
+		        $("#ajax-loading").css('display','inline');
+				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#idFrmCep").val().replace("-", ""), function(){
+		            if(resultadoCEP["resultado"] == 1){
+		                $("#idFrmEndereco").val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
+		                $("#city").val(unescape(resultadoCEP["cidade"]));
+		                $("#cmbUnidadeFederativa").val(unescape(resultadoCEP["uf"]));
+		         //       $("#number").focus();
+		            }else{
+		                alert("Endereço não encontrado para o cep ");
+		            }
+		            $("#ajax-loading").hide();
+		        });
+		    }
+		}
+		$(document).ready(function(){
+		    $("#zipcode").mask("99999-999")
+		});
