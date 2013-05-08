@@ -27,14 +27,28 @@
   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
     <tr>
       <td align="left" class="formu2"><div align="left">
-        <p align="center"><strong><em>SOBRE  OS PROGRAMAS DE RESIDÊNCIA ARTÍSTICA </em></strong></p>
+        <div align="center"><b></b></div>
+        <b><label>
+          <div align="center">PARTE II</div>
+        </label>
+        <div align="center"><br/>
+        </div>
+        <label>
+          <div align="center">SOBRE  OS PROGRAMAS DE RESIDÊNCIA ARTÍSTICA</div>
+        </label>
+		</b>
+        <div align="center"><br/>
+
+
+       </div>
+        </div>
         <table width="99%" align="center" border="0">
           <tr>
             <th>
               <div align="justify">Um programa de residências artísticas consiste num conjunto de ações voltadas para o incentivo à experimentação, inovação, pesquisa e criação no campo das artes. Isto se dá, em geral, através do apoio (financeiro ou não) concedido a artistas que, na maior parte das vezes, saem de seu lugar de origem para realizar residências em outras localidades. A instituição pode realizar o programa de residências artísticas por meio de recursos oriundos de outros editais públicos e privados, por meio de seus próprios editais/recursos ou qualquer outra forma de financiamento direto ou indireto. Os programas podem ou não conceder apoio financeiro ao artista, podendo a instituição arcar com parte dos custos ou com a totalidade deles. Os locais de realização das residências variam conforme o programa, podendo abranger desde um município até os mais diferentes países. Os programas podem abranger uma ou mais linguagens artísticas (circo, dança, teatro, artes visuais, música, arte digital, literatura, cinema). Quanto à periodicidade, podem acontecer em períodos pré-estabelecidos, anualmente, semestralmente, etc. </div></th>
           </tr>
         </table>
-  		</td>
+	  </td>
     </tr>
   
     <td align="left" class="formu2">
@@ -75,7 +89,7 @@
     </p>
     <tr>
     <td align="left" class="formu2">
-          <label>• As ações em reidências artísticas possuem um valor previsto planejado? </label>
+          <label>• As ações em residências artísticas possuem um valor previsto planejado (marque apenas 1 item)?* </label>
           <label>
           <br/>
           <input type="radio" name="qtd2" <?php if($_POST['qtd2']=="2a") echo "checked";?> value="2a" class="radio" />
@@ -88,62 +102,62 @@
     <td height="412" align="left" class="formu2">
     <br/>
     <div>
-    <label>• De que forma a instituição financia os diferentes programas em residências artísticas</label>
+    <label>• De que forma a instituição financia os diferentes programas em residências artísticas (marque quantos itens julgar necessário):*</label>
     <p>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3a") echo "checked";?> value="3a" class="radio" />
+   	  <input name="qtd3[]" type="checkbox" value="3a" />
         por meio de editais geridos pela própria instituição</label>
       <br />
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3b") echo "checked";?> value="3b" class="radio" />
+        <input name="qtd3[]" type="checkbox" value="3b" />
         por meio de editais privados geridos pela própria instituição</label>
       <br />
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3c") echo "checked";?> value="3c" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3c" />
         por meio de recursos oriundos de editais públicos externos a instituição</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3d") echo "checked";?> value="3d" class="radio" />
+        <input name="qtd3[]" type="checkbox" value="3d" />
         por meio de recursos oriundos de editais privados externos a instituição</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3e") echo "checked";?> value="3e" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3e" />
         por meio de recursos diretos da própria instituição, não necessariamente editais</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3f") echo "checked";?> value="3f" class="radio" />
+        <input name="qtd3[]" type="checkbox" value="3f" />
         por meio de fundos públicos de cultura em nível estadual, municipal e federal</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3g") echo "checked";?> value="3g" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3g" />
         por meio de patrocínio, com recursos oriundos de leis de incentivo em nível estadual, federal e municipal</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3h") echo "checked";?> value="3h" class="radio" />
+        <input name="qtd3[]" type="checkbox" value="3h" />
         por meio de empréstimos junto a instituições financeiras</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3i") echo "checked";?> value="3i" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3i" />
         por meio de patrocínio/financiamento direto de entidades privadas</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3j") echo "checked";?> value="3j" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3j" />
         por meio de organizações sociais como SENAC, SEBRAE</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3k") echo "checked";?> value="3k" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3k" />
         por intermédio do programa Cultura Viva</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3l") echo "checked";?> value="3l" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3l" />
         por meio de recursos oriundos de órgãos internacionais como OEA, UNESCO</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3m") echo "checked";?> value="3m" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3m" />
         por meio de Organizações não – governamentais (ONGs)</label>
       <br/>
       <label>
-        <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3n") echo "checked";?> value="3n" class="radio" />
+		<input name="qtd3[]" type="checkbox" value="3n" />
         Outros</label>
       <label>Quais</label>
       <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
@@ -153,7 +167,7 @@
     </td>
     <tr>
       <td align="left" class="formu2">
-      <label>Quanto ao local das realizações das residências</label>
+      <label>Quanto ao local das realizações das residências (marque apenas 1 item)*:</label>
 		<br/>
         <label>
         <input type="radio" name="qtd4" <?php if($_POST['qtd4']=="4a") echo "checked";?> value="4a" class="radio" />
@@ -177,7 +191,7 @@
     <tr>
       <td align="left" class="formu2">
       <label>Em caso de abrangência nacional, quando as residências puderem se desenvolver em mais de uma região geográfica
-      , quais estão envolvidas?</label>
+      , quais estão envolvidas?(marque quantos itens julgar necessário)*:</label>
       <br/>
        <br/>
    	  <input name="qtd5[]" type="checkbox" value="5a" />
@@ -204,7 +218,7 @@
     <tr>
       
       <td align="left" class="formu2">
-        <label>• As residências podem ocorrer em países do exterior</label>
+        <label>• As residências podem ocorrer em países do exterior (marque apenas um item)?*</label>
         <br/>
         <label>
           <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6a") echo "checked";?> value="6a" class="radio" />
@@ -265,6 +279,7 @@
     <td align="left" class="formu2">
     <div>
     <label>• Aponte em quais anos ocorreram programas em residências artísticas (marque quantos itens julgar necessário)</label>
+    *
     <p>
       <label>
       <input name="qtd8[]" type="checkbox" value="8a" />
@@ -312,7 +327,7 @@
     </tr>
     <td align="left" class="formu2">
     <div>
-    <label>• Com relação à continuidade destes programas em residências artísticas</label>
+    <label>• Com relação à continuidade destes programas em residências artísticas (marque apenas 1 item)*:</label>
     <p>
       <label>
        <input type="radio" name="qtd9" <?php if($_POST['qtd9']=="9a") echo "checked";?> value="9a" class="radio" />
@@ -337,7 +352,7 @@
     </tr>
     <td align="left" class="formu2">
     <div>
-    <label>• Em caso dos programas terem ocorridos mais de uma vez e terem periodicidade definida</label>
+    <label>• Em caso dos programas terem ocorridos mais de uma vez e terem periodicidade definida (marque apenas 1 item)*:</label>
     <p>
       <label>
         <input type="radio" name="qtd10" <?php if($_POST['qtd10']=="10a") echo "checked";?> value="10a" class="radio" />
@@ -362,7 +377,8 @@
     </tr>
     <td align="left" class="formu2">
     <div>
-    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?</label>
+    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?(marque apenas 1 item)*
+    </label>
     <p>
       <label>
 		<input type="radio" name="qtd11" <?php if($_POST['qtd11']=="11a") echo "checked";?> value="11a" class="radio" />
@@ -378,7 +394,7 @@
     </tr>
     <td align="left" class="formu2">
     <div>
-    <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas?</label>
+    <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?</label>
     <p>
       <label>
 	  <input type="radio" name="qtd12" <?php if($_POST['qtd12']=="12a") echo "checked";?> value="12a" class="radio" />
@@ -424,7 +440,7 @@
       <td height="27" align="left" class="formu2">
       <div>
       <label>• Qual o apoio financeiro concedido (em reais) para que cada artista realize a ação?
-     (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)</label>
+     (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*:</label>
       <p>
       <label>
 	  <input name="qtd13[]" type="checkbox" value="13a"/>
@@ -467,7 +483,7 @@
     </tr>
     <td align="left" class="formu2">
     <div>
-    <label>• O valor concedido já é deduzido do imposto de renda devido?</label>
+    <label>• O valor concedido já é deduzido do imposto de renda devido*?  (marque apenas 1 item):</label>
     <p>
       <label>
        <input type="radio" name="qtd14" <?php if($_POST['qtd14']=="14a") echo "checked";?> value="14a" class="radio" />
@@ -488,7 +504,7 @@
   
     <td align="left" class="formu2">
     <div>
-    <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário)</label>
+    <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário*)</label>
     <p>
       <label>
         <input name="qtd15[]" type="checkbox" value="15a"/>

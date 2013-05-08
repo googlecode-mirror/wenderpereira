@@ -7,6 +7,7 @@
 <? 
 	session_start();
 	include "conexao.php";
+	header("Cache-Control: no-cache, must-revalidate");
 	connect();
 	  $Login 	=  trim($_SESSION["login"]);
 	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
@@ -40,6 +41,9 @@
       <tr>
         <td colspan="2">
          <p align="center">
+ 		 <strong>PARTE IV</strong>
+         <br/>
+         <br/>
  		 <strong><em>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</em></strong>
          </p>
  		</td>
@@ -54,7 +58,8 @@
       <tr>
         <td colspan="2">
         <div>
-  <label>Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)</label>
+  <label>Quais as principais ações realizadas pelos artistas durante a residência </label>
+  (marque quantos itens julgar necessário)*:
   <p>
     <label>
    <input name="qtd1[]" type="checkbox" value="1a" />
@@ -93,7 +98,7 @@
     <br />
   </p>
   <div>
-  <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas? </label>
+  <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas?(marque quantos itens julgar necessário)*: </label>
   <p>
     <label>
     <input name="qtd2[]" type="checkbox" value="2a" />
@@ -186,7 +191,8 @@
   </div>
   <br/>
   <div>
-  <label>Qual o principal público a ser atingido pelas ações? (marque no máximo os 3 itens mais importantes)</label>
+  <label>Qual o principal público a ser atingido pelas ações? (marque no máximo os 3 itens mais importantes)*:</label>
+
   <p>
     <label>
       <input type="checkbox" name="qtd3[]" value="2a"/>
@@ -215,7 +221,7 @@
   </p>
   </div>
   	<div>
-  	  <label>Onde as ações são realizadas? (marque quantos itens julgar necessário)</label>
+  	  <label>Onde as ações são realizadas? (marque quantos itens julgar necessário)*</label>
       </div>
  	  <p>
       <label>
@@ -279,7 +285,7 @@
       <tr>
         <td colspan="2">
         <Lable>
-        Quais os produtos são resultados das ações realizadas</label>
+        Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*:</label>
         <br />
          <label>
          <input type="checkbox" name="qtd5[]" value="5a"/>

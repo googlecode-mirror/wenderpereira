@@ -33,7 +33,10 @@
 <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
       <tr>
         <td colspan="2">
-          <p align="center">SOBRE  OS ARTISTAS RESIDENTES</p>
+                <div align="center"><strong><em>PARTE III</em></strong>
+                        </p>
+                            <strong></strong></div>
+          <strong><p align="center">SOBRE  OS ARTISTAS RESIDENTES</p></strong>               
 
 		</td>
       </tr>
@@ -87,7 +90,7 @@
       <tr>
       <td colspan="2">
       <div>
-        <label>O número de artistas apoiados foi o mesmo em todas os programas?</label>
+        <label>O número de artistas apoiados foi o mesmo em todas os programas( marque apenas 1 item)?</label>
           <br/>
           <p>
           <label>
@@ -113,7 +116,7 @@
       <tr>
         <td colspan="2">
         <div>
-        <label>Qual o período de duração da residência (marque apenas 1 item)</label>
+        <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
           <p>
             <label>
             <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3a") echo "checked";?> value="3a" class="radio" />
@@ -157,7 +160,7 @@
       <tr>
       <td colspan="2">
       <div>
-      <label>Em relação à nacionalidade dos artistas contemplados, marque apenas 1 item abaixo</label>
+      <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
       <p>
       <label>
       <input type="radio" name="qtd4" <?php if($_POST['qtd4']=="4a") echo "checked";?> value="4a" class="radio" />
@@ -179,7 +182,7 @@
         <td colspan="2">
              <div>
         <label>Existe a possibilidade de intercâmbio entre artistas brasileiros e 
-        internacionais nos programas de residências artísticas</label>
+        internacionais nos programas de residências artísticas(marque apenas 1 item)?*</label>
         <p>
           <label>
 	      <input type="radio" name="qtd5" <?php if($_POST['qtd5']=="5a") echo "checked";?> value="5a" class="radio" />
@@ -198,7 +201,7 @@
         <td colspan="2">
      <div>
         <label>Quanto à presença de artistas estrangeiros no Brasil e/ou
-         artistas brasileiros no exterior que podem ser contemplados pelos programas</label>
+         artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
         <p>
           <label>
             <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6a") echo "checked";?> value="6a" class="radio" />
@@ -224,7 +227,7 @@
         <td colspan="2">
         <div>
         <label>Quanto à presença de artistas estrangeiros no Brasil e/ou 
-        artistas brasileiros no exterior que podem ser contemplados pelos programas</label>
+        artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
          <p>
 	  	  <input name="qtd7[]" type="checkbox" value="7a" />
           <label>América do Sul</label>
