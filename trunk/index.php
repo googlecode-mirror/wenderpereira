@@ -74,7 +74,7 @@
                     </tr>
                   <tr>
                     <td align="center">&nbsp;</td>
-                    <td colspan="2"><div align="right"><a href="ovoUsuario.php">Novo usuário  </a></div></td>
+                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usuário  </a></div></td>
                     </tr>
                   
                   <tr>
