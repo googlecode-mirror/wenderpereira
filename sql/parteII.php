@@ -8,7 +8,7 @@
 	$hora = date("H:i");
   	//----------------------------
 	// confirma se o form já foi preenchido
-	$sql = "select * from usuarios where login='wender'";
+	$sql = "select * from usuarios where login='$Login'";
 	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	while ($array_exibir = mysql_fetch_array($Resultado)) 
 	{
@@ -114,16 +114,15 @@
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
 		//função insere---------------------------------------------
-		  ?>
-	  <script language="JavaScript">
-      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
-      </script>
-	  <?
-	}
+	 }
      function atualizaconcluir(&$Login){
 	 $consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
-      //---------------------------
-	 }
- 	 ?>
+		?>
+	  <script language="JavaScript">
+      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
+      </script>
+	  <?
+	}
+ 	
