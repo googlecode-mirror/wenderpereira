@@ -55,24 +55,31 @@
   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
        <tr>
       <th colspan="4" align="left" scope="row">
-        <p align="center">
-        <strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong></p>
-        <p align="center">
-        </p>
+          <div align="center"><strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong>
+            <br />
+          </div>
+          <label>
+            <div align="center">Os campos com asterisco* são de preenchimento obrigatório:</div>
+          </label>
+          <div align="center"></div>
+          <p>
+            <label>Responsável pelo preenchimento das informações:</label>
+          </p>
       </th>
       </tr>
       <tr>
-      <th width="136" align="center" scope="row"> <label id="lblnome">Nome:</label></th>
-      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94"/></td>
+      <th width="153" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
+      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94"/>
+      </td>
       </tr>
       <tr>
-      <th height="32" align="center" scope="row"><label id="lblCargoInstituicao">Cargo na instituição:</label></th>
+      <th height="32" align="center" scope="row"><label id="lblCargoInstituicao">Cargo na instituição*:</label></th>
       <td colspan="3"><input name="txtCargoInstituicao" id="idFrmCargoIntituicao"
        value="<?php echo $txtCargoInstituicao;?>" type="text" size="94" /></td>
       </tr>
       <tr>
       <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
-      <td width="151">
+      <td width="144">
           <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
           onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
       </td>
@@ -97,14 +104,14 @@
         </td>
       </tr>
       <tr>
-      <td width="136"></td>
+      <td width="153"></td>
       </tr>
       <tr>
       <th align="left" scope="row">&nbsp;</th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td width="0"></td>
+      <td width="17"></td>
       </tr>
       <tr>
       <th align="left" scope="row">&nbsp;</th>
