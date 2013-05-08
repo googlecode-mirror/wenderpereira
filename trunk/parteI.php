@@ -42,7 +42,7 @@
 	
 	<script type="text/javascript">
 
-/*		function findCEP() {
+		function findCEP() {
 		    if($.trim($("#idFrmCep").val()) != ""){
 		        $("#ajax-loading").css('display','inline');
 				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#idFrmCep").val().replace("-", ""), function(){
@@ -61,7 +61,7 @@
 		}
 		$(document).ready(function(){
 		    $("#zipcode").mask("99999-999")
-		});*/
+		});
 
 	</script>
 
