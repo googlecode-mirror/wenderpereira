@@ -35,7 +35,11 @@
       $consulta = "UPDATE usuarios SET concluido='0' WHERE login='$Login';";
       $resultado = mysql_query($consulta)
       or die ("--");
-      //------------------------------------------------------------------------------------
+	   ?>
+	  <script language="JavaScript">
+      alert("Mapeamento cadastradro, clique na parte I para realizar o cadastro!");
+      </script>
+	  <?
 	  }else{
 		echo("Cadastramento já realizado!");  
 	  }

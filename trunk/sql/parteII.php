@@ -20,7 +20,8 @@
 	  $questao6 = $_POST[qtd6];	  
 	  $questao9 = $_POST[qtd9];
   	  $questao10 = $_POST[qtd10];
-  	  $questao12 = $_POST[qtd12];
+	  $questao11 = $_POST[qtd11];
+	  $questao12 = $_POST[qtd12];
    	  $questao14 = $_POST[qtd14];
 	  // Recuperando campos Quais	    
 	  $questao1Quais = $_POST[qtd1quais];
