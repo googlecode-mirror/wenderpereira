@@ -28,24 +28,20 @@
 			$txtTelefone = ($array_exibir['telefone']);
 			$txtEmail = ($array_exibir['email']);
 			$cmbUnidadeFederativa = ($array_exibir['unidadefederativa']);
-		}
-	  
-   ?>
-	  <?
-    function getArray(&$Login){
-   	  	$sql = "select * from pesquisa Where usuario= '$Login' and parte ='1';";
-		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-		$i=0;
-		$resposta = array();
-		while ($array_exibir = mysql_fetch_array($Resultado)) {
-			$resposta[$i] = ($array_exibir['respostas']);
-			$i++;
-		}
+		}   ?>
+   <?  function getArray(&$Login){
+   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='1';";
+	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+	   $i=0;
+	   $resposta = array();
+	   while ($array_exibir = mysql_fetch_array($Resultado)) {
+		$resposta[$i] = ($array_exibir['respostas']);
+		$i++;
+	    }
    	    return $resposta;
-      }
-  	$meuArray = getArray($Login);
-   ?>
-   
+      	}
+     	$meuArray = getArray($Login);
+  ?>
 <title>Funarte - Portal das Artes</title>
 <script src="js/jsValidate.js" type="text/javascript"></script>
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
