@@ -25,7 +25,7 @@
           $questao6 = $_POST[qtd6];
           $questao7Quais = $_POST[qtd7quais];
          // inserindo informaçoes
-        if($concluido < 3) 
+        if($concluido == 2) 
         {
           // inserindo CheckBox  
          if(empty($questao2)) {}else{
@@ -58,9 +58,16 @@
                         insere($_valor,$Login,$date,$hora);
                 }
         atualizaconcluir($Login);               
-         }else{
-                    echo("Cadastramento já realizado!");  
-          }
+		  } elseif ($concluido == 0){
+		  echo("Retorne para o mapeamento e realize o cadastro!");  
+		  } elseif ($concluido == 1){
+		  echo("Retorne para a parteI e realize o cadastro!!");   
+		  } elseif ($concluido == 3){
+			echo("Cadastramento da Parte III já foi realizado!"); 
+		  } elseif ($concluido == 4){
+			echo("Cadastramento da Parte IV já foi realizado!"); 
+		  }else{
+	 	 }
           //função insere---------------------------------------------  
         function insere(&$resposta1,&$usuario,&$date,&$hora) {
                 

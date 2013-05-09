@@ -25,7 +25,7 @@
         $questao3Quais = $_POST[qtd3quais];
         $questao4Quais = $_POST[qtd4quais];
         $qtdComentarios = $_POST[qtdComentariosGerais]; 
-        if($concluido < 4) 
+        if($concluido == 3) 
         {
         // inserindo CheckBox    
         //----------------------------
@@ -88,9 +88,16 @@
          inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
         
         atualizaconcluir($Login);               
-         }else{
-                echo("Cadastramento já realizado!");  
-         }
+		  } elseif ($concluido == 0){
+		  echo("Retorne para o mapeamento e realize o cadastro!");  
+		  } elseif ($concluido == 1){
+		  echo("Retorne para a parteI e realize o cadastro!!");   
+		  } elseif ($concluido == 2){
+			echo("Retorne para a parteII e realize o cadastro!!"); 
+		  } elseif ($concluido == 4){
+			echo("Cadastramento concluído!"); 
+		  }else{
+	 	 }
    //função insere---------------------------------------------  
         function insere(&$resposta1,&$usuario,&$date,&$hora) {
                 
@@ -106,11 +113,6 @@
                  VALUES ('$qtdQuestao','$resposta1','$usuario','4','$date','$hora')";
                 $resultado = mysql_query($consulta)
                 or die (mysql_error());
-          ?>
-          <script language="JavaScript">
-      alert("ParteIII cadastradra, clique na parte IV para realizar o cadastro!");
-      </script>
-          <?
           }
      function atualizaconcluir(&$Login){
          $consulta = "UPDATE usuarios SET concluido='4' WHERE login='$Login';";
