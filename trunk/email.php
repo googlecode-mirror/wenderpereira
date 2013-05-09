@@ -53,7 +53,7 @@ or die ("Usuário ou senha já existem, falha ao inserir dados!");
 
  
  // Variável que junta os valores acima e monta o corpo do email
-$Vai = "$Nome,\n\n Seus dados de cadastro são \n\n E-mail: $Email \n\n Para ativar o seu login clique no link abaixo! \n
+$Vai = "$Nome,\n\n Seus dados de cadastro são \n\n Usuário: $Nome \n \n E-mail: $Email \n\n Para ativar o seu login clique no link abaixo! \n
 		\n Link de ativação: $Ativacao\n \n\n $Agradecimento";
 
 require_once("phpmailer/class.phpmailer.php");
@@ -82,7 +82,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 	} else {
 			?>
 		    <script>
-               alert("Foi enviado um email de confirmação para o seu email, é necessario para ativar o cadastro!");
+               alert("A senha foi enviada para o seu email!");
 			   window.location = 'index.php';
              </script>
 			<?php
@@ -95,13 +95,14 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 
  if (smtpmailer($Email, '$Email', 'Nome do Enviador', $Email, $Vai)) {
 
+?>
+<script>
+ alert("A senha foi enviada para o seu email!". echo $Email."");
 	//Header("location:http://localhost:8080/"); // Redireciona para uma página de obrigado.
-
+</script>
+<?
 }
 if (!empty($error)) echo $error;
 
 }
-
-
-
 ?>
