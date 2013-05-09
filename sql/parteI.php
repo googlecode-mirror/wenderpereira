@@ -30,7 +30,7 @@
 		$questao3Quais = $_POST[qtd3quais];
 		$questao4 = $_POST[qtd4];
 		$questao6 = $_POST[qtd6];
-		if($concluido < 1) {
+		if($concluido == 0){
 		// inserindo informaçoes
 		if(empty($questao1)) {}else{
 			insere($questao1,$Login,$date,$hora);}
@@ -50,8 +50,15 @@
 		  foreach($_checkbox as $_valor){
 		  insere($_valor,$Login,$date,$hora); }
 		  atualizaconcluir($Login);
+		  } elseif ($concluido == 1){
+		  echo("Cadastramento da Parte I já foi realizado!");  
+		  } elseif ($concluido == 2){
+		  echo("Cadastramento da Parte II já foi realizado!");   
+		  } elseif ($concluido == 3){
+			echo("Cadastramento da Parte III já foi realizado!"); 
+		  } elseif ($concluido == 4){
+			echo("Cadastramento da Parte IV já foi realizado!"); 
 		  }else{
-		echo("Cadastramento já realizado!");  
 	  }
 	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {

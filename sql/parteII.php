@@ -30,7 +30,7 @@
 	  $questao8Quais = $_POST[qtd8Quais];
    	  $questao8Quais1 = $_POST[qtd8Quais1];
   	  $questao12Quais = $_POST[qtd12quais];
-	if($concluido < 2) 
+	if($concluido == 1) 
 	{
 	  // inserindo CheckBox	 
 	  $_checkbox = $_POST['qtd1'];
@@ -97,9 +97,15 @@
 		   $qtdQuestao = qtd12;
 		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
 	  atualizaconcluir($Login);		
-		
-	 }else{
-		echo("Cadastramento já realizado!");  
+		  } elseif ($concluido == 0){
+		  echo("Retorne para o mapeamento e realize o cadastro!");  
+		  } elseif ($concluido == 2){
+		  echo("Cadastramento da Parte II realizado avance para a parteIII!");   
+		  } elseif ($concluido == 3){
+			echo("Cadastramento da Parte III já foi realizado!"); 
+		  } elseif ($concluido == 4){
+			echo("Cadastramento da Parte IV já foi realizado!"); 
+		  }else{
 	  }
 	//função insere---------------------------------------------  
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {

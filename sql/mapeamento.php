@@ -16,31 +16,45 @@
       $telefone = trim($_POST["txtTelefone"]);
 	  //------------------------------------------------------------------------------------
 	  // confirma se o form já foi preenchido
-	  	$sql = "select * from usuarios where login='wender'";
+	  	$sql = "select * from usuarios where login='$Login'";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 		while ($array_exibir = mysql_fetch_array($Resultado)) {
 	    $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
 		}
 	  //------------------------------------------------------------------------------------
   	  //		
-	  if($concluido < 0) {
-      //------------------------------------------------------------------------------------
+		  if($concluido == -1) {
+		  	  inseremapeamento($nome,$cargoInstituicao,$cpf,$email,$telefone,$Login,$date,$hora);
+			  atualizaconcluir($Login);
+		  } elseif ($concluido == 0){
+		  echo("Cadastramento do mapeamento já foi realizado!");  
+		  } elseif ($concluido == 1){
+		  echo("Cadastramento da Parte I já foi realizado!");   
+		  } elseif ($concluido == 2){
+			echo("Cadastramento da Parte II já foi realizado!"); 
+		  } elseif ($concluido == 3){
+			echo("Cadastramento da Parte III já foi realizado!"); 
+		  } elseif ($concluido == 4){
+			echo("Cadastramento da Parte IV já foi realizado!"); 	
+		  }else{
+	  }
+	  function inseremapeamento(&$nome,&$cargoInstituicao,&$cpf,&$email,&$telefone,&$Login,&$date,&$hora){
       $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
        VALUES 
       ('$nome','$cargoInstituicao','$cpf','$email','$telefone','$Login','1','$date','$hora')";
       $resultado = mysql_query($consulta)
 	  or die ("--");
+	  }
       //------------------------------------------------------------------------------------
-	  //Salava o andamento do preenchimento do formulario
-      $consulta = "UPDATE usuarios SET concluido='0' WHERE login='$Login';";
-      $resultado = mysql_query($consulta)
-      or die ("--");
-	   ?>
+     
+	 function atualizaconcluir(&$Login){
+	 $consulta = "UPDATE usuarios SET concluido='0' WHERE login='$Login';";
+     $resultado = mysql_query($consulta)
+     or die ("--");
+	  ?>
 	  <script language="JavaScript">
-      alert("Mapeamento cadastradro, clique na parte I para realizar o cadastro!");
+      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
       </script>
 	  <?
-	  }else{
-		echo("Cadastramento já realizado!");  
-	  }
- 	 ?>
+	}
+ 	
