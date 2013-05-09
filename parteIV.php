@@ -19,7 +19,7 @@
 		}
 ?>
    <?  function getArray(&$Login){
-   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='2';";
+   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='4';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $resposta = array();
