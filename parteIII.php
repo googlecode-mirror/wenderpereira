@@ -4,12 +4,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Furnarte</title>
 
-<? 
-   	session_start();
-	include "conexao.php";
-	connect();
-?>
-
+   <? 
+      session_start();
+      include "conexao.php";
+      connect();
+	  $Login 	=  trim($_SESSION["login"]);
+   ?>
+   <?  function getArray(&$Login){
+   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='2';";
+	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+	   $i=0;
+	   $resposta = array();
+	   while ($array_exibir = mysql_fetch_array($Resultado)) {
+		$resposta[$i] = ($array_exibir['respostas']);
+		$i++;
+	    }
+   	    return $resposta;
+      	}
+     	$meuArray = getArray($Login);
+  ?>
 <script src="js/jsValidate.js" type="text/javascript"></script>
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
 <script src="js/jquery.validate.js" type="text/javascript"></script>
@@ -54,33 +67,33 @@
        <label>Quantos artistas foram apoiados em média ao ano?</label>
          <p>
           <label>
-          <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1a") echo "checked";?> value="1a" class="radio" />
+          <input type="radio" name="qtd1" <? if(in_array("1a", $meuArray)){ echo "checked";}?> value="1a" class="radio" />
           até 5 artistas</label>
           <br />
           <label>
-          <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1b") echo "checked";?> value="1b" class="radio" />
+          <input type="radio" name="qtd1" <? if(in_array("1b", $meuArray)){ echo "checked";}?> value="1b" class="radio" />
           acima de 5  até 10</label>
           <br />
           <label>
-		  <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1c") echo "checked";?> value="1c" class="radio" />
+		  <input type="radio" name="qtd1" <? if(in_array("1c", $meuArray)){ echo "checked";}?> value="1c" class="radio" />
           acima de 11  até 20</label>
           <br />
           <label>
-		  <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1d") echo "checked";?> value="1d" class="radio" />
+		  <input type="radio" name="qtd1" <? if(in_array("1d", $meuArray)){ echo "checked";}?> value="1d" class="radio" />
           acima de 21  até 30 </label>
           <br />
           <label>
-		  <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1e") echo "checked";?> value="1e" class="radio" />
+		  <input type="radio" name="qtd1" <? if(in_array("1e", $meuArray)){ echo "checked";}?> value="1e" class="radio" />
           acima de 31 até 50</label>
           <br />
           <label>
-          <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1f") echo "checked";?> value="1f" class="radio" />
+          <input type="radio" name="qtd1" <? if(in_array("1f", $meuArray)){ echo "checked";}?> value="1f" class="radio" />
           acima de 51 até 80</label>
           <br />  <label>
-		  <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1g") echo "checked";?> value="1g" class="radio" />
+		  <input type="radio" name="qtd1" <? if(in_array("1g", $meuArray)){ echo "checked";}?> value="1g" class="radio" />
           acima de 81 até 120 </label>
           <br />  <label>
-          <input type="radio" name="qtd1" <?php if($_POST['qtd1']=="1h") echo "checked";?> value="1h" class="radio" />
+          <input type="radio" name="qtd1" <? if(in_array("1h", $meuArray)){ echo "checked";}?> value="1h" class="radio" />
           acima de 120 artistas</label>
         </p>
       </div>
@@ -93,19 +106,19 @@
           <br/>
           <p>
           <label>
-          <input type="radio" name="qtd2" <?php if($_POST['qtd2']=="2a") echo "checked";?> value="2a" class="radio" />
+          <input type="radio" name="qtd2" <? if(in_array("2a", $meuArray)){ echo "checked";}?> value="2a" class="radio" />
           Sim</label>
           <br />
           <label>
-          <input type="radio" name="qtd2" <?php if($_POST['qtd2']=="2b") echo "checked";?> value="2b" class="radio" />
+          <input type="radio" name="qtd2" <? if(in_array("2b", $meuArray)){ echo "checked";}?> value="2b" class="radio" />
           Não, foi aumentando com o tempo</label>
           <br />
           <label>
-          <input type="radio" name="qtd2" <?php if($_POST['qtd2']=="2c") echo "checked";?> value="2c" class="radio" />
+          <input type="radio" name="qtd2" <? if(in_array("2c", $meuArray)){ echo "checked";}?> value="2c" class="radio" />
           Não, foi diminuindo com o tempo</label>
           <br />
           <label>
-          <input type="radio" name="qtd2" <?php if($_POST['qtd2']=="2d") echo "checked";?> value="2d" class="radio" />
+          <input type="radio" name="qtd2" <? if(in_array("2d", $meuArray)){ echo "checked";}?> value="2d" class="radio" />
           Não, tiveram anos com um número maior e outros com um número menor de montantes concedidos</label>
           <br />
         </p>
@@ -118,35 +131,35 @@
         <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
           <p>
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3a") echo "checked";?> value="3a" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="radio" />
             até 20 dias</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3b") echo "checked";?> value="3b" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="radio" />
             de 21 até 30 dias ( cerca de um mês)</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3c") echo "checked";?> value="3c" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c" class="radio" />
             de 31 até 60 dias ( cerca de dois meses)</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3d") echo "checked";?> value="3d" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d" class="radio" />
             de 61 até 90 dias ( cerca de três meses)</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3e") echo "checked";?> value="3e" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e" class="radio" />
             de 91 até 180 dias ( cerca de seis meses)</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3f") echo "checked";?> value="3f" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f" class="radio" />
             de 181 até 365 dias ( cerca de um ano)</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3g") echo "checked";?> value="3g" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g" class="radio" />
              de 1 ano até 2 anos</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <?php if($_POST['qtd3']=="3h") echo "checked";?> value="3h" class="radio" />
+            <input type="radio" name="qtd3" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h" class="radio" />
             acima de 2 anos</label>
             <br/>
             <label> Qual período?</label>
@@ -162,15 +175,15 @@
       <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
       <p>
       <label>
-      <input type="radio" name="qtd4" <?php if($_POST['qtd4']=="4a") echo "checked";?> value="4a" class="radio" />
+      <input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a" class="radio" />
       apenas brasileiros</label>
       <br />
       <label>
-      <input type="radio" name="qtd4" <?php if($_POST['qtd4']=="4b") echo "checked";?> value="4b" class="radio" />
+      <input type="radio" name="qtd4" <? if(in_array("4b", $meuArray)){ echo "checked";}?> value="4b" class="radio" />
         apenas estrangeiros</label>
       <br />
       <label>
-      <input type="radio" name="qtd4" <?php if($_POST['qtd4']=="4c") echo "checked";?> value="4c" class="radio" />
+      <input type="radio" name="qtd4" <? if(in_array("4c", $meuArray)){ echo "checked";}?> value="4c" class="radio" />
         ambos</label>
       <br />
     </p>
@@ -184,11 +197,11 @@
         internacionais nos programas de residências artísticas(marque apenas 1 item)?*</label>
         <p>
           <label>
-	      <input type="radio" name="qtd5" <?php if($_POST['qtd5']=="5a") echo "checked";?> value="5a" class="radio" />
+	      <input type="radio" name="qtd5" <? if(in_array("5a", $meuArray)){ echo "checked";}?> value="5a" class="radio" />
            Sim</label>
           <br />
           <label>
-          <input type="radio" name="qtd5" <?php if($_POST['qtd5']=="5b") echo "checked";?> value="5b" class="radio" />
+          <input type="radio" name="qtd5" <? if(in_array("5b", $meuArray)){ echo "checked";}?> value="5b" class="radio" />
             Não</label>
           <br />
         </p>
@@ -203,19 +216,19 @@
          artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
         <p>
           <label>
-            <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6a") echo "checked";?> value="6a" class="radio" />
+            <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" class="radio" />
             não há  residências em nível internacional</label>
           <br />
           <label>
-            <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6b") echo "checked";?> value="6b" class="radio" />
+            <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b" class="radio" />
             o artista estrangeiro pode ser contemplado para vir fazer residência no Brasil</label>
           <br />
           <label>
-            <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6c") echo "checked";?> value="6c" class="radio" />
+            <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c" class="radio" />
             o artista brasileiro pode ser contemplado para fazer residência no exterior</label>
           <br />
           <label>
-            <input type="radio" name="qtd6" <?php if($_POST['qtd6']=="6d") echo "checked";?> value="6d" class="radio" />
+            <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d" class="radio" />
             o artista brasileiro pode fazer residência no exterior e o artista estrangeiro fazer residência no Brasil</label>
           <br />
          </p>
@@ -228,43 +241,43 @@
         <label>Quanto à presença de artistas estrangeiros no Brasil e/ou 
         artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
          <p>
-	  	  <input name="qtd7[]" type="checkbox" value="7a" />
+	  	  <input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>/>
           <label>América do Sul</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7b" />
+	  	  <input name="qtd7[]" type="checkbox" value="7b" <? if(in_array("7b", $meuArray)){ echo "checked";}?>/>
           <label>América Central</label>
           <br/> 
-	  	  <input name="qtd7[]" type="checkbox" value="7c" />
+	  	  <input name="qtd7[]" type="checkbox" value="7c" <? if(in_array("7c", $meuArray)){ echo "checked";}?>/>
           <label>América do Norte</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7d" />
+	  	  <input name="qtd7[]" type="checkbox" value="7d" <? if(in_array("7d", $meuArray)){ echo "checked";}?>/>
           <label>Europa</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7e" />
+	  	  <input name="qtd7[]" type="checkbox" value="7e" <? if(in_array("7e", $meuArray)){ echo "checked";}?>/>
           <label>Ásia</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7f" />
+	  	  <input name="qtd7[]" type="checkbox" value="7f" <? if(in_array("7f", $meuArray)){ echo "checked";}?>/>
           <label>África</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7g" />
+	  	  <input name="qtd7[]" type="checkbox" value="7g" <? if(in_array("7g", $meuArray)){ echo "checked";}?>/>
           <label>Oceania</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7h" />
+	  	  <input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>/>
           <label>países Ibero-Americanos</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7i" />
+	  	  <input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>/>
           <label>países da União Europeia</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7j" />
+	  	  <input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>/>
           <label>países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
           <br/>
-	  	  <input name="qtd7[]" type="checkbox" value="7k" />
+	  	  <input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/>
           <label>em nível mundial, englobando todos os continentes</label>
           <br/>       
-	  	  <input name="qtd7[]" type="checkbox" value="7l" />
+	  	  <input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
           <label>em acordo bilateral, no caso de apenas um outro país</label>
           <br/>        
-   	  	  <input name="qtd7[]" type="checkbox" value="7m" />
+   	  	  <input name="qtd7[]" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>
           <label>Qual?</label>
           <input name="qtd7quais" value="<?php echo $_POST[qtd7quais];?>" type="text" />
            </p>
