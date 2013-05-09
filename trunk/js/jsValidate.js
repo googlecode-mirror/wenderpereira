@@ -30,6 +30,34 @@ if (campo.value.length == conjunto3)
   }
 }
 
+// CNPJ
+if (formato=='cnpj'){
+	separador1 = '.'; 
+	separador2 = '.'; 
+	separador3 = '/';
+	separador4 = '-';
+		conjunto1 = 2;
+		conjunto2 = 6;
+		conjunto3 = 10;
+		conjunto4 = 15;
+if (campo.value.length == conjunto1)
+  {
+  campo.value = campo.value + separador1;
+  }
+if (campo.value.length == conjunto2)
+  {
+  campo.value = campo.value + separador1;
+  }
+if (campo.value.length == conjunto3)
+  {
+  campo.value = campo.value + separador3;
+  }
+  if (campo.value.length == conjunto4)
+  {
+  campo.value = campo.value + separador4;
+  }
+}
+
 // nascimento
 if (formato=='nascimento'){
 	separador = '/'; 
@@ -111,24 +139,24 @@ function validateEmail_(form_id,email) {
       return false;
    }
 }
-
-		function findCEP() {
-		    if($.trim($("#idFrmCep").val()) != ""){
-		        $("#ajax-loading").css('display','inline');
-				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#idFrmCep").val().replace("-", ""), function(){
-		            if(resultadoCEP["resultado"] == 1){
-		                $("#idFrmEndereco").val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
-		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
-		                $("#city").val(unescape(resultadoCEP["cidade"]));
-		                $("#cmbUnidadeFederativa").val(unescape(resultadoCEP["uf"]));
-		         //       $("#number").focus();
-		            }else{
-		                alert("Endereço não encontrado para o cep ");
-		            }
-		            $("#ajax-loading").hide();
-		        });
-		    }
-		}
-		$(document).ready(function(){
-		    $("#zipcode").mask("99999-999")
-		});
+//
+//		function findCEP() {
+//		    if($.trim($("#idFrmCep").val()) != ""){
+//		        $("#ajax-loading").css('display','inline');
+//				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#idFrmCep").val().replace("-", ""), function(){
+//		            if(resultadoCEP["resultado"] == 1){
+//		                $("#idFrmEndereco").val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
+//		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
+//		                $("#city").val(unescape(resultadoCEP["cidade"]));
+//		                $("#cmbUnidadeFederativa").val(unescape(resultadoCEP["uf"]));
+//		         //       $("#number").focus();
+//		            }else{
+//		                alert("Endereço não encontrado para o cep ");
+//		            }
+//		            $("#ajax-loading").hide();
+//		        });
+//		    }
+//		}
+//		$(document).ready(function(){
+//		    $("#zipcode").mask("99999-999")
+//		});
