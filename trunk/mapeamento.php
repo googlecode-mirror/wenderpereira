@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 <? 
 	session_start();
 	include "conexao.php";
@@ -13,28 +12,21 @@
 	$_POST[txtCargoInstituicao] = $txtCargoInstituicao;
 	$_POST[txtTelefone] = $txtTelefone;
 	$_POST[txtEmail] = $txtEmail;
-
 	$sql = "select * from mapeamento Where usuario= '$Login'";
 	$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-
-	while ($array_exibir = mysql_fetch_array($Resultado)) {
+	while ($array_exibir = mysql_fetch_array($Resultado)) 
+	{
 		$txtNome = ($array_exibir['nome']);
 		$txtCargoInstituicao = ($array_exibir['cargointituicao']);
 		$txtCpf = ($array_exibir['cpf']);
 		$txtTelefone = ($array_exibir['telefone']);
 		$txtEmail = ($array_exibir['email']);
 	}
-
-	
 ?>
-
-
    <script src="js/jsValidate.js" type="text/javascript"></script>
    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
    <script src="js/jquery.validate.js" type="text/javascript"></script>
    <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
-  
-         
 	 <style type="text/css">
       /* Estilizar os alertas */
       label.error{
@@ -46,25 +38,22 @@
 
 <title>Funarte - Portal das Artes</title>
 </head>
-
-
 <body>
 <form id="form1" name="form1" method="post" action="sql\mapeamento.php">
  <div>
- 
-  <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
+   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
        <tr>
       <th colspan="4" align="left" scope="row">
-          <div align="center"><strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong>
-            <br />
-          </div>
-          <label>
-            <div align="center">Os campos com asterisco* são de preenchimento obrigatório:</div>
-          </label>
-          <div align="center"></div>
-          <p>
-            <label>Responsável pelo preenchimento das informações:</label>
-          </p>
+        <div align="center"><strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong>
+          <br />
+        </div>
+        <label>
+          <div align="center">Os campos com asterisco* são de preenchimento obrigatório:</div>
+        </label>
+        <div align="center"></div>
+        <p>
+         <label>Responsável pelo preenchimento das informações:</label>
+        </p>
       </th>
       </tr>
       <tr>
@@ -80,8 +69,8 @@
       <tr>
       <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
       <td width="144">
-          <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
-          onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
+        <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
+        onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
       </td>
       <td width="74"><label id="email">
       <div align="center">Email:</div>
@@ -100,9 +89,9 @@
          validateEmail_('form1','txtEmail');"/>
        </td>
       <td>
-       </td>
+      </td>
       <td>
-        </td>
+      </td>
       </tr>
       <tr>
       <td width="153"></td>
@@ -112,28 +101,20 @@
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td width="17"></td>
       </tr>
       <tr>
-      <th align="left" scope="row">&nbsp;</th>
-      <td>        <input type="submit" name="cadastrar" value="avancar" class="botao" 
-      onkeypress="return handleEnter(this, event);" />
-       </td>
-      <td><span class="formu2">
-        <input type="submit" name="cadastrar" value="avancar" class="botao" 
-      onkeypress="return handleEnter(this, event);" />
-      </span></td>
-      <td>
-      <input type="reset" value="Limpar" />
-      </td>
-      <td></td>
-    </tr>
+      <th colspan="4" align="left" scope="row"><div align="center">
+       <input type="submit" name="cadastrar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" />
+         <input type="submit" name="editar" value="editar" class="botao" onkeypress="return handleEnter(this, event);" />
+       <input type="reset" value="Limpar" />      
+       <span class="formu2">
+       </span></div></th>
+      </tr>
       <tr>
-        <th align="left" scope="row">&nbsp;</th>
-        <td></td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td></td>
+       <th align="left" scope="row">&nbsp;</th>
+       <td></td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
       </tr>
   </table>
   </div>

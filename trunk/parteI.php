@@ -57,8 +57,8 @@
 							("#idFrmCep").val().replace("-", ""), function(){
 		            if(resultadoCEP["resultado"] == 1){
 		                $("#idFrmEndereco").val(unescape(resultadoCEP["tipo_logradouro"])+" "+unescape(resultadoCEP["logradouro"]));
-		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
-		                $("#city").val(unescape(resultadoCEP["cidade"]));
+		             //   $("#ifFrmMunicipio").val(unescape(resultadoCEP["bairro"]));
+		                $("#ifFrmMunicipio").val(unescape(resultadoCEP["cidade"]));
 		                $("#cmbUnidadeFederativa").val(unescape(resultadoCEP["uf"]));
 		         //       $("#number").focus();
 		            }else{
