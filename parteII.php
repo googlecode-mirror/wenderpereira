@@ -67,8 +67,8 @@
   
     <td align="left" class="formu2">
     
-    <label>• Qual o principal objetivo dos programas de residência artística? </label>
-    <strong>marque no máximo os 3  itens de maior importância</strong> <br />
+    <label>• Qual o principal objetivo dos programas de residência artística? (</label>
+    <strong>marque no máximo os 3  itens de maior importância</strong>)* <br />
     <p>
       <input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>/>
       <label>promover o intercâmbio/troca de conhecimentos entre os artistas realizadores do projeto e o público em geral ( ênfase na troca de conhecimentos) </label>

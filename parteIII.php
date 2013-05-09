@@ -238,8 +238,8 @@
       <tr>
         <td colspan="2">
         <div>
-        <label>Quanto à presença de artistas estrangeiros no Brasil e/ou 
-        artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
+        <label>•Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? 
+        (marque quantos itens julgar necessário)*:*</label>
          <p>
 	  	  <input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>/>
           <label>América do Sul</label>
