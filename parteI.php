@@ -104,17 +104,18 @@
         <label>• CNPJ:</label>
         </td>
         <td>
-        <input name="txtCnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"/>
+        <input name="txtCnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
+          onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');"/>
         <div style="display:inline;">
         <a href="javascript:marcarCheck();">
-        <img src="images/busca.png" alt="Pesquisar" border="0" />
         </a>		        
         </div>
         </td>
         </tr>
         <tr>
         <td><label>• CEP*:</label></td>
-        <td><input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
+        <td>
+        <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
         onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"/>
         <div style="display:inline;"><a href="javascript:findCEP()"> <img src="images/busca.png" alt="Pesquisar" border="0" />
         </a>
@@ -181,7 +182,7 @@
         <tr>
         <td height="26"><label>• Telefone: </label></td>
         <td>
-        <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
+        <input name="txtTelefone" maxlength="14" value="<?php echo $txtTelefone;?>" type="text" 
         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');
         validateEmail_('form1','txtEmail');"/>
         </td>
