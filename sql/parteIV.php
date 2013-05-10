@@ -9,7 +9,7 @@
         
         //----------------------------
         // confirma se o form já foi preenchido
-        $sql = "select * from usuarios where login='wender'";
+        $sql = "select * from usuarios where login='$Login'";
         $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
         while ($array_exibir = mysql_fetch_array($Resultado)) 
         {
