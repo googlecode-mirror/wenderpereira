@@ -64,7 +64,7 @@
 	 ?>	
     <?
      if ($_POST[atualizar] == "atualizar") { 
-
+		echo("atualizado");
 	$sqlquery = "UPDATE mapeamento SET 
 		nome = '$_POST[txtNome]',
 		cargointituicao= '$_POST[txtCargoInstituicao]',
@@ -73,5 +73,6 @@
 		email ='$_POST[txtEmail]'
 	WHERE usuario = '$_SESSION[login]'"; 
 	$process = mysql_query($sqlquery) or die("Erro: " . mysql_error());
+
 	  }
 	 ?>
