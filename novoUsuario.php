@@ -19,9 +19,9 @@
       </style>
 
 <body>
-<!--<form name="form1" method="POST" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
+<!--<form name="form1" method="post" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
 
-<form name="form1" id="form1" method="POST" action="email.php">
+<form name="form1" id="form1" method="post" action="email.php">
 
 		<div align="center">
 		<center>
@@ -58,7 +58,7 @@
                           <div align="left">
                             <input type="text" class="cor-inativa" id="login" name="login" size="20" tabindex="1" />
                           </div></td>
-                          <td width="71"><input type="Submit" value="Salvar" tabindex="5"/></td>
+                          <td width="71"><input type="submit"" value="Salvar" tabindex="5"/></td>
                         </tr>
                         <tr>
                           <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>

@@ -9,16 +9,16 @@
 
 	$date = date("d/m/y");
 	$hora = date("H:i");
-	$Login 		= anti_sql_injection($_POST["login"]);
-	$Senha 		= anti_sql_injection($_POST["senha"]);
-	$Senha1		= anti_sql_injection($_POST["senha1"]);
-	$Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
-	$Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
-	$Ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";	
+	$login 		= anti_sql_injection($_POST["login"]);
+	$senha 		= anti_sql_injection($_POST["senha"]);
+	$senha1		= anti_sql_injection($_POST["senha1"]);
+	$nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
+	$email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
+	$ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$email&1425=$login";	
 	// Pega os valores do campo Mensagem
-	$Agradecimento = "Dúvidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
+	$agradecimento = "Dúvidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
 	
-	if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
+	if (empty($login) OR empty($senha) OR $senha != $senha1) {
 	?>
 		    <script>
                alert("Senhas diferentes ou usuário já existe no banco de dados!");
@@ -35,7 +35,7 @@
 
 $consulta = "INSERT INTO usuarios (login,senha,nome,ativo,email,data,hora)
  VALUES 
- ('$Login','$Senha','$Nome','1','$Email','$date','$hora')";
+ ('$login','$Senha','$nome','1','$email','$date','$hora')";
  
 $resultado = mysql_query($consulta)
 or die ("Usuário ou senha já existem, falha ao inserir dados!");
@@ -45,16 +45,16 @@ or die ("Usuário ou senha já existem, falha ao inserir dados!");
 //-----------------------------------------------
 
 
-	// $Nome		= $_POST["Nome"];	// Pega o valor do campo Nome
+	// $nome		= $_POST["Nome"];	// Pega o valor do campo Nome
 	// $Fone		= $_POST["Fone"];	// Pega o valor do campo Telefone
-	// $Email		= $_POST["Email"];	// Pega o valor do campo Email
+	// $email		= $_POST["Email"];	// Pega o valor do campo Email
 	// $Mensagem	= $_POST["Mensagem"];	// Pega os valores do campo Mensagem
 
 
  
  // Variável que junta os valores acima e monta o corpo do email
-$Vai = "$Nome,\n\n Seus dados de cadastro são \n\n Usuário: $Nome \n \n E-mail: $Email \n\n Para ativar o seu login clique no link abaixo! \n
-		\n Link de ativação: $Ativacao\n \n\n $Agradecimento";
+$Vai = "$nome,\n\n Seus dados de cadastro são \n\n Usuário: $nome \n \n E-mail: $email \n\n Para ativar o seu login clique no link abaixo! \n
+		\n Link de ativação: $ativacao\n \n\n $agradecimento";
 
 require_once("phpmailer/class.phpmailer.php");
 
@@ -93,11 +93,11 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 // Insira abaixo o email que irá receber a mensagem, o email que irá enviar (o mesmo da variável GUSER), 
 //o nome do email que envia a mensagem, o Assunto da mensagem e por último a variável com o corpo do email.
 
- if (smtpmailer($Email, '$Email', 'Nome do Enviador', $Email, $Vai)) {
+ if (smtpmailer($email, '$email', 'Nome do Enviador', $email, $Vai)) {
 
 ?>
 <script>
- alert("A senha foi enviada para o seu email!". echo $Email."");
+ alert("A senha foi enviada para o seu email!". echo $email."");
 	//Header("location:http://localhost:8080/"); // Redireciona para uma página de obrigado.
 </script>
 <?

@@ -1,18 +1,18 @@
 <?php
-// $Nome		= $_POST["Nome"];	// Pega o valor do campo Nome
-// $Fone		= $_POST["Fone"];	// Pega o valor do campo Telefone
-// $Email		= $_POST["Email"];	// Pega o valor do campo Email
-// $Mensagem	= $_POST["Mensagem"];	// Pega os valores do campo Mensagem
+// $nome		= $_POST["Nome"];	// Pega o valor do campo Nome
+// $fone		= $_POST["Fone"];	// Pega o valor do campo Telefone
+// $email		= $_POST["Email"];	// Pega o valor do campo Email
+// $mensagem	= $_POST["Mensagem"];	// Pega os valores do campo Mensagem
 
- $Nome		= "Nome"	// Pega o valor do campo Nome
- $Fone		= "Fone"	// Pega o valor do campo Telefone
- $Email		= "Email"	// Pega o valor do campo Email
- $Mensagem	= "Mensagem"	// Pega os valores do campo Mensagem
+ $nome		= "Nome"	// Pega o valor do campo Nome
+ $fone		= "Fone"	// Pega o valor do campo Telefone
+ $email		= "Email"	// Pega o valor do campo Email
+ $mensagem	= "Mensagem"	// Pega os valores do campo Mensagem
 
 
 // Variável que junta os valores acima e monta o corpo do email
 
-$Vai 		= "Nome: $Nome\n\nE-mail: $Email\n\nTelefone: $Fone\n\nMensagem: $Mensagem\n";
+$vai = "Nome: $nome\n\nE-mail: $email\n\nTelefone: $fone\n\nMensagem: $mensagem\n";
 
 require_once("phpmailer/class.phpmailer.php");
 
@@ -46,7 +46,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 // Insira abaixo o email que irá receber a mensagem, o email que irá enviar (o mesmo da variável GUSER), 
 //o nome do email que envia a mensagem, o Assunto da mensagem e por último a variável com o corpo do email.
 
- if (smtpmailer('wendercorrea@gmail.com', '$Email', 'Nome do Enviador', 'Assunto do Email', $Vai)) {
+ if (smtpmailer('wendercorrea@gmail.com', '$email', 'Nome do Enviador', 'Assunto do Email', $vai)) {
 
 	Header("location:http://www.dominio.com.br/obrigado.html"); // Redireciona para uma página de obrigado.
 
