@@ -41,34 +41,33 @@
   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
     <tr bgcolor="#C7C7C7">
       <td align="left" bgcolor="#C7C7C7" class="formu2"><div align="left">
-        <div align="center"><b></b></div>
+        <br/>
         <b><label>
           <div align="center">PARTE II</div>
         </label>
-        <div align="center"><br/>
-        </div>
+        <br/>
         <label>
           <div align="center">SOBRE  OS PROGRAMAS DE RESIDÊNCIA ARTÍSTICA</div>
         </label>
-		</b>
-        <div align="center"><br/>
-
-
-       </div>
-        </div>
+        <br/>
+		</b></div>
         <table width="99%" align="center" border="0">
           <tr>
             <th>
-              <div align="justify">Um programa de residências artísticas consiste num conjunto de ações voltadas para o incentivo à experimentação, inovação, pesquisa e criação no campo das artes. Isto se dá, em geral, através do apoio (financeiro ou não) concedido a artistas que, na maior parte das vezes, saem de seu lugar de origem para realizar residências em outras localidades. A instituição pode realizar o programa de residências artísticas por meio de recursos oriundos de outros editais públicos e privados, por meio de seus próprios editais/recursos ou qualquer outra forma de financiamento direto ou indireto. Os programas podem ou não conceder apoio financeiro ao artista, podendo a instituição arcar com parte dos custos ou com a totalidade deles. Os locais de realização das residências variam conforme o programa, podendo abranger desde um município até os mais diferentes países. Os programas podem abranger uma ou mais linguagens artísticas (circo, dança, teatro, artes visuais, música, arte digital, literatura, cinema). Quanto à periodicidade, podem acontecer em períodos pré-estabelecidos, anualmente, semestralmente, etc. </div></th>
+              <div align="justify">
+                <p>Um programa de residências artísticas consiste num conjunto de ações voltadas para o incentivo à experimentação, inovação, pesquisa e criação no campo das artes. Isto se dá, em geral, através do apoio (financeiro ou não) concedido a artistas que, na maior parte das vezes, saem de seu lugar de origem para realizar residências em outras localidades. A instituição pode realizar o programa de residências artísticas por meio de recursos oriundos de outros editais públicos e privados, por meio de seus próprios editais/recursos ou qualquer outra forma de financiamento direto ou indireto. Os programas podem ou não conceder apoio financeiro ao artista, podendo a instituição arcar com parte dos custos ou com a totalidade deles. Os locais de realização das residências variam conforme o programa, podendo abranger desde um município até os mais diferentes países. Os programas podem abranger uma ou mais linguagens artísticas (circo, dança, teatro, artes visuais, música, arte digital, literatura, cinema). Quanto à periodicidade, podem acontecer em períodos pré-estabelecidos, anualmente, semestralmente, etc. </p>
+                <br/>
+              </div></th>
           </tr>
+          
         </table>
 	  </td>
     </tr>
   
     <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
     
-    <label>• Qual o principal objetivo dos programas de residência artística? (</label>
-    <strong>marque no máximo os 3  itens de maior importância</strong>)* <br />
+    <label>• Qual o principal objetivo dos programas de residência artística? </label>
+    (marque no máximo os 3  itens de maior importância)* <br />
     <p>
       <input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>/>
       <label>promover o intercâmbio/troca de conhecimentos entre os artistas realizadores do projeto e o público em geral ( ênfase na troca de conhecimentos) </label>
@@ -571,9 +570,14 @@
   </div>
     </td>
     </tr>
-    <td align="center" class="formu2">
+    <tr bgcolor="#D2D2D2">
+      <td align="center" class="formu2">&nbsp;</td>
+    </tr>
+    <tr bgcolor="#C7C7C7"><td align="center" class="formu2">
        <input type="submit" name="enviar" value="avancar">
     </td>
+    </tr><tr>
+      <td align="center" bgcolor="#D2D2D2" class="formu2">&nbsp;</td>
     </tr>
   </table>
 </form>
