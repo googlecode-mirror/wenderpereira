@@ -37,7 +37,7 @@
      }
      </style>
 </head>
-<form name="form1" id="form1" method="POST"  action="sql\parteII.php">
+<form name="form1" id="form1" method="post"  action="sql\parteII.php">
   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
     <tr>
       <td align="left" class="formu2"><div align="left">

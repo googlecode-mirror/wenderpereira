@@ -93,7 +93,7 @@ font-weight: bold;
 </style>
 </head>
 <body>
-<form name="form1" id="form1" method="POST"  action="sql\parteI.php">
+<form name="form1" id="form1" method="post"  action="sql\parteI.php">
   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
   <tr>
   <td colspan="2">

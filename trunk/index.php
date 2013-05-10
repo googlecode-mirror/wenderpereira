@@ -34,7 +34,7 @@
     <tr>
       <td width="50" height="205">&nbsp;</td>
       <td width="420" height="205">
-  <form name="form1" id="form1" method="POST" action="login.php">
+  <form name="form1" id="form1" method="post" action="login.php">
   <div align="center">
     <center>
       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
