@@ -42,27 +42,28 @@
 
 <form id="form1" name="form1" method="post" action="sql\parteIII.php">
 
-<table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
-      <tr>
-        <td colspan="2">
+<table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+      <tr bgcolor="#C7C7C7">
+        <td>
                 <div align="center"><strong><em>PARTE III</em></strong>
                         </p>
                             <strong></strong></div>
           <strong><p align="center">SOBRE  OS ARTISTAS RESIDENTES</p></strong>               
 
 		</td>
-      </tr>
-      <tr>
-        <td colspan="2">
+    </tr>
+      <tr bgcolor="#C7C7C7">
+        <td>
         <div>
         <p>
+        <b>
     Os artistas apoiados por programas de residências artísticas podem ser oriundos de diversos países, havendo a possibilidade do artista vir fazer a residência no Brasil, bem como, um artista brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido. O número de artistas apoiados pode variar por programa.
-        </p>
+       </b> </p>
     <div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
+      <tr bgcolor="#D2D2D2">
+        <td bgcolor="#D2D2D2">
       <div>
        <label>Quantos artistas foram apoiados em média ao ano?</label>
          <p>
@@ -99,8 +100,8 @@
       </div>
       </td>
       </tr>
-      <tr>
-      <td colspan="2">
+      <tr bgcolor="#C7C7C7">
+      <td>
       <div>
         <label>O número de artistas apoiados foi o mesmo em todas os programas( marque apenas 1 item)?</label>
           <br/>
@@ -125,8 +126,8 @@
         </div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
+      <tr bgcolor="#D2D2D2">
+        <td>
         <div>
         <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
           <p>
@@ -169,8 +170,8 @@
 	  </div>
       </td>
       </tr>
-      <tr>
-      <td colspan="2">
+      <tr bgcolor="#C7C7C7">
+      <td>
       <div>
       <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
       <p>
@@ -190,8 +191,8 @@
     </div>
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
+      <tr bgcolor="#D2D2D2">
+        <td>
              <div>
         <label>Existe a possibilidade de intercâmbio entre artistas brasileiros e 
         internacionais nos programas de residências artísticas(marque apenas 1 item)?*</label>
@@ -209,8 +210,8 @@
         
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
+      <tr bgcolor="#C7C7C7">
+        <td>
      <div>
         <label>Quanto à presença de artistas estrangeiros no Brasil e/ou
          artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
@@ -235,8 +236,8 @@
         </div>   
         </td>
       </tr>
-      <tr>
-        <td colspan="2">
+      <tr bgcolor="#D2D2D2">
+        <td>
         <div>
         <label>•Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? 
         (marque quantos itens julgar necessário)*:*</label>
@@ -280,20 +281,20 @@
    	  	  <input name="qtd7[]" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>
           <label>Qual?</label>
           <input name="qtd7quais" value="<?php echo $_POST[qtd7quais];?>" type="text" />
-           </p>
+          </p>
           </div>
        </td>
       </tr>
-      <tr>
-        <td width="25%">&nbsp;</td>
-        <td width="75%">
-        <input type="submit" name="cadastrar" value="avancar" class="botao" 
-      onKeyPress="return handleEnter(this, event)">
-        </td>
+      <tr bgcolor="#C7C7C7">
+        <td>
+          <div align="center">
+            <input type="submit" name="cadastrar" value="avancar" class="botao" 
+      onKeyPress="return handleEnter(this, event)">        
+          </div></td>
       </tr>
         <br/>
-    <tr>
-      <td colspan="2" align="center" class="formu2">&nbsp;</td>
+    <tr bgcolor="#D2D2D2">
+      <td align="center" class="formu2">&nbsp;</td>
     </tr>
   </table>
 
