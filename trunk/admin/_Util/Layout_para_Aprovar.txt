@@ -1,0 +1,22 @@
+   function getArray(){
+   	  	$sql = "select * from pesquisa";
+		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+		$i=0;
+		$resposta = array();
+		while ($array_exibir = mysql_fetch_array($Resultado)) {
+			$resposta[$i] = ($array_exibir['respostas']);
+			$i++;
+		}
+   	    return $resposta;
+      }
+   ?>
+     <?php
+	$meuArray = getArray();
+	print_r($meuArray);
+	?>
+    <? if (in_array("5a", $meuArray)){ echo "checked";	}?>
+
+
+
+     <input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";	}?>
+     id="qtd5[]"> 
