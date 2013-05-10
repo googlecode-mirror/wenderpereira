@@ -36,6 +36,7 @@
            }
       </style>
 
+
 <title>Funarte - Portal das Artes</title>
 </head>
 <body>
@@ -104,9 +105,9 @@
       </tr>
       <tr>
       <th colspan="4" align="left" scope="row"><div align="center">
-       <input type="submit" name="cadastrar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" />
-         <input type="submit" name="editar" value="editar" class="botao" onkeypress="return handleEnter(this, event);" />
-       <input type="reset" value="Limpar" />      
+       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
        <span class="formu2">
        </span></div></th>
       </tr>
