@@ -53,7 +53,7 @@
         </label>
         <div align="center"></div>
         <p>
-         <label> Responsável pelo preenchimento das informações:</label>
+         <label>&nbsp; Responsável pelo preenchimento das informações:</label>
         </p>
       </th>
       </tr>
