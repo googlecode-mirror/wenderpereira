@@ -38,9 +38,9 @@
      </style>
 </head>
 <form name="form1" id="form1" method="post"  action="sql\parteII.php">
-  <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
-    <tr>
-      <td align="left" class="formu2"><div align="left">
+  <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
+    <tr bgcolor="#C7C7C7">
+      <td align="left" bgcolor="#C7C7C7" class="formu2"><div align="left">
         <div align="center"><b></b></div>
         <b><label>
           <div align="center">PARTE II</div>
@@ -65,7 +65,7 @@
 	  </td>
     </tr>
   
-    <td align="left" class="formu2">
+    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
     
     <label>• Qual o principal objetivo dos programas de residência artística? (</label>
     <strong>marque no máximo os 3  itens de maior importância</strong>)* <br />
@@ -101,7 +101,7 @@
       <label> Outros<label> Quais?</label>
       <input name="qtd1quais" value="<?php echo $_POST[qtd1quais];?>" type="text" />
     </p>
-    <tr>
+    <tr bgcolor="#C7C7C7">
     <td align="left" class="formu2">
           <label>• As ações em residências artísticas possuem um valor previsto planejado (marque apenas 1 item)?* </label>
           <label>
@@ -112,7 +112,7 @@
           <input type="radio" name="qtd2" <? if(in_array("2b", $meuArray)){ echo "checked";}?> value="2b" class="radio" />
      	  Não</label>
     </td>
-    <tr>
+    <tr bgcolor="#D2D2D2">
     <td height="412" align="left" class="formu2">
     <br/>
     <div>
@@ -179,7 +179,7 @@
     </div>
 	<br/>
     </td>
-    <tr>
+    <tr bgcolor="#C7C7C7">
       <td align="left" class="formu2">
       <label>Quanto ao local das realizações das residências (marque apenas 1 item)*:</label>
 		<br/>
@@ -202,7 +202,7 @@
         <br/>
       </td>
     </tr>
-    <tr>
+    <tr bgcolor="#D2D2D2">
       <td align="left" class="formu2">
       <label>Em caso de abrangência nacional, quando as residências puderem se desenvolver em mais de uma região geográfica
       , quais estão envolvidas?(marque quantos itens julgar necessário)*:</label>
@@ -229,7 +229,7 @@
       <br/>
       </td>
     </tr>
-    <tr>
+    <tr bgcolor="#C7C7C7">
       
       <td align="left" class="formu2">
         <label>• As residências podem ocorrer em países do exterior (marque apenas um item)?*</label>
@@ -244,7 +244,7 @@
         <br/>
       </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
       <div>
     <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências? (marque quantos itens julgar necessário):</label>
     <p>
@@ -290,7 +290,7 @@
   </div>
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
     <div>
     <label>• Aponte em quais anos ocorreram programas em residências artísticas (marque quantos itens julgar necessário)</label>
     *
@@ -339,7 +339,7 @@
   </div>
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
     <div>
     <label>• Com relação à continuidade destes programas em residências artísticas (marque apenas 1 item)*:</label>
     <p>
@@ -364,7 +364,7 @@
     
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
     <div>
     <label>• Em caso dos programas terem ocorridos mais de uma vez e terem periodicidade definida (marque apenas 1 item)*:</label>
     <p>
@@ -389,7 +389,7 @@
     
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
     <div>
     <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?(marque apenas 1 item)*
     </label>
@@ -406,7 +406,7 @@
   </div>
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
     <div>
     <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?</label>
     <p>
@@ -451,7 +451,7 @@
       </div>
       </td>
       </tr>
-      <td height="27" align="left" class="formu2">
+      <tr bgcolor="#D2D2D2"><td height="27" align="left" class="formu2">
       <div>
       <label>• Qual o apoio financeiro concedido (em reais) para que cada artista realize a ação?
      (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*:</label>
@@ -495,7 +495,7 @@
   </div>
     </td>
     </tr>
-    <td align="left" class="formu2">
+    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
     <div>
     <label>• O valor concedido já é deduzido do imposto de renda devido*?  (marque apenas 1 item):</label>
     <p>
@@ -516,7 +516,7 @@
     </td>
     </tr>
   
-    <td align="left" class="formu2">
+    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
     <div>
     <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário*)</label>
     <p>

@@ -42,10 +42,10 @@
 <body>
 <form id="form1" name="form1" method="post" action="sql\mapeamento.php">
  <div>
-   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;">
-       <tr>
+   <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;font-family: Verdana;">
+       <tr bgcolor="#C7C7C7">
       <th colspan="4" align="left" scope="row">
-        <div align="center"><strong>Mapeamento dos Programas  de Residências Artísticas no Brasil</strong>
+        <div align="center">Mapeamento dos Programas  de Residências Artísticas no Brasil
           <br />
         </div>
         <label>
@@ -53,35 +53,35 @@
         </label>
         <div align="center"></div>
         <p>
-         <label>Responsável pelo preenchimento das informações:</label>
+         <label> Responsável pelo preenchimento das informações:</label>
         </p>
       </th>
       </tr>
-      <tr>
-      <th width="153" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
+      <tr bgcolor="#D2D2D2">
+      <th width="160" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
       <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94"/>
       </td>
       </tr>
-      <tr>
+      <tr bgcolor="#D2D2D2">
       <th height="32" align="center" scope="row"><label id="lblCargoInstituicao">Cargo na instituição*:</label></th>
       <td colspan="3"><input name="txtCargoInstituicao" id="idFrmCargoIntituicao"
        value="<?php echo $txtCargoInstituicao;?>" type="text" size="94" /></td>
       </tr>
-      <tr>
+      <tr bgcolor="#D2D2D2">
       <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
-      <td width="144">
+      <td width="151">
         <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
         onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
       </td>
-      <td width="74"><label id="email">
+      <td width="41"><label id="email">
       <div align="center">Email:</div>
       </label>
       </td>
-      <td width="375">
+      <td width="430">
       <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="46"/>
       </td>
       </tr>
-      <tr>
+      <tr bgcolor="#D2D2D2">
       <th align="center" scope="row">
       <label id="telefone">Telefone:( )</label>
       <td>
@@ -89,21 +89,17 @@
          onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');
          validateEmail_('form1','txtEmail');"/>
        </td>
-      <td>
-      </td>
-      <td>
+      <td colspan="2">
       </td>
       </tr>
-      <tr>
-      <td width="153"></td>
+      <tr bgcolor="#D2D2D2">
+      <td width="160"></td>
       </tr>
-      <tr>
-      <th align="left" scope="row">&nbsp;</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <tr bgcolor="#D2D2D2">
+      <th colspan="2" align="left" scope="row">&nbsp;</th>
+      <td colspan="2">&nbsp;</td>
       </tr>
-      <tr>
+      <tr bgcolor="#D2D2D2">
       <th colspan="4" align="left" scope="row"><div align="center">
        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -111,11 +107,8 @@
        <span class="formu2">
        </span></div></th>
       </tr>
-      <tr>
-       <th align="left" scope="row">&nbsp;</th>
-       <td></td>
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
+      <tr bgcolor="#C7C7C7">
+       <th colspan="4" align="left" scope="row">&nbsp;</th>
       </tr>
   </table>
   </div>
