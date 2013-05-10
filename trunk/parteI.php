@@ -300,7 +300,7 @@ font-weight: bold;
   </td>
   </tr>
   <tr bgcolor="#D2D2D2">
-  <td colspan="2" align="left" class="formu2">
+  <td colspan="2" align="left" bgcolor="#D2D2D2" class="formu2">
   <div align="left">
   <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
   <br />
@@ -330,7 +330,7 @@ font-weight: bold;
   </td>
   </tr>
   <tr bgcolor="#C7C7C7">
-  <td colspan="2" align="left" class="formu2">
+  <td colspan="2" align="left" bgcolor="#C7C7C7" class="formu2">
   <div align="left">
   <label> •	Qual o tamanho aproximado da instituição em termos de número de funcionários (marque apenas 1 item)*:</label>
   <br/>
@@ -357,9 +357,17 @@ font-weight: bold;
   </td>
   </tr>
   <tr bgcolor="#D2D2D2">
+    <td colspan="2" align="center" class="formu2">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#C7C7C7">
   <td colspan="2" align="center" class="formu2">
-  <input type="submit" name="enviar" value="avancar">
+       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
   </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td colspan="2" align="center" class="formu2">&nbsp;</td>
   </tr>
       
   </table>

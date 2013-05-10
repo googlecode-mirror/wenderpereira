@@ -42,8 +42,9 @@
 <body>
 <form id="form1" name="form1" method="post" action="sql\mapeamento.php">
  <div>
+  <br/>
    <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;font-family: Verdana;">
-       <tr bgcolor="#C7C7C7">
+       <tr bgcolor="#D2D2D2">
       <th colspan="4" align="left" scope="row">
         <div align="center">Mapeamento dos Programas  de Residências Artísticas no Brasil
           <br />
@@ -82,7 +83,7 @@
       </td>
       </tr>
       <tr bgcolor="#D2D2D2">
-      <th align="center" scope="row">
+      <th align="center" bgcolor="#D2D2D2" scope="row">
       <label id="telefone">Telefone:( )</label>
       <td>
         <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
@@ -99,7 +100,7 @@
       <th colspan="2" align="left" scope="row">&nbsp;</th>
       <td colspan="2">&nbsp;</td>
       </tr>
-      <tr bgcolor="#D2D2D2">
+      <tr bgcolor="#C7C7C7">
       <th colspan="4" align="left" scope="row"><div align="center">
        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -107,7 +108,7 @@
        <span class="formu2">
        </span></div></th>
       </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr bgcolor="#D2D2D2">
        <th colspan="4" align="left" scope="row">&nbsp;</th>
       </tr>
   </table>

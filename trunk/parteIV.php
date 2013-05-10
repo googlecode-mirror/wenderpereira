@@ -49,21 +49,26 @@
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="sql\parteIV.php">
-    <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+    <table width="80%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; 
+    font-family: Verdana, Geneva, sans-serif;">
       <tr bgcolor="#C7C7C7">
         <td colspan="2">
-         <p align="center">
- 		 <strong>PARTE IV</strong>
+      	 <p align="center"><strong>PARTE IV</strong>
+      	   <br/>
+      	   <br/>
+      	   <strong><em>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</em></strong> 
          <br/>
-         <br/>
- 		 <strong><em>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</em></strong>
-         </p>
- 		</td>
-      </tr>
-      <tr bgcolor="#C7C7C7">
-        <th colspan="2"><div> 
-          <div align="left">Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. Estas ações podem ser realizadas em inúmeros locais como praças, teatros, museus, etc. Indiretamente, as ações em residência podem envolver diversos públicos: outros artistas, cidadãos locais, pesquisadores, etc. Ao término da residência o artista pode ter elaborado uma série de produtos: filmes, pinturas, publicações, livros, etc. </div>
-        </div></th>
+      	   <div>
+      	   <b>Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. 
+           Estas ações podem ser realizadas em inúmeros locais como praças, teatros, museus, etc. Indiretamente, 
+           as ações em residência podem envolver diversos públicos: outros artistas, cidadãos locais, pesquisadores,
+           etc. Ao término da residência o artista pode ter elaborado uma série de produtos: filmes, pinturas, 
+           publicações, livros, etc. </b>
+           </div>
+      	   <br/>
+   	      </p>
+   
+        </div></td>
       </tr>
       <tr bgcolor="#D2D2D2">
         <td colspan="2"><label>Quais as principais ações realizadas pelos artistas durante a residência </label>
