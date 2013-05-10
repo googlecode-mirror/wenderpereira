@@ -22,21 +22,26 @@
 	    $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
 		}
 	  //------------------------------------------------------------------------------------
-  	  //		
-		  if($concluido == -1) {
+  	  //
+	 if ($_POST[avancar] == "avancar") { 
+		if($concluido == -1) {
 		  	  inseremapeamento($nome,$cargoInstituicao,$cpf,$email,$telefone,$Login,$date,$hora);
 			  atualizaconcluir($Login);
-		  } elseif ($concluido == 0){
-		  echo("Cadastramento do mapeamento já foi realizado!");  
-		  } elseif ($concluido == 1){
-		  echo("Cadastramento da Parte I já foi realizado!");   
-		  } elseif ($concluido == 2){
-			echo("Cadastramento da Parte II já foi realizado!"); 
-		  } elseif ($concluido == 3){
-			echo("Cadastramento da Parte III já foi realizado!"); 
-		  } elseif ($concluido == 4){
-			echo("Cadastramento da Parte IV já foi realizado!"); 	
-		  }else{
+			  } elseif ($concluido == 0){
+			  echo("Cadastramento do mapeamento já foi realizado!");  
+			  } elseif ($concluido == 1){
+			  echo("Cadastramento da Parte I já foi realizado!");   
+			  } elseif ($concluido == 2){
+				echo("Cadastramento da Parte II já foi realizado!"); 
+			  } elseif ($concluido == 3){
+				echo("Cadastramento da Parte III já foi realizado!"); 
+			  } elseif ($concluido == 4){
+				echo("Cadastramento da Parte IV já foi realizado!"); 	
+		 }else{
+				//else do teste igual a parte atualizado!
+			  }
+	  }else{
+		   //else do teste se o solicitante clicou em avançar!
 	  }
 	  function inseremapeamento(&$nome,&$cargoInstituicao,&$cpf,&$email,&$telefone,&$Login,&$date,&$hora){
       $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
@@ -46,8 +51,7 @@
 	  or die ("--");
 	  }
       //------------------------------------------------------------------------------------
-     
-	 function atualizaconcluir(&$Login){
+  	 function atualizaconcluir(&$Login){
 	 $consulta = "UPDATE usuarios SET concluido='0' WHERE login='$Login';";
      $resultado = mysql_query($consulta)
      or die ("--");
@@ -56,5 +60,18 @@
       alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
       </script>
 	  <?
-	}
- 	
+		}
+	 ?>	
+    <?
+     if ($_POST[atualizar] == "atualizar") { 
+
+	$sqlquery = "UPDATE mapeamento SET 
+		nome = '$_POST[txtNome]',
+		cargointituicao= '$_POST[txtCargoInstituicao]',
+		cpf = '$_POST[txtCpf]',
+		telefone ='$_POST[txtTelefone]',
+		email ='$_POST[txtEmail]'
+	WHERE usuario = '$_SESSION[login]'"; 
+	$process = mysql_query($sqlquery) or die("Erro: " . mysql_error());
+	  }
+	 ?>
