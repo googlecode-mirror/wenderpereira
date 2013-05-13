@@ -36,8 +36,8 @@
            }
       </style>-->
       
-    <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="/css/template.css" type="text/css"/>
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">

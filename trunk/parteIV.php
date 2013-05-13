@@ -47,8 +47,8 @@
      </style>
      -->
      
-     <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="/css/template.css" type="text/css"/>
+     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
@@ -453,7 +453,9 @@
         <td colspan="2">
           <div>
             <div align="center">
-              <input type="submit" name="enviar" value="avancar" class="botao" onfocus="verifiyCheckboxes("tipo", 1);">
+        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>              
             </div>
           </div>      
           </td>

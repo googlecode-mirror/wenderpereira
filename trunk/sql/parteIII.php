@@ -15,7 +15,7 @@
           $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
         }
           //----------------------------
-//      echo($Login);
+		  //  echo($Login);
           $questao1 = $_POST[qtd1];
           $questao2 = $_POST[qtd2];
           $questao3 = $_POST[qtd3];
@@ -25,6 +25,7 @@
           $questao6 = $_POST[qtd6];
           $questao7Quais = $_POST[qtd7quais];
          // inserindo informaçoes
+  if ($_POST[avancar] == "avancar") { 		 
         if($concluido == 2) 
         {
           // inserindo CheckBox  
@@ -66,14 +67,16 @@
 			echo("Cadastramento da Parte III já foi realizado!"); 
 		  } elseif ($concluido == 4){
 			echo("Cadastramento da Parte IV já foi realizado!"); 
-		  }else{
-	 	 }
-          //função insere---------------------------------------------  
+		 }else{
+				//else do teste igual a parte atualizado!
+			  }
+	  }else{
+		   //else do teste se o solicitante clicou em avançar!
+	  }
+	//função insere---------------------------------------------
         function insere(&$resposta1,&$usuario,&$date,&$hora) {
-                
                 $consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
                  VALUES ('$resposta1','$usuario','3','$date','$hora')";;
-                 
                 $resultado = mysql_query($consulta)
                 or die (mysql_error());
                 //função insere---------------------------------------------
@@ -98,5 +101,44 @@
       alert("ParteIII cadastradra, clique na parte IV para realizar o cadastro!");
       </script>
 	  <?
-	}
- 	
+		}
+ 	 ?>
+	 <?
+     if ($_POST[atualizar] == "atualizar") 
+	 { 
+  	     echo("Atualizado");
+		 $sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='3'";
+		 $resultado = mysql_query($sql)
+		 or die (mysql_error());
+		 
+		  if(empty($questao2)) {}else{
+          insere($questao1,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{     
+          insere($questao2,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{     
+          insere($questao2,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{    
+          insere($questao3,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{     
+          insere($questao4,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{     
+          insere($questao5,$Login,$date,$hora);}
+         if(empty($questao2)) {}else{     
+          insere($questao6,$Login,$date,$hora);}
+            // inserindo se não branco
+      if(empty($questao3Quais)) {
+            }else{
+          $qtdQuestao = qtd3;
+          inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}      
+            // inserindo se não branco
+      if(empty($questao7Quais)) {
+           }else{
+           $qtdQuestao = qtd7;
+           inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}     
+         //----------------------------
+          $_checkbox = $_POST['qtd7'];
+            foreach($_checkbox as $_valor){
+            insere($_valor,$Login,$date,$hora);
+           }
+	 }
+	 ?>
