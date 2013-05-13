@@ -30,6 +30,7 @@
 	  $questao8Quais = $_POST[qtd8Quais];
    	  $questao8Quais1 = $_POST[qtd8Quais1];
   	  $questao12Quais = $_POST[qtd12quais];
+  if ($_POST[avancar] == "avancar") { 
 	if($concluido == 1) 
 	{
 	  // inserindo CheckBox	 
@@ -105,9 +106,13 @@
 			echo("Cadastramento da Parte III já foi realizado!"); 
 		  } elseif ($concluido == 4){
 			echo("Cadastramento da Parte IV já foi realizado!"); 
-		  }else{
+		 }else{
+				//else do teste igual a parte atualizado!
+			  }
+	  }else{
+		   //else do teste se o solicitante clicou em avançar!
 	  }
-	//função insere---------------------------------------------  
+	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 		 VALUES ('$resposta1','$usuario','2','$date','$hora')";
@@ -132,4 +137,79 @@
       </script>
 	  <?
 	}
- 	
+ 	 ?>
+	 <?
+     if ($_POST[atualizar] == "atualizar") 
+	 { 
+  	     echo("Atualizado");
+		 $sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='2'";
+		 $resultado = mysql_query($sql)
+		 or die (mysql_error());
+	 // inserindo CheckBox	 
+	  $_checkbox = $_POST['qtd1'];
+	  foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }	  
+	  $_checkbox = $_POST['qtd3'];
+	  foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }	  
+	  $_checkbox = $_POST['qtd5'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
+	  $_checkbox = $_POST['qtd7'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
+	  $_checkbox = $_POST['qtd8'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }		  
+	  $_checkbox = $_POST['qtd13'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }
+	  $_checkbox = $_POST['qtd15'];
+		foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	  }
+	  // inserindo informaçoes
+ 	  if(empty($questao2)) {}else{
+	  insere($questao2,$Login,$date,$hora);}
+	  if(empty($questao4)) {}else{	  
+      insere($questao4,$Login,$date,$hora);}
+ 	  if(empty($questao6)) {}else{	  
+ 	  insere($questao6,$Login,$date,$hora);}
+ 	  if(empty($questao9)) {}else{
+	  insere($questao9,$Login,$date,$hora);}
+	  if(empty($questao10)) {}else{	  
+ 	  insere($questao10,$Login,$date,$hora);}
+ 	  if(empty($questao11)) {}else{	  
+ 	  insere($questao11,$Login,$date,$hora);}
+ 	  if(empty($questao12)) {}else{	  
+ 	  insere($questao12,$Login,$date,$hora);}
+	  if(empty($questao14)) {}else{	  
+	  insere($questao14,$Login,$date,$hora);}
+	  if(empty($questao1Quais)) {}else{  	  
+	  $qtdQuestao = qtd1;
+		 inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}	  
+	  if(empty($questao3Quais)) {}else{
+ 		   $qtdQuestao = qtd3;
+		 inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
+	  if(empty($questao7Quais)) {}else{
+  		   $qtdQuestao = qtd7;
+	 	 inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
+      if(empty($questao8Quais)) {}else{
+		   $qtdQuestao = qtd8;
+	 	 inserequais($qtdQuestao,$questao8Quais,$Login,$date,$hora);}
+      if(empty($questao8Quais1)) {}else{
+		   $qtdQuestao = qtd81;
+	    inserequais($qtdQuestao,$questao8Quais1,$Login,$date,$hora);}
+      if(empty($questao12Quais)) {}else{
+		   $qtdQuestao = qtd12;
+		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
+	
+		
+	}
+	 ?>

@@ -58,8 +58,8 @@ $meuArray = getArray($Login);
      </style>
 -->
 
-<link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="/css/template.css" type="text/css"/>
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
@@ -144,7 +144,7 @@ $meuArray = getArray($Login);
   </td>
   <td bgcolor="#C7C7C7">
   <select name="cmbUnidadeFederativa" size="1" id="cmbUnidadeFederativa" class="validate[required]">
-  <option value=""> </option>
+  <option value=""><? echo $cmbUnidadeFederativa ?> </option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
   <option value="AM">AM</option>
@@ -225,34 +225,34 @@ Sim</label>
   <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
   Administração pública direta</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="validate[required] radio" />
   Entidade/empresa privada</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c" class="validate[required] radio" />
   Fundação pública federal</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d" class="validate[required] radio" />
   Fundação pública estadual</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e" class="validate[required] radio" />
   Fundação pública municipal</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f" class="validate[required] radio" />
   Autarquia</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g" class="validate[required] radio" />
   Empresa pública/ sociedade de economia mista</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h" class="validate[required] radio" />
   ONGs</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3i", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3i", $meuArray)){ echo "checked";}?> value="3i" class="validate[required] radio" />
   Organização social</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
   Cooperativa/ Associação de Classe/ Sindicato</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> value="3k" class="validate[required] radio" />
   Outras</label>
   <label>Quais?</label>
   <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />

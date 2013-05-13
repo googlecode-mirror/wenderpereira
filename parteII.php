@@ -37,8 +37,8 @@
      }
      </style>-->
      
-    <link rel="stylesheet" href="/css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="/css/template.css" type="text/css"/>
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
@@ -87,43 +87,43 @@
     (marque no máximo os 3  itens de maior importância)* <br />
     <p>
       <input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
       <label>promover o intercâmbio/troca de conhecimentos entre os artistas realizadores do projeto e o público em geral ( ênfase na troca de conhecimentos) </label>
       <br />
       <input name="qtd1[]" type="checkbox" value="1b" <? if(in_array("1b", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
       <label>produção cultural ( ênfase na produção)</label>
       <br />
       <input name="qtd1[]" type="checkbox" value="1c" <? if(in_array("1c", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label>criação artística ( ênfase na criação)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1d" <? if(in_array("1d", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
       <label>experimentação e inovação em artes (ênfase na experimentação)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label>levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de 		origem do artista ( ênfase na divulgação da arte (não seria difusão ou fruição?))</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label>garantir a inclusão social de cidadãos, gerando auto-estima e aguçando o gosto pelas artes no público local contemplado pelas residências (ênfase na atuação social)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1g" <? if(in_array("1g", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label>promover áreas como a educação patrimonial, a formação de guias, etc. (ênfase na preservação do patrimônio e turismo cultural)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1h" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label> fomentar a economia local e novos arranjos produtivos, desenvolvendo as cadeias produtivas dos setores culturais (ênfase na economia da cultura)</label>
       <br />
 	  	  <input name="qtd1[]" type="checkbox" value="1i" <? if(in_array("1i", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>          
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>          
       <label>desenvolvimento e aguçamento das habilidades artísticas (ênfase na excelência da arte)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1j" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3]] checkbox"/>      
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label> Outros<label> Quais?</label>
       <input name="qtd1quais" value="<?php echo $_POST[qtd1quais];?>" type="text" />
     </p>
@@ -691,7 +691,9 @@ Anos anteriores a 2006: </label>
       <td align="center" class="formu2">&nbsp;</td>
     </tr>
     <tr bgcolor="#C7C7C7"><td align="center" class="formu2">
-       <input type="submit" name="enviar" value="avancar">
+        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
     </td>
     </tr><tr>
       <td align="center" bgcolor="#D2D2D2" class="formu2">&nbsp;</td>
