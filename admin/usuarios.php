@@ -95,10 +95,8 @@ $data = date("d/m/Y");
 </tr>
 </table>
 <?
-$_pagi_sql = " select
-idusuario,login, senha, nome, email
-from  usuarios where nome like '%".$_POST[cons_nome]."%'
-order by nome";
+$_pagi_sql = " select * from  usuarios where nome like '%".$_POST[cons_nome]."%'
+order by data DESC";
 //quantidade de resultados por página (opcional, por padrão 20) 
 $_pagi_cuantos = 40; 
 //Incluímos o script de paginação. Este já executa a consulta automaticamente 
@@ -106,14 +104,18 @@ include("paginacao/paginator.inc.php");
 ?>
 <table width="100%" border="3" align="center" style="border:groove" cellpadding="6">
   <tr>
-    <td colspan="5" style="background-color:#999966; color:#ffffff;" align="center"><b>Usuários Gravados</b></td>
+    <td colspan="8" style="background-color:#999966; color:#ffffff;" align="center"><b>Usuários Gravados</b></td>
   </tr>
   <tr>
 	<td align="left" style="width:20px;"></td>
 	<td align="left" style="padding-left:10px; font-weight:bold; width:150px;">Cod</td>
 	<td align="left" style="padding-left:10px; font-weight:bold;">Usuario</td>
 	<td align="left" style="padding-left:10px; font-weight:bold;">Login</td>
-    <td align="left" style="padding-left:10px; font-weight:bold;">email</td>
+    <td align="left" style="padding-left:10px; font-weight:bold;">Email</td>
+    <td align="left" style="padding-left:10px; font-weight:bold;">Concluído</td>
+    <td align="left" style="padding-left:10px; font-weight:bold;">Data</td>
+    <td align="left" style="padding-left:10px; font-weight:bold;">Hora</td>
+    
   </tr>
 <?			
 	while($row = mysql_fetch_array($_pagi_result)){ 
@@ -121,6 +123,10 @@ include("paginacao/paginator.inc.php");
 		  $nome = $row['nome'];
 		  $login = $row['login'];
 		  $email = $row['email'];
+		  $concluido = $row['concluido'];
+		  $data = $row['data'];
+		  $hora = $row['hora'];
+		  
 ?>
   <tr>
 <? if ($_SESSION[login] == "zezo" or $_SESSION[login] == "rose") { ?>
@@ -135,6 +141,12 @@ include("paginacao/paginator.inc.php");
     <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
      <? echo "<a href='alunos.php?cod=$cod'>".$email."</a>"; ?></td>
+   	<td align="left" style="padding-left:10px;">
+     <? echo "<a href='alunos.php?cod=$cod'>".$concluido."</a>"; ?></td> 
+   	<td align="left" style="padding-left:10px;">
+     <? echo "<a href='alunos.php?cod=$cod'>".$data."</a>"; ?></td> 
+   	<td align="left" style="padding-left:10px;">
+     <? echo "<a href='alunos.php?cod=$cod'>".$hora."</a>"; ?></td> 
   </tr>
 <? } ?>
 </TABLE>

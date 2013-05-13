@@ -5,6 +5,43 @@
 	 	 
 ?>
 
+<script>
+$("input[@name=login]").blur(function(){
+var login = $(".login").val();
+
+$.post("login_request.php",{login: login},
+
+function(data){
+
+var retorno = parseInt($(data, 'login').text());
+
+if(retorno) {
+
+alert("login encontrado");
+
+// mais ações podem ser
+
+// adicionadas aqui para o login
+
+// encontrado
+
+} else {
+
+alert("login não encontrado");
+
+// mais ações podem ser
+
+// adicionadas aqui para o login
+
+// não encontrado
+
+}
+
+});
+
+});
+</script>
+
 <html>
 <head>
 <title>Funarte</title>
