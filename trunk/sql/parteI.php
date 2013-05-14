@@ -104,7 +104,7 @@
 	   $resultado = mysql_query($sql)
 	   or die (mysql_error());
 	   
-	   $sql1 = "Delete FROM mapeamentopartei Where usuario='$Login' and preenchido ='1'";
+	   $sql1 = "Delete FROM mapeamentoparteI Where usuario='$Login' and preenchido ='1'";
 	   $resultado1 = mysql_query($sql1)
 	   or die (mysql_error());
 	   
