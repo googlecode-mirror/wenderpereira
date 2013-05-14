@@ -83,7 +83,7 @@
         }
           function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
                 $consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
-                 VALUES ('$qtdQuestao','$resposta1','$usuario','3','$date','$hora')";
+                 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','3','$date','$hora')";
                 $resultado = mysql_query($consulta)
                 or die (mysql_error());
           ?>
