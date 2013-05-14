@@ -138,6 +138,10 @@
 		 $resultado = mysql_query($sql)
 		 or die (mysql_error());
 		 
+		 $sql1 = "Delete FROM pesquisaquais Where usuario='$Login' and parte ='4'";
+		 $resultado1 = mysql_query($sql1)
+		 or die (mysql_error());
+		 
 		     // inserindo CheckBox    
         //----------------------------
         $_checkbox = $_POST['qtd1'];

@@ -424,7 +424,7 @@
                 <div align="center">Comentários gerais (no máximo em dez linhas)</div>
                 </label>
                 <div align="center"><br />
-                  <textarea name="qtdComentariosGerais2" cols="100%" rows="10"><?php echo $qtdComentariosGerais;?>
+                  <textarea name="qtdComentariosGerais" cols="100%" rows="10"><?php echo $qtdComentariosGerais;?>
               </textarea>
                 </div>
               </div></td>
