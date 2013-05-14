@@ -11,7 +11,7 @@
 	  $Login 	=  trim($_SESSION["login"]);
 	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
 	  
-	  	$sql = "select * from pesquisaquais;";
+	  	$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
 			$qtdComentariosGerais = ($array_exibir['respostas']);
