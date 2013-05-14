@@ -103,6 +103,14 @@
 	   $sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='1'";
 	   $resultado = mysql_query($sql)
 	   or die (mysql_error());
+	   
+	   $sql1 = "Delete FROM mapeamentopartei Where usuario='$Login' and preenchido ='1'";
+	   $resultado1 = mysql_query($sql1)
+	   or die (mysql_error());
+	   
+	    inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
+				   				 $unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
+		
 	   // inserindo informaçoes-----------------------------------------------------------------------------------
 	   if(empty($questao1)) {}else{
 		  insere($questao1,$Login,$date,$hora);}
