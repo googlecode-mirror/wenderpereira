@@ -4,9 +4,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Furnarte</title>
 
-   <? 
-      session_start();
-      include "conexao.php";
+<? 
+	session_start();
+	if (empty($_SESSION["login"])){
+	header("Location: index.php");
+	exit;
+	} 
+?>
+<?
+     include "conexao.php";
       connect();
 	  $Login 	=  trim($_SESSION["login"]);
    ?>

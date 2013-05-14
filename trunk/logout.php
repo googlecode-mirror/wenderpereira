@@ -6,9 +6,12 @@
     $hora = date("H:i");	
 	
 	@session_start(); // Inicializa a sessão
-    @session_write_close();
-  	$Login 	=  $_SESSION["login"];
-	session_destroy(); 
+
+	$Login 	=  $_SESSION["login"];
+
+	session_unset();
+	session_destroy();
+
 ?>
 
 

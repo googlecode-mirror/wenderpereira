@@ -2,9 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <? 
-      session_start();
-      include "conexao.php";
+<? 
+	session_start();
+	if (empty($_SESSION["login"])){
+	header("Location: index.php");
+	exit;
+	} 
+?>
+<?
+     include "conexao.php";
       connect();
 	  $Login 	=  trim($_SESSION["login"]);
    ?>
