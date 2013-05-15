@@ -23,11 +23,12 @@ function setOutput(){
     {
 		//original
         //document.getElementById('saida').value = httpObject.responseText;
-		window.document.getElementById('erro').innerHTML = (httpObject.responseText);
 		
-		if ( window.document.getElementById('erro').innerHTML == "")
+		
+		if ( httpObject.responseText != "")
 		{
-		
+		window.document.getElementById('erromsg').innerHTML = ("Lozalizado usuário com email:");
+		window.document.getElementById('erro').innerHTML = (httpObject.responseText);
 		}
     }
 }
