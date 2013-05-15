@@ -16,7 +16,7 @@
   <tr>
     <td width="35" height="1" bgcolor="#bead3f">&nbsp;</td>
     <td height="1" colspan="3" bgcolor="#bead3f"><b><font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="lanca_processo.php">
+   
     <font color="#FFFFFF">&nbsp;&nbsp;MENU COM OP&Ccedil;&Otilde;ES </font></a></font></b></td>
   </tr>
   <tr>
