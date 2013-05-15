@@ -1,11 +1,16 @@
 <html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>FUNARTE</title>
 
    <script src="js/jsValidate.js" type="text/javascript"></script>
    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
    <script src="js/jquery.validate.js" type="text/javascript"></script>
    <script src="js/jsvalidarlogin.js" type="text/javascript"></script>
+   <script src="js/ajax.js" type="text/javascript"></script>  
+   
  </head>    
  
 	 <style type="text/css">
@@ -59,8 +64,9 @@
                     <td width="73"><div align="center"></div></td>
                     </tr>
                   <tr>
-                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
-                    <td width="193"><input type="text" class="cor-inativa"  name="login" size="20" tabindex="1"></td>
+                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Usuï¿½rio:</b></td>
+                    <td width="193">
+                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" name="login" id="login" size="20" tabindex="1"></td>
                     <td width="73"><div align="left">
                       <input type="submit" value="Entrar" name="B1" tabindex="3">
                     </div></td>
@@ -72,18 +78,23 @@
                       <input type="reset" value="Limpar" name="B2" tabindex="4">
                     </div></td>
                     </tr>
-                  <tr>
+                    <tr>
                     <td align="center">&nbsp;</td>
-                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usuário  </a></div></td>
+                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usuï¿½rio  </a></div></td>
                     </tr>
-                  
-                  <tr>
+                   	<tr>
                     <td colspan="3">
-                      <div align="center"><br/>
-                        <font face="verdana" size="1"color="#666666">
-                        <b></b></div>
-                      <b><label>
-                        <div align="center">Entre com o nome de usuário e senha para acessar o sistema.</div>
+                    <div align="center">
+                    <label id="erromsg"> </label>
+                    <label id="erro"> </label>
+                    <br/>
+                    <font face="verdana" size="1"color="#666666">
+                    <b>
+                    </b>
+                    </div>
+                    <b>
+                    <label>
+                        <div align="center">Entre com o nome de usuï¿½rio e senha para acessar o sistema.</div>
                       </label></b></td>
                   </tr>
                   </table>
