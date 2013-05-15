@@ -8,6 +8,7 @@
    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
    <script src="js/jquery.validate.js" type="text/javascript"></script>
    <script src="js/jsvalidarlogin.js" type="text/javascript"></script>
+   <script src="js/ajax.js" type="text/javascript"></script>  
  </head>    
 	 <style type="text/css">
       /* Estilizar os alertas */
@@ -53,10 +54,10 @@
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
-                          <td width="180">
-                          <div align="left">
-                            <input type="text" class="cor-inativa" id="login" name="login" size="20" tabindex="1" />
+                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
+                        <td width="180">
+                        <div align="left">
+                        <input type="text" class="cor-inativa" onKeyUp="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
                           </div></td>
                           <td width="71"><input type="submit"" value="Salvar" tabindex="5"/></td>
                         </tr>
@@ -81,7 +82,7 @@
                         <tr>
                           <td align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
                           <td><div align="left">
-                            <input name="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
+                            <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
                           </div></td>
                           <td>&nbsp;</td>
                         </tr>
@@ -99,8 +100,18 @@
                   </td>
                 </tr>
               </table>
-               <a href="index.php">Home</a>
-              <br/>
+               <p>
+               <script>
+                if (window.document.getElementById('erro').innerHTML == ""){
+                
+                }
+               </script>
+                  <label id="erromsg"> </label>
+                  <label id="erro"> </label>
+               </p>
+               <p><a href="index.php">Home</a>
+                 <br/>
+              </p>
             </center>
           </div>
       </form>

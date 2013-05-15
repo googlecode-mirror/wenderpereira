@@ -23,11 +23,8 @@ function setOutput(){
     {
 		//original
         //document.getElementById('saida').value = httpObject.responseText;
-		
-		
 		if ( httpObject.responseText != "")
 		{
-		window.document.getElementById('erromsg').innerHTML = ("Lozalizado usuário com email:");
 		window.document.getElementById('erro').innerHTML = (httpObject.responseText);
 		}
     }
@@ -46,5 +43,29 @@ function enviaKey(){
     }
  
 }
+
+function setOutput1(){
+ 
+    if (httpObject.readyState == 4)
+    {
+		//original
+        document.getElementById('email').value = httpObject.responseText;
+
+    }
+}
+
+function enviaKey1(){
+ 
+    httpObject = getHTTPObject();
+ 
+    if (httpObject != null)
+    {
+        httpObject.open("GET", "consulta_login_tempo_real.php?entrada="+document.getElementById('login').value, true);
+        httpObject.send(null);
+        httpObject.onreadystatechange = setOutput1;
+    }
+ 
+} 
+ 
  
 var httpObject = null;

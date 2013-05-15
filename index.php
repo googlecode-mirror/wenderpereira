@@ -64,9 +64,10 @@
                     <td width="73"><div align="center"></div></td>
                     </tr>
                   <tr>
-                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Usu�rio:</b></td>
+                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>usuário:</b></td>
                     <td width="193">
-                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" name="login" id="login" size="20" tabindex="1"></td>
+                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" name="login" id="login" size="20" tabindex="1">
+					</td>
                     <td width="73"><div align="left">
                       <input type="submit" value="Entrar" name="B1" tabindex="3">
                     </div></td>
@@ -80,7 +81,7 @@
                     </tr>
                     <tr>
                     <td align="center">&nbsp;</td>
-                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usu�rio  </a></div></td>
+                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usuário  </a></div></td>
                     </tr>
                    	<tr>
                     <td colspan="3">
@@ -94,7 +95,7 @@
                     </div>
                     <b>
                     <label>
-                        <div align="center">Entre com o nome de usu�rio e senha para acessar o sistema.</div>
+                        <div align="center">Entre com o nome de usuário e senha para acessar o sistema.</div>
                       </label></b></td>
                   </tr>
                   </table>
