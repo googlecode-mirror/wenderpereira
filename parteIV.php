@@ -411,31 +411,32 @@ include "conexao.php";
             publicações (artigo, catálogo,etc.) </label>
           <br/>
           <label>
-            <input type="checkbox" name="qtd5[]" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            outros </label>
-          <br/>
-          <label>
             <input type="checkbox" name="qtd5[]" value="5j" <? if(in_array("5j", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             vídeos / DVDs e gravações </label>
+          <br/>
+            <label>
+            <input type="checkbox" name="qtd5[]" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
+            class="validate[minCheckbox[1]] checkbox"/>            
+            outros </label>
+          
           <label> Quais?</label>
            <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" type="text" />
           </td>
-      </tr>
-            <tr bgcolor="#C7C7C7">
-              <td colspan="2" bgcolor="#C7C7C7"><div>
-                <label>
-                <div align="center">Comentários gerais (no máximo em dez linhas)</div>
-                </label>
-                <div align="center"><br />
-                  <textarea name="qtdComentariosGerais" cols="100%" rows="10">
-				  <?php echo $qtdComentariosGerais;?>
-              </textarea>
-                </div>
-              </div></td>
+          </tr>
+           <tr bgcolor="#C7C7C7">
+            <td colspan="2" bgcolor="#C7C7C7"><div>
+             <label>
+             <div align="center">Comentários gerais (no máximo em dez linhas)</div>
+             </label>
+             <div align="center"><br />
+             <textarea name="qtdComentariosGerais" cols="100%" rows="10">
+				<?php echo $qtdComentariosGerais;?>
+             </textarea>
+             </div>
+             </div></td>
             </tr>
-                  <tr bgcolor="#C7C7C7">
+            <tr bgcolor="#C7C7C7">
         <td colspan="2">&nbsp;</td>
       </tr>
                   <tr bgcolor="#D2D2D2">
