@@ -100,13 +100,29 @@
 	    inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
 	  atualizaconcluir($Login);		
 		  } elseif ($concluido == 0){
-		  echo("Retorne para o mapeamento e realize o cadastro!");  
+   		   ?>
+            <script language="JavaScript">
+            alert("Retorne para o mapeamento e realize o cadastro!");
+            </script>
+           <?php
 		  } elseif ($concluido == 2){
-		  echo("Cadastramento da Parte II realizado avance para a parteIII!");   
+   		   ?>
+            <script language="JavaScript">
+            alert("Cadastramento da Parte II realizado avance para a parteIII!");
+            </script>
+           <?php
 		  } elseif ($concluido == 3){
-			echo("Cadastramento da Parte III já foi realizado!"); 
+		   ?>
+              <script language="JavaScript">
+              alert("Cadastramento da Parte III já foi realizado!");
+              </script>
+            <?php
 		  } elseif ($concluido == 4){
-			echo("O cadatro já foi concluído, caso queira atualizar click na parte desejada!"); 
+             ?>
+              <script language="JavaScript">
+              alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+              </script>
+            <?php
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }
@@ -142,7 +158,6 @@
 	 <?
      if ($_POST[atualizar] == "atualizar") 
 	 { 
-  	     echo("Atualizado");
 		 $sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='2'";
 		 $resultado = mysql_query($sql)
 		 or die (mysql_error());
@@ -210,7 +225,10 @@
       if(empty($questao12Quais)) {}else{
 		   $qtdQuestao = qtd12;
 		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
-	
-		
+	?>
+     <script language="JavaScript">
+     alert("Atualizado com sucesso!!");
+     </script>
+	<?		
 	}
-	 ?>
+	?>

@@ -28,15 +28,35 @@
 		  	  inseremapeamento($nome,$cargoInstituicao,$cpf,$email,$telefone,$Login,$date,$hora);
 			  atualizaconcluir($Login);
 			  } elseif ($concluido == 0){
-			  echo("Cadastramento do mapeamento já foi realizado!");  
+			 ?>
+             <script language="JavaScript">
+             alert("Cadastramento do mapeamento já foi realizado!");
+             </script>
+            <?php
 			  } elseif ($concluido == 1){
-			  echo("Cadastramento da Parte I já foi realizado!");   
+			 ?>
+             <script language="JavaScript">
+             alert("Cadastramento da Parte I já foi realizado!");
+             </script>
+            <?php			  
 			  } elseif ($concluido == 2){
-				echo("Cadastramento da Parte II já foi realizado!"); 
+			 ?>
+             <script language="JavaScript">
+             alert("Cadastramento da Parte II já foi realizado!");
+             </script>
+            <?php					  
 			  } elseif ($concluido == 3){
-				echo("Cadastramento da Parte III já foi realizado!"); 
+			 ?>
+             <script language="JavaScript">
+             alert("Cadastramento da Parte III já foi realizado!");
+             </script>
+             <?php					  
 			  } elseif ($concluido == 4){
-				echo("Cadastramento da Parte IV já foi realizado!"); 	
+             ?>
+              <script language="JavaScript">
+              alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+              </script>
+            <?php
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }
@@ -64,7 +84,6 @@
 	 ?>	
     <?
      if ($_POST[atualizar] == "atualizar") { 
-		echo("atualizado");
 	$sqlquery = "UPDATE mapeamento SET 
 		nome = '$_POST[txtNome]',
 		cargointituicao= '$_POST[txtCargoInstituicao]',
@@ -73,6 +92,10 @@
 		email ='$_POST[txtEmail]'
 	WHERE usuario = '$_SESSION[login]'"; 
 	$process = mysql_query($sqlquery) or die("Erro: " . mysql_error());
-
+	?>
+     <script language="JavaScript">
+     alert("Atualizado com sucesso!!");
+     </script>
+	<?	
 	  }
 	 ?>
