@@ -29,19 +29,21 @@
       	}
      	$meuArray = getArray($Login);
   ?>
-<!--<script src="js/jsValidate.js" type="text/javascript"></script>
-<script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jsvalidarParteIII.js" type="text/javascript"></script>
-        
-	 <style type="text/css">
-     /* Estilizar os alertas */
-     label.error{
-       padding-left: 2px;
-       color: red;
-       font-weight: bold;
-     }
-     </style>-->
+  
+  	<? function getArray1(&$Login){
+    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='3';";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    $i=0;
+    
+    $resposta1 = array();
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
+        $i++;
+    }
+    return $resposta1;
+    }
+    $meuArray1 = getArray1($Login);
+    ?>
      
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
@@ -193,7 +195,7 @@
             acima de 2 anos</label>
             <br/>
             <label> Qual período?</label>
-            <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
+            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
             <br />
 		</p>
 	  </div>
@@ -331,7 +333,7 @@
    	  	  <input name="qtd7[]" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>
           class="validate[minCheckbox[1]] checkbox"/> 
           <label>Qual?</label>
-          <input name="qtd7quais" value="<?php echo $_POST[qtd7quais];?>" type="text" />
+          <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
           </p>
           </div>
        </td>

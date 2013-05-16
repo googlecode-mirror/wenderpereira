@@ -41,23 +41,9 @@
     return $resposta1;
     }
     $meuArray1 = getArray1($Login);
-	print_r($meuArray1);
     ?>
        
 <title>Funarte - Portal das Artes</title>
-<!--<script src="js/jsValidate.js" type="text/javascript"></script>
-<script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jsvalidarParteII.js" type="text/javascript"></script>
-        
-	 <style type="text/css">
-     /* Estilizar os alertas */
-     label.error{
-       padding-left: 2px;
-       color: red;
-       font-weight: bold;
-     }
-     </style>-->
      
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
@@ -126,11 +112,13 @@
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      <label>levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de 		origem do artista ( ênfase na divulgação da arte (não seria difusão ou fruição?))</label>
+      <label>levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de origem do artista
+       ( ênfase na divulgação da arte (não seria difusão ou fruição?))</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      <label>garantir a inclusão social de cidadãos, gerando auto-estima e aguçando o gosto pelas artes no público local contemplado pelas residências (ênfase na atuação social)</label>
+      <label>garantir a inclusão social de cidadãos, gerando auto-estima e aguçando o gosto pelas artes no público local contemplado pelas residências
+       (ênfase na atuação social)</label>
       <br />
 	  <input name="qtd1[]" type="checkbox" value="1g" <? if(in_array("1g", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
@@ -320,7 +308,8 @@ por meio de editais geridos pela própria instituição</label>
     </tr>
     <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
       <div>
-    <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências? (marque quantos itens julgar necessário):</label>
+    <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências?
+     (marque quantos itens julgar necessário):</label>
     <p>
       <input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>
 		/>
