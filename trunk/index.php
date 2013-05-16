@@ -5,10 +5,10 @@
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>FUNARTE</title>
 
-   <script src="js/jsValidate.js" type="text/javascript"></script>
-   <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-   <script src="js/jquery.validate.js" type="text/javascript"></script>
-   <script src="js/jsvalidarlogin.js" type="text/javascript"></script>
+   <script src="js/login/jsValidate.js" type="text/javascript"></script>
+   <script src="js/login/jquery-1.6.2.js" type="text/javascript"></script>
+   <script src="js/login/jquery.validate.js" type="text/javascript"></script>
+   <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
    <script src="js/ajax.js" type="text/javascript"></script>  
    
  </head>    
