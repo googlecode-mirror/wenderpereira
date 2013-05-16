@@ -29,7 +29,7 @@
  	  $questao7Quais = $_POST[qtd7quais];
 	  $questao8Quais = $_POST[qtd8Quais];
    	  $questao8Quais1 = $_POST[qtd8Quais1];
-  	  $questao12Quais = $_POST[qtd12quais];
+  	  $questao12Quais = $_POST[qtd12Quais];
   if ($_POST[avancar] == "avancar") { 
 	if($concluido == 1) 
 	{
@@ -91,12 +91,13 @@
       if(empty($questao8Quais)) {}else{
 		   $qtdQuestao = qtd8;
 	 	 inserequais($qtdQuestao,$questao8Quais,$Login,$date,$hora);}
+		 
       if(empty($questao8Quais1)) {}else{
 		   $qtdQuestao = qtd81;
 	    inserequais($qtdQuestao,$questao8Quais1,$Login,$date,$hora);}
-      if(empty($questao12Quais)) {}else{
+	  if(empty($questao12Quais)) {}else{
 		   $qtdQuestao = qtd12;
-		inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
+	    inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
 	  atualizaconcluir($Login);		
 		  } elseif ($concluido == 0){
 		  echo("Retorne para o mapeamento e realize o cadastro!");  
@@ -105,7 +106,7 @@
 		  } elseif ($concluido == 3){
 			echo("Cadastramento da Parte III já foi realizado!"); 
 		  } elseif ($concluido == 4){
-			echo("Cadastramento da Parte IV já foi realizado!"); 
+			echo("O cadatro já foi concluído, caso queira atualizar click na parte desejada!"); 
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }

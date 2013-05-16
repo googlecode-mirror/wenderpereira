@@ -96,7 +96,7 @@
 		  } elseif ($concluido == 2){
 			echo("Retorne para a parteII e realize o cadastro!!"); 
 		  } elseif ($concluido == 4){
-			echo("Cadastramento concluído!"); 
+			echo("O cadatro já foi concluído, caso queira atualizar click na parte desejada!"); 
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }
