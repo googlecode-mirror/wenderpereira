@@ -10,7 +10,8 @@
     $user = trim($_POST["login"]);
     $pwd  = trim($_POST["senha"]);
 	$Email = trim($_POST["txtEmail"]);
-	
+	$date = date("d/m/y");
+	$hora = date("H:i");
 
     $sQuery = "select login, senha
                from usuarios
@@ -37,4 +38,9 @@
                 </script>
             <?php
         }
+
+	 $consulta = "UPDATE historico SET usuario='$_SESSION[login]',acao= 'login', data='$date',hora='$hora' WHERE usuario='$user';";
+	 echo($consulta);
+	 $resultado = mysql_query($consulta)
+	 or die ("--");
 ?>

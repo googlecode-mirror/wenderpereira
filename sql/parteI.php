@@ -50,13 +50,29 @@
 		  inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
 				   				 $unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);  
 		  } elseif ($concluido == 1){
-		  echo("Cadastramento da Parte I já foi realizado!");  
+   		   ?>
+             <script language="JavaScript">
+             alert("Cadastramento da Parte I já foi realizado!");
+             </script>
+            <?php
 		  } elseif ($concluido == 2){
-		  echo("Cadastramento da Parte II já foi realizado!");   
+  		   ?>
+             <script language="JavaScript">
+             alert("Cadastramento da Parte II já foi realizado!");
+             </script>
+            <?php
 		  } elseif ($concluido == 3){
-			echo("Cadastramento da Parte III já foi realizado!"); 
+		   ?>
+              <script language="JavaScript">
+              alert("Cadastramento da Parte III já foi realizado!");
+              </script>
+            <?php
 		  } elseif ($concluido == 4){
-			echo("O cadatro já foi concluído, caso queira atualizar click na parte desejada!"); 
+             ?>
+              <script language="JavaScript">
+              alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+              </script>
+            <?php
 		  }else{ //else do teste igual a parte atualizado!
 	     }
 	 }else{  	//else do teste se o solicitante clicou em avançar!
@@ -91,15 +107,16 @@
 	 $consulta = "UPDATE usuarios SET concluido='1' WHERE login='$Login';";
 	 $resultado = mysql_query($consulta)
 	 or die ("--");
-	 ?>
+	  ?>
 	  <script language="JavaScript">
 	  alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
-	  </script> <?
-	  } ?>
+	  </script>
+     <?
+	  }
+	 ?>
 	 <?
      if ($_POST[atualizar] == "atualizar") 
 	 { 
-  	   echo("Atualizado");	
 	   $sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='1'";
 	   $resultado = mysql_query($sql)
 	   or die (mysql_error());
@@ -129,5 +146,10 @@
 	   $_checkbox = $_POST['qtd5'];
 		 foreach($_checkbox as $_valor){
 		 insere($_valor,$Login,$date,$hora); }
-	  }
+		?>
+     	<script language="JavaScript">
+	    alert("Atualizado com sucesso!!");
+    	</script>
+		<?	
+		}
 	 ?>

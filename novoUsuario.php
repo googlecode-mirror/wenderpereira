@@ -65,9 +65,9 @@
                           <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>
                           <td width="180">
 						    <div align="left">
-						      <input name="senha" id="senha" type="password" class="cor-inativa" tabindex="3" size="20" />
-						      <!--<input type="password" class="cor-inativa" id="idSenha" name="senha" size="20" tabindex="2" />-->
-				          </div></td>
+						      <input type="password" class="cor-inativa" id="senha" name="senha" size="20" tabindex="2" />
+                                                 
+					      </div></td>
                           <td width="71"><input type="reset" value="Limpar" name="B2" tabindex="6" /></td>
                         </tr>
                         <tr>
