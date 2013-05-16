@@ -56,7 +56,7 @@
 		  } elseif ($concluido == 3){
 			echo("Cadastramento da Parte III já foi realizado!"); 
 		  } elseif ($concluido == 4){
-			echo("Cadastramento da Parte IV já foi realizado!"); 
+			echo("O cadatro já foi concluído, caso queira atualizar click na parte desejada!"); 
 		  }else{ //else do teste igual a parte atualizado!
 	     }
 	 }else{  	//else do teste se o solicitante clicou em avançar!
