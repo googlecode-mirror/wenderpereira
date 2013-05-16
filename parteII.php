@@ -27,7 +27,23 @@
       	}
      	$meuArray = getArray($Login);
   ?>
-   
+  
+	<? function getArray1(&$Login){
+    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='2';";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    $i=0;
+    
+    $resposta1 = array();
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
+        $i++;
+    }
+    return $resposta1;
+    }
+    $meuArray1 = getArray1($Login);
+	print_r($meuArray1);
+    ?>
+       
 <title>Funarte - Portal das Artes</title>
 <!--<script src="js/jsValidate.js" type="text/javascript"></script>
 <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
@@ -131,7 +147,7 @@
 	  <input name="qtd1[]" type="checkbox" value="1j" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label> Outros<label> Quais?</label>
-      <input name="qtd1quais" value="<?php echo $_POST[qtd1quais];?>" type="text" />
+      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" type="text" />
     </p>
     <tr bgcolor="#C7C7C7">
     <td align="left" class="formu2">
@@ -220,7 +236,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
         Outros</label>
       <label>Quais</label>
-      <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
+      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
     </p>
     </div>
 	<br/>
@@ -355,7 +371,7 @@ por meio de editais geridos pela própria instituição</label>
       <label>em acordo bilateral, no caso de apenas um outro país</label>
       <br/>
       <label>Quail?</label>
-      <input name="qtd7quais" value="<?php echo $_POST[qtd7quais];?>" type="text" />
+      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
     </p>
   </div>
     </td>
@@ -370,7 +386,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
 Anos anteriores a 2006: </label>
       <label>Quais</label>
-      <input name="qtd8Quais" type="text" />
+      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" type="text" />
       <br />
       <label>
 	<input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
@@ -412,7 +428,7 @@ Anos anteriores a 2006: </label>
       class="validate[minCheckbox[1]] checkbox"/>  
         2013</label>
       <label>em diante (anos já previstos)</label>
-      <input name="qtd8Quais1" type="text" />
+      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" type="text" />
       <br />
     </p>
   </div>
@@ -544,7 +560,7 @@ Anos anteriores a 2006: </label>
       class="validate[required] radio" />
         acima de 5.000.000 de reais</label>
       <label> Qual valor?</label>
-      <input name="qtd12Quais" type="text" />
+      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>" type="text" />
       </p>
       </div>
       </td>

@@ -50,49 +50,27 @@ $meuArray = getArray($Login);
 
 
 <? function getArray1(&$Login){
-$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='2';";
+$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='1';";
 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 $i=0;
 
-$resposta = array();
+$resposta1 = array();
 while ($array_exibir = mysql_fetch_array($Resultado)) {
-	$resposta[$i] = array("questao"=>$array_exibir['questao'],"resposta"=>$array_exibir['respostas']);
+	$resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
 	$i++;
 }
-return $resposta;
+return $resposta1;
 }
 $meuArray1 = getArray1($Login);
-print_r($meuArray1);
-
 ?>
-
-
 
 <title>Funarte - Portal das Artes</title>
 
-<!--<script src="js/jsValidate.js" type="text/javascript"></script>
-<script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jsvalidarParteII.js" type="text/javascript"></script>
-        
-	 <style type="text/css">
-     /* Estilizar os alertas */
-     label.error{
-       padding-left: 2px;
-       color: red;
-       font-weight: bold;
-     }
-     </style>
--->
-
 <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
-	</script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
-	</script>
-	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
-	</script>
+	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">	</script>
+	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">	</script>
 	<script>
 		jQuery(document).ready(function(){
 			// binds form submission and fields to the validation engine
@@ -154,7 +132,8 @@ print_r($meuArray1);
   <td bgcolor="#C7C7C7">
   <label>• Endereço*:</label>
   </td>
-  <td bgcolor="#C7C7C7"><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
+  <td bgcolor="#C7C7C7"><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
+  value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
   </td>
   </tr>
   <tr>
@@ -162,7 +141,8 @@ print_r($meuArray1);
   <label id="municipio">• Município*:</label>
   </td>
   <td bgcolor="#C7C7C7">
-  <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text" size="50" class="validate[required] text-input"/>
+  <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text"
+   size="50" class="validate[required] text-input"/>
   </td>
   </tr>
   <tr>
@@ -279,10 +259,11 @@ Sim</label>
   <input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
   Cooperativa/ Associação de Classe/ Sindicato</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> value="3k" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> 
+  value="3k" id="qtd3quais1" class="validate[required] radio" />
   Outras</label>
   <label>Quais?</label>
-  <input name="qtd3quais" value="<?php echo $_POST[qtd3quais];?>" type="text" />
+  <input name="qtd3quais" type="text" id="idqtd3quais" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
   </td>
