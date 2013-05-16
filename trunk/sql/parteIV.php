@@ -24,6 +24,8 @@
         $questao2Quais = $_POST[qtd2quais];
         $questao3Quais = $_POST[qtd3quais];
         $questao4Quais = $_POST[qtd4quais];
+		$questao5Quais = $_POST[qtd5quais];
+		
         $qtdComentarios = $_POST[qtdComentariosGerais]; 
     if ($_POST[avancar] == "avancar") { 		
         if($concluido == 3) 

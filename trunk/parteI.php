@@ -2,70 +2,66 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<? 
+	<? 
 	session_start();
 	if (empty($_SESSION["login"])){
 	header("Location: index.php");
 	exit;
 	} 
-?>
-<?
-include "conexao.php";
-connect();
-$Login 	=  trim($_SESSION["login"]);
-$_POST[txtNome] = $txtNome;
-$_POST[txtCnpj] = $txtCnpj;
-$_POST[txtEndereco] = $txtEndereco;
-$_POST[txtMunicipio] = $txtMunicipio;
-$_POST[txtCep] = $txtCep;
-$_POST[txtTelefone] =  $txtTelefone;
-$_POST[txtEmail] = $txtEmail; 
-$_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
-$sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
-$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
- while ($array_exibir = mysql_fetch_array($Resultado)) {
-	$txtNome = ($array_exibir['nomeintituicao']);
-	$txtCnpj = ($array_exibir['cnpj']);
-	$txtEndereco = ($array_exibir['endereco']);
-	$txtMunicipio = ($array_exibir['municipio']);
-	$txtCep = ($array_exibir['cep']);
-	$txtTelefone = ($array_exibir['telefone']);
-	$txtEmail = ($array_exibir['email']);
-	$cmbUnidadeFederativa = ($array_exibir['unidadefederativa']);
-}
-?>
-<? function getArray(&$Login){
-$sql = "select * from pesquisa Where usuario= '$Login' and parte ='1';";
-$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-$i=0;
-$resposta = array();
-while ($array_exibir = mysql_fetch_array($Resultado)) {
-	$resposta[$i] = ($array_exibir['respostas']);
-	$i++;
-}
-return $resposta;
-}
-$meuArray = getArray($Login);
-?>
-
-
-<? function getArray1(&$Login){
-$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='1';";
-$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-$i=0;
-
-$resposta1 = array();
-while ($array_exibir = mysql_fetch_array($Resultado)) {
-	$resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
-	$i++;
-}
-return $resposta1;
-}
-$meuArray1 = getArray1($Login);
-?>
-
+	?>
+	<?
+    include "conexao.php";
+    connect();
+    $Login 	=  trim($_SESSION["login"]);
+    $_POST[txtNome] = $txtNome;
+    $_POST[txtCnpj] = $txtCnpj;
+    $_POST[txtEndereco] = $txtEndereco;
+    $_POST[txtMunicipio] = $txtMunicipio;
+    $_POST[txtCep] = $txtCep;
+    $_POST[txtTelefone] =  $txtTelefone;
+    $_POST[txtEmail] = $txtEmail; 
+    $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
+    $sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+     while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $txtNome = ($array_exibir['nomeintituicao']);
+        $txtCnpj = ($array_exibir['cnpj']);
+        $txtEndereco = ($array_exibir['endereco']);
+        $txtMunicipio = ($array_exibir['municipio']);
+        $txtCep = ($array_exibir['cep']);
+        $txtTelefone = ($array_exibir['telefone']);
+        $txtEmail = ($array_exibir['email']);
+        $cmbUnidadeFederativa = ($array_exibir['unidadefederativa']);
+    }
+    ?>
+    <? function getArray(&$Login){
+    $sql = "select * from pesquisa Where usuario= '$Login' and parte ='1';";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    $i=0;
+    $resposta = array();
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $resposta[$i] = ($array_exibir['respostas']);
+        $i++;
+    }
+    return $resposta;
+    }
+    $meuArray = getArray($Login);
+    ?>
+	<? function getArray1(&$Login){
+    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='1';";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    $i=0;
+    
+    $resposta1 = array();
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
+        $i++;
+    }
+    return $resposta1;
+    }
+    $meuArray1 = getArray1($Login);
+    ?>
 <title>Funarte - Portal das Artes</title>
-
 <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>

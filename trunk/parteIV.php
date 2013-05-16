@@ -21,9 +21,8 @@ include "conexao.php";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
 			$qtdComentariosGerais = ($array_exibir['respostas']);
-
 		}
-?>
+   ?>
    <?  function getArray(&$Login){
    	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='4';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
@@ -36,24 +35,23 @@ include "conexao.php";
    	    return $resposta;
       	}
      	$meuArray = getArray($Login);
-  ?>
+	?>
+	<? function getArray1(&$Login){
+    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='2';";
+    $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+    $i=0;
+    
+    $resposta1 = array();
+    while ($array_exibir = mysql_fetch_array($Resultado)) {
+        $resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
+        $i++;
+    }
+    return $resposta1;
+    }
+    $meuArray1 = getArray1($Login);
+    ?>
 
-<!--<script src="js/jsValidate.js" type="text/javascript"></script>
-<script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-<script src="js/jquery.validate.js" type="text/javascript"></script>
-<script src="js/jsvalidarParteIV.js" type="text/javascript"></script>
-        
-	 <style type="text/css">
-     /* Estilizar os alertas */
-     label.error{
-       padding-left: 2px;
-       color: red;
-       font-weight: bold;
-     }
-     </style>
-     -->
-     
-     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
@@ -136,7 +134,7 @@ include "conexao.php";
       outros</label>
     <br/>
     <label> Quais?</label>
-    <input name="qtd1quais" value="<?php echo $_POST[qtd1quais];?>" type="text" />
+    <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" type="text" />
   </p>
   </td>
       </tr>
@@ -251,7 +249,7 @@ include "conexao.php";
               outras</label>
             <br/>
             <label> Quais?</label>
-            <input name="qtd2quais" value="<?php echo $_POST[qtd2quais];?>" type="text" />
+            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" type="text" />
             <br />
           </p>
         </div></td>
@@ -290,7 +288,7 @@ include "conexao.php";
               class="validate[maxCheckbox[3]] checkbox"/>              
               outros</label>
             <label> Quais</label>
-            <input name="quais" type="text" />
+            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
             <br />
           </p>
         </div></td>
@@ -365,7 +363,7 @@ include "conexao.php";
               class="validate[minCheckbox[1]] checkbox"/>              
               outros</label>
             <label> Quais?</label>
-            <input name="Quais2" type="text" />
+            <input name="qtd4quais" value="<?php echo $meuArray1['qtd4'];?>" type="text" />
           </p></td>
       </tr>
             <tr bgcolor="#D2D2D2">
@@ -422,7 +420,8 @@ include "conexao.php";
             class="validate[minCheckbox[1]] checkbox"/>            
             vídeos / DVDs e gravações </label>
           <label> Quais?</label>
-          <input name="Quais" type="text" /></td>
+           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" type="text" />
+          </td>
       </tr>
             <tr bgcolor="#C7C7C7">
               <td colspan="2" bgcolor="#C7C7C7"><div>
@@ -430,7 +429,8 @@ include "conexao.php";
                 <div align="center">Comentários gerais (no máximo em dez linhas)</div>
                 </label>
                 <div align="center"><br />
-                  <textarea name="qtdComentariosGerais" cols="100%" rows="10"><?php echo $qtdComentariosGerais;?>
+                  <textarea name="qtdComentariosGerais" cols="100%" rows="10">
+				  <?php echo $qtdComentariosGerais;?>
               </textarea>
                 </div>
               </div></td>
