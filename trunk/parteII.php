@@ -59,6 +59,16 @@
 			jQuery("#form1").validationEngine();
 		});
 	</script>
+    
+        <script>
+	function MarcarCheckBoxClique(campo){
+	if(document.getElementById([campo]).checked == true){
+	document.getElementById([campo]).visibility = false;
+	}else{
+	document.getElementById([campo]).checked = true;
+	}
+	}
+	</script>
      
      
 </head>
@@ -132,10 +142,10 @@
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>          
       <label>desenvolvimento e aguçamento das habilidades artísticas (ênfase na excelência da arte)</label>
       <br />
-	  <input name="qtd1[]" type="checkbox" value="1j" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
+	  <input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       <label> Outros<label> Quais?</label>
-      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" type="text" />
+      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
     </p>
     <tr bgcolor="#C7C7C7">
     <td align="left" class="formu2">
@@ -220,11 +230,11 @@ por meio de editais geridos pela própria instituição</label>
         por meio de Organizações não – governamentais (ONGs)</label>
       <br/>
       <label>
-		<input name="qtd3[]" type="checkbox" value="3n" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
+		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
         Outros</label>
       <label>Quais</label>
-      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
+      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
     </p>
     </div>
 	<br/>
@@ -355,12 +365,12 @@ por meio de editais geridos pela própria instituição</label>
 		/>
       <label>em nível mundial, englobando todos os continentes</label>
       <br/>
-      <input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>
+      <input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" <? if(in_array("7l", $meuArray)){ echo "checked";}?>
 		/>
       <label>em acordo bilateral, no caso de apenas um outro país</label>
       <br/>
       <label>Quail?</label>
-      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
+      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" />
     </p>
   </div>
     </td>
@@ -371,11 +381,11 @@ por meio de editais geridos pela própria instituição</label>
     *
     <p>
       <label>
-	<input name="qtd8[]" type="checkbox" value="8a" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
+	<input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
 Anos anteriores a 2006: </label>
       <label>Quais</label>
-      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" type="text" />
+      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" />
       <br />
       <label>
 	<input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
@@ -413,11 +423,11 @@ Anos anteriores a 2006: </label>
         2012</label>
       <br />
       <label>
-      <input name="qtd8[]" type="checkbox" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
+      <input name="qtd8[]" type="checkbox" id="idqtd81quais" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
         2013</label>
       <label>em diante (anos já previstos)</label>
-      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" type="text" />
+      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" />
       <br />
     </p>
   </div>
@@ -545,11 +555,11 @@ Anos anteriores a 2006: </label>
         acima de 2.000.000 reais até 5.000.000 reais</label>
       <br />
       <label>
-      <input type="radio" name="qtd12" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
+      <input type="radio" name="qtd12" id="idqtd12quais" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
       class="validate[required] radio" />
         acima de 5.000.000 de reais</label>
       <label> Qual valor?</label>
-      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>" type="text" />
+      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  onclick="MarcarCheckBoxClique('idqtd12quais')" type="text" />
       </p>
       </div>
       </td>

@@ -65,6 +65,15 @@ include "conexao.php";
 			jQuery("#form1").validationEngine();
 		});
 	</script>   
+    <script>
+	function MarcarCheckBoxClique(campo){
+	if(document.getElementById([campo]).checked == true){
+	document.getElementById([campo]).visibility = false;
+	}else{
+	document.getElementById([campo]).checked = true;
+	}
+	}
+	</script>
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="sql\parteIV.php">
@@ -129,12 +138,11 @@ include "conexao.php";
       apresentações artísticas ( bandas de música, circo, etc.)</label>
     <br />
     <label>
-      <input name="qtd1[]" type="checkbox" value="1h" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
+      <input name="qtd1[]" type="checkbox" value="1h" id="idqtd1quais" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       outros</label>
-    <br/>
     <label> Quais?</label>
-    <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" type="text" />
+    <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
   </p>
   </td>
       </tr>
@@ -244,12 +252,11 @@ include "conexao.php";
               artes integradas ( projetos com múltiplas linguagens artísticas)</label>
             <br />
             <label>
-              <input name="qtd2[]" type="checkbox" value="2u" <? if(in_array("2u", $meuArray)){ echo "checked";}?>
+              <input name="qtd2[]" type="checkbox" id="idqtd2quais" value="2u" <? if(in_array("2u", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>
               outras</label>
-            <br/>
             <label> Quais?</label>
-            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" type="text" />
+            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" onclick="MarcarCheckBoxClique('idqtd2quais')" type="text" />
             <br />
           </p>
         </div></td>
@@ -284,11 +291,11 @@ include "conexao.php";
               pesquisadores</label>
             <br />
             <label>
-              <input type="checkbox" name="qtd3[]" value="3f" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd3[]" value="3f" id="idqtd3quais" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
               class="validate[maxCheckbox[3]] checkbox"/>              
               outros</label>
             <label> Quais</label>
-            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
+            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
             <br />
           </p>
         </div></td>
@@ -359,11 +366,11 @@ include "conexao.php";
               ocorrem em Pontos/ Pontões de Cultura</label>
             <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4m" <? if(in_array("4m", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" id="idqtd4quais" name="qtd4[]" value="4m" <? if(in_array("4m", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               outros</label>
             <label> Quais?</label>
-            <input name="qtd4quais" value="<?php echo $meuArray1['qtd4'];?>" type="text" />
+            <input name="qtd4quais" id="idqtd4quais" value="<?php echo $meuArray1['qtd4'];?>" onclick="MarcarCheckBoxClique('idqtd4quais')" type="text" />
           </p></td>
       </tr>
             <tr bgcolor="#D2D2D2">
@@ -416,12 +423,12 @@ include "conexao.php";
             vídeos / DVDs e gravações </label>
           <br/>
             <label>
-            <input type="checkbox" name="qtd5[]" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" id="idqtd5quais" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             outros </label>
           
           <label> Quais?</label>
-           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" type="text" />
+           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" onclick="MarcarCheckBoxClique('idqtd5quais')" type="text" />
           </td>
           </tr>
            <tr bgcolor="#C7C7C7">
