@@ -74,6 +74,18 @@
 		});
 	</script>
     <script src="js/jsValidate.js" type="text/javascript"></script> 
+    
+    <script>
+	function MarcarCheckBoxClique(campo){
+	if(document.getElementById([campo]).checked == true){
+	document.getElementById([campo]).visibility = false;
+	}else{
+	document.getElementById([campo]).checked = true;
+	}
+	}
+	</script>
+	
+	
 </head>
 <body>
 <form name="form1" id="form1" method="post"  action="sql\parteI.php">
@@ -259,7 +271,7 @@ Sim</label>
   value="3k" id="qtd3quais1" class="validate[required] radio" />
   Outras</label>
   <label>Quais?</label>
-  <input name="qtd3quais" type="text" id="idqtd3quais" value="<?php echo $meuArray1['qtd3'];?>" />
+  <input name="qtd3quais" type="text" id="idqtd3quais"   onclick="MarcarCheckBoxClique('qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
   </td>

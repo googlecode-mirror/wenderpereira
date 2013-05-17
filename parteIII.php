@@ -59,6 +59,15 @@
 			jQuery("#form1").validationEngine();
 		});
 	</script>     
+    <script>
+	function MarcarCheckBoxClique(campo){
+	if(document.getElementById([campo]).checked == true){
+	document.getElementById([campo]).visibility = false;
+	}else{
+	document.getElementById([campo]).checked = true;
+	}
+	}
+	</script>
      
 </head>
 <body>
@@ -190,12 +199,11 @@
              de 1 ano até 2 anos</label>
             <br />
             <label>
-            <input type="radio" name="qtd3" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
+            <input type="radio" name="qtd3" id="idqtd3quais" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
             class="validate[required] radio" />            
             acima de 2 anos</label>
-            <br/>
             <label> Qual período?</label>
-            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
+            <input name="qtd3quais" onclick="MarcarCheckBoxClique('idqtd3quais')" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
             <br />
 		</p>
 	  </div>
@@ -330,11 +338,11 @@
           class="validate[minCheckbox[1]] checkbox"/> 
           <label>em acordo bilateral, no caso de apenas um outro país</label>
           <br/>        
-   	  	  <input name="qtd7[]" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>
+   	  	  <input name="qtd7[]" id="idqtd7quais" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>
           class="validate[minCheckbox[1]] checkbox"/> 
           <label>Qual?</label>
-          <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
-          </p>
+          <input name="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
+        </p>
           </div>
        </td>
       </tr>
