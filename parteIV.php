@@ -438,7 +438,7 @@ include "conexao.php";
              </label>
              <div align="center"><br />
              <textarea name="qtdComentariosGerais" cols="100%" rows="10">
-				<?php echo $qtdComentariosGerais;?>
+				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
              </div>
              </div></td>
