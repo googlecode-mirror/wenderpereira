@@ -84,7 +84,17 @@
 	}
 	}
 	</script>
-	
+    
+<!--     <script>
+	function FuncaoObrigatorio(campo){
+	if(document.getElementById([campo]).disabled = true){
+	document.getElementById([campo]).visibility = false;
+	}else{
+	document.getElementById([campo]).visibility = true;
+	}
+	}
+	</script>
+	-->
 	
 </head>
 <body>
@@ -99,42 +109,47 @@
   <p><strong>Os campos  com asterisco* são de preenchimento obrigatório:</strong></p></td>
   </tr>
   <tr>
-  <td width="27%" bgcolor="#C7C7C7"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
+  <td width="32%" bgcolor="#C7C7C7"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
   </td>
-  <td width="73%" bgcolor="#C7C7C7">
+  <td width="68%" bgcolor="#C7C7C7">
   <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="84" class="validate[required] text-input"/>
   </td>
   </tr>
   <tr bgcolor="#C7C7C7">
-  <td>
-  <label>• CNPJ:</label>
-  </td>
-  <td>
-  <input name="txtCnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
+    <td>
+      <label>• A instituição se Declara Formal*: </label>
+      </td>
+    <td>
+      <input type="radio" name="qtd0" <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
+      value="0a" class="validate[required] radio" />
+      Sim</label>
+      <input type="radio" name="qtd0" <? if(in_array("0b", $meuArray)){ echo "checked";}?> value="0b" class="validate[required] radio" />
+      Não</label>
+      </td>
+  </tr>
+  <tr bgcolor="#C7C7C7">
+    <td><label>• CNPJ:</label></td>
+    <td><input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
     onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');"/>
-  <div style="display:inline;">
-  <a href="javascript:marcarCheck();">
-  </a>		        
-  </div>
-  </td>
+      <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
   </tr>
   <tr>
-  <td bgcolor="#C7C7C7"><label>• CEP*:</label>
-  </td>
-  <td bgcolor="#C7C7C7">
-  <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
+    <td bgcolor="#C7C7C7"><label>• CEP*:</label>
+      </td>
+    <td bgcolor="#C7C7C7">
+      <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
   onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
   class="validate[required] text-input"/>
-  
-  <div style="display:inline;">
-  <a href="javascript:findCEP()">
-   <img src="images/busca.png" alt="Pesquisar" border="0" />
-  </a>
-  </div>
-  <div id="ajax-loading" style="display:none;">
-  <img src="loading.gif"/>
-  </div>
-  </td>
+      
+      <div style="display:inline;">
+        <a href="javascript:findCEP()">
+          <img src="images/busca.png" alt="Pesquisar" border="0" />
+          </a>
+        </div>
+      <div id="ajax-loading" style="display:none;">
+        <img src="loading.gif"/>
+        </div>
+      </td>
   </tr>
   <tr>
   <td bgcolor="#C7C7C7">
