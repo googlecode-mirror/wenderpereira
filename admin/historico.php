@@ -49,7 +49,7 @@ or die ("Falha na execução da consulta");
 
 <? if ($_GET[mensagem] != "") { echo "<center><b>".$_GET[mensagem]."</b></center><br><br>"; } ?>
 
-<form name="form1" method="post" action="usuarios.php">
+<form name="form1" method="post" action="historico.php">
 <center>
  <!-- <table border="3" align="center" style="border:groove; width:480px;">
   <tr>
