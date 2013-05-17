@@ -20,6 +20,7 @@
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 		while ($array_exibir = mysql_fetch_array($Resultado)) {
 	    $_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);	}
+		$questao0 = $_POST[qtd0];
 		$questao1 = $_POST[qtd1];
 		$questao2 = $_POST[qtd2];
 		$questao3 = $_POST[qtd3];
@@ -29,6 +30,8 @@
 	 if ($_POST[avancar] == "avancar") { 
 		if($concluido == 0){
 		// inserindo informaçoes
+		if(empty($questao0)) {}else{
+			insere($questao0,$Login,$date,$hora);}
 		if(empty($questao1)) {}else{
 			insere($questao1,$Login,$date,$hora);}
 		if(empty($questao2)) {}else{
@@ -129,6 +132,8 @@
 				   				 $unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
 		
 	   // inserindo informaçoes-----------------------------------------------------------------------------------
+  	   if(empty($questao0)) {}else{
+			insere($questao0,$Login,$date,$hora);}	   
 	   if(empty($questao1)) {}else{
 		  insere($questao1,$Login,$date,$hora);}
 	   if(empty($questao2)) {}else{
