@@ -11,128 +11,160 @@
    <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
    <script src="js/ajax.js" type="text/javascript"></script>  
    
- </head>    
- 
-	 <style type="text/css">
-      /* Estilizar os alertas */
-      label.error{
-          padding-left: 3px;
-          color: red;
-          font-weight: bold;
-           }
-      </style>
+<style type="text/css">
+<!--
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+-->
+</style>
+<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
 
+}
 
-</head>
-<body onLoad="document.form1.login.focus()" bgcolor="white">
+-->
+</style></head></head>
+<body onLoad="document.form1.login.focus()">
+<div>
+<div class="barra">
+<div class="pagina"><a href="http://www.acessoainformacao.gov.br">
+<img src="images/ai.png" width="161" height="24" alt="" />
+<a href="http://www.brasil.gov.br" class=&quot;brasilgov">
+<img src="images/brasil.png" width="108" height="24" alt="" /></a></div>
 
-<p>&nbsp;</p>
+</div>
+
+    <div align="center">
+      <p><img src="images/baner1.jpg" width="60%" height="15%" />
+      </p>
+      </br>
+      </br>
+      </br>      
+      </br>
+</br>  
+</br>                
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: 
+collapse; border: 0px solid silver" bordercolor="#111111" width="500">
+<tr>
+<td width="50" height="205">&nbsp;</td>
+<td width="420" height="205">
+<form name="form1" id="form1" method="post" action="login.php">
 <div align="center">
-  <center>
-  <p><img src="images/baner1.jpg" alt="" width="836" height="135" ></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
-    <tr>
-      <td width="50" height="205">&nbsp;</td>
-      <td width="420" height="205">
-  <form name="form1" id="form1" method="post" action="login.php">
-  <div align="center">
-    <center>
-      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
-    <tr>
-          <td>
-            <div align="center">
-              <center>
-                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="384">
-                  <tr>
-                    <td width="118">&nbsp;</td>
-                    <td width="193">&nbsp;</td>
-                    <td width="73"><div align="center"></div></td>
-                    </tr>
-                  <tr>
-                    <td width="118">&nbsp;</td>
-                    <td width="193">&nbsp;</td>
-                    <td width="73"><div align="center"></div></td>
-                    </tr>
-                  <tr>
-                    <td width="118">&nbsp;</td>
-                    <td width="193">&nbsp;</td>
-                    <td width="73"><div align="center"></div></td>
-                    </tr>
-                  <tr>
-                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>usuário:</b></td>
-                    <td width="193">
-                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" onClick="enviaKey();"
-                     name="login" id="login" size="20" tabindex="1">
-					</td>
-                    <td width="73"><div align="left">
-                      <input type="submit" value="Entrar" name="B1" tabindex="3">
-                    </div></td>
-                    </tr>
-                  <tr>
-                    <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>
-                    <td width="193"><input type="password" class="cor-inativa" name="senha" size="20" tabindex="2"></td>
-                    <td width="73"><div align="left">
-                      <input type="reset" value="Limpar" name="B2" tabindex="4">
-                    </div></td>
-                    </tr>
-                    <tr>
-                    <td align="center">&nbsp;</td>
-                    <td colspan="2">
-                    <label id="erromsg"> </label>
-                    <label id="erro"> </label>
-                    </td>
-                    </tr>
-                   	<tr>
-                    <td colspan="3">
-                    <div align="center">
-              
-                	  <a href="novoUsuario.php">Novo usuário</a>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-              	      <a href="resetsenha.php">Nova senha</a>
-                 
-                    <font face="verdana" size="1"color="#666666">
-                    <b>
-                    </b>
-                    </div>
-                    <b>
-                    <label>
-                        <div align="center">Entre com o nome de usuário e senha para acessar o sistema.</div>
-                      </label></b></td>
-                  </tr>
-                  </table>
-                </center>
-              </div>
-            </td>
-          </tr>
-        </table>
-      </center>
-  </div>
-  </form>
-        </td>
-      <td width="50" height="205">&nbsp;</td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p><img src="images/imagem.jpg" alt="" width="581" height="72" ></p>
-<p>&nbsp;</p>
+<center>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
+bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
+<tr>
+<td>
+<div align="center">
+<center>
+<table border="0" cellpadding="0" cellspacing="0" 
+style="border-collapse: collapse" bordercolor="#111111" width="384">
+<tr>
+<td width="118">&nbsp;</td>
+<td width="193">&nbsp;</td>
+<td width="73"><div align="center"></div></td>
+</tr>
+<tr>
+<td width="118">&nbsp;</td>
+<td width="193">&nbsp;</td>
+<td width="73"><div align="center"></div></td>
+</tr>
+<tr>
+<td width="118">&nbsp;</td>
+<td width="193">&nbsp;</td>
+<td width="73"><div align="center"></div></td>
+</tr>
+<tr>
+<td width="118" align="center"><font face="verdana" size="1" color="#666666">
+<b>usuário:</b></td>
+<td width="193">
+<input type="text" class="cor-inativa" onKeyUp="enviaKey();" onClick="enviaKey();"
+name="login" id="login" size="20" tabindex="1">
+</td>
+<td width="73"><div align="left">
+<input type="submit" value="Entrar" name="B1" tabindex="3">
+</div></td>
+</tr>
+<tr>
+<td width="118" align="center"><font face="verdana" size="1" color="#666666">
+<b>Senha:</b></td>
+<td width="193"><input type="password" class="cor-inativa" name="senha" size="20" tabindex="2">
+</td>
+<td width="73"><div align="left">
+<input type="reset" value="Limpar" name="B2" tabindex="4">
+</div></td>
+</tr>
+<tr>
+<td align="center">&nbsp;</td>
+<td colspan="2">
+<label id="erromsg"> </label>
+<label id="erro"> </label>
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<div align="center">
+
+<a href="novoUsuario.php">Novo usuário</a>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<a href="resetsenha.php">Nova senha</a>
+
+<font face="verdana" size="1"color="#666666">
+<b>
+</b>
+</div>
+<b>
+<label>
+<div align="center"><b>Entre com o nome de usuário e senha para acessar o sistema.</b></div>
+<b>
+</label>
+</b></td>
+</tr>
+</table>
+</center>
+</div>
+</td>
+</tr>
+</table>
+</center>
+</div>
+</form>
+</td>
+<td width="50" height="205">&nbsp;</td>
+</tr>
+</table>
+</br>
+</br>  
+</br>
+</br>     
+</br>         
+</br>             
+<p><img src="images/imagem.jpg" alt="" width="581" height="72" /></p>
+</div>
+
   </center>
 </div>
 </body>
