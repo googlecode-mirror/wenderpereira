@@ -20,9 +20,8 @@
       </style>
 
 <body>
-<!--<form name="form1" method="post" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
 
-<form name="form1" id="form1" method="post" action="email.php">
+<form name="form1" id="form1" method="post" action="emailresetsenha.php">
 
 		<div align="center">
 		<center>
@@ -46,7 +45,7 @@
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td colspan="3"><b><label>Cadastro de novo usuário:</label></b></td>
+                          <td colspan="3">Reset de Senha:</td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>
@@ -54,44 +53,23 @@
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
+                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
                         <td width="180">
                         <div align="left">
-                        <input type="text" class="cor-inativa" onKeyUp="enviaKey1();" onClick="enviaKey1();"
-                        id="login" name="login" size="20" tabindex="1" />
-                          </div></td>
-                          <td width="71"><input type="submit"" value="Salvar" tabindex="5"/></td>
+                          <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
+                        </div></td>
+                          <td width="71"><input type="submit" name="reset" value="reset" tabindex="5"/></td>
                         </tr>
                         <tr>
-                          <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>
-                          <td width="180">
-						    <div align="left">
-						      <input type="password" class="cor-inativa" id="senha" name="senha" size="20" tabindex="2" />
-                                                 
-					      </div></td>
-                          <td width="71"><input type="reset" value="Limpar" name="B2" tabindex="6" /></td>
-                        </tr>
-                        <tr>
-                          <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Confirmar Senha:</b>
-                          </td>
-                          <td width="180">
-                            <div align="left">
-                              <input name="senha1" id="senha1" type="password" class="cor-inativa" tabindex="3" size="20" />
-                          </div></td>
-                          <td width="71">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
-                          <td><div align="left">
-                            <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
-                          </div></td>
+                          <td align="center">&nbsp;</td>
+                          <td><div align="left"></div></td>
                           <td>&nbsp;</td>
                         </tr>
                         <tr>
                           <td colspan="3">
                           <font face="verdana"  size="1"color="#666666"> 
                           <br/>
-                          <div align="center"><b>Entre com os dados para realizar um novo cadastro!</b>
+                          <div align="center"><b>Entre com os dados para realizar realizar o reset da senha!</b>
                           <br/> Um email de confirmarção será enviado para ativar o cadastro!
                           </div></td>
                         </tr>
