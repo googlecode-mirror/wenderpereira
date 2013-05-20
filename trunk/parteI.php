@@ -173,7 +173,7 @@
   <label>• Unidade Federativa*:</label>
   </td>
   <td bgcolor="#C7C7C7">
-  <select name="cmbUnidadeFederativa" size="1" id="cmbUnidadeFederativa" class="validate[required]">
+  <select name="cmbUnidadeFederativa" size="1" id="cmbUnidadeFederativa">
   <option value=""><? echo $cmbUnidadeFederativa ?> </option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
