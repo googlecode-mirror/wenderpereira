@@ -9,6 +9,9 @@
    <script src="js/login/jquery.validate.js" type="text/javascript"></script>
    <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
    <script src="js/ajax.js" type="text/javascript"></script>  
+   <?
+       include "acessoInformacao.php";
+   ?>
  </head>    
 	 <style type="text/css">
       /* Estilizar os alertas */
@@ -31,6 +34,7 @@
           <td width="420" height="205">
            <div align="center">
             <center>
+              <p>&nbsp;</p>
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
                bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
                <br/>
@@ -42,11 +46,11 @@
                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;</td>
+                          <td width="180"><b>Cadastro de novo usuário:</b></td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td colspan="3"><b><label>Cadastro de novo usuário:</label></b></td>
+                          <td colspan="3">&nbsp;</td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>
@@ -101,7 +105,7 @@
                   </td>
                 </tr>
               </table>
-               <p>
+              <p>
                <script>
                 if (window.document.getElementById('erro').innerHTML == ""){
                 
@@ -110,9 +114,9 @@
                   <label id="erromsg"> </label>
                   <label id="erro"> </label>
                </p>
-               <p><a href="index.php">Home</a>
-                 <br/>
-              </p>
+               <p><a href="index.php">Home</a>              </p>
+               <p><br/>
+               </p>
             </center>
           </div>
       </form>

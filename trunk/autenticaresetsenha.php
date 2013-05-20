@@ -19,6 +19,10 @@
            }
       </style>
 
+    <?
+       include "acessoInformacao.php";
+   ?> 
+
 <body>
 <? 
 	session_start();
@@ -66,12 +70,11 @@ if (empty($Email) OR empty($Autenticacao)) {
                       bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;</td>
+                          <td width="180"><b>Cadastro de nova Senha!</b></td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td colspan="3"><b>
-                            <label>Cadastro de nova Senha!</label></b></td>
+                          <td colspan="3">&nbsp;</td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>
