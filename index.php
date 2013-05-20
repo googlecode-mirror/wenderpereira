@@ -25,17 +25,23 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
--->
 </style>
 <link href="css/barra.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-<!--
 body {
-
 }
+</style>
 
--->
-</style></head></head>
+	 <style type="text/css">
+      /* Estilizar os alertas */
+      label.error{
+          padding-left: 3px;
+          color: red;
+          font-weight: bold;
+           }
+      </style>
+
+</head></head>
 <body onLoad="document.form1.login.focus()">
 <div>
 <div class="barra">
@@ -88,7 +94,7 @@ style="border-collapse: collapse" bordercolor="#111111" width="384">
 </tr>
 <tr>
 <td width="118" align="center"><font face="verdana" size="1" color="#666666">
-<b>usuário:</b></td>
+<b>Usuário:</b></td>
 <td width="193">
 <input type="text" class="cor-inativa" onKeyUp="enviaKey();" onClick="enviaKey();"
 name="login" id="login" size="20" tabindex="1">
@@ -162,7 +168,8 @@ name="login" id="login" size="20" tabindex="1">
 </br>     
 </br>         
 </br>             
-<p><img src="images/imagem.jpg" alt="" width="581" height="72" /></p>
+<p><a href="http://www.funarte.gov.br/">
+<img src="images/imagem.jpg" alt="" width="581" height="72" /></a></p>
 </div>
 
   </center>

@@ -9,7 +9,10 @@
    <script src="js/login/jquery.validate.js" type="text/javascript"></script>
    <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
    <script src="js/ajax.js" type="text/javascript"></script>  
- </head>    
+ </head>   
+    <?
+       include "acessoInformacao.php";
+   ?> 
 	 <style type="text/css">
       /* Estilizar os alertas */
       label.error{
@@ -41,11 +44,11 @@
                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;</td>
+                          <td width="180">Reset de Senha:</td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td colspan="3">Reset de Senha:</td>
+                          <td colspan="3">&nbsp;</td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>
@@ -79,7 +82,7 @@
                   </td>
                 </tr>
               </table>
-               <p>
+              <p>
                <script>
                 if (window.document.getElementById('erro').innerHTML == ""){
                 
@@ -88,9 +91,9 @@
                   <label id="erromsg"> </label>
                   <label id="erro"> </label>
                </p>
-               <p><a href="index.php">Home</a>
-                 <br/>
-              </p>
+               <p><a href="index.php">Home</a>              </p>
+               <p><br/>
+               </p>
             </center>
           </div>
       </form>

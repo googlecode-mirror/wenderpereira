@@ -73,8 +73,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 	$mail->SMTPSecure = 'ssl';	// SSL REQUERIDO pelo GMail
 	$mail->Host = 'smtp.gmail.com';	// SMTP utilizado
 	$mail->Port = 465;  		// A porta 465 deverá estar aberta em seu servidor
-	//$mail->Username = GUSER;
-	$mail->Username = "reset senha Mapeamento residências";
+	$mail->Username = GUSER;
 	$mail->Password = GPWD;
 	$mail->SetFrom($de, $de_nome);
 	$mail->Subject = $assunto;
