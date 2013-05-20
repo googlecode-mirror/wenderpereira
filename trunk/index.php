@@ -66,7 +66,8 @@
                   <tr>
                     <td width="118" align="center"><font face="verdana" size="1" color="#666666"><b>usuário:</b></td>
                     <td width="193">
-                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" name="login" id="login" size="20" tabindex="1">
+                    <input type="text" class="cor-inativa" onKeyUp="enviaKey();" onClick="enviaKey();"
+                     name="login" id="login" size="20" tabindex="1">
 					</td>
                     <td width="73"><div align="left">
                       <input type="submit" value="Entrar" name="B1" tabindex="3">
@@ -81,14 +82,30 @@
                     </tr>
                     <tr>
                     <td align="center">&nbsp;</td>
-                    <td colspan="2"><div align="right"><a href="novoUsuario.php">Novo usuário  </a></div></td>
+                    <td colspan="2">
+                    <label id="erromsg"> </label>
+                    <label id="erro"> </label>
+                    </td>
                     </tr>
                    	<tr>
                     <td colspan="3">
                     <div align="center">
-                    <label id="erromsg"> </label>
-                    <label id="erro"> </label>
-                    <br/>
+              
+                	  <a href="novoUsuario.php">Novo usuário</a>
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+                      &nbsp;
+              	      <a href="resetsenha.php">Nova senha</a>
+                 
                     <font face="verdana" size="1"color="#666666">
                     <b>
                     </b>

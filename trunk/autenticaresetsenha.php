@@ -8,7 +8,7 @@
    <script src="js/login/jquery-1.6.2.js" type="text/javascript"></script>
    <script src="js/login/jquery.validate.js" type="text/javascript"></script>
    <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
-   <script src="js/ajax.js" type="text/javascript"></script>  
+ 
  </head>    
 	 <style type="text/css">
       /* Estilizar os alertas */
@@ -20,9 +20,32 @@
       </style>
 
 <body>
-<!--<form name="form1" method="post" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
+<? 
+	session_start();
+	include "conexao.php";
+	connect();
+	$Email 			= ($_GET["x44221715457fghsr"]);
+	$date 			= date("d/m/y");
+	$hora 			= date("H:i");
+	$Senha 			= ($_POST["senha"]);
+	$Autenticacao 	= ($_GET["1425"]);
 
-<form name="form1" id="form1" method="post" action="email.php">
+
+if (empty($Email) OR empty($Autenticacao)) {
+	$consulta = "UPDATE usuarios SET ativo='0', senha='$_POST[senha]' WHERE email='$_POST[email]' 
+				 and autenticacao='$_POST[autenticacao]';";
+	$resultado = mysql_query($consulta)
+	 or die ("");
+	?>	 
+	<script>
+	alert("A senha foi alterada clique em ok e efetue o login!");
+	window.location = 'index.php';
+	</script>
+	<?php
+	}
+	?>
+
+<form name="form1" id="form1" method="post" action="autenticaresetsenha.php">
 
 		<div align="center">
 		<center>
@@ -39,14 +62,16 @@
                   <td>
                   <div align="center">
                     <center>
-                      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
+                      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" 
+                      bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
                           <td width="180">&nbsp;</td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td colspan="3"><b><label>Cadastro de novo usuário:</label></b></td>
+                          <td colspan="3"><b>
+                            <label>Cadastro de nova Senha!</label></b></td>
                         </tr>
                         <tr>
                           <td width="139">&nbsp;</td>
@@ -54,36 +79,41 @@
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Usuário:</b></td>
-                        <td width="180">
-                        <div align="left">
-                        <input type="text" class="cor-inativa" onKeyUp="enviaKey1();" onClick="enviaKey1();"
-                        id="login" name="login" size="20" tabindex="1" />
+                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
+                        <td width="180"><label>
+                          <div align="center">
+                            <input name="email" type="text" id="email" value="<? echo $Email; ?>" readonly="readonly"/>
+                          </div>
+                        </label>                        </td>
+                          <td width="71"><input type="submit" name="Salvar" value="Salvar" class="botao" /></td>
+                        </tr>
+                        <tr>
+                          <td width="139" align="center">
+                          <font face="verdana" size="1" color="#666666"><b>Senha:</b>
+                          </td>
+                          <td width="180"><div align="center">
+                            <input type="password" class="cor-inativa" id="senha" name="senha" size="20" tabindex="2" />
+                            
                           </div></td>
-                          <td width="71"><input type="submit"" value="Salvar" tabindex="5"/></td>
-                        </tr>
-                        <tr>
-                          <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Senha:</b></td>
-                          <td width="180">
-						    <div align="left">
-						      <input type="password" class="cor-inativa" id="senha" name="senha" size="20" tabindex="2" />
-                                                 
-					      </div></td>
                           <td width="71"><input type="reset" value="Limpar" name="B2" tabindex="6" /></td>
                         </tr>
                         <tr>
                           <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Confirmar Senha:</b>
                           </td>
-                          <td width="180">
-                            <div align="left">
-                              <input name="senha1" id="senha1" type="password" class="cor-inativa" tabindex="3" size="20" />
+                          <td width="180"><div align="center">
+                            <input name="senha1" id="senha1" type="password" class="cor-inativa" tabindex="3" size="20" />
                           </div></td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
-                          <td><div align="left">
-                            <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
+                          <td align="center">
+                          <font face="verdana" size="1" color="#666666"><b>Autenticação:</b>
+                          </td>
+                          <td>
+                            <div align="center">
+                              <input name="autenticacao" type="text" 
+                          class="cor-inativa" id="autenticacao" 
+                          tabindex="3"  value="<? echo $Autenticacao ?>" size="20" readonly="readonly" />
                           </div></td>
                           <td>&nbsp;</td>
                         </tr>
@@ -91,7 +121,7 @@
                           <td colspan="3">
                           <font face="verdana"  size="1"color="#666666"> 
                           <br/>
-                          <div align="center"><b>Entre com os dados para realizar um novo cadastro!</b>
+                          <div align="center"><b>Entre com os dados para cadastrar nova senha!</b>
                           <br/> Um email de confirmarção será enviado para ativar o cadastro!
                           </div></td>
                         </tr>
