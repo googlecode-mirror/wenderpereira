@@ -45,10 +45,11 @@ body {
 <body onLoad="document.form1.login.focus()">
 <div>
 <div class="barra">
-<div class="pagina"><a href="http://www.acessoainformacao.gov.br">
-<img src="images/ai.png" width="161" height="24" alt="" />
-<a href="http://www.brasil.gov.br" class=&quot;brasilgov">
-<img src="images/brasil.png" width="108" height="24" alt="" /></a></div>
+<div class="pagina"><a href="http://www.acessoainformacao.gov.br"><img src="images/ai.png" width="161" height="24" /><a href="http://www.brasil.gov.br" class=&quot;brasilgov">
+<img src="images/brasil.png" width="108" height="24" alt="" /></a>
+</div>
+<img src="images/barra.png" width="60%" height="2" alt="barra" />
+</div>
 
 </div>
 
@@ -168,8 +169,7 @@ name="login" id="login" size="20" tabindex="1">
 </br>     
 </br>         
 </br>             
-<p><a href="http://www.funarte.gov.br/">
-<img src="images/imagem.jpg" alt="" width="581" height="72" /></a></p>
+<p><a href="http://www.funarte.gov.br/"><img src="images/imagem.jpg" alt="" width="581" height="72" /></a></p>
 </div>
 
   </center>

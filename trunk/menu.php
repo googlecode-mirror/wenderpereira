@@ -1,16 +1,23 @@
 <? 
   	 session_start();
      include "conexao.php";
+  	 connect();
      include "valida_user.php";
 	 header("Cache-Control: no-cache, must-revalidate");
      $date = date("d/m/y");
      $hora = date("H:i");
 	 $Login 	=  $_SESSION["login"]; //recebe a sessão do login
+	 
+	 $sql = "select * from usuarios where login='$Login'";
+	 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+	 while ($array_exibir = mysql_fetch_array($Resultado)) {
+	 $concluido = ($array_exibir['concluido']);	}
 ?>
 <html>
 <head>
 	<title>Funarte</title>
 </head>
+<meta http-equiv="refresh" content="3;URL=menu.php">
 <body bgcolor="<?  echo $cor_pagina ?>">
 <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#FFFFFF" width="178">
   <tr>
@@ -31,7 +38,7 @@
     <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
     <td height="30" colspan="3" bgcolor="#adac39" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
     <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="mapeamento.php">
+    <a target="principal" style="text-decoration: none" <? if ($concluido >= -1 ){ echo('href="mapeamento.php"'); }?> >
     <font color="#FFFFFF">&nbsp;&nbsp;Mapeamento</font></a></font></b></td>
   </tr>
 
@@ -40,7 +47,7 @@
     <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
     <td height="30" colspan="3" bgcolor="#adac39" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
     <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteI.php">
+    <a target="principal" style="text-decoration: none" <? if ($concluido >= 0 ){ echo('href="parteI.php"'); }?> >
     <font color="#FFFFFF">&nbsp;&nbsp;ParteI</font></a></font></b></td>
   </tr>
 
@@ -49,7 +56,7 @@
     <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
     <td height="30" colspan="3" bgcolor="#adac39" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
     <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteII.php">
+    <a target="principal" style="text-decoration: none"  <? if ($concluido >= 1 ){ echo('href="parteII.php"'); }?> >
     <font color="#FFFFFF">&nbsp;&nbsp;ParteII</font></a></font></b></td>
   </tr>
     <tr>
@@ -57,7 +64,7 @@
     <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
     <td height="30" colspan="3" bgcolor="#adac39" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
     <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteIII.php">
+    <a target="principal" style="text-decoration: none" <? if ($concluido >= 2 ){ echo('href="parteIII.php"'); }?> >
     <font color="#FFFFFF">&nbsp;&nbsp;ParteIII</font></a></font></b></td>
   </tr>
  <tr>
@@ -65,29 +72,9 @@
     <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
     <td height="30" colspan="3" bgcolor="#adac39" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
     <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteIV.php">
+    <a target="principal" style="text-decoration: none" <? if ($concluido >= 3 ){ echo('href="parteIV.php"'); }?> >
     <font color="#FFFFFF">&nbsp;&nbsp;ParteIV</font></a></font></b></td>
   </tr>
-    <!-- Pesquisa de usuarios-->
-    <!--
-      <tr>
-        <td width="35" height="30" bgcolor="#FFFFFF">
-        <img border="0" src="imagebox/usuarios.png" width="30" height="30"></td>
-        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-        <font face="verdana" size="1">
-        <a href="usuarios.php" target="principal" style="text-decoration: none">
-        <font color="#FFFFFF">&nbsp;&nbsp;Usuários</font></a></font></b></td>
-      </tr>
-    
-      <tr>
-        <td width="35" height="30" bgcolor="#FFFFFF">
-        <img border="0" src="imagebox/sistema.png" width="30" height="30"></td>
-        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF;
-         border-bottom: 1px solid #FFFFFF"><font face="verdana" size="1">
-        <b><a target="principal" href="sobre.php" style="text-decoration: none">
-        <font color="#FFFFFF">&nbsp;&nbsp;Sobre o Sistema</font></a></b></font></td>
-      </tr>
-    -->
   <tr>
     <td width="35" height="30" bgcolor="#FFFFFF">
     <img border="0" src="imagebox/saida.png" width="30" height="30"></td>
@@ -102,7 +89,7 @@
   </tr>
 </table>
 <script language="javascript">
-document.form1.login1.focus();
+document.form.login1.focus();
 </script>
 </body>
 
