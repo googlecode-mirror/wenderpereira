@@ -85,17 +85,6 @@
 	}
 	</script>
     
-<!--     <script>
-	function FuncaoObrigatorio(campo){
-	if(document.getElementById([campo]).disabled = true){
-	document.getElementById([campo]).visibility = false;
-	}else{
-	document.getElementById([campo]).visibility = true;
-	}
-	}
-	</script>
-	-->
-	
 </head>
 <body>
 <form name="form1" id="form1" method="post"  action="sql\parteI.php">
