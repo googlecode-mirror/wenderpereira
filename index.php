@@ -97,7 +97,7 @@ style="border-collapse: collapse" bordercolor="#111111" width="384">
 <td width="118" align="center"><font face="verdana" size="1" color="#666666">
 <b>Usuário:</b></td>
 <td width="193">
-<input type="text" class="cor-inativa" onKeyUp="enviaKey();" onClick="enviaKey();"
+<input type="text" class="cor-inativa" onKeyUp="enviaKeyCEP();" onClick="enviaKey();"
 name="login" id="login" size="20" tabindex="1">
 </td>
 <td width="73"><div align="left">

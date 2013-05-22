@@ -89,7 +89,7 @@
   </tr>
 </table>
 <script language="javascript">
-document.form.login1.focus();
+//document.form.login1.focus();
 </script>
 </body>
 
