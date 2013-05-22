@@ -11,8 +11,15 @@
 <script src="../../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
 <style type="text/css">
 <!--
-#textarea {
+
+.Intruca {
+	width: 65%;
+	height:24px;
 	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	background-color: #CCC;
 }
 -->
 </style>
@@ -23,19 +30,34 @@
   </p>
   <form name="form1" method="post" action="">
     <label>
-      <textarea name="textarea" cols="100" rows="30" wrap="virtual" id="textarea">Instruções para cadastramento:
-
-Passo 1: Caso seja a primeira vez que esteja se cadastrando, clique em Novo Usuário e vá ao passo 2. Em caso do cadastro já ter sido realizado anteriormente, entre com o nome do usuário e senha e pule para o passo 3.
-
-Passo 2: Escolha um nome de usuário e senha. Em seguida coloque a mesma senha para confirmação, bem como, preencha o campo do endereço de seu e-mail. Clique em salvar e uma mensagem será enviada para seu e-mail. Ao abrir a mensagem, haverá um link de ativação. Clique neste para que seu cadastro seja autenticado. Posteriormente, entre normalmente com o nome de usuário e senha cujo cadastro foi realizado.
-
-Passo 3: O cadastramento é realizado em 5 partes : Mapeamento, Parte 1, Parte 2, Parte 3, e Parte 4. Preencha as partes do cadastro uma a uma. Alguns campos são obrigatórios, sendo que, nestes casos, ao final da perguntaaparece um asterisco (*). Em algumas questões somente é possível uma resposta. Em outras, são possíveis múltiplas respostas, mas fique atento às perguntas obrigatórias, onde o usuário deverá marcar pelo menos um item, caso não preencha aparecerá uma mensagem, sendo que, o usuário somente poderá avançar ou atualizar seus dados, caso conclua esta resposta. Fique também atento porque em algumas questões há um número limitado de itens que podem ser marcados. Caso este tipo de pergunta seja obrigatória, de qualquer forma, o usuário deverá marcar no mínimo um item.
-
-Passo 4: Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na Parte 4, é obrigatório o usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas salvas automaticamente.
-
-Passo 5: Após o término, clique em logout. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.
-
-      </textarea>
+      <div class="Intruca" >
+        <b><p align="left">Instruções para cadastramento:</p></b>
+        <p align="left"> <b> Passo 1: </b> Caso seja a primeira vez que esteja se cadastrando, clique em Novo Usuário e vá ao passo 2.
+         Em caso do cadastro já ter sido realizado anteriormente, entre com o nome do usuário e senha e pule para o passo 3.
+          </br>
+        </p>
+        <p align="left"><b>Passo 2:</b> Escolha um nome de usuário e senha. Em seguida coloque a mesma senha para confirmação,
+         bem como, preencha o campo do endereço de seu e-mail. Clique em salvar e uma mensagem será enviada para seu e-mail.
+          Ao abrir a mensagem, haverá um link de ativação. Clique neste para que seu cadastro seja autenticado. Posteriormente, 
+          entre normalmente com o nome de usuário e senha cujo cadastro foi realizado.</p>
+        <p align="left"> <b>Passo 3:</b> O cadastramento é realizado em 5 partes : Mapeamento, Parte 1, Parte 2, Parte 3, e Parte 4. 
+        Preencha as partes do cadastro uma a uma. Alguns campos são obrigatórios, sendo que, nestes casos, ao final da 
+        perguntaaparece um asterisco (*). Em algumas questões somente é possível uma resposta. Em outras, são possíveis
+         múltiplas respostas, mas fique atento às perguntas obrigatórias, onde o usuário deverá marcar pelo menos um item,
+          caso não preencha aparecerá uma mensagem, sendo que, o usuário somente poderá avançar ou atualizar seus dados, caso
+          conclua esta resposta. Fique também atento porque em algumas questões há um número limitado de itens que podem ser
+           marcados. Caso este tipo de pergunta seja obrigatória, de qualquer forma, o usuário deverá marcar no mínimo um item.</p>
+        <p align="left"> <b>Passo 4:</b> Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar 
+        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na Parte 4, é obrigatório o 
+        usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, 
+        ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas
+         salvas automaticamente.
+          
+        </p>
+        <p align="left"><b>Passo 5: </b> Após o término, clique em logout. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.</p>
+        <p align="left">&nbsp;</p>
+        <p align="left">&nbsp;</p>
+      </div>
     </label>
   </form>
   <p>&nbsp;</p>

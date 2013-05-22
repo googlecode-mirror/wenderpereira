@@ -68,13 +68,14 @@
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">	</script>
 	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">	</script>
 	<script>
+	   
 		jQuery(document).ready(function(){
 			// binds form submission and fields to the validation engine
 			jQuery("#form1").validationEngine();
 		});
 	</script>
     <script src="js/jsValidate.js" type="text/javascript"></script> 
-    
+    <script src="js/ajax.js" type="text/javascript"></script>  
     <script>
 	function MarcarCheckBoxClique(campo){
 	if(document.getElementById([campo]).checked == true){
@@ -127,7 +128,7 @@
       </td>
     <td bgcolor="#C7C7C7">
       <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
-  onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
+      onKeyUp="enviaKeyCEP();"  onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
   class="validate[required] text-input"/>
       
       <div style="display:inline;">
@@ -162,7 +163,7 @@
   <label>• Unidade Federativa*:</label>
   </td>
   <td bgcolor="#C7C7C7">
-  <select name="cmbUnidadeFederativa" size="1" id="cmbUnidadeFederativa">
+  <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
   <option value=""><? echo $cmbUnidadeFederativa ?> </option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
