@@ -77,7 +77,7 @@
      or die ("--");
 	  ?>
 	  <script language="JavaScript">
-      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+      alert("parte Mapeamento cadastradra, entre na parte I para realizar o cadastro!");
       </script>
 	  <?
 		}

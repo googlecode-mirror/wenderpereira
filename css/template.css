@@ -94,6 +94,7 @@ form.formular, .validationEngineContainer {
 	font-size: 12px;
 	margin-bottom: 15px;
 	background: #FFEAEA;
+	
 }
 
 .formular input[data-prompt-position="inline"] {

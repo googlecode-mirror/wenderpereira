@@ -85,6 +85,31 @@
 	}
 	}
 	</script>
+	<script>
+    /**
+    * 
+    * @param {input[type=checkbox]} the checkbox to read
+    * @param {input[type=textbox]} the field bound to the checkbox that gets enabled or disabled
+    */
+//    function ToggleState(checkbox, field) {
+//      if ($(checkbox).attr('checked'))
+//          $(field).attr('disabled', 'disabled');
+//      else
+//          $(field).removeAttr('disabled');
+//    }
+	 function ToggleState1(checkbox, field) {
+      if ($(checkbox).attr('checked'))
+          $(field).show(1000);
+      else
+          $(field).removeAttr('disabled');
+    }
+	 function ToggleState(checkbox, field) {
+      if ($(checkbox).attr('checked'))
+          $(field).hide(1000);
+      else
+          $(field).removeAttr('disabled');
+    }
+    </script>
     
 </head>
 <body>
@@ -110,17 +135,24 @@
       <label>• A instituição se Declara Formal*: </label>
       </td>
     <td>
-      <input type="radio" name="qtd0" <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
+      <input type="radio" name="qtd0" id="qtd01" onClick="javascript:ToggleState1('#qtd01', '#idopcaocnpj');" 
+	  <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
       value="0a" class="validate[required] radio" />
       Sim</label>
-      <input type="radio" name="qtd0" <? if(in_array("0b", $meuArray)){ echo "checked";}?> value="0b" class="validate[required] radio" />
+      <input type="radio" id="qtd00" name="qtd0" onClick="javascript:ToggleState('#qtd00', '#idopcaocnpj');"
+       <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
+      value="0b" class="validate[required] radio" />
+                  
       Não</label>
       </td>
   </tr>
   <tr bgcolor="#C7C7C7">
     <td><label>• CNPJ:</label></td>
-    <td><input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
-    onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');"/>
+    <td>
+    <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
+    onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" 
+    class="validate[required] text-input"/>
+    
       <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
   </tr>
   <tr>

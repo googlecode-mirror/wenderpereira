@@ -35,6 +35,6 @@
                 window.location = 'index.php';
                 //-->
                 </script>
-            <?php
+            <?
         }
 ?>

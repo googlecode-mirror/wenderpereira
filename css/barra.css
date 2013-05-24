@@ -1,18 +1,43 @@
-@charset "utf-8";
-.barra {
-	width: 100%;
-	height:25px;
-	background-color: #00500F;
-	text-align: center;
+#barra-brasil {
+	position:relative;
+    //overflow:hidden;
+	min-width:1000px;
+	background: #00500F url(../images/barra-brasil-v3-bgx.png) center bottom no-repeat;
+	background-image: url(images/barra-brasil-v3-bgx.png);
 }
 
- .pagina {
-	width: 80%;
-	height:24px;
-	text-align: right;
-	border-top-width: thin;
-	border-top-style: none;
-	border-top-color: #063;
+#barra-brasil .barra {
+    display: block;
+    width: 960px;
+    height:44px;
+    margin: 0 auto;
+	margin-top:-26px;
+    background: url(../images/barra-brasil-v3-bgx.gif) 0 bottom repeat-x;
 }
 
- 
+#barra-brasil .barra ul {
+    float:right;
+    width: 328px;
+}
+
+#barra-brasil .barra ul li {
+    float: left;
+    padding-left: 29px;
+}
+
+#barra-brasil .ai {
+    display: block;
+    width: 161px;
+    height: 28px;
+    text-indent: -2600px;
+    background: #00500F url(../images/ai.png) no-repeat 0 4px;
+}
+
+#barra-brasil .brasilgov {
+    display: block;
+    width: 108px;
+    height: 27px;
+    text-indent: -2600px;
+    background: #00500F url(../images/brasil.png) no-repeat 0 4px;
+
+}

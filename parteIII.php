@@ -288,58 +288,58 @@
         <td>
         <div>
         <label>•Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? 
-        (marque quantos itens julgar necessário):*</label>
+        (marque quantos itens julgar necessário):</label>
         <p>
 	  	  <input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>América do Sul</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7b" <? if(in_array("7b", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>América Central</label>
           <br/> 
 	  	  <input name="qtd7[]" type="checkbox" value="7c" <? if(in_array("7c", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	 
           <label>América do Norte</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7d" <? if(in_array("7d", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>Europa</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7e" <? if(in_array("7e", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>Ásia</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7f" <? if(in_array("7f", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>África</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7g" <? if(in_array("7g", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	 
           <label>Oceania</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>países Ibero-Americanos</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	 
           <label>países da União Europeia</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
           <br/>
 	  	  <input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>em nível mundial, englobando todos os continentes</label>
           <br/>       
 	  	  <input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	
           <label>em acordo bilateral, no caso de apenas um outro país</label>
           <br/>        
    	  	  <input name="qtd7[]" id="idqtd7quais" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>
-          class="validate[minCheckbox[1]] checkbox"/> 
+			/>	 
           <label>Qual?</label>
           <input name="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
         </p>
