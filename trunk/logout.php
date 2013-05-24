@@ -13,7 +13,9 @@
 	session_destroy();
 
 ?>
-
+   <?
+       include "acessoInformacao.php";
+   ?> 
 
 
 <HTML>

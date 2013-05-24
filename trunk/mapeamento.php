@@ -103,7 +103,7 @@
       </td>
       <td width="430">
       <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="46" 
-      class="validate[custom[email]] text-input"/>
+      class="validate[custom[email]] text-input" type="text" name="optional" id="optional" />
       </td>
       </tr>
       <tr bgcolor="#D2D2D2">

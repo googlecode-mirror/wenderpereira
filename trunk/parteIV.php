@@ -263,36 +263,36 @@ include "conexao.php";
       </tr>
             <tr bgcolor="#D2D2D2">
         <td colspan="2"><div>
-          <label>Qual o principal público a ser atingido pelas ações? (marque no máximo os 3 itens mais importantes)*:</label>
+          <label>Qual o principal público a ser atingido pelas ações*? (marque no máximo os 3 itens mais importantes):</label>
           <p>
             <label>
               <input type="checkbox" name="qtd3[]" value="3a" <? if(in_array("3a", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
               cidadãos locais</label>
             <br />
             <label>
               <input type="checkbox" name="qtd3[]" value="3b" <? if(in_array("3b", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
               artistas</label>
             <br />
             <label>
               <input type="checkbox" name="qtd3[]" value="3c" <? if(in_array("3c", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>              
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               produtores culturais</label>
             <br />
             <label>
               <input type="checkbox" name="qtd3[]" value="3d" <? if(in_array("3d", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>              
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               estudantes</label>
             <br />
             <label>
               <input type="checkbox" name="qtd3[]" value="3e" <? if(in_array("3e", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>              
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               pesquisadores</label>
             <br />
             <label>
               <input type="checkbox" name="qtd3[]" value="3f" id="idqtd3quais" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3]] checkbox"/>              
+              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               outros</label>
             <label> Quais</label>
             <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
@@ -302,7 +302,7 @@ include "conexao.php";
       </tr>
             <tr bgcolor="#C7C7C7">
         <td colspan="2"><div>
-          <label>Onde as ações são realizadas? (marque quantos itens julgar necessário)*</label>
+          <label>Onde as ações são realizadas*? (marque quantos itens julgar necessário)</label>
         </div>
           <p>
             <label>

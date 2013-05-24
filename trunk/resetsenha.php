@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+   <?
+       include "acessoInformacao.php";
+   ?> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Funarte - Cadastro de novo usuário:</title>
 
@@ -10,9 +13,7 @@
    <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
    <script src="js/ajax.js" type="text/javascript"></script>  
  </head>   
-    <?
-       include "acessoInformacao.php";
-   ?> 
+
 	 <style type="text/css">
       /* Estilizar os alertas */
       label.error{

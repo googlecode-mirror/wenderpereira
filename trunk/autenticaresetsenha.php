@@ -19,10 +19,9 @@
            }
       </style>
 
-    <?
+   <?
        include "acessoInformacao.php";
    ?> 
-
 <body>
 <? 
 	session_start();
