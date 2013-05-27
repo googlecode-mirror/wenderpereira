@@ -27,25 +27,34 @@
 
 <form name="form1" id="form1" method="post" action="emailresetsenha.php">
 
-		<div align="center">
-		<center>
-		 <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
+		
+              <table width="100%" border="0">
+                <tr>
+                  <th scope="col">
+        		<center>
+		        <p>&nbsp;</p>
+		        <p>&nbsp;</p>
+		        <p>&nbsp;</p>
+                </br>
+                
+		        <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
 		<tr>
-          <td width="420" height="205">
-           <div align="center">
+          <td width="800">
+           <div align="center" width="420" height="205">
             <center>
-              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
+            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
                bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
                <br/>
                <br/>
                 <tr>
                   <td>
+                  <div>
                   <div align="center">
                     <center>
                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
-                          <td width="180">Reset de Senha:</td>
+                          <td width="180">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset de Senha:</td>
                           <td width="71">&nbsp;</td>
                         </tr>
                         <tr>
@@ -82,7 +91,7 @@
                   </div>
                   </td>
                 </tr>
-              </table>
+            </table>
               <p>
                <script>
                 if (window.document.getElementById('erro').innerHTML == ""){
@@ -91,12 +100,18 @@
                </script>
                   <label id="erromsg"> </label>
                   <label id="erro"> </label>
-               </p>
-               <p><a href="index.php">Home</a>              </p>
-               <p><br/>
-               </p>
-            </center>
-          </div>
-      </form>
+                  <a href="index.php">Home</a></p>          </tr>
+              </table>
+               
+				<p>
+                <a href="index.php"></a></p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+  	           <p>
+               <br/>
+          </p>
+  	           <a href="http://www.funarte.gov.br/"><img src="images/imagem.jpg" alt="" width="581" height="72" /></a>
+  </form>
   </body>
 </html>

@@ -436,7 +436,7 @@ include "conexao.php";
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
              <div align="center"><br />
-             <textarea name="qtdComentariosGerais" cols="100%" rows="10">
+             <textarea name="qtdComentariosGerais" rows="15" cols="100%">
 				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
              </div>
