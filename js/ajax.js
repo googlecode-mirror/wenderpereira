@@ -69,33 +69,26 @@ function enviaKey1(){
 //--------------------------------------------------------------------------------------------------------------------------
 //Pesquisa CEP
 function setOutputCEP(){
- 
     if (httpObject.readyState == 4)
     {
 		var json =  JSON.parse(httpObject.responseText);
 		document.getElementById('idFrmEndereco').value = json.rua;
 		document.getElementById('ifFrmMunicipio').value = json.bairro;
-//		document.setSelectedItem('cmbUnidadeFederativa').value = json.uf;
-		//document.setSelectedItem('idcmbUnidadeFederativa').text = json.uf;
-  
-		//$('#idcmbUnidadeFederativa').text($(json.uf).find(":selected").text());
-
 	}
 }
-
 function enviaKeyCEP(){
- 
     httpObject = getHTTPObject();
- 
     if (httpObject != null)
     {
         httpObject.open("GET", "buscacep.php?entrada="+document.getElementById('idFrmCep').value, true);
         httpObject.send(null);
         httpObject.onreadystatechange = setOutputCEP;
     }
- 
 } 
 //--------------------------------------------------------------------------------------------------------------------------
  
+
  
+ 
+
 var httpObject = null;
