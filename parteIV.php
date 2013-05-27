@@ -447,18 +447,18 @@ include "conexao.php";
       </tr>
                   <tr>
                     <td colspan="2"><div><br />
-                      <input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 
+                     <label> <input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 
                       class="validate[required] radio"/> 
-                      <label>Declaro, para os devidos fins, que as informações aqui prestadas são verdadeiras</label>
+                      Declaro, para os devidos fins, que as informações aqui prestadas são verdadeiras</label>
                     
-                      <input type="radio" name="dec2" <?php if($_POST['dec2']=="dec2") echo "checked";?> value="dec2" 
+                     <label> <input type="radio" name="dec2" <?php if($_POST['dec2']=="dec2") echo "checked";?> value="dec2" 
                       class="validate[required] radio"/> 
-                      <label>Declaro estar ciente que as informações aqui prestadas são públicas em atendimento
+                      Declaro estar ciente que as informações aqui prestadas são públicas em atendimento
                         a Lei de Acesso à Informação nº 12.527/2011, resguardadas aquelas de caráter pessoal</label>
                     
-                      <input type="radio" name="dec3" <?php if($_POST['dec3']=="dec3") echo "checked";?> value="dec3" 
+                      <label><input type="radio" name="dec3" <?php if($_POST['dec3']=="dec3") echo "checked";?> value="dec3" 
                       class="validate[required] radio"/>                       
-                      <label>Autorizo a Funarte a utilizar as informações aqui  prestadas para fins de mapeamento,
+                      Autorizo a Funarte a utilizar as informações aqui  prestadas para fins de mapeamento,
                         pesquisa, análise e construção de políticas  para o campo das residências artísticas.</label>
                     </div></td>
                   </tr>
