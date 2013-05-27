@@ -1,4 +1,4 @@
-  
+  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
   <?
       session_start();
       include "conexao.php";
@@ -30,8 +30,10 @@
 			  } elseif ($concluido == 0){
 			 ?>
              <script language="JavaScript">
+		
              alert("Cadastramento do mapeamento já foi realizado!");
-             </script>
+			 	window.frames['conteúdo'].document.location = principal.php;
+              </script>
             <?php
 			  } elseif ($concluido == 1){
 			 ?>
@@ -55,6 +57,7 @@
              ?>
               <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+
               </script>
             <?php
 		 }else{
@@ -78,6 +81,7 @@
 	  ?>
 	  <script language="JavaScript">
       alert("parte Mapeamento cadastradra, entre na parte I para realizar o cadastro!");
+      window.location = 'Mapeamento_residencias/parte_I.php';
       </script>
 	  <?
 		}
