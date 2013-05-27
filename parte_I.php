@@ -63,7 +63,7 @@
 		 <br />    
 		 <br />  
 		<?
-			include "menu.php";
+   		require "menu.php";
 		?> 
         <div class="span9">
         <div class="row-fluid">

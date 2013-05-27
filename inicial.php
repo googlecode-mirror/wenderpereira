@@ -37,7 +37,7 @@
 ?>
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -45,40 +45,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="index.php">Mapeamento residências</a>
+          <a class="brand" href="#">Mapeamento residências</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-               <a href="logout.php" class="navbar-link">sair</a>
+              <a href="logout.php" class="navbar-link">sair</a>
             </p>
             <ul class="nav">
               <li class="active"><a href="index.php">Home</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-      </div>
-       <?
+        </div>
+        <?
 	    include "header.php";
-	   ?>
-    </div>
-     <br />
-     <br />
-     <br />    
-     <br />  
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Menu</li>
-              <li class="active"><a href="inicial.php">Mapeamento</a></li>
-              <li><a href="parte_I.php">ParteI</a></li>
-              <li><a href="parte_II.php">ParteII</a></li>
-              <li><a href="parte_III.php">ParteIII</a></li>
-              <li><a href="parte_IV.php">ParteIV</a></li>
-              <li><a href="logout.php">Logout</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+	    ?>
+		</div>
+		 <br />
+		 <br />
+		 <br />    
+		 <br />  
+		<?
+   		require "menu.php";
+		?> 
         <div class="span9">
         <div class="row-fluid">
        <dl>
