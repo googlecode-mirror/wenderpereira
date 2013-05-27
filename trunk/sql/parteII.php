@@ -150,7 +150,8 @@
      or die ("--");
 		?>
 	  <script language="JavaScript">
-      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
+	      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
+	      window.location = 'Mapeamento_residencias/parte_III.php';
       </script>
 	  <?
 	}

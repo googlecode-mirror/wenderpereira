@@ -1,0 +1,1 @@
+<meta http-equiv="Refresh" content="5; url=http://http://www.funarte.gov.br/mapeamento_residencias">

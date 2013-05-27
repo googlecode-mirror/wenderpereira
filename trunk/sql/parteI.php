@@ -56,7 +56,7 @@
    		   ?>
              <script language="JavaScript">
              alert("Cadastramento da Parte I já foi realizado!");
-             </script>
+	         </script>
             <?php
 		  } elseif ($concluido == 2){
   		   ?>
@@ -112,7 +112,8 @@
 	 or die ("--");
 	  ?>
 	  <script language="JavaScript">
-	  alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+	      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+	      window.location = 'Mapeamento_residencias/parte_III.php';
 	  </script>
      <?
 	  }
