@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/ajax.js" type="text/javascript"></script>  
 <? 
 	session_start();
 	if (empty($_SESSION["login"])){
@@ -29,34 +30,21 @@
 		$txtEmail = ($array_exibir['email']);
 	}
 ?>
-   <!--<script src="js/jsValidate.js" type="text/javascript"></script>
-   <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-   <script src="js/jquery.validate.js" type="text/javascript"></script>
-   <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
-	 <style type="text/css">
-      /* Estilizar os alertas */
-      label.error{
-          padding-left: 2px;
-          color: red;
-          font-weight: bold;
-           }
-      </style>-->
-      
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+     
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
 	</script>
 	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
 	</script>
-	<script>
-		jQuery(document).ready(function(){
-			// binds form submission and fields to the validation engine
-			jQuery("#form1").validationEngine();
-		});
-	</script>
     <script src="js/jsValidate.js" type="text/javascript"></script> 
+
+ 
 
 <title>Funarte - Portal das Artes</title>
 </head>
@@ -103,7 +91,7 @@
       </td>
       <td width="430">
       <input type="text" name="txtEmail" value="<?php echo $txtEmail;?>" size="46" 
-      class="validate[custom[email]] text-input" type="text" name="optional" id="optional" />
+      class="validate[custom[email]] text-input" id="optional" />
       </td>
       </tr>
       <tr bgcolor="#D2D2D2">
@@ -126,8 +114,8 @@
       </tr>
       <tr bgcolor="#C7C7C7">
       <th colspan="4" align="left" scope="row"><div align="center">
-       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <input type="submit" name="atualizar" value="atualizar" class="botao"/>
        <span class="formu2">
        </span></div></th>
