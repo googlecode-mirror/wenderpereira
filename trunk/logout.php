@@ -11,10 +11,9 @@
 
 	session_unset();
 	session_destroy();
-
-?>
+   ?>
    <?
-       include "acessoInformacao.php";
+     include "acessoInformacao.php";
    ?> 
 
 

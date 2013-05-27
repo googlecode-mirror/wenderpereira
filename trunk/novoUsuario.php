@@ -26,9 +26,12 @@
 <!--<form name="form1" method="post" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
 
 <form name="form1" id="form1" method="post" action="email.php">
-
-		<div align="center">
-		<center>
+              <table width="100%" border="0">
+                <tr>
+                  <th scope="col">
+        		<center>
+		 <p>&nbsp;</p>
+		 <p>&nbsp;</p>
 		 <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
 		<tr>
           <td width="420" height="205">
@@ -36,24 +39,20 @@
             <center>
               <p>&nbsp;</p>
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
-               bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
+               bordercolor="#111111" width="403" height="205" background="imagebox/logo_abertura.png">
                <br/>
                <br/>
                 <tr>
-                  <td>
+                  <td width="403">
                   <div align="center">
                     <center>
                       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
                         <tr>
                           <td width="139">&nbsp;</td>
-                          <td width="180"><b>Cadastro de novo usuário:</b></td>
-                          <td width="71">&nbsp;</td>
-                        </tr>
+                          <td colspan="2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cadastro de novo usuário:</b></td>
+                          </tr>
                         <tr>
-                          <td colspan="3">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td width="139">&nbsp;</td>
+                          <td width="139" height="40">&nbsp;</td>
                           <td width="180">&nbsp;</td>
                           <td width="71">&nbsp;</td>
                         </tr>
@@ -100,10 +99,11 @@
                           </div></td>
                         </tr>
                       </table>
-                    </center>
-                  </div>
-                  </td>
-                </tr>
+                  </table>
+                </center>
+              </div>
+            </td>
+           </tr>
               </table>
               <p>
                <script>
@@ -114,11 +114,15 @@
                   <label id="erromsg"> </label>
                   <label id="erro"> </label>
                </p>
-               <p><a href="index.php">Home</a>              </p>
+               <p><a href="index.php">Home</a>              
+               </p>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
+               <p>&nbsp;</p>
                <p><br/>
                </p>
-            </center>
-          </div>
+               <a href="http://www.funarte.gov.br/"><img src="images/imagem.jpg" alt="" width="581" height="72" /></a>
+        		</center>
       </form>
   </body>
 </html>

@@ -122,7 +122,7 @@
     </script>
 </head>
 <body>
-<form name="form1" class="table table-condensed" id="form1" method="post"  action="sql\parteI.php">
+<form name="form1" class="table table-condensed" id="form1" method="post"  action="sql/parteI.php">
    <div class="container">
  <table width="80%" align="center" cellpadding="2" class="table table-hover">
   <tr>
