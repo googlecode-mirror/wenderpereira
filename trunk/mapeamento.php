@@ -29,19 +29,7 @@
 		$txtEmail = ($array_exibir['email']);
 	}
 ?>
-   <!--<script src="js/jsValidate.js" type="text/javascript"></script>
-   <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-   <script src="js/jquery.validate.js" type="text/javascript"></script>
-   <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
-	 <style type="text/css">
-      /* Estilizar os alertas */
-      label.error{
-          padding-left: 2px;
-          color: red;
-          font-weight: bold;
-           }
-      </style>-->
-      
+     
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
@@ -81,8 +69,8 @@
       </tr>
       <tr bgcolor="#D2D2D2">
       <th width="160" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
-      <td colspan="3"><input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" 
-      type="text" size="94" class="validate[required] text-input"/>
+      <td colspan="3">
+      <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="94" class="validate[required] text-input"/>
       </td>
       </tr>
       <tr bgcolor="#D2D2D2">

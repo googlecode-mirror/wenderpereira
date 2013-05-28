@@ -1,7 +1,17 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<!--JS -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-alert.js"></script>
 
+<!--_JS -->
+<!--CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<!--_CSS -->
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<div class="conteiner" >
 <div id="barra-brasil">
   <div class="barra">
     <ul>
@@ -10,8 +20,6 @@
       <li><a href="http://www.brasil.gov.br" class="brasilgov" title="Portal de Estado do Brasil">www.brasil.gov.br</a></li>
     </ul>
   </div>
+  </div>
 </div>
-</body>
-       
-</html>
-
+</div>

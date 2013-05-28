@@ -9,9 +9,9 @@
 #barra-brasil .barra {
     display: block;
     width: 960px;
-    height:44px;
+    height:28px;
     margin: 0 auto;
-	margin-top:-26px;
+	margin-top: 0px;
     background: url(../images/barra-brasil-v3-bgx.gif) 0 bottom repeat-x;
 }
 
@@ -22,7 +22,7 @@
 
 #barra-brasil .barra ul li {
     float: left;
-    padding-left: 29px;
+    padding-left: 0px;
 }
 
 #barra-brasil .ai {
