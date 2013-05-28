@@ -20,25 +20,25 @@
 <?
 if($concluido == -1) {
 		if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_o.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php"); 
 		}else{
-		
+		header ("location: inicial.php");
 		}
 }elseif ($concluido == 0) {
 		if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_o.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php");
 		}elseif($opcao == 1){
 			 header ("location: parte_II.php");		
 		}else{
-		
+		header ("location: inicial.php");
 		}
 }elseif ($concluido == 1) {
 		if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_0.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php");
 		}elseif($opcao == 1){
@@ -48,7 +48,7 @@ if($concluido == -1) {
 		}
 }elseif ($concluido == 2) {
 			if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_o.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php");
 		}elseif($opcao == 1){
@@ -62,7 +62,7 @@ if($concluido == -1) {
 		}
 }elseif ($concluido == 3) {
 		if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_o.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php");
 		}elseif($opcao == 1){
@@ -76,7 +76,7 @@ if($concluido == -1) {
 		}
 }elseif ($concluido == 4) {
 			if($opcao == -1){
-			 header ("location: inicial.php"); 
+			 header ("location: mapeament_o.php"); 
 		}elseif($opcao == 0){
 			 header ("location: parte_I.php");
 		}elseif($opcao == 1){
