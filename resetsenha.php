@@ -1,117 +1,99 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-   <?
-       include "acessoInformacao.php";
-   ?> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Funarte - Cadastro de novo usuário:</title>
-
-   <script src="js/login/jsValidate.js" type="text/javascript"></script>
-   <script src="js/login/jquery-1.6.2.js" type="text/javascript"></script>
-   <script src="js/login/jquery.validate.js" type="text/javascript"></script>
-   <script src="js/login/jsvalidarlogin.js" type="text/javascript"></script>
-   <script src="js/ajax.js" type="text/javascript"></script>  
- </head>   
-
-	 <style type="text/css">
-      /* Estilizar os alertas */
-      label.error{
-          padding-left: 3px;
-          color: red;
-          font-weight: bold;
-           }
-      </style>
-
-<body>
-
-<form name="form1" id="form1" method="post" action="emailresetsenha.php">
-
-		
-              <table width="100%" border="0">
-                <tr>
-                  <th scope="col">
-        		<center>
-		        <p>&nbsp;</p>
-		        <p>&nbsp;</p>
-		        <p>&nbsp;</p>
-                </br>
-                
-		        <table border="0" cellpadding="0" cellspacing="0" bgcolor="white" style="border-collapse: collapse; border: 0px solid silver" bordercolor="#111111" width="500">
-		<tr>
-          <td width="800">
-           <div align="center" width="420" height="205">
-            <center>
-            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse"
-               bordercolor="#111111" width="400" height="205" background="imagebox/logo_abertura.png">
-               <br/>
-               <br/>
-                <tr>
-                  <td>
-                  <div>
-                  <div align="center">
-                    <center>
-                      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="390">
-                        <tr>
-                          <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset de Senha:</td>
-                          <td width="71">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td colspan="3">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td width="139">&nbsp;</td>
-                          <td width="180">&nbsp;</td>
-                          <td width="71">&nbsp;</td>
-                        </tr>
-                        <tr>
-                        <td width="139" align="center"><font face="verdana" size="1" color="#666666"><b>Email:</b></td>
-                        <td width="180">
-                        <div align="left">
-                          <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
-                        </div></td>
-                          <td width="71"><input type="submit" name="reset" value="reset" tabindex="5"/></td>
-                        </tr>
-                        <tr>
-                          <td align="center">&nbsp;</td>
-                          <td><div align="left"></div></td>
-                          <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td colspan="3">
-                          <font face="verdana"  size="1"color="#666666"> 
-                          <br/>
-                          <div align="center"><b>Entre com os dados para realizar realizar o reset da senha!</b>
-                          <br/> Um email de confirmarção será enviado para ativar o cadastro!
-                          </div></td>
-                        </tr>
-                      </table>
-                    </center>
-                  </div>
-                  </td>
-                </tr>
-            </table>
-              <p>
-               <script>
-                if (window.document.getElementById('erro').innerHTML == ""){
-                
-                }
-               </script>
-                  <label id="erromsg"> </label>
-                  <label id="erro"> </label>
-                  <a href="index.php">Home</a></p>          </tr>
-              </table>
-               
-				<p>
-                <a href="index.php"></a></p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-				<p>&nbsp;</p>
-  	           <p>
-               <br/>
-          </p>
-  	           <a href="http://www.funarte.gov.br/"><img src="images/imagem.jpg" alt="" width="581" height="72" /></a>
-  </form>
-  </body>
+<title>FUNARTE</title>
+  
+<!--JS -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/ajax.js"></script>
+<!--_JS -->
+<!--CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<!--_CSS -->
+<!--Validacao_CSS -->
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="css/template.css" type="text/css"/>
+	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+	</script>
+	<script>
+	    jQuery(document).ready(function () {
+	        // binds form submission and fields to the validation engine
+	        jQuery("#form1").validationEngine();
+	    });
+	</script>
+    <script src="js/jsValidate.js" type="text/javascript"></script> 	
+<!--Validacao_CSS -->
+   <style type="text/css">
+     .form-signin {
+        max-width: 350px;
+        padding: 10px 25px 25px;
+        margin: 0 auto 10px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 10px;
+        padding: -2px 9px;
+      }
+    </style>
+</head>
+<body onload="document.form1.login.focus()">
+<div class="container">
+		<?
+   		require "acessoInformacao.php";
+        ?>
+    <br />
+    <br />
+    <img src="images/baner1.jpg" alt="" width="400" height="60" style=" display: block; margin-left: auto; margin-right: auto " /></a>  
+       </div>
+          </div>
+<form name="form1" class="form-signin" id="form1" method="post" action="emailresetsenha.php">
+    <div class="form-actions">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+    <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
+    <input type="submit" class="btn btn-success" name="reset" value="reset" tabindex="5"/>
+   </div>   
+      <div class="control-label">
+      <div class="alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      Entre com os dados para realizar a alteração de sua senha!
+      </div>
+      <br />  
+        <a href="index.php" class="btn btn-success">Home</a>              
+      </div>
+    </div>
+     <br />  
+     <br />  
+</form>
+    <br />  
+    <br />  
+    <br />  
+    <br />  
+    <br />  
+    <br />  
+<div class="dropdown-toggle">
+     <a href="http://www.funarte.gov.br/"> 
+     <img src="images/imagem.jpg" alt="" width="581" height="72" class="img-rounded" style=" display: block; margin-left: auto; margin-right: auto " /> </a> 
+     </div>
+</body>
 </html>
