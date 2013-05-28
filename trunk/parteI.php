@@ -113,7 +113,7 @@
     
 </head>
 <body>
-<form name="form1" id="form1" method="post"  action="sql\parteI.php">
+<form name="form1" id="form1" method="post"  action="sql/parteI.php">
   <table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
   <tr bgcolor="#C7C7C7">
   <td colspan="2">
@@ -259,8 +259,6 @@ Sim</label>
   <td colspan="2" align="left" class="formu2">
   <label>• A instituição tem fins lucrativos*?:</label>
   <label>
-  <br />
-  <br />
   <input type="radio" name="qtd2" <? if(in_array("2a", $meuArray)){ echo "checked";}?> value="2a" class="validate[required] radio" />
   Sim</label>
   <label>
@@ -276,7 +274,6 @@ Sim</label>
   <label>
   <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
   Administração pública direta</label>
-  <br/>
   <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="validate[required] radio" />
   Entidade/empresa privada</label>
   <br/>
@@ -322,15 +319,15 @@ Sim</label>
   <td colspan="2" align="left" class="formu2">
   <div align="left">
   <label>• A instituição atua somente na área cultural? (marque apenas 1 item)*:</label>
-  <br />
+
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a" class="validate[required] radio" />
   Sim, o ramo de atuação é somente na cultura, não realizando outro tipo de atuação</label>
-  <br />
+
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4b", $meuArray)){ echo "checked";}?> value="4b" class="validate[required] radio" />
   Sim, o ramo de atuação principal é na cultura, porém atua também em outras atividades econômicas</label>
-  <br />
+
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4c", $meuArray)){ echo "checked";}?> value="4c" class="validate[required] radio" />
   Não, a cultura é apenas uma das áreas da instituição, não sendo a atividade principal </label>
@@ -342,27 +339,28 @@ Sim</label>
   <div align="left">
   <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
   <br />
-  <input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";}?> 
+  <label><input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";}?> 
   class="validate[minCheckbox[1]] checkbox"/> 
-  <label>orçamento próprio</label>
-  <br/>
-  <input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>transferências governamentais </label>
-  <br/>
+  orçamento próprio</label>
+
+  <label><input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
+  transferências governamentais </label>
+
+  <label>
   <input name="qtd5[]" type="checkbox" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>fundos: municipais, estaduais e federais </label>
-  <br/>
+    fundos: municipais, estaduais e federais </label>
+  <label>
   <input name="qtd5[]" type="checkbox" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>patrocínio/ financiamento privado </label>
-  <br/>
+    patrocínio/ financiamento privado </label>
+  <label>
   <input name="qtd5[]" type="checkbox" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>recursos internacionais </label>
-  <br/>
+  recursos internacionais </label>
+  <label>
   <input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>doações/ ajudas externas </label>
-  <br/>
+ doações/ ajudas externas </label>
+  <label>
   <input name="qtd5[]" type="checkbox" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  <label>outros </label>
+  outros </label>
   <br/>
   </div>
   </td>
@@ -371,23 +369,18 @@ Sim</label>
   <td colspan="2" align="left" bgcolor="#C7C7C7" class="formu2">
   <div align="left">
   <label> •	Qual o tamanho aproximado da instituição em termos de número de funcionários (marque apenas 1 item)*:</label>
-  <br/>
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" class="validate[required] radio" />
   pequeno porte ( até 5 funcionários)</label>
-  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b" class="validate[required] radio" />
   pequeno-médio porte ( de 6 a 20 funcionários)</label>
-  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c" class="validate[required] radio" />
   médio porte ( de 21 até 50 funcionários)</label>
-  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d" class="validate[required] radio" />
   médio-grande porte ( de 51 até 200 funcionários)</label>
-  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6e", $meuArray)){ echo "checked";}?> value="6e" class="validate[required] radio" />
   grande porte ( acima de 200 funcionários)</label>
