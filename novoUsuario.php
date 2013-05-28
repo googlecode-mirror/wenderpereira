@@ -23,8 +23,6 @@
       </style>
 
 <body>
-<!--<form name="form1" method="post" action="email.php" onsubmit="javascript:return validate('form1','email')">-->
-
 <form name="form1" id="form1" method="post" action="email.php">
               <table width="100%" border="0">
                 <tr>

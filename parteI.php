@@ -62,21 +62,21 @@
     $meuArray1 = getArray1($Login);
     ?>
 <title>Funarte - Portal das Artes</title>
-<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">	</script>
 	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">	</script>
-	<script>
+<script>
 	   
 		jQuery(document).ready(function(){
 			// binds form submission and fields to the validation engine
 			jQuery("#form1").validationEngine();
 		});
-	</script>
-    <script src="js/jsValidate.js" type="text/javascript"></script> 
-    <script src="js/ajax.js" type="text/javascript"></script>  
-    <script>
+</script>
+<script src="js/jsValidate.js" type="text/javascript"></script> 
+  <script src="js/ajax.js" type="text/javascript"></script>  
+<script>
 	function MarcarCheckBoxClique(campo){
 	if(document.getElementById([campo]).checked == true){
 	document.getElementById([campo]).visibility = false;
@@ -85,7 +85,7 @@
 	}
 	}
 	</script>
-	<script>
+<script>
     /**
     * 
     * @param {input[type=checkbox]} the checkbox to read
@@ -109,7 +109,7 @@
       else
           $(field).removeAttr('disabled');
     }
-    </script>
+</script>
     
 </head>
 <body>
