@@ -23,15 +23,15 @@
 
    <style type="text/css">
       body {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         background-color: #f5f5f5;
       }
 
       .form-signin {
         max-width: 350px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
+        padding: 10px 25px 25px;
+        margin: 0 auto 10px;
         background-color: #fff;
         border: 1px solid #e5e5e5;
         -webkit-border-radius: 3px;
@@ -49,8 +49,8 @@
       .form-signin input[type="password"] {
         font-size: 16px;
         height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
+        margin-bottom: 10px;
+        padding: -2px 9px;
       }
 	   .headerpagina{
 
@@ -61,15 +61,12 @@
 </head>
 
 <body onload="document.form1.login.focus()">
-
-
-<div class="headerpagina">
-<!--<img src="images/baner1.jpg" width="600" height="120" class="headerpagina" />-->
+<?
+	    include "acessoInformacao.php";
+	    ?>
+<div class="container">
+  <img src="images/baner1.jpg" width="600" height="100" class="headerpagina" />
 </div>
-   <br />
-   <br />
-   <br />
-   <br />
 <form name="form1" class="form-signin" id="form1" method="post" action="login.php">
 
   <div class="form-actions">
@@ -94,14 +91,11 @@
          <a href="novoUsuario.php"class="btn btn-success">Novo usuário</a>
          <a href="resetsenha.php" class="btn btn-success">Esqueceu a senha</a>
 	  <br/>
-	  </div>
+    </div>
  </div>
 </form>
-
-
-
-    <div class="container">
+<div class="container">
         <a href="http://www.funarte.gov.br/"> <img src="images/imagem.jpg" alt="" width="581" height="72" /> </a> 
-	</div>
+</div>
 </body>
 </html>
