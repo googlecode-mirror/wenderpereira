@@ -95,26 +95,34 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
+			window.location.assign("../parte_IV.php");
             </script>
-			<?				  
+			<?
+						
 		  } elseif ($concluido == 1){
          	?>
             <script language="JavaScript">
             alert("Retorne para a parteI e realize o cadastro!!");
+			window.location.assign("../parte_IV.php");
             </script>
-			<?				  
+			<?	
+						
 		  } elseif ($concluido == 2){
          	?>
             <script language="JavaScript">
             alert("Retorne para a parteII e realize o cadastro!!");
+			window.location.assign("../parte_IV.php");
             </script>
-			<?				
+			<?	
+						
 		  } elseif ($concluido == 4){
          	?>
             <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+			  window.location.assign("../parte_IV.php");
             </script>
 			<?	
+			
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }
@@ -144,8 +152,10 @@
 		?>
 	  <script language="JavaScript">
       alert("ParteIV concluida!");
+	  window.location.assign("../parte_IV.php");
       </script>
 	  <?
+		
 		}
  	  ?>
 	 <?
@@ -221,7 +231,8 @@
          inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
 	?>
      <script language="JavaScript">
-     alert("Atualizado com sucesso!!");
+		alert("Atualizado com sucesso!!");
+		window.location.assign("../parte_IV.php");
      </script>
 	<?	
 	}

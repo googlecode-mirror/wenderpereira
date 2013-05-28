@@ -103,26 +103,34 @@
    		   ?>
             <script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
+			window.location.assign("../parte_II.php");
             </script>
            <?php
+		    
 		  } elseif ($concluido == 2){
    		   ?>
             <script language="JavaScript">
             alert("Cadastramento da Parte II realizado avance para a parteIII!");
+			window.location.assign("../parte_II.php");
             </script>
            <?php
+		    
 		  } elseif ($concluido == 3){
 		   ?>
               <script language="JavaScript">
               alert("Cadastramento da Parte III já foi realizado!");
+			  window.location.assign("../parte_II.php");
               </script>
             <?php
+			 
 		  } elseif ($concluido == 4){
              ?>
               <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+			  window.location.assign("../parte_II.php");
               </script>
             <?php
+			 
 		 }else{
 				//else do teste igual a parte atualizado!
 			  }
@@ -151,9 +159,10 @@
 		?>
 	  <script language="JavaScript">
 	      alert("ParteII cadastradra, clique na parte III para realizar o cadastro!");
-	      window.location = 'Mapeamento_residencias/parte_III.php';
+	      window.location.assign("../parte_II.php");
       </script>
 	  <?
+	   
 	}
  	 ?>
 	 <?
@@ -229,7 +238,9 @@
 	?>
      <script language="JavaScript">
      alert("Atualizado com sucesso!!");
+	 window.location.assign("../parte_II.php");
      </script>
-	<?		
+	<?	
+		 	
 	}
 	?>

@@ -2,16 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--JS -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-
-<!--_JS -->
-<!--CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/barra.css" rel="stylesheet" type="text/css" />
-<!--_CSS -->
 	<? 
 	session_start();
 	if (empty($_SESSION["login"])){
@@ -120,26 +110,31 @@
           $(field).removeAttr('disabled');
     }
     </script>
+    
 </head>
 <body>
-<form name="form1" class="table table-condensed" id="form1" method="post"  action="sql/parteI.php">
-   <div class="container">
- <table width="80%" align="center" cellpadding="2" class="table table-hover">
-  <tr>
-  <td>
-  <h4>PARTE  I</h4>
-  <h5>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA</h5>
-  <h6>Os campos  com asterisco* são de preenchimento obrigatório:</h6>
+<form name="form1" id="form1" method="post"  action="sql\parteI.php">
+  <table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2">
+  <p align="center">
+  <strong><em>PARTE  I</em></strong></p>
+  <p align="center"><strong><em>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </em>
+  </strong></p>
+  <p><strong>Os campos  com asterisco* são de preenchimento obrigatório:</strong></p></td>
   </tr>
   <tr>
-  <td><label id=lblNomeInstituicao">• Nome da instituição*:</label>
-    <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="84" class="input-xxlarge validate[required] text-input"/>
+  <td width="32%" bgcolor="#C7C7C7"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
+  </td>
+  <td width="68%" bgcolor="#C7C7C7">
+  <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="84" class="validate[required] text-input"/>
   </td>
   </tr>
-  <tr>
+  <tr bgcolor="#C7C7C7">
     <td>
       <label>• A instituição se Declara Formal*: </label>
-      
+      </td>
+    <td>
       <input type="radio" name="qtd0" id="qtd01" onClick="javascript:ToggleState1('#qtd01', '#idopcaocnpj');" 
 	  <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
       value="0a" class="validate[required] radio" />
@@ -147,97 +142,125 @@
       <input type="radio" id="qtd00" name="qtd0" onClick="javascript:ToggleState('#qtd00', '#idopcaocnpj');"
        <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
       value="0b" class="validate[required] radio" />
-      
+                  
       Não</label>
-    </td>
-    </tr>
-  <tr>
-    <td><label>• CNPJ:</label>
-      <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
+      </td>
+  </tr>
+  <tr bgcolor="#C7C7C7">
+    <td><label>• CNPJ:</label></td>
+    <td>
+    <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
     onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" 
     class="validate[required] text-input"/>
-      
+    
       <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
-    </tr>
+  </tr>
   <tr>
-    <td><label>• CEP*:</label>
+    <td bgcolor="#C7C7C7"><label>• CEP*:</label>
+      </td>
+    <td bgcolor="#C7C7C7">
       <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
       onKeyUp="enviaKeyCEP();"  onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
-     class="validate[required] text-input"/>
-    </td>
-    </tr>
+  class="validate[required] text-input"/>
+      
+      <div style="display:inline;">
+        <a href="javascript:findCEP()">
+          <img src="images/busca.png" alt="Pesquisar" border="0" />
+          </a>
+        </div>
+      <div id="ajax-loading" style="display:none;">
+        <img src="loading.gif"/>
+        </div>
+      </td>
+  </tr>
   <tr>
-  <td>
-    <label>• Endereço*:</label>    <input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
-  value="<?php echo $txtEndereco;?>" type="text" size="84" class="input-xxlarge validate[required] text-input"/>		       
+  <td bgcolor="#C7C7C7">
+  <label>• Endereço*:</label>
+  </td>
+  <td bgcolor="#C7C7C7"><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
+  value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
   </td>
   </tr>
   <tr>
-  <td>
-    <label id="municipio">• Município*:</label>
-    <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text"
-   size="50" class="input-xxlarge validate[required] text-input"/>
+  <td bgcolor="#C7C7C7">
+  <label id="municipio">• Município*:</label>
+  </td>
+  <td bgcolor="#C7C7C7">
+  <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text"
+   size="50" class="validate[required] text-input"/>
   </td>
   </tr>
   <tr>
-  <td>
-    <label>• Unidade Federativa*:</label>
-    <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
-      <option value=""><? echo $cmbUnidadeFederativa ?> </option>
-      <option value="AC">AC</option>
-      <option value="AL">AL</option>
-      <option value="AM">AM</option>
-      <option value="AP">AP</option>
-      <option value="BA">BA</option>
-      <option value="CE">CE</option>
-      <option value="DF">DF</option>
-      <option value="ES">ES</option>
-      <option value="GO">GO</option>
-      <option value="MA">MA</option>
-      <option value="MG">MG</option>
-      <option value="MS">MS</option>
-      <option value="MT">MT</option>
-      <option value="PA">PA</option>
-      <option value="PB">PB</option>
-      <option value="PE">PE</option>
-      <option value="PI">PI</option>
-      <option value="PR">PR</option>
-      <option value="RJ">RJ</option>
-      <option value="RN">RN</option>
-      <option value="RO">RO</option>
-      <option value="RR">RR</option>
-      <option value="RS">RS</option>
-      <option value="SC">SC</option>
-      <option value="SE">SE</option>
-      <option value="SP">SP</option>
-      <option value="TO">TO</option>
-    </select>
+  <td bgcolor="#C7C7C7">
+  <label>• Unidade Federativa*:</label>
+  </td>
+  <td bgcolor="#C7C7C7">
+  <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
+  <option value=""><? echo $cmbUnidadeFederativa ?> </option>
+  <option value="AC">AC</option>
+  <option value="AL">AL</option>
+  <option value="AM">AM</option>
+  <option value="AP">AP</option>
+  <option value="BA">BA</option>
+  <option value="CE">CE</option>
+  <option value="DF">DF</option>
+  <option value="ES">ES</option>
+  <option value="GO">GO</option>
+  <option value="MA">MA</option>
+  <option value="MG">MG</option>
+  <option value="MS">MS</option>
+  <option value="MT">MT</option>
+  <option value="PA">PA</option>
+  <option value="PB">PB</option>
+  <option value="PE">PE</option>
+  <option value="PI">PI</option>
+  <option value="PR">PR</option>
+  <option value="RJ">RJ</option>
+  <option value="RN">RN</option>
+  <option value="RO">RO</option>
+  <option value="RR">RR</option>
+  <option value="RS">RS</option>
+  <option value="SC">SC</option>
+  <option value="SE">SE</option>
+  <option value="SP">SP</option>
+  <option value="TO">TO</option>
+  </select>
+  </td>     
+  </tr>
+  <tr>
+  <td bgcolor="#C7C7C7"><label>• Correio eletrônico (e-mail):</label></td>
+  <td bgcolor="#C7C7C7">
+  <input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" type="text" size="80" 
+  class="validate[custom[email]] text-input"/>
   </td>
   </tr>
   <tr>
-  <td><label>• Correio eletrônico (e-mail):</label>
-    <input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" type="text" size="80" 
-  class="input-xxlarge validate[custom[email]] text-input"/>  </td>
-  </tr>
-  <tr>
-  <td height="26"><label>• Telefone: </label>
-    <input name="txtTelefone" maxlength="14" value="<?php echo $txtTelefone;?>" type="text" 
-  onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>  </td>
-  <tr>
-  <td align="left">
-    <label>• A instituição tem sede própia*?:</label>
-    <label>
+  <td height="26" bgcolor="#C7C7C7"><label>• Telefone: </label></td>
+  <td bgcolor="#C7C7C7">
+  <input name="txtTelefone" maxlength="14" value="<?php echo $txtTelefone;?>" type="text" 
+  onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
+  </td>
+  <tr bgcolor="#D2D2D2">
+  <td colspan="2" align="left" class="formu2">
+  <p>
+  <label>• A instituição tem sede própia*?:</label>
+  </p>
+  <p>
+  <label>
 <input type="radio" name="qtd1" <? if(in_array("1a",$meuArray)){echo "checked";}?>  value="1a" class="validate[required] radio" />
 Sim</label>
   <label>
   <input type="radio" name="qtd1" <? if(in_array("1b", $meuArray)){ echo "checked";}?> value="1b" class="validate[required] radio" />
   Não</label>
+  </p>
   </td>
   </tr>
-  <tr>
-  <td align="left">
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2" align="left" class="formu2">
   <label>• A instituição tem fins lucrativos*?:</label>
   <label>
+  <br />
+  <br />
   <input type="radio" name="qtd2" <? if(in_array("2a", $meuArray)){ echo "checked";}?> value="2a" class="validate[required] radio" />
   Sim</label>
   <label>
@@ -245,13 +268,15 @@ Sim</label>
   Não</label>
   </td>
   </tr>
-  <tr>
-  <td align="left">
+  <tr bgcolor="#D2D2D2">
+  <td colspan="2" align="left" class="formu2">
+  <br/>
   <label>• Regime jurídico da instituição (marque apenas 1 item)*:</label>
   <p>
   <label>
   <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
   Administração pública direta</label>
+  <br/>
   <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="validate[required] radio" />
   Entidade/empresa privada</label>
   <br/>
@@ -276,89 +301,114 @@ Sim</label>
   <input type="radio" name="qtd3" <? if(in_array("3i", $meuArray)){ echo "checked";}?> value="3i" class="validate[required] radio" />
   Organização social</label>
   <br/>
-  <label><input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
+  <input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
   Cooperativa/ Associação de Classe/ Sindicato</label>
-  <label>
+  <br/>
   <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> 
   value="3k" id="qtd3quais1" class="validate[required] radio" />
   Outras</label>
-  <label>Quais?
+  <label>Quais?</label>
   <input name="qtd3quais" type="text" id="idqtd3quais"   onclick="MarcarCheckBoxClique('qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
-  </label>
+  <br/>
+  </p>
   </td>
   </tr>
+  <br/>
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2" align="left" class="formu2">
+  </td>
   </tr>
-  <td align="left">
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2" align="left" class="formu2">
+  <div align="left">
   <label>• A instituição atua somente na área cultural? (marque apenas 1 item)*:</label>
+  <br />
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a" class="validate[required] radio" />
   Sim, o ramo de atuação é somente na cultura, não realizando outro tipo de atuação</label>
+  <br />
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4b", $meuArray)){ echo "checked";}?> value="4b" class="validate[required] radio" />
   Sim, o ramo de atuação principal é na cultura, porém atua também em outras atividades econômicas</label>
+  <br />
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4c", $meuArray)){ echo "checked";}?> value="4c" class="validate[required] radio" />
   Não, a cultura é apenas uma das áreas da instituição, não sendo a atividade principal </label>
+  </div>
   </td>
   </tr>
-  <td align="left">
+  <tr bgcolor="#D2D2D2">
+  <td colspan="2" align="left" bgcolor="#D2D2D2" class="formu2">
+  <div align="left">
   <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
-  <label><input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";}?> 
+  <br />
+  <input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";}?> 
   class="validate[minCheckbox[1]] checkbox"/> 
-  orçamento próprio</label>
-  <label><input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  transferências governamentais </label>
-  <label><input name="qtd5[]" type="checkbox" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  fundos: municipais, estaduais e federais </label>
-  <label><input name="qtd5[]" type="checkbox" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  patrocínio/ financiamento privado </label>
-  <label><input name="qtd5[]" type="checkbox" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  recursos internacionais </label>
-  <label>
+  <label>orçamento próprio</label>
+  <br/>
+  <input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
+  <label>transferências governamentais </label>
+  <br/>
+  <input name="qtd5[]" type="checkbox" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
+  <label>fundos: municipais, estaduais e federais </label>
+  <br/>
+  <input name="qtd5[]" type="checkbox" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
+  <label>patrocínio/ financiamento privado </label>
+  <br/>
+  <input name="qtd5[]" type="checkbox" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
+  <label>recursos internacionais </label>
+  <br/>
   <input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  doações/ ajudas externas </label>
-  <label>
+  <label>doações/ ajudas externas </label>
+  <br/>
   <input name="qtd5[]" type="checkbox" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  outros </label>
-   </td>
+  <label>outros </label>
+  <br/>
+  </div>
+  </td>
   </tr>
-  <tr>
-  <td align="left">
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2" align="left" bgcolor="#C7C7C7" class="formu2">
   <div align="left">
   <label> •	Qual o tamanho aproximado da instituição em termos de número de funcionários (marque apenas 1 item)*:</label>
+  <br/>
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" class="validate[required] radio" />
   pequeno porte ( até 5 funcionários)</label>
+  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b" class="validate[required] radio" />
   pequeno-médio porte ( de 6 a 20 funcionários)</label>
+  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c" class="validate[required] radio" />
   médio porte ( de 21 até 50 funcionários)</label>
+  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d" class="validate[required] radio" />
   médio-grande porte ( de 51 até 200 funcionários)</label>
+  <br />
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6e", $meuArray)){ echo "checked";}?> value="6e" class="validate[required] radio" />
   grande porte ( acima de 200 funcionários)</label>
   </div>
   </td>
   </tr>
-  <tr>
-    <td align="center">&nbsp;</td>
+  <tr bgcolor="#D2D2D2">
+    <td colspan="2" align="center" class="formu2">&nbsp;</td>
   </tr>
-  <tr>
-  <td align="center">
-       <input type="submit" name="avancar" value="avancar" class="btn btn-primary" onkeypress="return handleEnter(this, event);" /> 
-       <input type="submit" name="atualizar" value="atualizar" class="btn"/>
+  <tr bgcolor="#C7C7C7">
+  <td colspan="2" align="center" class="formu2">
+       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
   </td>
   </tr>
-  <tr>
-    <td align="center">&nbsp;</td>
+  <tr bgcolor="#D2D2D2">
+    <td colspan="2" align="center" class="formu2">&nbsp;</td>
   </tr>
       
   </table>
-  </div>
 </form>
 </body>
 </html>
