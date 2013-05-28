@@ -14,23 +14,11 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/barra.css" rel="stylesheet" type="text/css" />
 <!--_CSS -->
-<!--Validacao_CSS -->
-    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
-	</script>
-	<script>
-	    jQuery(document).ready(function () {
-	        // binds form submission and fields to the validation engine
-	        jQuery("#form1").validationEngine();
-	    });
-	</script>
-    <script src="js/jsValidate.js" type="text/javascript"></script> 	
-<!--Validacao_CSS -->
+
    <style type="text/css">
-     .form-signin {
+
+
+      .form-signin {
         max-width: 350px;
         padding: 10px 25px 25px;
         margin: 0 auto 10px;
@@ -54,6 +42,10 @@
         margin-bottom: 10px;
         padding: -2px 9px;
       }
+	   .headerpagina{
+
+       }
+
     </style>
 </head>
 <body onload="document.form1.login.focus()">
@@ -72,11 +64,11 @@
   <div class="form-actions">
     <label class="control-label" for="inputEmail">Usuário</label>
     <div class="controls">
-       <input type="text" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1" class="validate[required,minSize[6]]"/>
-     </div>
+       <input type="text" class="cor-inativa" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
+    </div>
      <label class="control-label" for="inputPassword">Password</label>
     <div class="controls">
-    <input type="password" name="senha" size="20" tabindex="2" class="validate[required] text-input"/>                                
+    <input type="password" placeholder="Senha" name="senha" size="20" tabindex="2">                                
     </div>
     <div class="control-label">
       <input type="submit" class="btn btn-success" value="Entrar" name="B1" tabindex="3">
