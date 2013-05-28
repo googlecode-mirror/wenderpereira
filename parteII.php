@@ -232,7 +232,7 @@ por meio de editais geridos pela própria instituição</label>
 		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
         Outros</label>
-      <label>Quais</label>
+      <label>Quais?</label>
       <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
     </p>
     </div>
@@ -352,7 +352,7 @@ por meio de editais geridos pela própria instituição</label>
       <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
       em acordo bilateral, no caso de apenas um outro país</label>
       
-      <label>Quail?</label>
+      <label>Qual?</label>
       <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" />
     </p>
   </div>
@@ -366,7 +366,7 @@ por meio de editais geridos pela própria instituição</label>
 	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
       Anos anteriores a 2006: </label>
-      <label>Quais</label>
+      <label>Quais?</label>
       <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" />
       
       <label><input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>

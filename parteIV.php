@@ -10,7 +10,17 @@
 	header("Location: index.php");
 	exit;
 	} 
-?>
+ ?>
+<!--JS -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/ajax.js"></script>
+<!--_JS -->
+<!--CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/barra.css" rel="stylesheet" type="text/css" />
+<!--_CSS -->
 <?
 include "conexao.php";
 	connect();
@@ -414,8 +424,8 @@ include "conexao.php";
              <label>
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
-             <div align="center"><br />
-             <textarea name="qtdComentariosGerais" cols="100%" rows="10">
+             <div align="center">
+             <textarea name="qtdComentariosGerais" dir="ltr" lang="pt-br" cols="20" rows="20" class="input-xxlarge">
 				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
              </div>

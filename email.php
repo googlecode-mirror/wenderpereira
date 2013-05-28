@@ -5,8 +5,6 @@
 	connect();
 	//-----------------------------------------------
 	
-
-
 	$date = date("d/m/y");
 	$hora = date("H:i");
 	$Login 		= anti_sql_injection($_POST["login"]);
