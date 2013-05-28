@@ -30,37 +30,39 @@
 			  } elseif ($concluido == 0){
 			 ?>
              <script language="JavaScript">
-		
-             alert("Cadastramento do mapeamento já foi realizado!");
-			 	window.frames['conteúdo'].document.location = principal.php;
-              </script>
-            <?php
+			alert("Cadastramento do mapeamento já foi realizado!");
+			 </script>
+			<?php
+				header ("location: inicial.php");
 			  } elseif ($concluido == 1){
 			 ?>
              <script language="JavaScript">
              alert("Cadastramento da Parte I já foi realizado!");
              </script>
-            <?php			  
-			  } elseif ($concluido == 2){
+			<?php			  
+				header ("location: inicial.php");
+				} elseif ($concluido == 2){
 			 ?>
              <script language="JavaScript">
              alert("Cadastramento da Parte II já foi realizado!");
              </script>
-            <?php					  
+			<?php
+			header ("location: inicial.php");			
 			  } elseif ($concluido == 3){
 			 ?>
              <script language="JavaScript">
              alert("Cadastramento da Parte III já foi realizado!");
              </script>
              <?php					  
+				header ("location: inicial.php");
 			  } elseif ($concluido == 4){
              ?>
               <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-
-              </script>
+		      </script>
             <?php
-		 }else{
+				header ("location: inicial.php");
+			}else{
 				//else do teste igual a parte atualizado!
 			  }
 	  }else{
