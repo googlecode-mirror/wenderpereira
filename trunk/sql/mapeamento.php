@@ -31,37 +31,44 @@
 			 ?>
              <script language="JavaScript">
 			alert("Cadastramento do mapeamento já foi realizado!");
+			window.location.assign("../mapeament_o.php");
 			 </script>
 			<?php
-				header ("location: inicial.php");
+				 
 			  } elseif ($concluido == 1){
 			 ?>
              <script language="JavaScript">
-             alert("Cadastramento da Parte I já foi realizado!");
+                 alert("Cadastramento da Parte I já foi realizado!");
+                 window.location.assign("../mapeament_o.php");
              </script>
 			<?php			  
-				header ("location: inicial.php");
+				 
 				} elseif ($concluido == 2){
 			 ?>
              <script language="JavaScript">
-             alert("Cadastramento da Parte II já foi realizado!");
+                 alert("Cadastramento da Parte II já foi realizado!");
+                 window.location.assign("../mapeament_o.php");
              </script>
 			<?php
-			header ("location: inicial.php");			
+			 			
 			  } elseif ($concluido == 3){
 			 ?>
              <script language="JavaScript">
-             alert("Cadastramento da Parte III já foi realizado!");
+                 alert("Cadastramento da Parte III já foi realizado!");
+                 window.location.assign("../mapeament_o.php");
              </script>
              <?php					  
-				header ("location: inicial.php");
+				 
 			  } elseif ($concluido == 4){
-             ?>
+				
+			 ?>
+			 
               <script language="JavaScript">
-              alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+                  alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
+                  window.location.assign("../mapeament_o.php");
 		      </script>
             <?php
-				header ("location: inicial.php");
+				 
 			}else{
 				//else do teste igual a parte atualizado!
 			  }
@@ -83,9 +90,10 @@
 	  ?>
 	  <script language="JavaScript">
       alert("parte Mapeamento cadastradra, entre na parte I para realizar o cadastro!");
-      window.location = 'Mapeamento_residencias/parte_I.php';
+      window.location.assign("../mapeament_o.php");
       </script>
 	  <?
+	   	
 		}
 	 ?>	
     <?
@@ -100,8 +108,10 @@
 	$process = mysql_query($sqlquery) or die("Erro: " . mysql_error());
 	?>
      <script language="JavaScript">
-     alert("Atualizado com sucesso!!");
+         alert("Atualizado com sucesso!!");
+         window.location.assign("../mapeament_o.php");
      </script>
 	<?	
+	 
 	  }
 	 ?>

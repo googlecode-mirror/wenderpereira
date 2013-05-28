@@ -12,19 +12,12 @@
 	} 
 ?>
 <?
-include "conexao.php";
-	connect();
+     include "conexao.php";
+      connect();
 	  $Login 	=  trim($_SESSION["login"]);
-	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
-	  
-	  	$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
-		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-  		 while ($array_exibir = mysql_fetch_array($Resultado)) {
-			$qtdComentariosGerais = ($array_exibir['respostas']);
-		}
    ?>
    <?  function getArray(&$Login){
-   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='4';";
+   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='3';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $resposta = array();
@@ -35,9 +28,10 @@ include "conexao.php";
    	    return $resposta;
       	}
      	$meuArray = getArray($Login);
-	?>
-	<? function getArray1(&$Login){
-    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
+  ?>
+  
+  	<? function getArray1(&$Login){
+    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='3';";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
     $i=0;
     
@@ -50,7 +44,7 @@ include "conexao.php";
     }
     $meuArray1 = getArray1($Login);
     ?>
-
+     
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
@@ -64,7 +58,7 @@ include "conexao.php";
 			// binds form submission and fields to the validation engine
 			jQuery("#form1").validationEngine();
 		});
-	</script>   
+	</script>     
     <script>
 	function MarcarCheckBoxClique(campo){
 	if(document.getElementById([campo]).checked == true){
@@ -74,432 +68,299 @@ include "conexao.php";
 	}
 	}
 	</script>
+     
 </head>
 <body>
-<form id="form1" name="form1" method="post" action="sql\parteIV.php">
-<table width="80%" align="center" cellpadding="2" class="table table-hover">
-      <tr>
-        <td colspan="2">
-      	 <p align="center"><strong>PARTE IV</strong>
-      	 
-      	 
-      	   <strong><em>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</em></strong> 
-       
-      	   <div>
-      	   <b>Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. 
-           Estas ações podem ser realizadas em inúmeros locais como praças, teatros, museus, etc. Indiretamente, 
-           as ações em residência podem envolver diversos públicos: outros artistas, cidadãos locais, pesquisadores,
-           etc. Ao término da residência o artista pode ter elaborado uma série de produtos: filmes, pinturas, 
-           publicações, livros, etc. </b>
-           </div>
-      	 
-   	      </p>
-   
-        </div></td>
+
+<form id="form1" name="form1" method="post" action="sql\parteIII.php">
+
+<table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+      <tr bgcolor="#C7C7C7">
+        <td>
+                <div align="center"><strong><em>PARTE III</em></strong>
+                        </p>
+                            <strong></strong></div>
+          <strong><p align="center">SOBRE  OS ARTISTAS RESIDENTES</p></strong>               
+
+		</td>
+    </tr>
+      <tr bgcolor="#C7C7C7">
+        <td>
+        <div>
+        <p>
+        <b>
+    Os artistas apoiados por programas de residências artísticas podem ser oriundos de diversos países, havendo a possibilidade do artista vir fazer a residência no Brasil, bem como, um artista brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido. O número de artistas apoiados pode variar por programa.</b></p>
+        <br/>
+    <div>
+        </td>
       </tr>
-      <tr>
-        <td colspan="2"><label>Quais as principais ações realizadas pelos artistas durante a residência </label>
-(marque quantos itens julgar necessário)*:
-  <p>
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      pesquisa</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1b" <? if(in_array("1b", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      intervenção urbana</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1c" <? if(in_array("1c", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      cursos</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1d" <? if(in_array("1d", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      feiras</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      festivais/mostras</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      exposições</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1g" <? if(in_array("1g", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      apresentações artísticas ( bandas de música, circo, etc.)</label>
-  
-    <label>
-      <input name="qtd1[]" type="checkbox" value="1h" id="idqtd1quais" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>      
-      outros</label>
-    <label> Quais?</label>
-    <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
-  </p>
-  </td>
+      <tr bgcolor="#D2D2D2">
+        <td bgcolor="#D2D2D2">
+      <div>
+       <label>Quantos artistas foram apoiados em média ao ano?</label>
+         <p>
+          <label>
+          <input type="radio" name="qtd1" <? if(in_array("1a", $meuArray)){ echo "checked";}?> value="1a" class="radio" />
+          até 5 artistas</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd1" <? if(in_array("1b", $meuArray)){ echo "checked";}?> value="1b" class="radio" />
+          acima de 5  até 10</label>
+          <br />
+          <label>
+		  <input type="radio" name="qtd1" <? if(in_array("1c", $meuArray)){ echo "checked";}?> value="1c" class="radio" />
+          acima de 11  até 20</label>
+          <br />
+          <label>
+		  <input type="radio" name="qtd1" <? if(in_array("1d", $meuArray)){ echo "checked";}?> value="1d" class="radio" />
+          acima de 21  até 30 </label>
+          <br />
+          <label>
+		  <input type="radio" name="qtd1" <? if(in_array("1e", $meuArray)){ echo "checked";}?> value="1e" class="radio" />
+          acima de 31 até 50</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd1" <? if(in_array("1f", $meuArray)){ echo "checked";}?> value="1f" class="radio" />
+          acima de 51 até 80</label>
+          <br />  <label>
+		  <input type="radio" name="qtd1" <? if(in_array("1g", $meuArray)){ echo "checked";}?> value="1g" class="radio" />
+          acima de 81 até 120 </label>
+          <br />  <label>
+          <input type="radio" name="qtd1" <? if(in_array("1h", $meuArray)){ echo "checked";}?> value="1h" class="radio" />
+          acima de 120 artistas</label>
+        </p>
+      </div>
+      </td>
       </tr>
-            <tr>
-        <td colspan="2"><div>
-          <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas?
-          (marque quantos itens julgar necessário)*: </label>
+      <tr bgcolor="#C7C7C7">
+      <td>
+      <div>
+        <label>O número de artistas apoiados foi o mesmo em todas os programas( marque apenas 1 item)?</label>
+          <br/>
           <p>
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2a" <? if(in_array("2a", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              artesanato</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2b" <? if(in_array("2b", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              teatro</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2c" <? if(in_array("2c", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              dança</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2d" <? if(in_array("2d", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              circo</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2e" <? if(in_array("2e", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              bandas de música</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2f" <? if(in_array("2f", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              música Erudita</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2g" <? if(in_array("2g", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              música Popular</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2h" <? if(in_array("2h", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              artes visuais</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2i" <? if(in_array("2i", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              fotografia</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2j" <? if(in_array("2j", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              audiovisual</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2k" <? if(in_array("2k", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              jogos eletrônicos</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2l" <? if(in_array("2l", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              literatura</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2m" <? if(in_array("2m", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              patrimônio material</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2n" <? if(in_array("2n", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              patrimônio imaterial</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2o" <? if(in_array("2o", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              museus</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2p" <? if(in_array("2p", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              cultura popular/ manifestações tradicionais</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2q" <? if(in_array("2q", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              cultura digital/ arte e tecnologia ( programação de linguagens digitais)</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2r" <? if(in_array("2r", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              design</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2s" <? if(in_array("2s", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              moda</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" value="2t" <? if(in_array("2t", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              artes integradas ( projetos com múltiplas linguagens artísticas)</label>
-          
-            <label>
-              <input name="qtd2[]" type="checkbox" id="idqtd2quais" value="2u" <? if(in_array("2u", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>
-              outras</label>
-            <label> Quais?</label>
-            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" onclick="MarcarCheckBoxClique('idqtd2quais')" type="text" />
-          
-          </p>
-        </div></td>
-      </tr>
-            <tr>
-        <td colspan="2"><div>
-          <label>Qual o principal público a ser atingido pelas ações*? (marque no máximo os 3 itens mais importantes):</label>
-          <p>
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3a" <? if(in_array("3a", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
-              cidadãos locais</label>
-          
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3b" <? if(in_array("3b", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
-              artistas</label>
-          
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3c" <? if(in_array("3c", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
-              produtores culturais</label>
-          
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3d" <? if(in_array("3d", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
-              estudantes</label>
-          
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3e" <? if(in_array("3e", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
-              pesquisadores</label>
-          
-            <label>
-              <input type="checkbox" name="qtd3[]" value="3f" id="idqtd3quais" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
-              class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
-              outros</label>
-            <label> Quais</label>
-            <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
-          
-          </p>
-        </div></td>
-      </tr>
-            <tr>
-        <td colspan="2"><div>
-          <label>Onde as ações são realizadas*? (marque quantos itens julgar necessário)</label>
+          <label>
+          <input type="radio" name="qtd2" <? if(in_array("2a", $meuArray)){ echo "checked";}?> value="2a" class="radio" />
+          Sim</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd2" <? if(in_array("2b", $meuArray)){ echo "checked";}?> value="2b" class="radio" />
+          Não, foi aumentando com o tempo</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd2" <? if(in_array("2c", $meuArray)){ echo "checked";}?> value="2c" class="radio" />
+          Não, foi diminuindo com o tempo</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd2" <? if(in_array("2d", $meuArray)){ echo "checked";}?> value="2d" class="radio" />
+          Não, tiveram anos com um número maior e outros com um número menor de montantes concedidos</label>
+          <br />
+        </p>
         </div>
+        </td>
+      </tr>
+      <tr bgcolor="#D2D2D2">
+        <td>
+        <div>
+        <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
           <p>
             <label>
-              <input type="checkbox" name="qtd4[]" value="4a" <? if(in_array("4a", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              na sede da instituição organizadora do programa</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" 
+            class="validate[required] radio" />
+            até 20 dias</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4b" <? if(in_array("4b", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              teatros</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" 
+            class="validate[required] radio" />            
+            de 21 até 30 dias ( cerca de um mês)</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4c" <? if(in_array("4c", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              centros culturais/ espaços multiuso</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c"
+            class="validate[required] radio" />            
+            de 31 até 60 dias ( cerca de dois meses)</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4d" <? if(in_array("4d", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              cinemas</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d"
+            class="validate[required] radio" />            
+            de 61 até 90 dias ( cerca de três meses)</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4e" <? if(in_array("4e", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              galerias de arte</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e"
+            class="validate[required] radio" />            
+            de 91 até 180 dias ( cerca de seis meses)</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4f" <? if(in_array("4f", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              museus</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f"
+            class="validate[required] radio" />            
+            de 181 até 365 dias ( cerca de um ano)</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4g" <? if(in_array("4g", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              em outros equipamentos culturais como bibliotecas públicas</label>
-          
+            <input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g"
+            class="validate[required] radio" />            
+             de 1 ano até 2 anos</label>
+            <br />
             <label>
-              <input type="checkbox" name="qtd4[]" value="4h" <? if(in_array("4h", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              ocorrem em locais pertencentes a fundações municipais, secretarias de cultura, etc.</label>
-          
-            <label>
-              <input type="checkbox" name="qtd4[]" value="4i" <? if(in_array("4i", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              ocorrem  locais abertos como praças e ruas</label>
-          
-            <label>
-              <input type="checkbox" name="qtd4[]" value="4j" <? if(in_array("4j", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              ocorrem em instituições de ensino, como escolas e creches.</label>
-          
-            <label>
-              <input type="checkbox" name="qtd4[]" value="4k" <? if(in_array("4k", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              ocorrem em locais vinculados a práticas esportivas como ginásios poliesportivos</label>
-          
-            <label>
-              <input type="checkbox" name="qtd4[]" value="4l" <? if(in_array("4l", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              ocorrem em Pontos/ Pontões de Cultura</label>
-          
-            <label>
-              <input type="checkbox" id="idqtd4quais" name="qtd4[]" value="4m" <? if(in_array("4m", $meuArray)){ echo "checked";}?>
-              class="validate[minCheckbox[1]] checkbox"/>              
-              outros</label>
-            <label> Quais?</label>
-            <input name="qtd4quais" id="idqtd4quais" value="<?php echo $meuArray1['qtd4'];?>" onclick="MarcarCheckBoxClique('idqtd4quais')" type="text" />
-          </p></td>
+            <input type="radio" name="qtd3" id="idqtd3quais" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
+            class="validate[required] radio" />            
+            acima de 2 anos</label>
+            <label> Qual período?</label>
+            <input name="qtd3quais" onclick="MarcarCheckBoxClique('idqtd3quais')" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
+            <br />
+		</p>
+	  </div>
+      </td>
       </tr>
-            <tr>
-        <td colspan="2">Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*:
-          </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5a" <? if(in_array("5a", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>
-            vídeos / DVDs e gravações </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            filmes </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            livro </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            instrumentos musicais </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            pinturas, esculturas, gravuras </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            bens artesanais </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            produção de cenografia / figurino </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5h" <? if(in_array("5h", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            publicações (artigo, catálogo,etc.) </label>
-        
-          <label>
-            <input type="checkbox" name="qtd5[]" value="5j" <? if(in_array("5j", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            vídeos / DVDs e gravações </label>
-        
-            <label>
-            <input type="checkbox" name="qtd5[]" id="idqtd5quais" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
-            class="validate[minCheckbox[1]] checkbox"/>            
-            outros </label>
-          
-          <label> Quais?</label>
-           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" onclick="MarcarCheckBoxClique('idqtd5quais')" type="text" />
-          </td>
-          </tr>
-           <tr>
-            <td colspan="2"><div>
-             <label>
-             <div align="center">Comentários gerais (no máximo em dez linhas)</div>
-             </label>
-             <div align="center"><br />
-             <textarea name="qtdComentariosGerais" cols="100%" rows="10">
-				<?php echo $meuArray1['qtdComentariosGerais'];?>
-             </textarea>
-             </div>
-             </div></td>
-            </tr>
-            <tr>
-        <td colspan="2">&nbsp;</td>
+      <tr bgcolor="#C7C7C7">
+      <td>
+      <div>
+      <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
+      <p>
+      <label>
+      <input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a"
+      class="validate[required] radio" />      
+      apenas brasileiros</label>
+      <br />
+      <label>
+      <input type="radio" name="qtd4" <? if(in_array("4b", $meuArray)){ echo "checked";}?> value="4b"
+      class="validate[required] radio" />      
+        apenas estrangeiros</label>
+      <br />
+      <label>
+      <input type="radio" name="qtd4" <? if(in_array("4c", $meuArray)){ echo "checked";}?> value="4c"
+      class="validate[required] radio" />      
+        ambos</label>
+      <br />
+    </p>
+    </div>
+        </td>
       </tr>
-                  <tr>
-                    <td colspan="2"><div><br />
-                      <input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 
-                      class="validate[required] radio"/> 
-                      <label>Declaro, para os devidos fins, que as informações aqui prestadas são verdadeiras</label>
-                    
-                      <input type="radio" name="dec2" <?php if($_POST['dec2']=="dec2") echo "checked";?> value="dec2" 
-                      class="validate[required] radio"/> 
-                      <label>Declaro estar ciente que as informações aqui prestadas são públicas em atendimento
-                        a Lei de Acesso à Informação nº 12.527/2011, resguardadas aquelas de caráter pessoal</label>
-                    
-                      <input type="radio" name="dec3" <?php if($_POST['dec3']=="dec3") echo "checked";?> value="dec3" 
-                      class="validate[required] radio"/>                       
-                      <label>Autorizo a Funarte a utilizar as informações aqui  prestadas para fins de mapeamento,
-                        pesquisa, análise e construção de políticas  para o campo das residências artísticas.</label>
-                    </div></td>
-                  </tr>
-      <tr>
-        <td colspan="2">
-          <div>
-            <div align="center">
+      <tr bgcolor="#D2D2D2">
+        <td>
+             <div>
+        <label>Existe a possibilidade de intercâmbio entre artistas brasileiros e 
+        internacionais nos programas de residências artísticas(marque apenas 1 item)?*</label>
+        <p>
+          <label>
+	      <input type="radio" name="qtd5" <? if(in_array("5a", $meuArray)){ echo "checked";}?> value="5a"
+	      class="validate[required] radio" />          
+           Sim</label>
+          <br />
+          <label>
+          <input type="radio" name="qtd5" <? if(in_array("5b", $meuArray)){ echo "checked";}?> value="5b"
+	      class="validate[required] radio" />                    
+            Não</label>
+          <br />
+        </p>
+        </div>   
+        
+        </td>
+      </tr>
+      <tr bgcolor="#C7C7C7">
+        <td>
+     <div>
+        <label>Quanto à presença de artistas estrangeiros no Brasil e/ou
+         artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
+        <p>
+          <label>
+            <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a"
+   	      class="validate[required] radio" />          
+            não há  residências em nível internacional</label>
+          <br />
+          <label>
+            <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b"
+   	      class="validate[required] radio" />                      
+            o artista estrangeiro pode ser contemplado para vir fazer residência no Brasil</label>
+          <br />
+          <label>
+            <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c"
+   	      class="validate[required] radio" />                      
+            o artista brasileiro pode ser contemplado para fazer residência no exterior</label>
+          <br />
+          <label>
+            <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d"
+   	      class="validate[required] radio" />                      
+            o artista brasileiro pode fazer residência no exterior e o artista estrangeiro fazer residência no Brasil</label>
+          <br />
+         </p>
+        </div>   
+        </td>
+      </tr>
+      <tr bgcolor="#D2D2D2">
+        <td>
+        <div>
+        <label>•Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? 
+        (marque quantos itens julgar necessário):</label>
+        <p>
+	  	  <input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>América do Sul</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7b" <? if(in_array("7b", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>América Central</label>
+          <br/> 
+	  	  <input name="qtd7[]" type="checkbox" value="7c" <? if(in_array("7c", $meuArray)){ echo "checked";}?>
+			/>	 
+          <label>América do Norte</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7d" <? if(in_array("7d", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>Europa</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7e" <? if(in_array("7e", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>Ásia</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7f" <? if(in_array("7f", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>África</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7g" <? if(in_array("7g", $meuArray)){ echo "checked";}?>
+			/>	 
+          <label>Oceania</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>países Ibero-Americanos</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>
+			/>	 
+          <label>países da União Europeia</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
+          <br/>
+	  	  <input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>em nível mundial, englobando todos os continentes</label>
+          <br/>       
+	  	  <input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>
+			/>	
+          <label>em acordo bilateral, no caso de apenas um outro país</label>
+          <br/>        
+   	  	  <input name="qtd7[]" id="idqtd7quais" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>
+			/>	 
+          <label>Qual?</label>
+          <input name="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
+        </p>
+          </div>
+       </td>
+      </tr>
+      <tr bgcolor="#C7C7C7">
+        <td>
+          <div align="center">
         <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>              
-            </div>
-          </div>      
-          </td>
+       <input type="submit" name="atualizar" value="atualizar" class="botao"/>    
+          </div></td>
       </tr>
-      <tr>
-        <td colspan="2">
-        A Funarte agradece a sua participação no preenchimento deste formulário de mapeamento. As informações prestadas serão fundamentais para a construção de políticas públicas voltadas para o fomento às residências artísticas no país. 
-
-</td>
-      </tr>
-      <tr>
-        <td width="38%">&nbsp;</td>
-        <td width="62%">&nbsp;</td>
-      </tr>
-    
-    <tr>
-      <td colspan="2" align="center" class="formu2">
-        
-      </td>
+        <br/>
+    <tr bgcolor="#D2D2D2">
+      <td align="center" class="formu2">&nbsp;</td>
     </tr>
   </table>
-  
- </p>
-  
 
-  
-<br />
-
-<br/>
-<br/>
-<br/>
 </form>
+
 </body>
 </html>
