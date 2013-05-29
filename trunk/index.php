@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>FUNARTE</title>
-  
+ <meta name="author" content="wender corrêa"> 
 <!--JS -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -14,13 +14,8 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/barra.css" rel="stylesheet" type="text/css" />
 <!--_CSS -->
-     <script>
-         $("#myModal").modal('show');
-    </script>  
-   <style type="text/css">
-
-
-      .form-signin {
+    <style type="text/css">
+     .form-signin {
         max-width: 350px;
         padding: 10px 25px 25px;
         margin: 0 auto 10px;
@@ -44,10 +39,6 @@
         margin-bottom: 10px;
         padding: -2px 9px;
       }
-	   .headerpagina{
-
-       }
-
     </style>
 </head>
 <body onload="document.form1.login.focus()">
