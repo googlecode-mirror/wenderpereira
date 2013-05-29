@@ -119,15 +119,16 @@
                                 <br />
                                  A participação da sociedade será, portanto, estratégica. Por isso, a Funarte convida  instituições públicas e privadas, organizações não governamentais, pontos de cultura,
                                  associações e outras entidades que desenvolvem programas de residência artística para preencher o mapeamento a seguir, até XX de Junho de 2013.
-                                                       
-                                 A Funarte agradece a participação. 
-                                 Preencha o MAPEAMENTO AQUI.
-
+                                 <br/>                       
+                                 
+                                 <br/>
+								<button type="button" class="close" data-dismiss="modal">Preencha o MAPEAMENTO AQUI.</button>
                               </p>
                              </div>
                             <div class="modal-body">
-                                Dúvidas: 
-                                cepin@funarte.gov.br
+								A Funarte agradece a participação.                                
+								<br/>                       
+							    Dúvidas:cepin@funarte.gov.br
                                 <abbr title="Telefone">(21) 2279-8082 </abbr>
                             </div>
                           <div class="modal-footer">
