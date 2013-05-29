@@ -15,6 +15,7 @@
 	$Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
 	$Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
 	$Ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";	
+	
 	// Pega os valores do campo Mensagem
 	$Agradecimento = "Dúvidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
 	
@@ -54,7 +55,7 @@ or die ("Usuário ou senha já existem, falha ao inserir dados!");
  
  // Variável que junta os valores acima e monta o corpo do email
 $Vai = "$Nome,\n\n Seus dados de cadastro são \n\n Usuário: $Nome \n \n E-mail: $Email \n\n Para ativar o seu login clique no link abaixo! \n
-		\n Link de ativação: $Ativacao\n \n\n $Agradecimento";
+		\n Link de ativação:\n $Ativacao  \n\n $Agradecimento \n \n";
 
 require_once("phpmailer/class.phpmailer.php");
 
