@@ -1,14 +1,9 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FUNARTE</title>
+      <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -51,7 +46,12 @@
               <a href="logout.php" class="navbar-link">sair</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="index.php">Home</a></li>
+              <li class="active"><a href="inicial.php">Menu</a></li>
+			  <li><a href="verificamenu.php?m=-1">Mapeamento</a></li>
+			  <li><a href="verificamenu.php?m=0">Parte I</a></li>
+			  <li><a href="verificamenu.php?m=1">Parte II</a></li>
+			  <li><a href="verificamenu.php?m=2">Parte III</a></li>
+			  <li><a href="verificamenu.php?m=3">Parte IV</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

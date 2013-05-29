@@ -1,13 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mapeamento de residências - Funarte</title>
+    <title>Bootstrap, from Twitter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
@@ -49,7 +47,12 @@
               <a href="logout.php" class="navbar-link">sair</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="index.php">Home</a></li>
+              <li class="active"><a href="inicial.php">Menu</a></li>
+			  <li><a href="verificamenu.php?m=-1">Mapeamento</a></li>
+			  <li><a href="verificamenu.php?m=0">Parte I</a></li>
+			  <li><a href="verificamenu.php?m=1">Parte II</a></li>
+			  <li><a href="verificamenu.php?m=2">Parte III</a></li>
+			  <li><a href="verificamenu.php?m=3">Parte IV</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
