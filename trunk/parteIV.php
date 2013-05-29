@@ -87,10 +87,10 @@ include "conexao.php";
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="sql/parteIV.php">
-    <table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; 
+    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; 
     font-family: Verdana, Geneva, sans-serif;">
-      <tr bgcolor="#C7C7C7">
-        <td colspan="2">
+      <tr>
+        <td>
       	 <p align="center"><strong>PARTE IV</strong>
       	   <br/>
       	   <br/>
@@ -104,11 +104,10 @@ include "conexao.php";
            publicações, livros, etc. </b>
            </div>
       	  </p>
-   
-        </div></td>
+        </td>
       </tr>
-      <tr bgcolor="#D2D2D2">
-        <td colspan="2">
+      <tr>
+        <td>
         <label>Quais as principais ações realizadas pelos artistas durante a residência </label>
         (marque quantos itens julgar necessário)*:
         
@@ -149,8 +148,8 @@ include "conexao.php";
   
       </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
-      <td colspan="2"><div>
+      <tr>
+      <td><div>
           <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas?
           (marque quantos itens julgar necessário)*: </label>
       
@@ -249,8 +248,8 @@ include "conexao.php";
           
         </div></td>
       </tr>
-            <tr bgcolor="#D2D2D2">
-        <td colspan="2"><div>
+            <tr>
+        <td><div>
           <label>Qual o principal público a ser atingido pelas ações*? (marque no máximo os 3 itens mais importantes):</label>
           
             <label>
@@ -287,8 +286,8 @@ include "conexao.php";
                     
         </div></td>
       </tr>
-            <tr bgcolor="#C7C7C7">
-        <td colspan="2"><div>
+            <tr>
+        <td><div>
           <label>Onde as ações são realizadas*? (marque quantos itens julgar necessário)</label>
         </div>
           
@@ -360,8 +359,8 @@ include "conexao.php";
             <input name="qtd4quais" id="idqtd4quais" value="<?php echo $meuArray1['qtd4'];?>" onclick="MarcarCheckBoxClique('idqtd4quais')" type="text" />
           </td>
       </tr>
-            <tr bgcolor="#D2D2D2">
-        <td colspan="2">
+            <tr>
+        <td>
           <label>Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*:
           </label>
           
@@ -419,8 +418,8 @@ include "conexao.php";
            <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" onclick="MarcarCheckBoxClique('idqtd5quais')" type="text" />
           </td>
           </tr>
-           <tr bgcolor="#C7C7C7">
-            <td colspan="2" bgcolor="#C7C7C7"><div>
+           <tr>
+            <td><div>
              <label>
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
@@ -431,11 +430,10 @@ include "conexao.php";
              </div>
              </div></td>
             </tr>
-            <tr bgcolor="#C7C7C7">
-        <td colspan="2">&nbsp;</td>
-      </tr>
-                  <tr bgcolor="#D2D2D2">
-                    <td colspan="2"><div><br />
+            <tr>
+           </tr>
+                  <tr>
+                    <td><div><br />
                       <label><input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 
                       class="validate[required] radio"/> 
                       Declaro, para os devidos fins, que as informações aqui prestadas são verdadeiras</label>
@@ -451,44 +449,27 @@ include "conexao.php";
                         pesquisa, análise e construção de políticas  para o campo das residências artísticas.</label>
                     </div></td>
                   </tr>
-      <tr bgcolor="#C7C7C7">
-        <td colspan="2">
+      <tr>
+        <td>
           <div>
             <div align="center">
-        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>              
+        <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+       
+       <input type="submit" name="atualizar" value="atualizar" class="btn"/>              
             </div>
           </div>      
           </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
-        <td colspan="2">
+      <tr>
+        <td>
+        <div id="alert1" class="alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
         A Funarte agradece a sua participação no preenchimento deste formulário de mapeamento. As informações prestadas serão fundamentais para a construção de políticas públicas voltadas para o fomento às residências artísticas no país. 
-
-</td>
-      </tr>
-      <tr bgcolor="#C7C7C7">
-        <td width="38%">&nbsp;</td>
-        <td width="62%">&nbsp;</td>
+        </div>
+        </td>
       </tr>
       <br/>
-    <tr>
-      <td colspan="2" align="center" class="formu2">
-        
-      </td>
-    </tr>
-  </table>
-  
- </p>
-  
-  <br />
-  
-<br />
-
-<br/>
-<br/>
-<br/>
+    </table>
 </form>
 </body>
 </html>

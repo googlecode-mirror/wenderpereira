@@ -74,24 +74,29 @@
 
 <form id="form1" name="form1" method="post" action="sql/parteIII.php">
 
-<table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
-      <tr bgcolor="#C7C7C7">
+<table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+      <tr >
         <td>
           <div align="center"><strong><em>PARTE III</em></strong>
           <strong></strong></div>
           <strong><p align="center">SOBRE  OS ARTISTAS RESIDENTES</p></strong>               
 		</td>
     </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr >
         <td>
         <div>
         
         <b>
-    Os artistas apoiados por programas de residências artísticas podem ser oriundos de diversos países, havendo a possibilidade do artista vir fazer a residência no Brasil, bem como, um artista brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido. O número de artistas apoiados pode variar por programa.</b><br/>
+    Os artistas apoiados por programas de residências artísticas podem ser oriundos de diversos países,
+             havendo a possibilidade do artista vir fazer a residência no Brasil, bem como, um artista 
+            brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, 
+            sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio
+             a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido.
+             O número de artistas apoiados pode variar por programa.</b><br/>
         </td>
       </tr>
-      <tr bgcolor="#D2D2D2">
-        <td bgcolor="#D2D2D2">
+      <tr>
+        <td>
       <div>
        <label>Quantos artistas foram apoiados em média ao ano?</label>
          
@@ -122,7 +127,7 @@
       </div>
       </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr >
       <td>
       <div>
         <label>O número de artistas apoiados foi o mesmo em todas os programas( marque apenas 1 item)?</label>
@@ -142,7 +147,7 @@
         </div>
         </td>
       </tr>
-      <tr bgcolor="#D2D2D2">
+      <tr>
         <td>
         <div>
         <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
@@ -184,7 +189,7 @@
 	  </div>
       </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr >
       <td>
       <div>
       <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
@@ -204,7 +209,7 @@
     </div>
         </td>
       </tr>
-      <tr bgcolor="#D2D2D2">
+      <tr>
         <td>
              <div>
         <label>Existe a possibilidade de intercâmbio entre artistas brasileiros e 
@@ -221,7 +226,7 @@
         </div>   
         </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr >
         <td>
      <div>
         <label>Quanto à presença de artistas estrangeiros no Brasil e/ou
@@ -246,7 +251,7 @@
         </div>   
         </td>
       </tr>
-      <tr bgcolor="#D2D2D2">
+      <tr>
         <td>
         <div>
         <label>•Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? 
@@ -296,17 +301,16 @@
           </div>
        </td>
       </tr>
-      <tr bgcolor="#C7C7C7">
+      <tr >
         <td>
           <div align="center">
-        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>    
+        <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+       
+       <input type="submit" name="atualizar" value="atualizar" class="btn"/>    
           </div></td>
       </tr>
         <br/>
-    <tr bgcolor="#D2D2D2">
-      <td align="center" class="formu2">&nbsp;</td>
+    <tr>
     </tr>
   </table>
 

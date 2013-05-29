@@ -73,9 +73,9 @@
      
 </head>
 <form name="form1" id="form1" method="post"  action="sql/parteII.php">
-  <table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
-    <tr bgcolor="#C7C7C7">
-      <td align="left" bgcolor="#C7C7C7" class="formu2"><div align="left">
+  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
+    <tr>
+      <td align="left" class="formu2"><div align="left">
         <b><label>
           <div align="center">PARTE II</div>
         </label>
@@ -98,7 +98,7 @@
 	  </td>
     </tr>
   
-    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     
     <label>• Qual o principal objetivo dos programas de residência artística? 
     (marque no máximo os 3  itens de maior importância)*</label> <br />
@@ -146,7 +146,7 @@
        Outros</label> Quais?</label>
       <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
     </p>
-    <tr bgcolor="#C7C7C7">
+    <tr>
     <td align="left" class="formu2">
           <label>• As ações em residências artísticas possuem um valor previsto planejado (marque apenas 1 item)?* </label>
           <label>
@@ -157,7 +157,7 @@
           <input type="radio" name="qtd2" <? if(in_array("2b", $meuArray)){ echo "checked";}?> value="2b" class="validate[required] radio" />
      	  Não</label>
     </td>
-    <tr bgcolor="#D2D2D2">
+    <tr>
     <td height="412" align="left" class="formu2">
     <br/>
     <div>
@@ -238,7 +238,7 @@ por meio de editais geridos pela própria instituição</label>
     </div>
 	<br/>
     </td>
-    <tr bgcolor="#C7C7C7">
+    <tr>
       <td align="left" class="formu2">
       <label>Quanto ao local das realizações das residências (marque apenas 1 item)*:</label>
 		 
@@ -265,7 +265,7 @@ por meio de editais geridos pela própria instituição</label>
          
       </td>
     </tr>
-    <tr bgcolor="#D2D2D2">
+    <tr>
       <td align="left" class="formu2">
       <label>Em caso de abrangência nacional, quando as residências puderem se desenvolver em mais de uma região geográfica
       , quais estão envolvidas?(marque quantos itens julgar necessário)*:</label>
@@ -296,7 +296,7 @@ por meio de editais geridos pela própria instituição</label>
             
       </td>
     </tr>
-    <tr bgcolor="#C7C7C7">
+    <tr>
       
       <td align="left" class="formu2">
         <label>• As residências podem ocorrer em países do exterior (marque apenas um item)?*</label>
@@ -311,7 +311,7 @@ por meio de editais geridos pela própria instituição</label>
           Não</label>
       </td>
     </tr>
-    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
       <div>
     <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências?
      (marque quantos itens julgar necessário):</label>
@@ -358,7 +358,7 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Aponte em quais anos ocorreram programas em residências artísticas* (marque quantos itens julgar necessário)</label>
       
@@ -405,7 +405,7 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Com relação à continuidade destes programas em residências artísticas (marque apenas 1 item)*:</label>
     
@@ -431,7 +431,7 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Em caso dos programas terem ocorridos mais de uma vez e terem periodicidade definida (marque apenas 1 item)*:</label>
     <p>
@@ -458,7 +458,7 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?(marque apenas 1 item)*
     </label>
@@ -476,7 +476,7 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?</label>
     
@@ -521,7 +521,7 @@ por meio de editais geridos pela própria instituição</label>
       </div>
       </td>
       </tr>
-      <tr bgcolor="#D2D2D2"><td height="27" align="left" class="formu2">
+      <tr><td height="27" align="left" class="formu2">
       <div>
       <label>• Qual o apoio financeiro concedido (em reais) para que cada artista realize a ação?
      (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*:</label>
@@ -564,7 +564,7 @@ por meio de editais geridos pela própria instituição</label>
     </div>
     </td>
     </tr>
-    <tr bgcolor="#C7C7C7"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• O valor concedido já é deduzido do imposto de renda devido*?  (marque apenas 1 item):</label>
     
@@ -584,7 +584,7 @@ por meio de editais geridos pela própria instituição</label>
     </td>
     </tr>
   
-    <tr bgcolor="#D2D2D2"><td align="left" class="formu2">
+    <tr><td align="left" class="formu2">
     <div>
     <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário*)</label>
     
@@ -639,16 +639,15 @@ por meio de editais geridos pela própria instituição</label>
   </div>
     </td>
     </tr>
-    <tr bgcolor="#D2D2D2">
-      <td align="center" class="formu2">&nbsp;</td>
-    </tr>
-    <tr bgcolor="#C7C7C7"><td align="center" class="formu2">
-        <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
+    <tr>
+    <td align="center" class="formu2">
+     <div align="center">
+        <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+        <input type="submit" name="atualizar" value="atualizar" class="btn"/>
+    </div>
     </td>
-    </tr><tr>
-      <td align="center" bgcolor="#D2D2D2" class="formu2">&nbsp;</td>
+    </tr>
+    <tr>
     </tr>
   </table>
 </form>

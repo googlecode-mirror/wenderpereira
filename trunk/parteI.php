@@ -86,17 +86,7 @@
 	}
 	</script>
 <script>
-    /**
-    * 
-    * @param {input[type=checkbox]} the checkbox to read
-    * @param {input[type=textbox]} the field bound to the checkbox that gets enabled or disabled
-    */
-//    function ToggleState(checkbox, field) {
-//      if ($(checkbox).attr('checked'))
-//          $(field).attr('disabled', 'disabled');
-//      else
-//          $(field).removeAttr('disabled');
-//    }
+
 	 function ToggleState1(checkbox, field) {
       if ($(checkbox).attr('checked'))
           $(field).show(1000);
@@ -111,11 +101,17 @@
     }
 </script>
     
+    <style type="text/css">
+        .auto-style1 {
+            height: 31px;
+        }
+    </style>
+    
 </head>
 <body>
 <form name="form1" id="form1" method="post"  action="sql/parteI.php">
-  <table width="98%" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
-  <tr bgcolor="#C7C7C7">
+  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+  <tr>
   <td colspan="2">
   <p align="center">
   <strong><em>PARTE  I</em></strong></p>
@@ -124,13 +120,13 @@
   <p><strong>Os campos  com asterisco* são de preenchimento obrigatório:</strong></p></td>
   </tr>
   <tr>
-  <td width="32%" bgcolor="#C7C7C7"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
+  <td width="32%"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
   </td>
-  <td width="68%" bgcolor="#C7C7C7">
+  <td width="68%">
   <input name="txtNome" id="idFrmNome" value="<?php echo $txtNome;?>" type="text" size="84" class="validate[required] text-input"/>
   </td>
   </tr>
-  <tr bgcolor="#C7C7C7">
+  <tr>
     <td>
       <label>• A instituição se Declara Formal*: </label>
       </td>
@@ -146,9 +142,9 @@
       Não</label>
       </td>
   </tr>
-  <tr bgcolor="#C7C7C7">
-    <td><label>• CNPJ:</label></td>
-    <td>
+  <tr>
+    <td class="auto-style1"><label>• CNPJ:</label></td>
+    <td class="auto-style1">
     <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
     onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" 
     class="validate[required] text-input"/>
@@ -156,9 +152,9 @@
       <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
   </tr>
   <tr>
-    <td bgcolor="#C7C7C7"><label>• CEP*:</label>
+    <td><label>• CEP*:</label>
       </td>
-    <td bgcolor="#C7C7C7">
+    <td>
       <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
       onKeyUp="enviaKeyCEP();"  onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
   class="validate[required] text-input"/>
@@ -174,27 +170,27 @@
       </td>
   </tr>
   <tr>
-  <td bgcolor="#C7C7C7">
+  <td>
   <label>• Endereço*:</label>
   </td>
-  <td bgcolor="#C7C7C7"><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
+  <td><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
   value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
   </td>
   </tr>
   <tr>
-  <td bgcolor="#C7C7C7">
+  <td>
   <label id="municipio">• Município*:</label>
   </td>
-  <td bgcolor="#C7C7C7">
+  <td>
   <input name="txtMunicipio" id="ifFrmMunicipio" value="<?php echo $txtMunicipio;?>" type="text"
    size="50" class="validate[required] text-input"/>
   </td>
   </tr>
   <tr>
-  <td bgcolor="#C7C7C7">
+  <td>
   <label>• Unidade Federativa*:</label>
   </td>
-  <td bgcolor="#C7C7C7">
+  <td>
   <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
   <option value=""><? echo $cmbUnidadeFederativa ?> </option>
   <option value="AC">AC</option>
@@ -228,19 +224,19 @@
   </td>     
   </tr>
   <tr>
-  <td bgcolor="#C7C7C7"><label>• Correio eletrônico (e-mail):</label></td>
-  <td bgcolor="#C7C7C7">
+  <td><label>• Correio eletrônico (e-mail):</label></td>
+  <td>
   <input name="txtEmail" id="idEmail" value="<?php echo $txtEmail;?>" type="text" size="80" 
   class="validate[custom[email]] text-input"/>
   </td>
   </tr>
   <tr>
-  <td height="26" bgcolor="#C7C7C7"><label>• Telefone: </label></td>
-  <td bgcolor="#C7C7C7">
+  <td height="26"><label>• Telefone: </label></td>
+  <td>
   <input name="txtTelefone" maxlength="14" value="<?php echo $txtTelefone;?>" type="text" 
   onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
   </td>
-  <tr bgcolor="#D2D2D2">
+  <tr>
   <td colspan="2" align="left" class="formu2">
   <p>
   <label>• A instituição tem sede própia*?:</label>
@@ -255,7 +251,7 @@ Sim</label>
   </p>
   </td>
   </tr>
-  <tr bgcolor="#C7C7C7">
+  <tr>
   <td colspan="2" align="left" class="formu2">
   <label>• A instituição tem fins lucrativos*?:</label>
   <label>
@@ -266,7 +262,7 @@ Sim</label>
   Não</label>
   </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
+  <tr>
   <td colspan="2" align="left" class="formu2">
   <br/>
   <label>• Regime jurídico da instituição (marque apenas 1 item)*:</label>
@@ -311,11 +307,11 @@ Sim</label>
   </td>
   </tr>
   <br/>
-  <tr bgcolor="#C7C7C7">
+  <tr>
   <td colspan="2" align="left" class="formu2">
   </td>
   </tr>
-  <tr bgcolor="#C7C7C7">
+  <tr>
   <td colspan="2" align="left" class="formu2">
   <div align="left">
   <label>• A instituição atua somente na área cultural? (marque apenas 1 item)*:</label>
@@ -334,8 +330,8 @@ Sim</label>
   </div>
   </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-  <td colspan="2" align="left" bgcolor="#D2D2D2" class="formu2">
+  <tr>
+  <td colspan="2" align="left" class="formu2">
   <div align="left">
   <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
   <br />
@@ -365,8 +361,8 @@ Sim</label>
   </div>
   </td>
   </tr>
-  <tr bgcolor="#C7C7C7">
-  <td colspan="2" align="left" bgcolor="#C7C7C7" class="formu2">
+  <tr>
+  <td colspan="2" align="left" class="formu2">
   <div align="left">
   <label> •	Qual o tamanho aproximado da instituição em termos de número de funcionários (marque apenas 1 item)*:</label>
   <label>
@@ -387,18 +383,16 @@ Sim</label>
   </div>
   </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td colspan="2" align="center" class="formu2">&nbsp;</td>
-  </tr>
-  <tr bgcolor="#C7C7C7">
+  <tr>
   <td colspan="2" align="center" class="formu2">
-       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
+   <div align="center">
+       <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+       <input type="submit" name="atualizar" value="atualizar" class="btn"/>
+    </div>
   </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td colspan="2" align="center" class="formu2">&nbsp;</td>
+  <tr>
+ 
   </tr>
       
   </table>
