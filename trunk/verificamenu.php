@@ -21,8 +21,6 @@
 if($concluido == -1) {
 		if($opcao == -1){
 			 header ("location: mapeament_o.php"); 
-		}elseif($opcao == 0){
-			 header ("location: parte_I.php"); 
 		}else{
 		header ("location: inicial.php");
 		}
