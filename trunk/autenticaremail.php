@@ -8,6 +8,15 @@ $Login = ($_GET["1425"]);
 $date = date("d/m/y");
 $hora = date("H:i");
 
+if (empty($Email) OR empty($Login)) {
+    ?>
+	   <script language="JavaScript">
+	       alert("Acesso não autorizado!");
+	       window.location = 'index.php';
+        </script>
+<?
+}else{
+
 $consulta = "UPDATE usuarios SET ativo='0' Where (login='$Login')";
  
 $resultado = mysql_query($consulta)
@@ -20,11 +29,10 @@ or die ("Usuario autenticado com sucesso");
                 //-->
                 </script>
             <?php
-			
 $consulta1 = "INSERT INTO historico (usuario,acao,data,hora)
 VALUES ('$_GET[1425]','autenticado_email','$date','$hora')";
 $resultado1 = mysql_query($consulta1)
 or die (mysql_error());
-			
-
+               
+}	
 ?>
