@@ -21,14 +21,6 @@
    <script src="js/bootstrap.min.js"></script>
    <script src="js/bootstrap-alert.js"></script>
 
- 
-
-
-
-
-
-
-
     <script src="js/ajax.js"></script>
        <style type="text/css">
      .form-signin {
@@ -114,8 +106,8 @@
                             <h4>MAPEAMENTO DAS RESIDÊNCIAS ARTÍSTICAS NO BRASIL</h4>
                           </div>
                           <div class="modal-body">
-                                 <p class="well"> 
-                                     Em 2012, a Fundação Nacional de Artes realizou, em parceria com a Secretaria da Cidadania e da Diversidade Culturaldo Ministério da Cultura,
+                                 <p class="ui-dialog"> 
+                                     Em 2012, a Fundação Nacional de Artes realizou, em parceria com a Secretaria da Cidadania e da Diversidade Cultural do Ministério da Cultura,
                                  o II Encontro Funarte de Políticas para as Artes que teve como foco de discussão as Interações Estéticas em Rede. Durante o evento, temas importantes
                                  para a construção das políticas públicas para as artes foram abordados, entre eles o lugar das ocupações artísticas na difusão cultural, o papel das
                                  redes na produção cultural, e trânsitos: deslocamentos e residências.

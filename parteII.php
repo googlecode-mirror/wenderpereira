@@ -84,7 +84,7 @@
      
 </head>
 <form name="form1" id="form1" method="post"  action="sql/parteII.php">
-  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
+  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
     <tr>
       <td align="left" class="formu2"><div align="left">
         <label><h4>PARTE II</h4></label>

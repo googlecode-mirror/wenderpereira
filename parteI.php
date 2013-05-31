@@ -126,7 +126,7 @@
 </head>
 <body>
 <form name="form1" id="form1" method="post"  action="sql/parteI.php">
-  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+  <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
   <tr>
   <td colspan="2">
   <h4>PARTE  I</h4>

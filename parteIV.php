@@ -85,8 +85,7 @@ include "conexao.php";
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="sql/parteIV.php">
-    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; 
-    font-family: Verdana, Geneva, sans-serif;">
+    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr>
         <td>
       	 <h4>PARTE IV</h4>
