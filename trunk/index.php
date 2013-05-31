@@ -77,11 +77,11 @@
          
  <label class="control-label" for="inputEmail">Usuário</label>
     <div class="controls">
-       <input type="text" class="validate[custom[email]] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
+       <input type="text" class="validate[required,minSize[6]] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
     </div>
      <label class="control-label" for="inputPassword">Password</label>
     <div class="controls">
-    <input type="password" placeholder="Senha" name="senha" size="20" tabindex="2">                                
+    <input type="password" class="validate[required,minSize[6]] placeholder="Senha" name="senha" size="20" tabindex="2">                                
     </div>
     <div class="control-label">
       <input type="submit" class="btn btn-success" value="Entrar" name="B1" tabindex="3">
