@@ -21,15 +21,7 @@
    <script src="js/bootstrap.min.js"></script>
    <script src="js/bootstrap-alert.js"></script>
 
- 
-
-
-
-
-
-
-
-    <script src="js/ajax.js"></script>
+   <script src="js/ajax.js"></script>
        <style type="text/css">
      .form-signin {
         max-width: 350px;

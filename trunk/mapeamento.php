@@ -65,7 +65,7 @@
 <form id="form1" name="form1" method="post" action="sql\mapeamento.php">
  <div>
   <br/>
-   <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;font-family: Verdana;">
+   <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
        <tr>
       <th colspan="4" align="left" scope="row">
         <label><h4>Mapeamento dos Programas  de Residências Artísticas no Brasil</h4></label>

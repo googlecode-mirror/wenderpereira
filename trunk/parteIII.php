@@ -82,7 +82,7 @@
 
 <form id="form1" name="form1" method="post" action="sql/parteIII.php">
 
-<table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
+<table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr >
         <td>
           <h4>PARTE III</h4>
