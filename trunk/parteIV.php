@@ -10,16 +10,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<!--JS -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/ajax.js"></script>
-<!--_JS -->
-<!--CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/barra.css" rel="stylesheet" type="text/css" />
-<!--_CSS -->
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <!--_JS -->
+        <!--CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <!--_CSS -->     
+
 <?
 include "conexao.php";
 	connect();
@@ -90,19 +89,16 @@ include "conexao.php";
     font-family: Verdana, Geneva, sans-serif;">
       <tr>
         <td>
-      	 <p align="center"><strong>PARTE IV</strong>
-      	   <br/>
-      	   <br/>
-      	   <strong><em>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</em></strong> 
-         <br/>
-      	   <div>
-      	   <b>Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. 
+      	 <h4>PARTE IV</h4>
+      	   <h5>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</h5>
+           <div>
+      	   <p>Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. 
            Estas ações podem ser realizadas em inúmeros locais como praças, teatros, museus, etc. Indiretamente, 
            as ações em residência podem envolver diversos públicos: outros artistas, cidadãos locais, pesquisadores,
            etc. Ao término da residência o artista pode ter elaborado uma série de produtos: filmes, pinturas, 
-           publicações, livros, etc. </b>
+           publicações, livros, etc. </p>
+           <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
            </div>
-      	  </p>
         </td>
       </tr>
       <tr>
@@ -429,8 +425,6 @@ include "conexao.php";
              </div>
              </div></td>
             </tr>
-            <tr>
-           </tr>
                   <tr>
                     <td><div><br />
                       <label><input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 

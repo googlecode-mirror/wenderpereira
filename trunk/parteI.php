@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+ 
 <html lang="en">
 	<? 
 	session_start();
@@ -8,6 +9,16 @@
 	} 
 	?>
   <head>
+
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <!--_JS -->
+        <!--CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <!--_CSS -->      
+
     <meta charset="utf-8">
     <title>Mapeamento de residencias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,11 +129,10 @@
   <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
   <tr>
   <td colspan="2">
-  <p align="center">
-  <strong><em>PARTE  I</em></strong></p>
-  <p align="center"><strong><em>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </em>
-  </strong></p>
-  <p><strong>Os campos  com asterisco* são de preenchimento obrigatório:</strong></p></td>
+  <h4>PARTE  I</h4>
+  <h5>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </h5>
+
+  <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
   </tr>
   <tr>
   <td width="32%"><label id=lblNomeInstituicao">• Nome da instituição*:</label>
@@ -396,10 +406,7 @@ Sim</label>
     </div>
   </td>
   </tr>
-  <tr>
- 
-  </tr>
-      
+        
   </table>
 </form>
 </body>

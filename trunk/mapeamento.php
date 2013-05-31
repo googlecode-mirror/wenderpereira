@@ -30,7 +30,7 @@
 		$txtEmail = ($array_exibir['email']);
 	}
 ?>
-   <!--<script src="js/jsValidate.js" type="text/javascript"></script>
+   <script src="js/jsValidate.js" type="text/javascript"></script>
    <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
    <script src="js/jquery.validate.js" type="text/javascript"></script>
    <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
@@ -41,7 +41,7 @@
           color: red;
           font-weight: bold;
            }
-      </style>-->
+      </style>
       
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
@@ -68,17 +68,12 @@
    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="border:solid 1px #333333;font-family: Verdana;">
        <tr>
       <th colspan="4" align="left" scope="row">
-        <div align="center">Mapeamento dos Programas  de Residências Artísticas no Brasil
-          <br />
-        </div>
+        <label><h4>Mapeamento dos Programas  de Residências Artísticas no Brasil</h4></label>
         <label>
-          <div align="center">Os campos com asterisco* são de preenchimento obrigatório:</div>
+          <h5>Os campos com asterisco* são de preenchimento obrigatório:</h5>
         </label>
-        <div align="center"></div>
-        <p>
-         <label>&nbsp; Responsável pelo preenchimento das informações:</label>
-        </p>
-      </th>
+         <label><h5> Responsável pelo preenchimento das informações:</h5></label>
+           </th>
       </tr>
       <tr>
       <th width="160" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
@@ -119,22 +114,14 @@
       </td>
       </tr>
       <tr>
-      <td width="160"></td>
+      <th colspan="4" align="left" scope="row">
+           <div align="center">
+               <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+               <input type="submit" name="atualizar" value="atualizar" class="btn"/>
+            </div>
+          </th>
       </tr>
       <tr>
-      <th colspan="2" align="left" scope="row">&nbsp;</th>
-      <td colspan="2">&nbsp;</td>
-      </tr>
-      <tr>
-      <th colspan="4" align="left" scope="row"><div align="center">
-       <input type="submit" name="avancar" value="avancar" class="botao" onkeypress="return handleEnter(this, event);" /> 
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <input type="submit" name="atualizar" value="atualizar" class="botao"/>
-       <span class="formu2">
-       </span></div></th>
-      </tr>
-      <tr>
-       <th colspan="4" align="left" scope="row">&nbsp;</th>
       </tr>
   </table>
 
