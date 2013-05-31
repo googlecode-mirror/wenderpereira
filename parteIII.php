@@ -9,6 +9,15 @@
 ?>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-alert.js"></script>
+        <!--_JS -->
+        <!--CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <!--_CSS -->     
 
 <?
      include "conexao.php";
@@ -76,22 +85,23 @@
 <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="border:solid 1px #333333; font-family: Verdana, Geneva, sans-serif;">
       <tr >
         <td>
-          <div align="center"><strong><em>PARTE III</em></strong>
-          <strong></strong></div>
-          <strong><p align="center">SOBRE  OS ARTISTAS RESIDENTES</p></strong>               
+          <h4>PARTE III</h4>
+          
+          <label><h5>OS ARTISTAS RESIDENTES</h5></label>
 		</td>
     </tr>
       <tr >
         <td>
         <div>
         
-        <b>
+        <p>
     Os artistas apoiados por programas de residências artísticas podem ser oriundos de diversos países,
              havendo a possibilidade do artista vir fazer a residência no Brasil, bem como, um artista 
             brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, 
             sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio
              a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido.
-             O número de artistas apoiados pode variar por programa.</b><br/>
+             O número de artistas apoiados pode variar por programa.</p>
+            <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
         </td>
       </tr>
       <tr>
