@@ -8,7 +8,7 @@
     
 	
     $user = trim($_POST["login"]);
-    $pwd  = trim($_POST["senha"]);
+    $pwd  = md5(trim($_POST["senha"]));
 	$Email = trim($_POST["txtEmail"]);
 	$date = date("d/m/y");
 	$hora = date("H:i");

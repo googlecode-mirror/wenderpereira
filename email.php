@@ -10,8 +10,8 @@
 	$date = date("d/m/y");
 	$hora = date("H:i");
 	$Login 		= anti_sql_injection($_POST["login"]);
-	$Senha 		= anti_sql_injection($_POST["senha"]);
-	$Senha1		= anti_sql_injection($_POST["senha1"]);
+	$Senha 		= md5(anti_sql_injection($_POST["senha"]));
+	$Senha1		= md5(anti_sql_injection($_POST["senha1"]));
 	$Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
 	$Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
 	$Ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";	
