@@ -81,7 +81,7 @@
     </div>
      <label class="control-label" for="inputPassword">Password</label>
     <div class="controls">
-    <input type="password" class="validate[required,minSize[6]] placeholder="Senha" name="senha" size="20" tabindex="2">                                
+    <input type="password" class="validate[required,minSize[6]]" placeholder="Senha" name="senha" size="20" tabindex="2">                                
     </div>
     <div class="control-label">
       <input type="submit" class="btn btn-success" value="Entrar" name="B1" tabindex="3">

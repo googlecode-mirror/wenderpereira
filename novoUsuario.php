@@ -1,24 +1,13 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>FUNARTE</title>
-  
-<!--JS -->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/ajax.js"></script>
-<!--_JS -->
-<!--CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="css/barra.css" rel="stylesheet" type="text/css" />
-<!--_CSS -->
-<!--Validacao_CSS -->
-    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+       <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
+	</script>
+	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
+	</script>
 	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
 	</script>
 	<script>
@@ -27,9 +16,21 @@
 	        jQuery("#form1").validationEngine();
 	    });
 	</script>
-    <script src="js/jsValidate.js" type="text/javascript"></script> 	
-<!--Validacao_CSS -->
-   <style type="text/css">
+    <script src="js/jsValidate.js" type="text/javascript"></script> 
+
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/bootstrap-alert.js"></script>
+
+ 
+
+
+
+
+
+
+
+    <script src="js/ajax.js"></script>
+       <style type="text/css">
      .form-signin {
         max-width: 350px;
         padding: 10px 25px 25px;
@@ -55,38 +56,42 @@
         padding: -2px 9px;
       }
     </style>
+
+
+<title>Funarte - Portal das Artes</title>
 </head>
-<body onload="document.form1.login.focus()">
+<body>
 <div class="container">
 		<?
    		require "acessoInformacao.php";
-        ?>
-    <br />
-    <br />
-    <img src="images/baner1.jpg" alt="" width="400" height="60" style=" display: block; margin-left: auto; margin-right: auto " /></a>  
-       </div>
-<form name="form1" class="form-signin" id="form1" method="post" action="email.php">
-  <div class="form-actions">
+		?> 
+                    <br />
+                    <a href="http://www.funarte.gov.br/"> 
+                    <img src="images/baner1.jpg" alt="" width="720" height="120" style=" display: block; margin-left: auto; margin-right: auto " /></a> 
+           <br />
+ </div>
+<form id="form1" name="form1" class="form-signin" method="post" action="email.php">
+ <div class="form-actions">
     <h4>Novo usuário</h4>
     <label class="control-label" for="inputEmail">Usuário</label>
     <div class="controls">
-    <input type="text" class="cor-inativa" onKeyUp="enviaKey1();" onClick="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
+    <input type="text" class="validate[required,minSize[6]] text-input" onKeyUp="enviaKey1();" onClick="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
    </div>
 
     <label class="control-label" for="inputEmail">Senha</label>
     <div class="controls">
-    <input type="password" class="cor-inativa" id="senha" name="senha" size="20" tabindex="2" />
+    <input type="password" class="validate[required,minSize[6]] text-input" id="senha" name="senha" size="20" tabindex="2" />
    </div>   
     
       
       <label class="control-label" for="inputPassword">repetir a senha</label>
     <div class="controls">
-    <input name="senha1" id="senha1" type="password" class="cor-inativa" tabindex="3" size="20" />
+    <input name="senha1" id="senha1" type="password" class="validate[required,minSize[6],equals[senha]] text-input" tabindex="3" size="20" />
     </div>
    
       <label class="control-label" for="inputPassword">Email</label>
     <div class="controls">
-    <input name="email" id="email" type="email" class="cor-inativa" tabindex="4" size="20"/>
+    <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
     </div>
    
         <div class="control-label">
@@ -104,16 +109,13 @@
          <input type="reset" class="btn" value="Limpar" name="B2" tabindex="6" />
 	   <br/>
        <br/>
-       <br/>
       <a href="index.php" class="btn btn-success">Home</a>              
     </div>
-</form>
-    <br />  
-    <br />  
     <br />  
 <div class="dropdown-toggle">
      <a href="http://www.funarte.gov.br/"> 
      <img src="images/imagem.jpg" alt="" width="581" height="72" class="img-rounded" style=" display: block; margin-left: auto; margin-right: auto " /> </a> 
      </div>
+</form>
 </body>
 </html>
