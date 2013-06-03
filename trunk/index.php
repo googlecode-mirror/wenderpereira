@@ -69,7 +69,7 @@
          
  <label class="control-label" for="inputEmail"><i class="icon-user"></i>Usuário</label>
     <div class="controls">
-       <input type="text" class="validate[required,minSize[6]] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
+       <input type="text" class="validate[required,minSize[6]],custom[onlyLetterNumber] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
     </div>
      <label class="control-label" for="inputPassword"><i class="icon-asterisk"></i>Senha</label>
     <div class="controls">
@@ -92,8 +92,7 @@
  </div> 
            <script>
                $(window).load(function () {
-
-                   $('#modalindex').modal({
+				    $('#modalindex').modal({
                        show: true
                    });
                });

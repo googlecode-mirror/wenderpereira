@@ -67,9 +67,8 @@
     <h4><i class="icon-plus"></i>Novo usuário</h4>
     <label class="control-label" for="inputEmail"><i class="icon-user"></i>Usuário</label>
     <div class="controls">
-    <input type="text" class="validate[required,minSize[6]] text-input" onKeyUp="enviaKey1();" onClick="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
+    <input type="text" class="validate[required,minSize[6]],custom[onlyLetterNumber] text-input" onKeyUp="enviaKey1();" onClick="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
    </div>
-
     <label class="control-label" for="inputEmail"><i class="icon-asterisk"></i>Senha</label>
     <div class="controls">
     <input type="password" class="validate[required,minSize[6]] text-input" id="senha" name="senha" size="20" tabindex="2" />
