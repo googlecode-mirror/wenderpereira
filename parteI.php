@@ -98,15 +98,9 @@
 	</script>
 <script>
 
-	 function ToggleState1(checkbox, field) {
-      if ($(checkbox).attr('checked'))
-          $(field).show(1000);
-      else
-          $(field).removeAttr('disabled');
-    }
 	 function ToggleState(checkbox, field) {
       if ($(checkbox).attr('checked'))
-          $(field).hide(1000);
+          $(field).val('');
       else
           $(field).removeAttr('disabled');
     }
@@ -141,12 +135,10 @@
       <label>• A instituição se Declara Formal*: </label>
       </td>
     <td>
-      <input type="radio" name="qtd0" id="qtd01" onClick="javascript:ToggleState1('#qtd01', '#idopcaocnpj');" 
-	  <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
+      <input type="radio" name="qtd0" id="qtd01" <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
       value="0a" class="validate[required] radio" />
       Sim</label>
-      <input type="radio" id="qtd00" name="qtd0" onClick="javascript:ToggleState('#qtd00', '#idopcaocnpj');"
-       <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
+      <input type="radio" id="qtd00" name="qtd0" onClick="javascript: ToggleState('#qtd00', '#idopcaocnpj');" <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
       value="0b" class="validate[required] radio" />
                   
       Não</label>
@@ -157,7 +149,7 @@
     <td class="auto-style1">
     <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
     onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" 
-    class="validate[required] text-input"/>
+    class="validate[condRequired[qtd01]]"/>
     
       <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
   </tr>
@@ -311,7 +303,7 @@ Sim</label>
   value="3k" id="qtd3quais1" class="validate[required] radio" />
   Outras</label>
   <label>Quais?</label>
-  <input name="qtd3quais" type="text" id="idqtd3quais"   onclick="MarcarCheckBoxClique('qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
+  <input name="qtd3quais" type="text" id="idqtd3quais"  class="validate[condRequired[qtd3quais1]]" onclick="MarcarCheckBoxClique('qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
   </td>
