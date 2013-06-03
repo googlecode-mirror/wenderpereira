@@ -413,7 +413,7 @@ include "conexao.php";
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
              <div align="center">
-             <textarea name="qtdComentariosGerais" dir="ltr" lang="pt-br" cols="20" rows="10" maxlength="660" class="input-xxlarge" style="text-align:left;">
+             <textarea name="qtdComentariosGerais" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[650]]  maxlength="660" class="input-xxlarge" style="text-align:left;">
 				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
              </div>
