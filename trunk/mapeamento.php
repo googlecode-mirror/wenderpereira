@@ -107,8 +107,7 @@
       <label id="telefone">Telefone:( )</label>
       <td>
         <input name="txtTelefone" maxlength="15" value="<?php echo $txtTelefone;?>" type="text" 
-         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');
-         validateEmail_('form1','txtEmail');"/>
+         onKeyPress="SoNumero();Mascara('telefone', window.event.keyCode, 'document.form1.txtTelefone');"/>
        </td>
       <td colspan="2">
       </td>
