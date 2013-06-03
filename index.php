@@ -71,7 +71,7 @@
     <div class="controls">
        <input type="text" class="validate[required,minSize[6]] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
     </div>
-     <label class="control-label" for="inputPassword">Password</label>
+     <label class="control-label" for="inputPassword">Senha</label>
     <div class="controls">
     <input type="password" class="validate[required,minSize[6]]" placeholder="Senha" name="senha" size="20" tabindex="2">                                
     </div>
