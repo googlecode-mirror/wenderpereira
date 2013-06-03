@@ -62,7 +62,7 @@
 <title>Funarte - Portal das Artes</title>
 </head>
 <body>
-<form id="form1" name="form1" method="post" action="sql\mapeamento.php">
+<form id="form1" name="form1" method="post" action="sql/mapeamento.php">
  <div>
   <br/>
    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
