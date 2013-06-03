@@ -227,7 +227,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
         Outros</label>
       <label>Quais?</label>
-      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
+      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
     </p>
     </div>
 	<br/>
@@ -347,7 +347,7 @@ por meio de editais geridos pela própria instituição</label>
       em acordo bilateral, no caso de apenas um outro país</label>
       
       <label>Qual?</label>
-      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" />
+      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" />
     </p>
   </div>
     </td>
@@ -361,7 +361,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
       Anos anteriores a 2006: </label>
       <label>Quais?</label>
-      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" />
+      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" />
       
       <label><input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>   
@@ -395,7 +395,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
       2013</label>
       <label>em diante (anos já previstos)</label>
-      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" />
+      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" />
   </div>
     </td>
     </tr>
@@ -510,7 +510,7 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[required] radio" />
         acima de 5.000.000 de reais</label>
       <label> Qual valor?</label>
-      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  onclick="MarcarCheckBoxClique('idqtd12quais')" type="text" />
+      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[condRequired[idqtd12quais]]" onclick="MarcarCheckBoxClique('idqtd12quais')" type="text" />
       
       </div>
       </td>

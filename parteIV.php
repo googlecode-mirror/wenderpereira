@@ -133,7 +133,7 @@ include "conexao.php";
       outros</label>
 
       <label> Quais?</label>
-      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
+      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
   
       </td>
       </tr>
@@ -233,7 +233,7 @@ include "conexao.php";
               class="validate[minCheckbox[1]] checkbox"/>
               outras</label>
             <label> Quais?</label>
-            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" onclick="MarcarCheckBoxClique('idqtd2quais')" type="text" />
+            <input name="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" class="validate[condRequired[idqtd2quais]]" onclick="MarcarCheckBoxClique('idqtd2quais')" type="text" />
           
         </div></td>
       </tr>
@@ -345,7 +345,7 @@ include "conexao.php";
               class="validate[minCheckbox[1]] checkbox"/>              
               outros</label>
             <label> Quais?</label>
-            <input name="qtd4quais" id="idqtd4quais" value="<?php echo $meuArray1['qtd4'];?>" onclick="MarcarCheckBoxClique('idqtd4quais')" type="text" />
+            <input name="qtd4quais" id="idqtd4quais" value="<?php echo $meuArray1['qtd4'];?>" class="validate[condRequired[idqtd4quais]]" onclick="MarcarCheckBoxClique('idqtd4quais')" type="text" />
           </td>
       </tr>
             <tr>
@@ -404,7 +404,7 @@ include "conexao.php";
             outros </label>
           
           <label> Quais?</label>
-           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" onclick="MarcarCheckBoxClique('idqtd5quais')" type="text" />
+           <input name="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" class="validate[condRequired[idqtd5quais]]" onclick="MarcarCheckBoxClique('idqtd5quais')" type="text" />
           </td>
           </tr>
            <tr>
