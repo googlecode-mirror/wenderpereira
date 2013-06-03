@@ -21,15 +21,7 @@
    <script src="js/bootstrap.min.js"></script>
    <script src="js/bootstrap-alert.js"></script>
 
- 
-
-
-
-
-
-
-
-    <script src="js/ajax.js"></script>
+     <script src="js/ajax.js"></script>
        <style type="text/css">
      .form-signin {
         max-width: 350px;
@@ -74,7 +66,7 @@
  </div>
 <form id="form1" name="form1" class="form-signin" method="post" action="emailresetsenha.php">
   <div class="form-actions">
-    <label class="control-label" for="inputEmail">Email</label>
+    <label class="control-label" for="inputEmail"><i class="icon-envelope"></i>Email</label>
     <div class="controls">
     <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
     <input type="submit" class="btn btn-success" name="reset" value="reset" tabindex="5"/>
@@ -85,7 +77,7 @@
       Entre com os dados para realizar a alteração de sua senha!
       </div>
       <br />  
-        <a href="index.php" class="btn btn-success">Home</a>              
+        <a href="index.php" class="btn btn-success"><i class="icon-home"></i>Home</a>              
       </div>
     </div>
     <br />  

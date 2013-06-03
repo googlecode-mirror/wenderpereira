@@ -64,25 +64,26 @@
  </div>
 <form id="form1" name="form1" class="form-signin" method="post" action="email.php">
  <div class="form-actions">
-    <h4>Novo usuário</h4>
-    <label class="control-label" for="inputEmail">Usuário</label>
+    <h4><i class="icon-plus"></i>Novo usuário</h4>
+    <label class="control-label" for="inputEmail"><i class="icon-user"></i>Usuário</label>
     <div class="controls">
     <input type="text" class="validate[required,minSize[6]] text-input" onKeyUp="enviaKey1();" onClick="enviaKey1();" id="login" name="login" size="20" tabindex="1" />
    </div>
 
-    <label class="control-label" for="inputEmail">Senha</label>
+    <label class="control-label" for="inputEmail"><i class="icon-asterisk"></i>Senha</label>
     <div class="controls">
     <input type="password" class="validate[required,minSize[6]] text-input" id="senha" name="senha" size="20" tabindex="2" />
    </div>   
     
       
-      <label class="control-label" for="inputPassword">repetir a senha</label>
+      <label class="control-label" for="inputPassword"><i class="icon-asterisk"></i>repetir a senha</label>
     <div class="controls">
     <input name="senha1" id="senha1" type="password" class="validate[required,minSize[6],equals[senha]] text-input" tabindex="3" size="20" />
     </div>
    
-      <label class="control-label" for="inputPassword">Email</label>
+      <label class="control-label" for="inputPassword"><i class="icon-envelope"></i>Email</label>
     <div class="controls">
+	
     <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
     </div>
    
@@ -101,7 +102,7 @@
          <input type="reset" class="btn" value="Limpar" name="B2" tabindex="6" />
 	   <br/>
        <br/>
-      <a href="index.php" class="btn btn-success">Home</a>              
+      <a href="index.php" class="btn btn-success"><i class="icon-home"></i>Home</a>              
     </div>
     <br />  
 <div class="dropdown-toggle">

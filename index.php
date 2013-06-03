@@ -67,11 +67,11 @@
 <form id="form1" name="form1" class="form-signin" method="post" action="login.php">
   <div class="form-actions">
          
- <label class="control-label" for="inputEmail">Usuário</label>
+ <label class="control-label" for="inputEmail"><i class="icon-user"></i>Usuário</label>
     <div class="controls">
        <input type="text" class="validate[required,minSize[6]] text-input" placeholder="Usuário" onkeyup="enviaKey();" onclick="enviaKey();" name="login" id="login" size="20" tabindex="1">
     </div>
-     <label class="control-label" for="inputPassword">Senha</label>
+     <label class="control-label" for="inputPassword"><i class="icon-asterisk"></i>Senha</label>
     <div class="controls">
     <input type="password" class="validate[required,minSize[6]]" placeholder="Senha" name="senha" size="20" tabindex="2">                                
     </div>
@@ -85,10 +85,11 @@
         </div>
 		 <label id="erromsg" class="label-success"> </label>
 		 <label id="erro" class="label-success"> </label>
-         <a href="novoUsuario.php"class="btn btn-success">Novo usuário</a>
-         <a href="resetsenha.php" class="btn btn-success">Esqueceu a senha</a>
+         <a href="novoUsuario.php"class="btn btn-success"><i class="icon-plus"></i>Novo usuário</a>
+        
+         <a href="resetsenha.php"  class="btn btn-success"><i class="icon-retweet"></i>Esqueceu a senha</a>  
 	  <br/>
-    </div>
+	  </div>
  </div> 
            <script>
                $(window).load(function () {
@@ -121,7 +122,7 @@
                                  <br/>                       
                                  
                                  <br/>
-								<button type="button" class="close" data-dismiss="modal">Preencha o MAPEAMENTO AQUI.</button>
+								<button type="button" class="close" data-dismiss="modal"><i class="icon-plus"></i>Preencha o MAPEAMENTO AQUI.</button>
                               </p>
                              </div>
                             <div class="modal-body">
