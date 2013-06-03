@@ -1,12 +1,7 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<? 
-	session_start();
-	if (empty($_SESSION["login"])){
-	header("Location: index.php");
-	exit;
-	} 
-?>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         
@@ -84,7 +79,7 @@
 <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr >
         <td>
-          <h4>PARTE III</h4>
+          <h4><i class="icon-plus-sign"></i> PARTE III</h4>
           
           <label><h5>OS ARTISTAS RESIDENTES</h5></label>
 		</td>

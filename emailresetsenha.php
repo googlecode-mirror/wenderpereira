@@ -85,7 +85,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 	} else {
 			?>
 		    <script>
-               alert("A senha foi enviada para o seu email $Email!");
+               alert("A senha foi enviada para o seu email!");
 			   window.location = 'index.php';
              </script>
 			<?php
@@ -97,7 +97,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 
 ?>
 <script>
- alert('A senha foi enviada para o seu email! $Email');
+ alert("A senha foi enviada para o seu email!". echo $Email."");
 	//Header("location:http://localhost:8080/"); // Redireciona para uma página de obrigado.
 </script>
 <?

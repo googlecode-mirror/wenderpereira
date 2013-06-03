@@ -21,7 +21,7 @@
    <script src="js/bootstrap.min.js"></script>
    <script src="js/bootstrap-alert.js"></script>
 
-   <script src="js/ajax.js"></script>
+    <script src="js/ajax.js"></script>
        <style type="text/css">
      .form-signin {
         max-width: 350px;
@@ -81,19 +81,18 @@
     <input name="senha1" id="senha1" type="password" class="validate[required,minSize[6],equals[senha]] text-input" tabindex="3" size="20" />
     </div>
    
-      <label class="control-label" for="inputPassword"><i class="icon-envelope"></i>Email</label>
+      <label class="control-label" for="inputPassword"><i class="icon-home"></i>Email</label>
     <div class="controls">
-	
     <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
     </div>
    
         <div class="control-label">
          <div class="alert-success">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-         Entre com os dados para realizar um novo cadastro!
+	     Um <i class="icon-home"></i>email de confirmarção será enviado para ativar o cadastro!<i class="icon-hand-left"></i>
         </div>
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-         Um email de confirmarção será enviado para ativar o cadastro!
+         Entre com os dados para realizar um novo cadastro! <i class="icon-hand-left"></i>
         </div>
 		 <label id="erromsg"> </label>
          <label id="erro"> </label>
@@ -102,7 +101,7 @@
          <input type="reset" class="btn" value="Limpar" name="B2" tabindex="6" />
 	   <br/>
        <br/>
-      <a href="index.php" class="btn btn-success"><i class="icon-home"></i>Home</a>              
+      <a href="index.php" class="btn btn-success">Home</a>              
     </div>
     <br />  
 <div class="dropdown-toggle">

@@ -40,18 +40,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Mapeamento residências</a>
+          <a class="brand" href="#"><i class="icon-plus-sign"></i>Mapeamento residências</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="logout.php" class="navbar-link">sair</a>
+              <a href="logout.php" class="navbar-link"><i class="icon-user"></i>sair</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="inicial.php">Menu</a></li>
-			  <li><a href="verificamenu.php?m=-1">Mapeamento</a></li>
-			  <li><a href="verificamenu.php?m=0">Parte I</a></li>
-			  <li><a href="verificamenu.php?m=1">Parte II</a></li>
-			  <li><a href="verificamenu.php?m=2">Parte III</a></li>
-			  <li><a href="verificamenu.php?m=3">Parte IV</a></li>
+              <li class="active"><a href="inicial.php"><i class="icon-th-list"></i>Menu</a></li>
+			  <li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a></li>
+			  <li><a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a></li>
+			  <li><a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a></li>
+			  <li><a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Parte III</a></li>
+			  <li><a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -67,7 +67,7 @@
 		<?
    		require "menu.php";
 		?> 
-        <div class="span9">
+        <div class="span8">
         <div class="row-fluid">
        <dl>
         <dt>Instruções para cadastramento:</dt>
@@ -75,13 +75,18 @@
         <dd> Caso seja a primeira vez que esteja se cadastrando, clique em Novo Usuário e vá ao passo 2.
         Em caso do cadastro já ter sido realizado anteriormente, entre com o nome do usuário e senha e pule para o passo 3.</dd>
         <dt>Passo 2:</dt>
-        <dd> Escolha um nome de usuário e senha. Em seguida coloque a mesma senha para confirmação,
+        <dd> Escolha um nome de <i class="icon-user"></i>usuário e <i class="icon-asterisk"></i>senha. Em seguida coloque a mesma senha para confirmação,
         bem como, preencha o campo do endereço de seu e-mail. Clique em salvar e uma mensagem será enviada para seu e-mail.
         Ao abrir a mensagem, haverá um link de ativação. Clique neste para que seu cadastro seja autenticado. Posteriormente, 
         entre normalmente com o nome de usuário e senha cujo cadastro foi realizado.
         </dd>
         <dt>Passo 3:</dt>
-        <dd> O cadastramento é realizado em 5 partes : Mapeamento, Parte 1, Parte 2, Parte 3, e Parte 4. 
+        <dd> O cadastramento é realizado em 5 partes : 
+		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a>, 
+		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a>, 
+		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a>,
+		<a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Parte III</a>,
+		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a>. 
         Preencha as partes do cadastro uma a uma. Alguns campos são obrigatórios, sendo que, nestes casos, ao final da 
         perguntaaparece um asterisco (*). Em algumas questões somente é possível uma resposta. Em outras, são possíveis
         múltiplas respostas, mas fique atento às perguntas obrigatórias, onde o usuário deverá marcar pelo menos um item,
@@ -91,13 +96,13 @@
         </dd>
         <dt>Passo 4:</dt>
         <dd>Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar 
-        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na Parte 4, é obrigatório o 
+        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a>, é obrigatório o 
         usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, 
         ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas
         salvas automaticamente.
         </dd>
         <dt>Passo 5:</dt>
-        <dd> Após o término, clique em logout. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.</dd>
+        <dd> Após o término, clique em <a href="logout.php"><i class="icon-remove"></i>Logout</a>. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.</dd>
         </dl>
 	<div/>     
      	 <hr>
