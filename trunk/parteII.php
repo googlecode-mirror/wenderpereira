@@ -138,7 +138,7 @@
 	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
        Outros</label> Quais?</label>
-      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
+      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
     </p>
     <tr>
     <td align="left" class="formu2">
