@@ -19,12 +19,12 @@
         <link href="css/barra.css" rel="stylesheet" type="text/css" />
         <!--_CSS -->     
 
-<?
+ <?
      include "conexao.php";
       connect();
 	  $Login 	=  trim($_SESSION["login"]);
-   ?>
-   <?  function getArray(&$Login){
+ ?>
+ <?    function getArray(&$Login){
    	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='3';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
@@ -37,8 +37,8 @@
       	}
      	$meuArray = getArray($Login);
   ?>
-  
-  	<? function getArray1(&$Login){
+  <?
+    function getArray1(&$Login){
     $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='3';";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
     $i=0;
@@ -51,8 +51,7 @@
     return $resposta1;
     }
     $meuArray1 = getArray1($Login);
-    ?>
-     
+ ?>
     <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
 	<link rel="stylesheet" href="css/template.css" type="text/css"/>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
