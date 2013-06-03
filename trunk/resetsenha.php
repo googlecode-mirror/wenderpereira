@@ -21,7 +21,7 @@
    <script src="js/bootstrap.min.js"></script>
    <script src="js/bootstrap-alert.js"></script>
 
-     <script src="js/ajax.js"></script>
+    <script src="js/ajax.js"></script>
        <style type="text/css">
      .form-signin {
         max-width: 350px;
@@ -66,18 +66,19 @@
  </div>
 <form id="form1" name="form1" class="form-signin" method="post" action="emailresetsenha.php">
   <div class="form-actions">
-    <label class="control-label" for="inputEmail"><i class="icon-envelope"></i>Email</label>
+	<h4><i class="icon-plus"></i>Reset de Senha</h4>
+    <label class="control-label" for="inputEmail"><i class="icon-home"></i>Email</label>
     <div class="controls">
     <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
     <input type="submit" class="btn btn-success" name="reset" value="reset" tabindex="5"/>
    </div>   
       <div class="control-label">
-      <div class="alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      Entre com os dados para realizar a alteração de sua senha!
-      </div>
+	    <div class="alert-success">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+	     Um <i class="icon-home"></i>email de confirmarção será enviado para realizar o reset da senha!<i class="icon-hand-left"></i>
+        </div>
       <br />  
-        <a href="index.php" class="btn btn-success"><i class="icon-home"></i>Home</a>              
+        <a href="index.php" class="btn btn-success">Home</a>              
       </div>
     </div>
     <br />  

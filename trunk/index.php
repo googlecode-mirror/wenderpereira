@@ -81,15 +81,14 @@
       <br/>
          <div id="alert1" class="alert-success">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
-         Entre com o nome de usuário e senha para acessar o sistema..
+         Entre com o nome de usuário e senha para acessar o sistema. <i class="icon-hand-left"></i>
         </div>
 		 <label id="erromsg" class="label-success"> </label>
 		 <label id="erro" class="label-success"> </label>
-         <a href="novoUsuario.php"class="btn btn-success"><i class="icon-plus"></i>Novo usuário</a>
-        
-         <a href="resetsenha.php"  class="btn btn-success"><i class="icon-retweet"></i>Esqueceu a senha</a>  
+         <a href="novoUsuario.php"class="btn btn-success">Novo usuário</a>
+         <a href="resetsenha.php" class="btn btn-success">Esqueceu a senha</a>
 	  <br/>
-	  </div>
+    </div>
  </div> 
            <script>
                $(window).load(function () {
@@ -122,7 +121,7 @@
                                  <br/>                       
                                  
                                  <br/>
-								<button type="button" class="close" data-dismiss="modal"><i class="icon-plus"></i>Preencha o MAPEAMENTO AQUI.</button>
+								<button type="button" class="close" data-dismiss="modal">Preencha o MAPEAMENTO AQUI.</button>
                               </p>
                              </div>
                             <div class="modal-body">

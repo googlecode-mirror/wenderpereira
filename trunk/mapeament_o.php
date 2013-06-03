@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+<? 
+	session_start();
+	if (empty($_SESSION["login"])){
+	header("Location: index.php");
+	exit;
+	} 
+?>
+  <meta charset="utf-8">
     <title>Funarte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -41,19 +48,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Mapeamento residências</a>
+          <a class="brand" href="#"><i class="icon-plus-sign"></i>Mapeamento residências</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              <a href="logout.php" class="navbar-link">sair</a>
+              <a href="logout.php" class="navbar-link"><i class="icon-user"></i>sair</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="inicial.php">Menu</a></li>
-			  <li><a href="verificamenu.php?m=-1">Mapeamento</a></li>
-			  <li><a href="verificamenu.php?m=0">Parte I</a></li>
-			  <li><a href="verificamenu.php?m=1">Parte II</a></li>
-			  <li><a href="verificamenu.php?m=2">Parte III</a></li>
-			  <li><a href="verificamenu.php?m=3">Parte IV</a></li>
-			  
+              <li class="active"><a href="inicial.php"><i class="icon-th-list"></i>Menu</a></li>
+			  <li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a></li>
+			  <li><a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a></li>
+			  <li><a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a></li>
+			  <li><a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Parte III</a></li>
+			  <li><a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

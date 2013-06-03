@@ -1,12 +1,7 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<? 
-	session_start();
-	if (empty($_SESSION["login"])){
-	header("Location: index.php");
-	exit;
-	} 
-?>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -68,7 +63,7 @@
    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
        <tr>
       <th colspan="4" align="left" scope="row">
-        <label><h4>Mapeamento dos Programas  de Residências Artísticas no Brasil</h4></label>
+        <label><h4><i class="icon-plus-sign"></i> Mapeamento dos Programas  de Residências Artísticas no Brasil</h4></label>
         <label>
           <h5>Os campos com asterisco* são de preenchimento obrigatório:</h5>
         </label>
@@ -118,6 +113,7 @@
                <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
                <input type="submit" name="atualizar" value="atualizar" class="btn"/>
             </div>
+			
           </th>
       </tr>
       <tr>

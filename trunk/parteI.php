@@ -1,13 +1,8 @@
+
 <!DOCTYPE html>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <html lang="en">
-	<? 
-	session_start();
-	if (empty($_SESSION["login"])){
-	header("Location: index.php");
-	exit;
-	} 
-	?>
+
   <head>
 
         <script src="http://code.jquery.com/jquery.js"></script>
@@ -129,7 +124,7 @@
   <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
   <tr>
   <td colspan="2">
-  <h4>PARTE  I</h4>
+  <h4><i class="icon-plus-sign"></i> PARTE  I</h4>
   <h5>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </h5>
 
   <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
