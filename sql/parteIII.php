@@ -124,7 +124,7 @@
      or die ("--");
 		?>
 	  <script language="JavaScript">
-	      alert("ParteIII cadastradra, clique na parte IV para realizar o cadastro!");
+	      alert("ParteIII cadastrada, clique na parte IV para realizar o cadastro!");
 	      window.location.assign("../parte_III.php");
       </script>
 	  <?
