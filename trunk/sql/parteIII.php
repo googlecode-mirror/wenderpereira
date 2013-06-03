@@ -25,7 +25,8 @@
           $questao6 = $_POST[qtd6];
           $questao7Quais = $_POST[qtd7quais];
          // inserindo informaçoes
-  if ($_POST[avancar] == "avancar") { 		 
+ 
+    if ($_POST[avancar] == "avancar") { 
         if($concluido == 2) 
         {
           // inserindo CheckBox  
@@ -89,7 +90,7 @@
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../inicial.php");
             </script>
-			<?	
+			<?php	
 			 
 		 }else{
 				//else do teste igual a parte atualizado!
@@ -128,8 +129,7 @@
 	      window.location.assign("../parte_III.php");
       </script>
 	  <?
-	   
-		}
+	   }
  	 ?>
 	 <?
      if ($_POST[atualizar] == "atualizar") 

@@ -25,8 +25,9 @@
         $questao3Quais = $_POST[qtd3quais];
         $questao4Quais = $_POST[qtd4quais];
 		$questao5Quais = $_POST[qtd5quais];
-		
         $qtdComentarios = strip_tags($_POST[qtdComentariosGerais]); 
+ ?>
+ <?
     if ($_POST[avancar] == "avancar") { 		
         if($concluido == 3) 
         {
@@ -36,7 +37,7 @@
         foreach($_checkbox as $_valor){
         insere($_valor,$Login,$date,$hora);
         }
-    //----------------------------
+        //----------------------------
         $_checkbox = $_POST['qtd2'];
         foreach($_checkbox as $_valor){
         insere($_valor,$Login,$date,$hora);
@@ -46,49 +47,52 @@
         foreach($_checkbox as $_valor){
         insere($_valor,$Login,$date,$hora);
         }
-    //----------------------------
-    $_checkbox = $_POST['qtd4'];
+        //----------------------------
+        $_checkbox = $_POST['qtd4'];
         foreach($_checkbox as $_valor){
         insere($_valor,$Login,$date,$hora);
-  }
+   }
         //----------------------------
-    $_checkbox = $_POST['qtd5'];
+        $_checkbox = $_POST['qtd5'];
         foreach($_checkbox as $_valor){
         insere($_valor,$Login,$date,$hora);
   }  
-//------------------------------------------------------
-//Inserindo-Descricao-----------------------------------
-          if(empty($decs1)) {}else{
+        //------------------------------------------------------
+        //Inserindo-Descricao-----------------------------------
+          if(empty($decs1)) {
+            }else{
            insere($decs1,$Login,$date,$hora);}
-          if(empty($decs2)) {}else{
-                insere($decs2,$Login,$date,$hora);}
-          if(empty($decs3)) {}else{  
-                insere($decs3,$Login,$date,$hora);}
-//------------------------------------------------------                
-      if(empty($qtdComentarios)) {}else{
+          if(empty($decs2)) {
+            }else{
+           insere($decs2,$Login,$date,$hora);}
+          if(empty($decs3)) {
+            }else{  
+           insere($decs3,$Login,$date,$hora);}
+        //------------------------------------------------------                
+        if(empty($qtdComentarios)) {}else{
             $qtdQuestao = qtdComentariosGerais;
         inserequais($qtdQuestao,$qtdComentarios,$Login,$date,$hora);}
-//------------------------------------------------------
-         if(empty($questao1Quais)) {
-          }else{
-           $qtdQuestao = qtd1;
-         inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}   
-          if(empty($questao2Quais)) {
-          }else{
-           $qtdQuestao = qtd2;
-         inserequais($qtdQuestao,$questao2Quais,$Login,$date,$hora);}
+        //------------------------------------------------------
+     if(empty($questao1Quais)) {
+       }else{
+        $qtdQuestao = qtd1;
+        inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}   
+     if(empty($questao2Quais)) {
+       }else{
+        $qtdQuestao = qtd2;
+       inserequais($qtdQuestao,$questao2Quais,$Login,$date,$hora);}
      if(empty($questao3Quais)) {
-          }else{
-           $qtdQuestao = qtd3;
-         inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
+        }else{
+        $qtdQuestao = qtd3;
+        inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
      if(empty($questao4Quais)) {
-          }else{
-           $qtdQuestao = qtd4;
-         inserequais($qtdQuestao,$questao4Quais,$Login,$date,$hora);}
+        }else{
+        $qtdQuestao = qtd4;
+       inserequais($qtdQuestao,$questao4Quais,$Login,$date,$hora);}
      if(empty($questao5Quais)) {
-          }else{
-           $qtdQuestao = qtd5;
-         inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
+        }else{
+        $qtdQuestao = qtd5;
+        inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
         
         atualizaconcluir($Login);               
 		  } elseif ($concluido == 0){
