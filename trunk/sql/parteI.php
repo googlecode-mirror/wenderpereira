@@ -120,7 +120,7 @@
 	 or die ("--");
 	  ?>
 	  <script language="JavaScript">
-	      alert("ParteI cadastradra, clique na parte II para realizar o cadastro!");
+	      alert("ParteI cadastrada, clique na parte II para realizar o cadastro!");
 	      window.location.assign("../parte_I.php");
 	  </script>
      <?
