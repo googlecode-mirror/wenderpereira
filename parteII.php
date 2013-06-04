@@ -75,6 +75,15 @@
 	}
 	}
 	</script>
+    <script>
+
+        function textBoxClearSelecao(checkbox, field) {
+            if ($(checkbox).attr('checked'))
+                $(field).val('');
+            else
+                $(field).val('');
+        }
+    </script>
      
      
 </head>
@@ -132,13 +141,13 @@
        fomentar a economia local e novos arranjos produtivos, desenvolvendo as cadeias produtivas dos setores culturais (ênfase na economia da cultura)</label>
       <label> 
 	  <input name="qtd1[]" type="checkbox" value="1i" <? if(in_array("1i", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>          
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox" />          
       desenvolvimento e aguçamento das habilidades artísticas (ênfase na excelência da arte)</label>
        
-	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
+	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
        Outros</label> Quais?</label>
-      <input name="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
     </p>
     <tr>
     <td align="left" class="formu2">
@@ -223,11 +232,11 @@ por meio de editais geridos pela própria instituição</label>
         por meio de Organizações não – governamentais (ONGs)</label>
        
       <label>
-		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
+		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        Outros</label>
-      <label>Quais?</label>
-      <input name="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" />
+        Outros</label> 
+      <label>Quais?
+      <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" /> </label>
     </p>
     </div>
 	<br/>
@@ -343,11 +352,11 @@ por meio de editais geridos pela própria instituição</label>
       <label><input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/>
       em nível mundial, englobando todos os continentes</label>
       
-      <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
+      <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
       em acordo bilateral, no caso de apenas um outro país</label>
       
-      <label>Qual?</label>
-      <input name="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" />
+      <label>Qual?
+      <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" /></label>
     </p>
   </div>
     </td>
@@ -357,11 +366,11 @@ por meio de editais geridos pela própria instituição</label>
     <label>• Aponte em quais anos ocorreram programas em residências artísticas* (marque quantos itens julgar necessário)</label>
       
       <label>
-	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
+	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
       Anos anteriores a 2006: </label>
-      <label>Quais?</label>
-      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" />
+      <label>Quais?
+      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" /></label>
       
       <label><input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>   
@@ -394,8 +403,8 @@ por meio de editais geridos pela própria instituição</label>
       <label><input name="qtd8[]" type="checkbox" id="idqtd81quais" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
       2013</label>
-      <label>em diante (anos já previstos)</label>
-      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" />
+      <label>em diante (anos já previstos)
+      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" /></label>
   </div>
     </td>
     </tr>

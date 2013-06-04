@@ -31,7 +31,7 @@
     $_POST[txtCep] = $txtCep;
     $_POST[txtTelefone] =  $txtTelefone;
     $_POST[txtEmail] = $txtEmail; 
-    $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
+    //$_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
     $sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
      while ($array_exibir = mysql_fetch_array($Resultado)) {
@@ -98,11 +98,11 @@
 	</script>
 <script>
 
-	 function ToggleState(checkbox, field) {
+	 function textBoxClearSelecao(checkbox, field) {
       if ($(checkbox).attr('checked'))
           $(field).val('');
       else
-          $(field).removeAttr('disabled');
+          $(field).val('');
     }
 </script>
     
@@ -138,7 +138,7 @@
       <input type="radio" name="qtd0" id="qtd01" <? if(in_array("0a", $meuArray)){ echo "checked";}?> 
       value="0a" class="validate[required] radio" />
       Sim</label>
-      <input type="radio" id="qtd00" name="qtd0" onClick="javascript: ToggleState('#qtd00', '#idopcaocnpj');" <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
+      <input type="radio" id="qtd00" name="qtd0" onClick="javascript: textBoxClearSelecao('#qtd00', '#idopcaocnpj');" <? if(in_array("0b", $meuArray)){ echo "checked";}?> 
       value="0b" class="validate[required] radio" />
                   
       Não</label>
@@ -158,25 +158,15 @@
       </td>
     <td>
       <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
-      onKeyUp="enviaKeyCEP();"  onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
+      onKeyUp="enviaKeyCEP();" onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
   class="validate[required] text-input"/>
-      
-      <div style="display:inline;">
-        <a href="javascript:findCEP()">
-          <img src="images/busca.png" alt="Pesquisar" border="0" />
-          </a>
-        </div>
-      <div id="ajax-loading" style="display:none;">
-        <img src="loading.gif"/>
-        </div>
       </td>
   </tr>
   <tr>
   <td>
   <label>• Endereço*:</label>
   </td>
-  <td><input name="txtEndereco" onClick="javascript:findCEP();"id="idFrmEndereco" 
-  value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
+  <td><input name="txtEndereco" "id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
   </td>
   </tr>
   <tr>
@@ -194,7 +184,7 @@
   </td>
   <td>
   <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
-  <option value=""><? echo $cmbUnidadeFederativa ?> </option>
+  <option value=""><? echo $cmbUnidadeFederativa?> </option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
   <option value="AM">AM</option>
@@ -388,7 +378,7 @@ Sim</label>
   <tr>
   <td colspan="2" align="center" class="formu2">
    <div align="center">
-       <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
+       <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" > 
        <input type="submit" name="atualizar" value="atualizar" class="btn"/>
     </div>
   </td>
