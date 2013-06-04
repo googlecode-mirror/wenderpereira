@@ -64,7 +64,7 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../parte_III.php");
+			window.location.assign("../parte_I.php");
             </script>
 			<?		
 			 			
@@ -72,7 +72,7 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_III.php");
+			window.location.assign("../parte_II.php");
             </script>
 			<?		  
 			 
@@ -80,7 +80,7 @@
          	?>
             <script language="JavaScript">
             alert("Cadastramento da Parte III já foi realizado!");
-			window.location.assign("../parte_III.php");
+			window.location.assign("../parte_IV.php");
             </script>
 			<?
 			 
@@ -88,7 +88,7 @@
          	?>
             <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../inicial.php");
+			  window.location.assign("../parte_IV.php");
             </script>
 			<?php	
 			 
@@ -114,7 +114,7 @@
           ?>
           <script language="JavaScript">
       alert("ParteIII cadastradra, clique na parte IV para realizar o cadastro!");
-	  window.location.assign("../parte_III.php");
+	  window.location.assign("../parte_IV.php");
       </script>
           <?
 		   
@@ -126,7 +126,7 @@
 		?>
 	  <script language="JavaScript">
 	      alert("ParteIII cadastrada, clique na parte IV para realizar o cadastro!");
-	      window.location.assign("../parte_III.php");
+	      window.location.assign("../parte_IV.php");
       </script>
 	  <?
 	   }
@@ -170,7 +170,7 @@
 	?>
      <script language="JavaScript">
      alert("Atualizado com sucesso!!");
-	 window.location.assign("../parte_III.php");
+	 window.location.assign("../parte_IV.php");
      </script>
 	<?	
 	 
