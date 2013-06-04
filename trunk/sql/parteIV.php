@@ -99,7 +99,7 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../parte_IV.php");
+			window.location.assign("../mapeament_o.php");
             </script>
 			<?
 						
@@ -107,7 +107,7 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_IV.php");
+			window.location.assign("../parte_II.php");
             </script>
 			<?	
 						
@@ -115,7 +115,7 @@
          	?>
             <script language="JavaScript">
             alert("Retorne para a parteII e realize o cadastro!!");
-			window.location.assign("../parte_IV.php");
+			window.location.assign("../parte_III.php");
             </script>
 			<?	
 						
