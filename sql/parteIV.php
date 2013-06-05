@@ -107,7 +107,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 <script language="JavaScript">
             alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_II.php");
+			window.location.assign("../parte_I.php");
             </script>
 		<?
 
@@ -115,7 +115,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 <script language="JavaScript">
             alert("Retorne para a parteII e realize o cadastro!!");
-			window.location.assign("../parte_III.php");
+			window.location.assign("../parte_II.php");
             </script>
 		<?
 

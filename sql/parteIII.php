@@ -64,7 +64,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../parte_I.php");
+			window.location.assign("../mapeament_o.php");
             </script>
 		<?
 		 
@@ -72,7 +72,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
             alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_II.php");
+			window.location.assign("../parte_I.php");
             </script>
 		<?
 
