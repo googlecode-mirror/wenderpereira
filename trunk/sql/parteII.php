@@ -103,7 +103,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
             alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../parte_II.php");
+			window.location.assign("../mapeament_o.php");
             </script>
 		<?php
 
@@ -111,7 +111,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
             alert("Cadastramento da Parte II realizado avance para a parteIII!");
-			window.location.assign("../parte_II.php");
+			window.location.assign("../parte_III.php");
             </script>
 		<?php
 
@@ -119,7 +119,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
               alert("Cadastramento da Parte III já foi realizado!");
-			  window.location.assign("../parte_II.php");
+			  window.location.assign("../parte_IV.php");
               </script>
 		<?php
 
@@ -127,7 +127,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../parte_II.php");
+			  window.location.assign("../parte_IV.php");
               </script>
 		<?php
 
@@ -159,7 +159,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 	<script language="JavaScript">
 			  alert("ParteII cadastrada, clique na parte III para realizar o cadastro!");
-			  window.location.assign("../parte_II.php");
+			  window.location.assign("../parte_III.php");
 	</script>
 	<?
 
@@ -245,7 +245,7 @@ if ($_POST[atualizar] == "atualizar")
 															?>
 															<script language="JavaScript">
 															 alert("Atualizado com sucesso!!");
-															 window.location.assign("../parte_II.php");
+															 window.location.assign("../parte_III.php");
 															 </script>
 															<?
 

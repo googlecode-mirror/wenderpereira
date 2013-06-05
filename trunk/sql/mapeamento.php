@@ -96,14 +96,16 @@
 	 ?>	
     <?
      if ($_POST[atualizar] == "atualizar") { 
-	$sqlquery = "UPDATE mapeamento SET 
-		nome = '$_POST[txtNome]',
-		cargointituicao= '$_POST[txtCargoInstituicao]',
-		cpf = '$_POST[txtCpf]',
-		telefone ='$_POST[txtTelefone]',
-		email ='$_POST[txtEmail]'
-	WHERE usuario = '$_SESSION[login]'"; 
-	$process = mysql_query($sqlquery) or die("Erro: " . mysql_error());
+	 
+	$sql = "Delete FROM mapeamento Where usuario='$_SESSION[login]'";
+	$resultado = mysql_query($sql)
+	or die (mysql_error());
+	 
+			$consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
+			   VALUES 
+			  ('$nome','$cargoInstituicao','$cpf','$email','$telefone','$Login','1','$date','$hora')";
+			  $resultado = mysql_query($consulta)
+			  or die ("--");
 	?>
      <script language="JavaScript">
          alert("Atualizado com sucesso!!");
