@@ -17,8 +17,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 60px;
-        padding-bottom: 40px;
+        padding-top: 130px;
+        padding-bottom: 70px;
       }
       .sidebar-nav {
         padding: 9px 0;
@@ -63,15 +63,11 @@
             </ul>
           </div><!--/.nav-collapse -->
         </div>
-        </div>
         <?
-	    include "header.php";
-	    ?>
+		include "header.php";
+		?>
+        </div>
 		</div>
-		 <br />
-		 <br />
-		 <br />    
-		 <br />  
 		<?
    		require "menu.php";
 		?> 

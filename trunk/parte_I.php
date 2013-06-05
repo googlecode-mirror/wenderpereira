@@ -17,12 +17,12 @@ if (empty($_SESSION["login"])){
 <link href="css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
-	padding-top: 60px;
-	padding-bottom: 40px;
+	padding-top: 123px;
+	padding-bottom: 70px;
 }
 
 .sidebar-nav {
-	padding: 9px 0;
+	padding: 15px 0;
 }
 </style>
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -74,16 +74,12 @@ body {
 				</div>
 				<!--/.nav-collapse -->
 			</div>
-		</div>
-		<?
+          <?
 		include "header.php";
 		?>
-	</div>
-	<br />
-	<br />
+		</div>
 
-	<br />
-	<br />
+	</div>
 	<?
 	require "menu.php";
 	?>

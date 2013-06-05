@@ -70,6 +70,15 @@
 	}
 	}
 	</script>
+     <script>
+
+            function textBoxClearSelecao(checkbox, field) {
+                if ($(checkbox).attr('checked'))
+                    $(field).val('');
+                else
+                    $(field).val('');
+            }
+    </script>
      
 </head>
 <body>
@@ -155,39 +164,38 @@
         <div>
         <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
         
-            <label><input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" 
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" 
             class="validate[required] radio" />
             até 20 dias</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" 
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" 
             class="validate[required] radio" />            
             de 21 até 30 dias ( cerca de um mês)</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c"
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c"
             class="validate[required] radio" />            
             de 31 até 60 dias ( cerca de dois meses)</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d"
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d"
             class="validate[required] radio" />            
             de 61 até 90 dias ( cerca de três meses)</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e"
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e"
             class="validate[required] radio" />            
             de 91 até 180 dias ( cerca de seis meses)</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f"
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f"
             class="validate[required] radio" />            
             de 181 até 365 dias ( cerca de um ano)</label>
             
-            <label><input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g"
+            <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g"
             class="validate[required] radio" />            
              de 1 ano até 2 anos</label>
             
             <label><input type="radio" name="qtd3" id="idqtd3quais" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
             class="validate[required] radio" />            
-            acima de 2 anos</label>
-            <label>Qual período?</label>
-            <input name="qtd3quais" onclick="MarcarCheckBoxClique('idqtd3quais')" class="validate[condRequired[idqtd3quais]]" value="<?php echo $meuArray1['qtd3'];?>" type="text" />
+            acima de 2 anos Qual período?
+            <input name="qtd3quais" id="qtd3quais" onclick="MarcarCheckBoxClique('idqtd3quais')" class="validate[condRequired[idqtd3quais]]" value="<?php echo $meuArray1['qtd3'];?>" type="text" /> </label>
             
 	  </div>
       </td>
@@ -296,10 +304,10 @@
 	  	  <label><input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>	
           em acordo bilateral, no caso de apenas um outro país</label>
           
-   	  	  <label><input name="qtd7[]" id="idqtd7quais" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>	 
-          Qual?</label>
+   	  	  <label><input name="qtd7[]" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>	 
+          Qual?
           
-          <input name="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" class="validate[condRequired[idqtd7quais]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
+          <input name="qtd7quais" id="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" class="validate[condRequired[idqtd7quais]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
         
           </div>
        </td>

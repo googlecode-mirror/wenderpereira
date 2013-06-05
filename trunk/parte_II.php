@@ -17,7 +17,7 @@ if (empty($_SESSION["login"])){
 <link href="css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
-	padding-top: 60px;
+	padding-top: 123px;
 	padding-bottom: 40px;
 }
 
@@ -74,15 +74,12 @@ body {
 				</div>
 				<!--/.nav-collapse -->
 			</div>
-		</div>
-		<?
+         <?
 		include "header.php";
 		?>
+		</div>
+
 	</div>
-	<br />
-	<br />
-	<br />
-	<br />
 	<?
 	include "menu.php";
 	?>
