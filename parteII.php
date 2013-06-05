@@ -146,8 +146,8 @@
        
 	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-       Outros</label> Quais?</label>
-      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('idqtd1quais')" type="text" />
+       Outros Quais?
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('#idqtd1quais')" type="text" /></label>
     </p>
     <tr>
     <td align="left" class="formu2">
@@ -234,9 +234,8 @@ por meio de editais geridos pela própria instituição</label>
       <label>
 		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        Outros</label> 
-      <label>Quais?
-      <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('idqtd3quais')" type="text" /> </label>
+        Outros Quais?
+      <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('#idqtd3quais')" type="text" /> </label>
     </p>
     </div>
 	<br/>
@@ -353,10 +352,8 @@ por meio de editais geridos pela própria instituição</label>
       em nível mundial, englobando todos os continentes</label>
       
       <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
-      em acordo bilateral, no caso de apenas um outro país</label>
-      
-      <label>Qual?
-      <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('idqtd7quais')" type="text" /></label>
+      em acordo bilateral, no caso de apenas um outro país: Qual?
+      <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('#idqtd7quais')" type="text" /></label>
     </p>
   </div>
     </td>
@@ -366,11 +363,10 @@ por meio de editais geridos pela própria instituição</label>
     <label>• Aponte em quais anos ocorreram programas em residências artísticas* (marque quantos itens julgar necessário)</label>
       
       <label>
-	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
+	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" onClick="javascript: textBoxClearSelecao('#idqtd8quais', '#qtd8Quais');" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      Anos anteriores a 2006: </label>
-      <label>Quais?
-      <input name="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('idqtd8quais')" type="text" /></label>
+      Anos anteriores a 2006: Quais?
+      <input name="qtd8Quais" id="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('#idqtd8quais')" type="text" /></label>
       
       <label><input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>   
@@ -400,11 +396,10 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
       2012</label>
       
-      <label><input name="qtd8[]" type="checkbox" id="idqtd81quais" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd8[]" type="checkbox" id="idqtd81quais" onClick="javascript: textBoxClearSelecao('#idqtd81quais', '#qtd8Quais1');" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      2013</label>
-      <label>em diante (anos já previstos)
-      <input name="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('idqtd81quais')" type="text" /></label>
+      2013 em diante (anos já previstos)
+      <input name="qtd8Quais1" id="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('#idqtd81quais')" type="text" /></label>
   </div>
     </td>
     </tr>
@@ -483,43 +478,42 @@ por meio de editais geridos pela própria instituição</label>
     <div>
     <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?</label>
     
-      <label><input type="radio" name="qtd12" <? if(in_array("12a", $meuArray)){ echo "checked";}?> value="12a" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12a", $meuArray)){ echo "checked";}?> value="12a" 
       class="validate[required] radio" />
       não há valor dispendido para apoio financeiro ao artista</label>
      
-      <label><input type="radio" name="qtd12" <? if(in_array("12b", $meuArray)){ echo "checked";}?> value="12b" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12b", $meuArray)){ echo "checked";}?> value="12b" 
       class="validate[required] radio" />
       até 100.000 reais</label>
       
-      <label><input type="radio" name="qtd12" <? if(in_array("12c", $meuArray)){ echo "checked";}?> value="12c" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12c", $meuArray)){ echo "checked";}?> value="12c" 
       class="validate[required] radio" />
         acima de 100.000 reais até 200.000 reais</label>
       
-      <label><input type="radio" name="qtd12" <? if(in_array("12d", $meuArray)){ echo "checked";}?> value="12d" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12d", $meuArray)){ echo "checked";}?> value="12d" 
       class="validate[required] radio" />
       acima de 200.000 reais até 400.000 reais</label>
        
-      <label><input type="radio" name="qtd12" <? if(in_array("12e", $meuArray)){ echo "checked";}?> value="12e" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12e", $meuArray)){ echo "checked";}?> value="12e" 
       class="validate[required] radio" />
         acima de 400.000 reais até 600.000 reais</label>
       
-      <label><input type="radio" name="qtd12" <? if(in_array("12f", $meuArray)){ echo "checked";}?> value="12f" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12f", $meuArray)){ echo "checked";}?> value="12f" 
       class="validate[required] radio" />
         acima de 600.000 reais até 1.000.000 de reais</label>
       
-      <label><input type="radio" name="qtd12" <? if(in_array("12g", $meuArray)){ echo "checked";}?> value="12g" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12g", $meuArray)){ echo "checked";}?> value="12g" 
       class="validate[required] radio" />
         acima de 1.000.000 de reais até 2.000.000 reais</label>
       
-      <label><input type="radio" name="qtd12" <? if(in_array("12h", $meuArray)){ echo "checked";}?> value="12h" 
+      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12h", $meuArray)){ echo "checked";}?> value="12h" 
       class="validate[required] radio" />
         acima de 2.000.000 reais até 5.000.000 reais</label>
       
-      <label><input type="radio" name="qtd12" id="idqtd12quais" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
+      <label><input type="radio" name="qtd12" id="idqtd12quais" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
       class="validate[required] radio" />
-        acima de 5.000.000 de reais</label>
-      <label> Qual valor?</label>
-      <input name="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[condRequired[idqtd12quais]]" onclick="MarcarCheckBoxClique('idqtd12quais')" type="text" />
+        acima de 5.000.000 de reais Qual valor?
+      <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[condRequired[idqtd12quais]]" onclick="MarcarCheckBoxClique('#idqtd12quais')" type="text" /></label>
       
       </div>
       </td>

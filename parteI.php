@@ -148,7 +148,7 @@
     <td class="auto-style1"><label>• CNPJ:</label></td>
     <td class="auto-style1">
     <input name="txtCnpj" id="idopcaocnpj" maxlength="18" value="<?php echo $txtCnpj;?>" type="text" size="17"
-    onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" 
+    onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" onclick="MarcarCheckBoxClique('#qtd01')" 
     class="validate[condRequired[qtd01]]"/>
     
       <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
@@ -158,7 +158,7 @@
       </td>
     <td>
       <input name="txtCep" id="idFrmCep" maxlength="10" value="<?php echo $txtCep;?>" type="text"
-      onKeyUp="enviaKeyCEP();" onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
+       onkeypress="SoNumero();Mascara('cep', window.event.keyCode, 'document.form1.txtCep');"
   class="validate[required] text-input"/>
       </td>
   </tr>
@@ -260,40 +260,39 @@ Sim</label>
   <label>• Regime jurídico da instituição (marque apenas 1 item)*:</label>
   <p>
   <label>
-  <input type="radio" name="qtd3" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" class="validate[required] radio" />
   Administração pública direta</label>
-  <input type="radio" name="qtd3" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" class="validate[required] radio" />
   Entidade/empresa privada</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c" class="validate[required] radio" />
   Fundação pública federal</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d" class="validate[required] radio" />
   Fundação pública estadual</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e" class="validate[required] radio" />
   Fundação pública municipal</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f" class="validate[required] radio" />
   Autarquia</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g" class="validate[required] radio" />
   Empresa pública/ sociedade de economia mista</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h" class="validate[required] radio" />
   ONGs</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3i", $meuArray)){ echo "checked";}?> value="3i" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3i", $meuArray)){ echo "checked";}?> value="3i" class="validate[required] radio" />
   Organização social</label>
   <br/>
-  <input type="radio" name="qtd3" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
+  <input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#qtd3quais1', '#qtd3quais');" <? if(in_array("3j", $meuArray)){ echo "checked";}?> value="3j" class="validate[required] radio" />
   Cooperativa/ Associação de Classe/ Sindicato</label>
   <br/>
   <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> 
   value="3k" id="qtd3quais1" class="validate[required] radio" />
-  Outras</label>
-  <label>Quais?</label>
-  <input name="qtd3quais" type="text" id="idqtd3quais"  class="validate[condRequired[qtd3quais1]]" onclick="MarcarCheckBoxClique('qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
+  Outras Quais?</label>
+  <input name="qtd3quais" type="text" id="qtd3quais"  class="validate[condRequired[qtd3quais1]]" onclick="MarcarCheckBoxClique('#qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
   </td>

@@ -130,6 +130,10 @@ if ($_POST[atualizar] == "atualizar")
 	$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='3'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
+	
+	$sql = "Delete FROM pesquisaquais Where usuario='$Login' and parte ='3'";
+	$resultado = mysql_query($sql)
+	or die (mysql_error());
 		
 	if(empty($questao2)) {}else{
 		insere($questao1,$Login,$date,$hora);}
