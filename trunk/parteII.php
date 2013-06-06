@@ -125,7 +125,7 @@
 	  <label><input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de origem do artista
-       ( ênfase na divulgação da arte (não seria difusão ou fruição?))</label>
+       ( ênfase na divulgação da arte (não seria difusão ou fruição))</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
