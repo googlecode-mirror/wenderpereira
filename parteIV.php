@@ -441,10 +441,10 @@ include "conexao.php";
       <tr>
         <td>
           <div>
-            <div align="center">
-        <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
-       
-       <input type="submit" name="atualizar" value="atualizar" class="btn"/>              
+           <div align="center">
+               <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
             </div>
           </div>      
           </td>
@@ -459,6 +459,9 @@ include "conexao.php";
       </tr>
       <br/>
     </table>
+          <div class="progress progress-danger">
+          <div class="bar" style="width: 100%;">100%concluido</div>
+        </div>
 </form>
 </body>
 </html>

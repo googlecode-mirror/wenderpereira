@@ -638,13 +638,17 @@ por meio de editais geridos pela própria instituição</label>
     </tr>
     <tr>
     <td align="center" class="formu2">
-     <div align="center">
-        <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
-        <input type="submit" name="atualizar" value="atualizar" class="btn"/>
+   <div align="center">
+       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
     </div>
     </td>
     </tr>
     </table>
+         <div class="progress progress-danger">
+          <div class="bar" style="width: 55%;">55%concluido</div>
+        </div>
 </form>
 </body>
 </html>

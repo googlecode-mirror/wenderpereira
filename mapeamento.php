@@ -109,17 +109,20 @@
       </tr>
       <tr>
       <th colspan="4" align="left" scope="row">
-           <div align="center">
-               <input type="submit" name="avancar" value="avancar" class="btn btn-success" onkeypress="return handleEnter(this, event);" /> 
-               <input type="submit" name="atualizar" value="atualizar" class="btn"/>
-            </div>
+              <div align="center">
+               <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
+              </div>
 			
           </th>
       </tr>
       <tr>
       </tr>
   </table>
-
+        <div class="progress progress-danger">
+          <div class="bar" style="width: 8%;">8%concluido</div>
+        </div>
 </form>
 </body>
 </html>
