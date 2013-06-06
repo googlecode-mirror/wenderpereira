@@ -49,9 +49,9 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 										$_checkbox = $_POST['qtd5'];
 										foreach($_checkbox as $_valor){
 											insere($_valor,$Login,$date,$hora); }
-											atualizaconcluir($Login);
 											inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
 											$unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
+										atualizaconcluir($Login);
 		} elseif ($concluido == 1){
 			?>
 <script language="JavaScript">
@@ -130,7 +130,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	<?
 	if ($_POST[atualizar] == "atualizar")
 	{
-	$unidadeFederativa = $_POST["cmbUnidadeFederativa"];
+		$unidadeFederativa = $_POST["cmbUnidadeFederativa"];
 		$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='1'";
 		$resultado = mysql_query($sql)
 		or die (mysql_error());
@@ -139,16 +139,9 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		$resultado1 = mysql_query($sql1)
 		or die (mysql_error());
 
-		//inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
-		//$unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
+		inseremapeamentoparte1($nomeInstituicao,$cnpj,$endereco,$municipio,
+		$unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
 
-		$consulta = "INSERT INTO mapeamentoparteI
-		(nomeintituicao,cnpj,endereco,municipio,unidadefederativa,cep,telefone,email,usuario,preenchido,data,hora)
-		VALUES
-		('$nomeInstituicao', '$cnpj', '$endereco', '$municipio', '$unidadeFederativa',
-		 '$cep', '$telefone', '$email', '$Login', '1', '$date', '$hora')";
-		$resultado = mysql_query($consulta)
-		or die (mysql_error());
 		
 		// inserindo informaçoes-----------------------------------------------------------------------------------
 		if(empty($questao0)) {}else{
