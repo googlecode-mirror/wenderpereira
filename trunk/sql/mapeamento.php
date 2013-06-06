@@ -88,7 +88,7 @@
 			 or die ("--");
 		 ?>
 	  <script language="JavaScript">
-		  alert("parte Mapeamento cadastradra, entre na parte I para realizar o cadastro!");
+		  alert("parte Mapeamento cadastrada, entre na parte I para realizar o cadastro!");
 		  window.location.assign("../parte_I.php");
 	  </script>
 	  <?
