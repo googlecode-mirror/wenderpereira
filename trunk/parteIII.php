@@ -195,7 +195,7 @@
             <label><input type="radio" name="qtd3" id="idqtd3quais" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
             class="validate[required] radio" />            
             acima de 2 anos Qual período?
-            <input name="qtd3quais" id="qtd3quais" onclick="MarcarCheckBoxClique('idqtd3quais')" class="validate[condRequired[idqtd3quais]]" value="<?php echo $meuArray1['qtd3'];?>" type="text" /> </label>
+            <input name="qtd3quais" id="qtd3quais" class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd3'];?>" type="text" /> </label>
             
 	  </div>
       </td>
@@ -307,7 +307,7 @@
    	  	  <label><input name="qtd7[]" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>	 
           Qual?
           
-          <input name="qtd7quais" id="qtd7quais" onclick="MarcarCheckBoxClique('idqtd7quais')" class="validate[condRequired[idqtd7quais]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
+          <input name="qtd7quais" id="qtd7quais" class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
         
           </div>
        </td>

@@ -293,7 +293,7 @@ Sim</label>
   <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> 
   value="3k" id="qtd3quais1" class="validate[required] radio" />
   Outras Quais?</label>
-  <input name="qtd3quais" type="text" id="qtd3quais"  class="validate[condRequired[qtd3quais1]]" onclick="MarcarCheckBoxClique('#qtd3quais1')" value="<?php echo $meuArray1['qtd3'];?>" />
+  <input name="qtd3quais" type="text" id="qtd3quais"  class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
   </td>

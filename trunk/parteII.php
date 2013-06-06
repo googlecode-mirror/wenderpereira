@@ -147,7 +147,7 @@
 	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
        Outros Quais?
-      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[condRequired[idqtd1quais]]" onclick="MarcarCheckBoxClique('#idqtd1quais')" type="text" /></label>
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
     </p>
     <tr>
     <td align="left" class="formu2">
@@ -235,7 +235,7 @@ por meio de editais geridos pela própria instituição</label>
 		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
         Outros Quais?
-      <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[condRequired[idqtd3quais]]" onclick="MarcarCheckBoxClique('#idqtd3quais')" type="text" /> </label>
+      <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[optional,minSize[2]]" type="text" /> </label>
     </p>
     </div>
 	<br/>
@@ -353,7 +353,7 @@ por meio de editais geridos pela própria instituição</label>
       
       <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
       em acordo bilateral, no caso de apenas um outro país: Qual?
-      <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[condRequired[idqtd7quais]]" onclick="MarcarCheckBoxClique('#idqtd7quais')" type="text" /></label>
+      <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
     </p>
   </div>
     </td>
@@ -366,7 +366,7 @@ por meio de editais geridos pela própria instituição</label>
 	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" onClick="javascript: textBoxClearSelecao('#idqtd8quais', '#qtd8Quais');" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
       Anos anteriores a 2006: Quais?
-      <input name="qtd8Quais" id="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[condRequired[idqtd8quais]]" onclick="MarcarCheckBoxClique('#idqtd8quais')" type="text" /></label>
+      <input name="qtd8Quais" id="qtd8Quais" value="<?php echo $meuArray1['qtd8'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
       
       <label><input name="qtd8[]" type="checkbox" value="8b" <? if(in_array("8b", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>   
@@ -399,7 +399,7 @@ por meio de editais geridos pela própria instituição</label>
       <label><input name="qtd8[]" type="checkbox" id="idqtd81quais" onClick="javascript: textBoxClearSelecao('#idqtd81quais', '#qtd8Quais1');" value="8i" <? if(in_array("8i", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
       2013 em diante (anos já previstos)
-      <input name="qtd8Quais1" id="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[condRequired[idqtd81quais]]" onclick="MarcarCheckBoxClique('#idqtd81quais')" type="text" /></label>
+      <input name="qtd8Quais1" id="qtd8Quais1" value="<?php echo $meuArray1['qtd81'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
   </div>
     </td>
     </tr>
@@ -513,7 +513,7 @@ por meio de editais geridos pela própria instituição</label>
       <label><input type="radio" name="qtd12" id="idqtd12quais" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
       class="validate[required] radio" />
         acima de 5.000.000 de reais Qual valor?
-      <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[condRequired[idqtd12quais]]" onclick="MarcarCheckBoxClique('#idqtd12quais')" type="text" /></label>
+      <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[optional,minSize[2]]" type="text" /></label>
       
       </div>
       </td>
