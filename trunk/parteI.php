@@ -31,8 +31,9 @@
     $_POST[txtCep] = $txtCep;
     $_POST[txtTelefone] =  $txtTelefone;
     $_POST[txtEmail] = $txtEmail; 
-    //$_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
-    $sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
+    $_POST[cmbUnidadeFederativa] = $cmbUnidadeFederativa;
+    
+	$sql = "select * from mapeamentoparteI  Where usuario= '$Login'";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
      while ($array_exibir = mysql_fetch_array($Resultado)) {
         $txtNome = ($array_exibir['nomeintituicao']);
@@ -151,7 +152,7 @@
     onkeypress="SoNumero();Mascara('cnpj', window.event.keyCode, 'document.form1.txtCnpj');" onclick="MarcarCheckBoxClique('#qtd01')" 
     class="validate[condRequired[qtd01]]"/>
     
-      <div style="display:inline;"> <a href="javascript:marcarCheck();"> </a> </div></td>
+      </td>
   </tr>
   <tr>
     <td><label>• CEP*:</label>
@@ -184,7 +185,7 @@
   </td>
   <td>
   <select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
-  <option value=""><? echo $cmbUnidadeFederativa?> </option>
+  <option value='<? echo $cmbUnidadeFederativa?>'><? echo $cmbUnidadeFederativa?></option>
   <option value="AC">AC</option>
   <option value="AL">AL</option>
   <option value="AM">AM</option>
