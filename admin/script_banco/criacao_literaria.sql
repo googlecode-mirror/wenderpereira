@@ -1,193 +1,271 @@
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+CREATE DATABASE  IF NOT EXISTS `criacao_literaria` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `criacao_literaria`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: localhost    Database: criacao_literaria
+-- ------------------------------------------------------
+-- Server version	5.0.77-log
 
-DROP SCHEMA IF EXISTS `criacao_literaria` ;
-CREATE SCHEMA IF NOT EXISTS `criacao_literaria` DEFAULT CHARACTER SET latin1 ;
-SHOW WARNINGS;
-USE `criacao_literaria` ;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- -----------------------------------------------------
--- Table `historico`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `historico` ;
+--
+-- Not dumping tablespaces as no INFORMATION_SCHEMA.FILES table on this server
+--
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `historico` (
-  `idhistorico` INT(11) NOT NULL AUTO_INCREMENT ,
-  `usuario` VARCHAR(25) NULL DEFAULT NULL ,
-  `acao` VARCHAR(45) NULL DEFAULT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `hora` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idhistorico`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 20
-DEFAULT CHARACTER SET = latin1;
+--
+-- Table structure for table `historico`
+--
 
-SHOW WARNINGS;
+DROP TABLE IF EXISTS `historico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `historico` (
+  `idhistorico` int(11) NOT NULL auto_increment,
+  `usuario` varchar(25) default NULL,
+  `acao` varchar(45) default NULL,
+  `data` varchar(45) default NULL,
+  `hora` varchar(45) default NULL,
+  PRIMARY KEY  (`idhistorico`)
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `mapeamento`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mapeamento` ;
+--
+-- Dumping data for table `historico`
+--
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `mapeamento` (
-  `idmapeamento` INT(11) NOT NULL AUTO_INCREMENT ,
-  `nome` VARCHAR(45) NOT NULL ,
-  `cargointituicao` VARCHAR(45) NOT NULL ,
-  `cpf` VARCHAR(45) NULL DEFAULT NULL ,
-  `email` VARCHAR(45) NULL DEFAULT NULL ,
-  `telefone` VARCHAR(45) NULL DEFAULT NULL ,
-  `usuario` VARCHAR(45) NULL DEFAULT NULL ,
-  `preenchido` CHAR(1) NULL DEFAULT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `hora` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idmapeamento`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 31
-DEFAULT CHARACTER SET = latin1
-COMMENT = '	';
+LOCK TABLES `historico` WRITE;
+/*!40000 ALTER TABLE `historico` DISABLE KEYS */;
+INSERT INTO `historico` VALUES (1,'Mauriney','autenticado_email','16/05/13','15:55'),(3,'feliperibeiro','login','28/05/13','14:32'),(4,'','login','05/06/13','17:34'),(5,'andrebezerra','login','05/06/13','15:51'),(14,'wender7','autenticado_email','20/05/13','17:25'),(7,'anateresa','autenticado_email','16/05/13','15:55'),(8,'lucas.lopes','autenticado_email','16/05/13','15:55'),(11,'ratinho','login','17/05/13','16:57'),(13,'Marjara','login','21/05/13','10:22'),(19,'fernando','login','31/05/13','13:11'),(17,'wender9','login','21/05/13','12:05'),(23,'feliperibeiro','login','28/05/13','15:07'),(28,'marcelaviana','login','05/06/13','14:14'),(29,'wender7082','login','28/05/13','16:16'),(49,'wenderr','login','05/06/13','14:15'),(50,'marcelasilva','login','06/06/13','14:40'),(33,'jaime','login','29/05/13','17:10'),(48,'wenderr','login','05/06/13','14:15'),(35,'gorila','login','31/05/13','13:30'),(36,'aluno18','login','29/05/13','18:33'),(37,'wenderb','autenticado_email','31/05/13','12:21'),(38,'wenderpereira','login','31/05/13','12:22'),(47,'wenderr','login','05/06/13','14:15'),(40,'webnkjker','autenticado_email','01/06/13','21:57'),(41,'Suelen','login','01/06/13','23:16'),(42,'wender22','login','03/06/13','16:18'),(46,'wenderr','login','05/06/13','14:15'),(44,'FelipeOliveira','login','03/06/13','17:15'),(45,'wenderm','login','05/06/13','14:12');
+/*!40000 ALTER TABLE `historico` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SHOW WARNINGS;
+--
+-- Table structure for table `mapeamento`
+--
 
--- -----------------------------------------------------
--- Table `mapeamentoparteI`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `mapeamentoparteI` ;
+DROP TABLE IF EXISTS `mapeamento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mapeamento` (
+  `idmapeamento` int(11) NOT NULL auto_increment,
+  `nome` varchar(45) NOT NULL,
+  `cargointituicao` varchar(45) NOT NULL,
+  `cpf` varchar(45) default NULL,
+  `email` varchar(45) default NULL,
+  `telefone` varchar(45) default NULL,
+  `usuario` varchar(45) default NULL,
+  `preenchido` char(1) default NULL,
+  `data` varchar(45) default NULL,
+  `hora` varchar(45) default NULL,
+  PRIMARY KEY  (`idmapeamento`)
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=latin1 COMMENT='	';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `mapeamentoparteI` (
-  `idmapeamento` INT(11) NOT NULL AUTO_INCREMENT ,
-  `nomeintituicao` VARCHAR(45) NOT NULL ,
-  `cnpj` VARCHAR(45) NULL DEFAULT NULL ,
-  `endereco` VARCHAR(80) NOT NULL ,
-  `municipio` VARCHAR(45) NOT NULL ,
-  `unidadefederativa` VARCHAR(45) NULL DEFAULT NULL ,
-  `cep` VARCHAR(18) NOT NULL ,
-  `telefone` VARCHAR(45) NULL DEFAULT NULL ,
-  `email` VARCHAR(58) NULL DEFAULT NULL ,
-  `usuario` VARCHAR(45) NULL DEFAULT NULL ,
-  `preenchido` VARCHAR(1) NULL DEFAULT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `hora` CHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idmapeamento`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 83
-DEFAULT CHARACTER SET = latin1
-COMMENT = '	';
+--
+-- Dumping data for table `mapeamento`
+--
 
-SHOW WARNINGS;
+LOCK TABLES `mapeamento` WRITE;
+/*!40000 ALTER TABLE `mapeamento` DISABLE KEYS */;
+INSERT INTO `mapeamento` VALUES (27,'IntituiÃ§Ã£o de Teste !','1111111111111','057.512.517-92','000000000000000000@gmail.com','(00)0000-00000','Marjara','1','21/05/13','10:22'),(26,'Felipe de Oliveira Ribeiro','Economista junior','757.923.795-77','fl.ribeiro@globo.com','','castor','1','17/05/13','16:35'),(19,'Felipe de Oliveira Ribeiro','Economista junior','083.203.277-84','fl.ribeiro@globo.com','(21) 3511-6550','feliperibeiro','1','09/05/13','15:07'),(25,'Joao Bosco de Oliveira Ribeiro','Economista junior','083.203.277-84','fl.ribeiro@globo.com','','ratinho','1','17/05/13','16:13'),(21,'Eduardo da Silva Santos','TÃ©cnico de ManutenÃ§Ã£o Micro','055.605.917-42','dudu_2500@yahoo.com.br','(94) 5814-30','dudu','1','10/05/13','08:59'),(47,'wender pereira corrÃªa','Analista de Sistemas','057.512.517-92','wendercorrea@gmail.com','(21)8220-9733','wender','1','05/06/13','14:52'),(28,'IntituiÃ§Ã£o 9','Cargo 9','057.512.517-92','wendercorrea@gmail.com','(21)8220-9733','wender9','1','21/05/13','12:03'),(29,'Fernando','cozinheiro','097.974.968-93','','','fernando','1','21/05/13','12:48'),(30,'rato','economista','083.726.625-25','','(22)5678-43989','ratazana','1','21/05/13','13:35'),(31,'MARCELAVIANA','ANALISTA','053.480.517-56','marcela.viana@funarte.gov.br','(21)2280-7082','marcelaviana','1','28/05/13','16:06'),(32,'Lionel Messi','economista','6','','','jaime','1','29/05/13','17:20'),(33,'Caetano','Economista junior','454.545.454-45','','(21) 3511-6510','gorila','1','29/05/13','17:26'),(34,'www','www','111.111.111-11','','(','aluno18','1','29/05/13','18:33'),(35,'Suelen Barbosa','analista de INPI','156.561.456-45','fl.ribeiro@globo.com','','Suelen','1','01/06/13','22:03'),(36,'212','2111','11111111111111','','','wender22','1','03/06/13','09:30'),(37,'jjjjjj','Economista','454.545.454-46','fl.ribeiro@globo.com','(21)3511-6510','FelipeOliveira','1','03/06/13','15:27'),(38,'jjjjjj','Economista','454.545.454-46','fl.ribeiro@globo.com','(21)3511-6510','wender22','1','03/06/13','16:18'),(39,'11111','11111111','05751215792','wendercorrea@gmail.com','','wenderm','1','05/06/13','09:57'),(44,'22222','22222222222222','222.222.222-22','','(22)2222-222222','wenderr','1','05/06/13','14:37'),(49,'marcela da silva','ppppppppppppppppppppppp','ppp.ppp.ppp-pp','','','marcelasilva','1','06/06/13','14:40'),(48,'Felipe','economista','144.646.464-64','','(21)6666-666666','andrebezerra','1','05/06/13','15:15');
+/*!40000 ALTER TABLE `mapeamento` ENABLE KEYS */;
+UNLOCK TABLES;
 
--- -----------------------------------------------------
--- Table `pergunta`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `pergunta` ;
+--
+-- Table structure for table `mapeamentoparteI`
+--
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `pergunta` (
-  `idpergunta` INT(11) NOT NULL AUTO_INCREMENT ,
-  `questao` VARCHAR(45) NULL DEFAULT NULL ,
-  `parte` VARCHAR(45) NULL DEFAULT NULL ,
-  `pergunta` VARCHAR(255) NULL DEFAULT NULL ,
-  `observacao` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idpergunta`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 36
-DEFAULT CHARACTER SET = latin1;
+DROP TABLE IF EXISTS `mapeamentoparteI`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mapeamentoparteI` (
+  `idmapeamento` int(11) NOT NULL auto_increment,
+  `nomeintituicao` varchar(45) NOT NULL,
+  `cnpj` varchar(45) default NULL,
+  `endereco` varchar(80) NOT NULL,
+  `municipio` varchar(45) NOT NULL,
+  `unidadefederativa` varchar(45) default NULL,
+  `cep` varchar(18) NOT NULL,
+  `telefone` varchar(45) default NULL,
+  `email` varchar(58) default NULL,
+  `usuario` varchar(45) default NULL,
+  `preenchido` varchar(1) default NULL,
+  `data` varchar(45) default NULL,
+  `hora` char(45) default NULL,
+  PRIMARY KEY  (`idmapeamento`)
+) ENGINE=MyISAM AUTO_INCREMENT=229 DEFAULT CHARSET=latin1 COMMENT='	';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-SHOW WARNINGS;
+--
+-- Dumping data for table `mapeamentoparteI`
+--
 
--- -----------------------------------------------------
--- Table `pesquisa`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `pesquisa` ;
+LOCK TABLES `mapeamentoparteI` WRITE;
+/*!40000 ALTER TABLE `mapeamentoparteI` DISABLE KEYS */;
+INSERT INTO `mapeamentoparteI` VALUES (71,'Funarte','55.669.646/4646-44','Rua de GÃ¡vea, 301','Rio de Janeiro','SE','95454-4644','','','castor','1','17/05/13','16:43'),(40,'Eduardo da Silva Santos n2','11.111.111/1111-11','Rua SÃ£o JosÃ©, 50','Cenrto','RJ','25075-085','(21) 9458-1430','dudu_2500@yahoo.com.br','dudu','1','13/05/13','13:38'),(118,'Bem te vi','14.646.464/6464-64','Rua de GÃ¡vea, 301','Rio de Janeiro','','22050-001','(21) 3511-6515','fl.ribeiro@globo.com','gorila','1','29/05/13','17:59'),(228,'FUNARTE','99.999.999/9999-99','RUA SAO JOSE','RIO DE JANEIRO','RJ','99999-9999','','','marcelasilva','1','06/06/13','14:41'),(78,'Funarte','','Rua da Gavea','Rio de Janeiro','','22051-001','','','fernando','1','21/05/13','13:08'),(79,'Funare','28.436.868/6868-64','Rua 45','Rio de Janeiro','','24688-4686','(21) 3511-6510','fl.ribeiro@globo.com','ratazana','1','21/05/13','13:37'),(74,'IntituiÃ§Ã£o de Teste9','11.111.111/1111-11','Rua Doutor Alfredo Backer, 579 bl 01 apt 5049','Mutondo','RJ','24452-001','(21)8220-9733','wendercorrea@gmail.com','wender9','1','21/05/13','12:04'),(95,'FundaÃ§Ã£o nacional de artes','16.246.891/6168-68','Rua da GÃ¡vea','Rio de Janeiro','','59792-3746','(21) 3627-651','','feliperibeiro','1','28/05/13','14:58'),(227,'Desenvolvimento de Sites','11.111.111/1111-11','Rua Doutor Alfredo Backer, 579 bl 01 apt 504','Mutondo','RJ','24452-001','(21)8220-9733','wendercorrea@gmail.com','wender','1','06/06/13','14:30'),(73,'wender pereira corrÃªa','00.000.000/0000-00','Rua Doutor Alfredo Backer, 579 bl 01 apt 504','11111111111111111111','RJ','00000-0000','(21)8220-9733','wendercorrea@gmail.com','Marjara','1','21/05/13','10:23'),(64,'Funarte','','Rua de GÃ¡vea, 301','Rio de Janeiro','RJ','62686-8268','','fl.ribeiro@globo.com','ratinho','1','17/05/13','16:25'),(132,'INPI','35.247.575/7747-57','Rua X','Rio','','57657-6576','(16)5464-64646','','Suelen','1','01/06/13','22:31'),(145,'Funarte','46.464.646/4433-13','Rua 3','Rio de Janeiro','RN','46464-6464','','','wender22','1','03/06/13','16:18'),(225,'Funarte','46.464.644/6464-64','Rua','Rio','','44464-6464','','','andrebezerra','1','05/06/13','15:55'),(149,'Funarte','46.464.646/4433-13','Rua 3','Rio de Janeiro','PI','46464-6464','','','FelipeOliveira','1','03/06/13','17:15'),(187,'teste','','222222222222222222222','222222222222222222','RJ','2222222222','22222222222222','wendercorrea@gmail.com','wenderm','1','05/06/13','14:13'),(198,'1111','11.1','11','11','RJ','11','','11111111111111111111111@gmail.com','wenderr','1','05/06/13','14:37');
+/*!40000 ALTER TABLE `mapeamentoparteI` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `pesquisa` (
-  `idpesquisa` INT(11) NOT NULL AUTO_INCREMENT ,
-  `respostas` VARCHAR(45) NULL DEFAULT NULL ,
-  `usuario` VARCHAR(45) NULL DEFAULT NULL ,
-  `parte` VARCHAR(45) NULL DEFAULT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `hora` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idpesquisa`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 2065
-DEFAULT CHARACTER SET = latin1;
+--
+-- Table structure for table `pergunta`
+--
 
-SHOW WARNINGS;
+DROP TABLE IF EXISTS `pergunta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pergunta` (
+  `idpergunta` int(11) NOT NULL auto_increment,
+  `questao` varchar(45) default NULL,
+  `parte` varchar(45) default NULL,
+  `pergunta` varchar(255) default NULL,
+  `observacao` varchar(45) default NULL,
+  PRIMARY KEY  (`idpergunta`)
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
--- -----------------------------------------------------
--- Table `pesquisaquais`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `pesquisaquais` ;
+--
+-- Dumping data for table `pergunta`
+--
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `pesquisaquais` (
-  `idpesquisa` INT(11) NOT NULL AUTO_INCREMENT ,
-  `questao` VARCHAR(45) NULL DEFAULT NULL ,
-  `respostas` VARCHAR(255) NULL DEFAULT NULL ,
-  `usuario` VARCHAR(45) NULL DEFAULT NULL ,
-  `parte` VARCHAR(45) NULL DEFAULT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `hora` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idpesquisa`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 179
-DEFAULT CHARACTER SET = latin1;
+LOCK TABLES `pergunta` WRITE;
+/*!40000 ALTER TABLE `pergunta` DISABLE KEYS */;
+INSERT INTO `pergunta` VALUES (1,'1','1','A instituição tem sede própria*?',NULL),(2,'2','1','A instituição tem fins lucrativos*:',NULL),(3,'3','1','Regime jurídico da instituição (marque apenas 1 item)*:',NULL),(4,'4','1',' A instituição atua somente na área cultural (marque apenas 1 item)*',NULL),(5,'5','1','Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:',NULL),(6,'6','1','Qual o tamanho aproximado da instituição em termos de número de funcionários ( marque apenas 1 item)*',NULL),(7,'1','2','Qual o principal objetivo dos programas de residência artística? (marque no máximo os 3 itens de maior importância)*',NULL),(8,'2','2',' As ações em reidências artísticas possuem um valor previsto planejado (marque apenas 1 item)?* ',NULL),(9,'3','2','De que forma a instituição financia os diferentes programas em residências artísticas (marque quantos itens julgar necessário):*',NULL),(10,'4','2','Quanto ao local de realização das residências (marque apenas 1 item)*:',NULL),(11,'5','2','Em caso de abrangência nacional, quando as residências puderem se desenvolver em mais de uma região geográfica, quais estão envolvidas? (marque quantos itens julgar necessário)*:',NULL),(12,'6','2',' As residências podem ocorrer em países do exterior (marque apenas um item)?*',NULL),(13,'7','2','Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências? (marque quantos itens julgar necessário):',NULL),(14,'8','2','Aponte em quais anos ocorreram programas em residências artísticas (marque quantos itens julgar necessário)* ',NULL),(15,'9','2','Com relação à continuidade destes programas em residências artísticas (marque apenas 1 item)*:',NULL),(16,'10','2',' Em caso dos programas terem ocorridos mais de uma vez e terem periodicidade definida (marque apenas 1 item)*:',NULL),(17,'11','2','Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista? (marque apenas 1 item)*',NULL),(18,'12','2','Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas? (marque apenas 1 item)*',NULL),(19,'13','2','Qual o apoio financeiro concedido (em reais) para que cada artista realize a ação? (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*:',NULL),(20,'14','2',' O valor concedido já é deduzido do imposto de renda devido*?  (marque apenas 1 item):',NULL),(21,'15','2','Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário)*:',NULL),(22,'1','3','Quantos artistas foram apoiados em média ao ano?',NULL),(23,'2','3','O número de artistas apoiados foi o mesmo em todas os programas ( marque apenas 1 item)?',NULL),(24,'3','3',' Qual o período de duração da residência (marque apenas 1 item)*  ?',NULL),(25,'4','3','Em relação à nacionalidade dos artistas contemplados, marque apenas 1 item abaixo*:',NULL),(26,'5','3','Existe a possibilidade de intercâmbio entre artistas brasileiros e internacionais nos programas de residências artísticas (marque apenas 1 item)?*',NULL),(27,'6','3','Quanto à presença de artistas estrangeiros no Brasil e/ou artistas brasileiros no exterior que podem ser contemplados pelos programas, marque apenas 1 item abaixo*:',NULL),(28,'7','3','Os artistas podem ser provenientes de que países/continentes/ blocos internacionais? (marque quantos itens julgar necessário)*:',NULL),(29,'1','4','Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)*:',NULL),(30,'2','4','Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas? (marque quantos itens julgar necessário)*:',NULL),(31,'3','4','Qual o principal público a ser atingido pelas ações? (marque no máximo os 3 itens mais importantes)*:',NULL),(32,'4','4','Onde as ações são realizadas? (marque quantos itens julgar necessário)*:',NULL),(33,'5','4',' Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*:',NULL),(34,'6','4','Comentários gerais (no máximo em dez linhas):',NULL),(35,NULL,'',NULL,NULL);
+/*!40000 ALTER TABLE `pergunta` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SHOW WARNINGS;
+--
+-- Table structure for table `pesquisa`
+--
 
--- -----------------------------------------------------
--- Table `respostas`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `respostas` ;
+DROP TABLE IF EXISTS `pesquisa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pesquisa` (
+  `idpesquisa` int(11) NOT NULL auto_increment,
+  `respostas` varchar(45) default NULL,
+  `usuario` varchar(45) default NULL,
+  `parte` varchar(45) default NULL,
+  `data` varchar(45) default NULL,
+  `hora` varchar(45) default NULL,
+  PRIMARY KEY  (`idpesquisa`)
+) ENGINE=MyISAM AUTO_INCREMENT=5156 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `respostas` (
-  `idperguntas` INT(11) NOT NULL AUTO_INCREMENT ,
-  `formulario` VARCHAR(45) NULL DEFAULT NULL ,
-  `questoes` VARCHAR(45) NULL DEFAULT NULL ,
-  `questaovalores` VARCHAR(255) NULL DEFAULT NULL )
-ENGINE = MyISAM
-DEFAULT CHARACTER SET = latin1;
+--
+-- Dumping data for table `pesquisa`
+--
 
-SHOW WARNINGS;
-CREATE UNIQUE INDEX `idperguntas` ON `respostas` (`idperguntas` ASC) ;
+LOCK TABLES `pesquisa` WRITE;
+/*!40000 ALTER TABLE `pesquisa` DISABLE KEYS */;
+INSERT INTO `pesquisa` VALUES (1741,'6a','Marjara','1','21/05/13','10:23'),(1740,'4a','Marjara','1','21/05/13','10:23'),(1739,'3a','Marjara','1','21/05/13','10:23'),(1738,'2a','Marjara','1','21/05/13','10:23'),(1737,'1a','Marjara','1','21/05/13','10:23'),(1736,'0b','Marjara','1','21/05/13','10:23'),(1688,'5f','castor','1','17/05/13','16:43'),(1687,'5e','castor','1','17/05/13','16:43'),(1686,'6d','castor','1','17/05/13','16:43'),(1685,'4c','castor','1','17/05/13','16:43'),(1684,'3d','castor','1','17/05/13','16:43'),(1683,'2a','castor','1','17/05/13','16:43'),(1682,'1a','castor','1','17/05/13','16:43'),(1681,'0a','castor','1','17/05/13','16:43'),(1665,'dec3','ratinho','4','17/05/13','16:27'),(1664,'dec2','ratinho','4','17/05/13','16:27'),(1663,'dec1','ratinho','4','17/05/13','16:27'),(1662,'5f','ratinho','4','17/05/13','16:27'),(1661,'4b','ratinho','4','17/05/13','16:27'),(1660,'3b','ratinho','4','17/05/13','16:27'),(1659,'2d','ratinho','4','17/05/13','16:27'),(1658,'1h','ratinho','4','17/05/13','16:27'),(1657,'1e','ratinho','4','17/05/13','16:27'),(1656,'1d','ratinho','4','17/05/13','16:27'),(1655,'7m','ratinho','3','17/05/13','16:27'),(1654,'7l','ratinho','3','17/05/13','16:27'),(1653,'7e','ratinho','3','17/05/13','16:27'),(1652,'7d','ratinho','3','17/05/13','16:27'),(1651,'7c','ratinho','3','17/05/13','16:27'),(1650,'6c','ratinho','3','17/05/13','16:27'),(1649,'5a','ratinho','3','17/05/13','16:27'),(1648,'4a','ratinho','3','17/05/13','16:27'),(1647,'3h','ratinho','3','17/05/13','16:27'),(1646,'2d','ratinho','3','17/05/13','16:27'),(1645,'2d','ratinho','3','17/05/13','16:27'),(1644,'1d','ratinho','3','17/05/13','16:27'),(1636,'14c','ratinho','2','17/05/13','16:26'),(1635,'12i','ratinho','2','17/05/13','16:26'),(1634,'11b','ratinho','2','17/05/13','16:26'),(1633,'10c','ratinho','2','17/05/13','16:26'),(1632,'9c','ratinho','2','17/05/13','16:26'),(1631,'6b','ratinho','2','17/05/13','16:26'),(1630,'4b','ratinho','2','17/05/13','16:26'),(1629,'2a','ratinho','2','17/05/13','16:26'),(1628,'15e','ratinho','2','17/05/13','16:26'),(1627,'15d','ratinho','2','17/05/13','16:26'),(1626,'13h','ratinho','2','17/05/13','16:26'),(1625,'13g','ratinho','2','17/05/13','16:26'),(1624,'8d','ratinho','2','17/05/13','16:26'),(1623,'8c','ratinho','2','17/05/13','16:26'),(1622,'7e','ratinho','2','17/05/13','16:26'),(1621,'7d','ratinho','2','17/05/13','16:26'),(1620,'5d','ratinho','2','17/05/13','16:26'),(1619,'5c','ratinho','2','17/05/13','16:26'),(1618,'3i','ratinho','2','17/05/13','16:26'),(1617,'3c','ratinho','2','17/05/13','16:26'),(1616,'1d','ratinho','2','17/05/13','16:26'),(1594,'5c','ratinho','1','17/05/13','16:25'),(1593,'6c','ratinho','1','17/05/13','16:25'),(1592,'4c','ratinho','1','17/05/13','16:25'),(1591,'3k','ratinho','1','17/05/13','16:25'),(1590,'2b','ratinho','1','17/05/13','16:25'),(1589,'1a','ratinho','1','17/05/13','16:25'),(1588,'0a','ratinho','1','17/05/13','16:25'),(2254,'5e','feliperibeiro','1','28/05/13','14:58'),(1564,'4c','ratinho','1','17/05/13','16:16'),(1563,'3k','ratinho','1','17/05/13','16:16'),(1562,'2b','ratinho','1','17/05/13','16:16'),(1561,'1a','ratinho','1','17/05/13','16:16'),(5005,'7m','andrebezerra','3','05/06/13','15:48'),(5027,'12i','andrebezerra','2','05/06/13','15:48'),(5100,'5g','andrebezerra','1','05/06/13','15:55'),(5099,'5f','andrebezerra','1','05/06/13','15:55'),(5094,'2b','andrebezerra','1','05/06/13','15:55'),(2246,'dec2','feliperibeiro','4','28/05/13','14:56'),(2922,'5e','gorila','1','29/05/13','17:59'),(2969,'dec3','fernando','4','31/05/13','13:30'),(4201,'5d','wenderm','1','05/06/13','14:13'),(4200,'6c','wenderm','1','05/06/13','14:13'),(4199,'4c','wenderm','1','05/06/13','14:13'),(2232,'7m','feliperibeiro','3','28/05/13','14:55'),(2231,'6d','feliperibeiro','3','28/05/13','14:55'),(2226,'2c','feliperibeiro','3','28/05/13','14:55'),(2227,'2c','feliperibeiro','3','28/05/13','14:55'),(2228,'3f','feliperibeiro','3','28/05/13','14:55'),(2229,'4c','feliperibeiro','3','28/05/13','14:55'),(2230,'5b','feliperibeiro','3','28/05/13','14:55'),(2245,'dec1','feliperibeiro','4','28/05/13','14:56'),(2244,'5j','feliperibeiro','4','28/05/13','14:56'),(2243,'5e','feliperibeiro','4','28/05/13','14:56'),(2242,'4e','feliperibeiro','4','28/05/13','14:56'),(2241,'3e','feliperibeiro','4','28/05/13','14:56'),(2240,'3d','feliperibeiro','4','28/05/13','14:56'),(2239,'3c','feliperibeiro','4','28/05/13','14:56'),(2238,'2u','feliperibeiro','4','28/05/13','14:56'),(2237,'2l','feliperibeiro','4','28/05/13','14:56'),(2236,'2g','feliperibeiro','4','28/05/13','14:56'),(2235,'2f','feliperibeiro','4','28/05/13','14:56'),(2234,'1h','feliperibeiro','4','28/05/13','14:56'),(2233,'1d','feliperibeiro','4','28/05/13','14:56'),(1566,'5c','ratinho','1','17/05/13','16:16'),(1565,'6c','ratinho','1','17/05/13','16:16'),(2225,'1d','feliperibeiro','3','28/05/13','14:55'),(1386,'14c','feliperibeiro','2','16/05/13','12:05'),(1385,'12c','feliperibeiro','2','16/05/13','12:05'),(1384,'11b','feliperibeiro','2','16/05/13','12:05'),(1383,'10b','feliperibeiro','2','16/05/13','12:05'),(1382,'9b','feliperibeiro','2','16/05/13','12:05'),(1381,'6b','feliperibeiro','2','16/05/13','12:05'),(1380,'4b','feliperibeiro','2','16/05/13','12:05'),(1379,'2a','feliperibeiro','2','16/05/13','12:05'),(1378,'15i','feliperibeiro','2','16/05/13','12:05'),(1377,'15g','feliperibeiro','2','16/05/13','12:05'),(1376,'15f','feliperibeiro','2','16/05/13','12:05'),(1375,'13h','feliperibeiro','2','16/05/13','12:05'),(1374,'13g','feliperibeiro','2','16/05/13','12:05'),(1373,'8a','feliperibeiro','2','16/05/13','12:05'),(1372,'5d','feliperibeiro','2','16/05/13','12:05'),(1371,'5c','feliperibeiro','2','16/05/13','12:05'),(1370,'3n','feliperibeiro','2','16/05/13','12:05'),(1369,'1j','feliperibeiro','2','16/05/13','12:05'),(2253,'6b','feliperibeiro','1','28/05/13','14:58'),(2252,'4c','feliperibeiro','1','28/05/13','14:58'),(2251,'3k','feliperibeiro','1','28/05/13','14:58'),(2250,'2b','feliperibeiro','1','28/05/13','14:58'),(2249,'1a','feliperibeiro','1','28/05/13','14:58'),(2248,'0a','feliperibeiro','1','28/05/13','14:58'),(5098,'5e','andrebezerra','1','05/06/13','15:55'),(5097,'6c','andrebezerra','1','05/06/13','15:55'),(5096,'4b','andrebezerra','1','05/06/13','15:55'),(5095,'3k','andrebezerra','1','05/06/13','15:55'),(5093,'1a','andrebezerra','1','05/06/13','15:55'),(5092,'0a','andrebezerra','1','05/06/13','15:55'),(4771,'dec3','wender','4','05/06/13','14:47'),(2247,'dec3','feliperibeiro','4','28/05/13','14:56'),(5026,'11b','andrebezerra','2','05/06/13','15:48'),(5025,'10c','andrebezerra','2','05/06/13','15:48'),(5024,'9b','andrebezerra','2','05/06/13','15:48'),(5023,'6b','andrebezerra','2','05/06/13','15:48'),(5022,'4b','andrebezerra','2','05/06/13','15:48'),(5021,'2a','andrebezerra','2','05/06/13','15:48'),(5020,'15g','andrebezerra','2','05/06/13','15:48'),(5019,'15f','andrebezerra','2','05/06/13','15:48'),(5018,'13e','andrebezerra','2','05/06/13','15:48'),(5017,'8i','andrebezerra','2','05/06/13','15:48'),(5016,'8c','andrebezerra','2','05/06/13','15:48'),(5015,'8a','andrebezerra','2','05/06/13','15:48'),(863,'14b','dudu','2','10/05/13','09:03'),(862,'12f','dudu','2','10/05/13','09:03'),(861,'11a','dudu','2','10/05/13','09:03'),(860,'10c','dudu','2','10/05/13','09:03'),(859,'9d','dudu','2','10/05/13','09:03'),(858,'6a','dudu','2','10/05/13','09:03'),(857,'4c','dudu','2','10/05/13','09:03'),(856,'2b','dudu','2','10/05/13','09:03'),(855,'15k','dudu','2','10/05/13','09:03'),(854,'13a','dudu','2','10/05/13','09:03'),(853,'8h','dudu','2','10/05/13','09:03'),(852,'8g','dudu','2','10/05/13','09:03'),(851,'8f','dudu','2','10/05/13','09:03'),(850,'7d','dudu','2','10/05/13','09:03'),(849,'7c','dudu','2','10/05/13','09:03'),(848,'5e','dudu','2','10/05/13','09:03'),(847,'3k','dudu','2','10/05/13','09:03'),(846,'3i','dudu','2','10/05/13','09:03'),(845,'3f','dudu','2','10/05/13','09:03'),(844,'1g','dudu','2','10/05/13','09:03'),(843,'1f','dudu','2','10/05/13','09:03'),(842,'1d','dudu','2','10/05/13','09:03'),(1017,'5e','dudu','1','13/05/13','13:39'),(1016,'5d','dudu','1','13/05/13','13:39'),(1015,'6e','dudu','1','13/05/13','13:39'),(1014,'4c','dudu','1','13/05/13','13:39'),(1013,'3a','dudu','1','13/05/13','13:39'),(1012,'2b','dudu','1','13/05/13','13:39'),(1011,'1b','dudu','1','13/05/13','13:39'),(5014,'7l','andrebezerra','2','05/06/13','15:48'),(5013,'7h','andrebezerra','2','05/06/13','15:48'),(5012,'7d','andrebezerra','2','05/06/13','15:48'),(5011,'5c','andrebezerra','2','05/06/13','15:48'),(5010,'3e','andrebezerra','2','05/06/13','15:48'),(5008,'1i','andrebezerra','2','05/06/13','15:48'),(5146,'14a','wender','2','06/06/13','14:31'),(5145,'12h','wender','2','06/06/13','14:31'),(5144,'11a','wender','2','06/06/13','14:31'),(5143,'10a','wender','2','06/06/13','14:31'),(5142,'9a','wender','2','06/06/13','14:31'),(5141,'6a','wender','2','06/06/13','14:31'),(886,'dec3','dudu','4','10/05/13','09:13'),(885,'dec2','dudu','4','10/05/13','09:13'),(884,'dec1','dudu','4','10/05/13','09:13'),(883,'5f','dudu','4','10/05/13','09:13'),(882,'5e','dudu','4','10/05/13','09:13'),(881,'4f','dudu','4','10/05/13','09:13'),(880,'3c','dudu','4','10/05/13','09:13'),(879,'3b','dudu','4','10/05/13','09:13'),(878,'2l','dudu','4','10/05/13','09:13'),(877,'2j','dudu','4','10/05/13','09:13'),(876,'2h','dudu','4','10/05/13','09:13'),(875,'1f','dudu','4','10/05/13','09:13'),(874,'1d','dudu','4','10/05/13','09:13'),(873,'1b','dudu','4','10/05/13','09:13'),(872,'7d','dudu','3','10/05/13','09:13'),(871,'7c','dudu','3','10/05/13','09:13'),(870,'6a','dudu','3','10/05/13','09:13'),(869,'5a','dudu','3','10/05/13','09:13'),(868,'4c','dudu','3','10/05/13','09:13'),(867,'3f','dudu','3','10/05/13','09:13'),(866,'2a','dudu','3','10/05/13','09:13'),(865,'2a','dudu','3','10/05/13','09:13'),(864,'1a','dudu','3','10/05/13','09:13'),(1742,'5a','Marjara','1','21/05/13','10:23'),(1743,'1a','Marjara','2','21/05/13','10:23'),(1744,'3c','Marjara','2','21/05/13','10:23'),(1745,'5c','Marjara','2','21/05/13','10:23'),(1746,'7b','Marjara','2','21/05/13','10:23'),(1747,'8b','Marjara','2','21/05/13','10:23'),(1748,'13a','Marjara','2','21/05/13','10:23'),(1749,'15d','Marjara','2','21/05/13','10:23'),(1750,'2b','Marjara','2','21/05/13','10:23'),(1751,'4c','Marjara','2','21/05/13','10:23'),(1752,'6a','Marjara','2','21/05/13','10:23'),(1753,'9b','Marjara','2','21/05/13','10:23'),(1754,'10b','Marjara','2','21/05/13','10:23'),(1755,'11a','Marjara','2','21/05/13','10:23'),(1756,'12e','Marjara','2','21/05/13','10:23'),(1757,'14b','Marjara','2','21/05/13','10:23'),(1758,'0a','wender9','1','21/05/13','12:04'),(1759,'1b','wender9','1','21/05/13','12:04'),(1760,'2b','wender9','1','21/05/13','12:04'),(1761,'3a','wender9','1','21/05/13','12:04'),(1762,'4a','wender9','1','21/05/13','12:04'),(1763,'6a','wender9','1','21/05/13','12:04'),(1764,'5a','wender9','1','21/05/13','12:04'),(1810,'12a','wender9','2','21/05/13','12:06'),(1809,'11b','wender9','2','21/05/13','12:06'),(1808,'10a','wender9','2','21/05/13','12:06'),(1807,'9a','wender9','2','21/05/13','12:06'),(1806,'6a','wender9','2','21/05/13','12:06'),(1805,'4a','wender9','2','21/05/13','12:06'),(1804,'2a','wender9','2','21/05/13','12:06'),(1803,'15c','wender9','2','21/05/13','12:06'),(1802,'13f','wender9','2','21/05/13','12:06'),(1801,'8b','wender9','2','21/05/13','12:06'),(1800,'7c','wender9','2','21/05/13','12:06'),(1799,'5b','wender9','2','21/05/13','12:06'),(1798,'3d','wender9','2','21/05/13','12:06'),(1797,'1j','wender9','2','21/05/13','12:06'),(1796,'1a','wender9','2','21/05/13','12:06'),(1780,'1a','wender9','3','21/05/13','12:05'),(1781,'2a','wender9','3','21/05/13','12:05'),(1782,'2a','wender9','3','21/05/13','12:05'),(1783,'3b','wender9','3','21/05/13','12:05'),(1784,'4b','wender9','3','21/05/13','12:05'),(1785,'5b','wender9','3','21/05/13','12:05'),(1786,'6b','wender9','3','21/05/13','12:05'),(1787,'7b','wender9','3','21/05/13','12:05'),(1788,'1a','wender9','4','21/05/13','12:06'),(1789,'2d','wender9','4','21/05/13','12:06'),(1790,'3c','wender9','4','21/05/13','12:06'),(1791,'4b','wender9','4','21/05/13','12:06'),(1792,'5b','wender9','4','21/05/13','12:06'),(1793,'dec1','wender9','4','21/05/13','12:06'),(1794,'dec2','wender9','4','21/05/13','12:06'),(1795,'dec3','wender9','4','21/05/13','12:06'),(1811,'14b','wender9','2','21/05/13','12:06'),(1955,'5d','fernando','1','21/05/13','13:08'),(1954,'5c','fernando','1','21/05/13','13:08'),(1953,'5b','fernando','1','21/05/13','13:08'),(1952,'6d','fernando','1','21/05/13','13:08'),(1951,'4b','fernando','1','21/05/13','13:08'),(1950,'3k','fernando','1','21/05/13','13:08'),(1949,'2b','fernando','1','21/05/13','13:08'),(1948,'1b','fernando','1','21/05/13','13:08'),(1947,'0a','fernando','1','21/05/13','13:08'),(1987,'4c','ratazana','1','21/05/13','13:37'),(1986,'3k','ratazana','1','21/05/13','13:37'),(1985,'2b','ratazana','1','21/05/13','13:37'),(1984,'1a','ratazana','1','21/05/13','13:37'),(1983,'0a','ratazana','1','21/05/13','13:37'),(1982,'14c','fernando','2','21/05/13','13:26'),(1981,'12h','fernando','2','21/05/13','13:26'),(1980,'11b','fernando','2','21/05/13','13:26'),(1979,'10c','fernando','2','21/05/13','13:26'),(1978,'9b','fernando','2','21/05/13','13:26'),(1977,'6a','fernando','2','21/05/13','13:26'),(1976,'4c','fernando','2','21/05/13','13:26'),(1975,'2a','fernando','2','21/05/13','13:26'),(1974,'15h','fernando','2','21/05/13','13:26'),(1973,'13d','fernando','2','21/05/13','13:26'),(1972,'8i','fernando','2','21/05/13','13:26'),(1971,'8a','fernando','2','21/05/13','13:26'),(1970,'7l','fernando','2','21/05/13','13:26'),(1969,'5d','fernando','2','21/05/13','13:26'),(1968,'3n','fernando','2','21/05/13','13:26'),(1967,'1j','fernando','2','21/05/13','13:26'),(1966,'1c','fernando','2','21/05/13','13:26'),(1965,'1b','fernando','2','21/05/13','13:26'),(1964,'7m','fernando','3','21/05/13','13:23'),(1963,'7i','fernando','3','21/05/13','13:23'),(1962,'6b','fernando','3','21/05/13','13:23'),(1961,'5b','fernando','3','21/05/13','13:23'),(1960,'4b','fernando','3','21/05/13','13:23'),(1959,'3h','fernando','3','21/05/13','13:23'),(1958,'2b','fernando','3','21/05/13','13:23'),(1957,'2b','fernando','3','21/05/13','13:23'),(1956,'1d','fernando','3','21/05/13','13:23'),(2968,'dec2','fernando','4','31/05/13','13:30'),(2967,'dec1','fernando','4','31/05/13','13:30'),(2966,'5i','fernando','4','31/05/13','13:30'),(2965,'5e','fernando','4','31/05/13','13:30'),(2964,'5c','fernando','4','31/05/13','13:30'),(2963,'4m','fernando','4','31/05/13','13:30'),(2962,'4f','fernando','4','31/05/13','13:30'),(2961,'3c','fernando','4','31/05/13','13:30'),(2960,'2u','fernando','4','31/05/13','13:30'),(2959,'1c','fernando','4','31/05/13','13:30'),(1988,'6d','ratazana','1','21/05/13','13:37'),(1989,'5b','ratazana','1','21/05/13','13:37'),(1990,'5c','ratazana','1','21/05/13','13:37'),(1991,'1b','ratazana','2','21/05/13','13:39'),(1992,'1d','ratazana','2','21/05/13','13:39'),(1993,'1e','ratazana','2','21/05/13','13:39'),(1994,'3e','ratazana','2','21/05/13','13:39'),(1995,'3n','ratazana','2','21/05/13','13:39'),(1996,'5c','ratazana','2','21/05/13','13:39'),(1997,'8a','ratazana','2','21/05/13','13:39'),(1998,'8c','ratazana','2','21/05/13','13:39'),(1999,'8i','ratazana','2','21/05/13','13:39'),(2000,'13c','ratazana','2','21/05/13','13:39'),(2001,'13d','ratazana','2','21/05/13','13:39'),(2002,'13e','ratazana','2','21/05/13','13:39'),(2003,'15d','ratazana','2','21/05/13','13:39'),(2004,'15e','ratazana','2','21/05/13','13:39'),(2005,'2b','ratazana','2','21/05/13','13:39'),(2006,'4c','ratazana','2','21/05/13','13:39'),(2007,'6a','ratazana','2','21/05/13','13:39'),(2008,'9c','ratazana','2','21/05/13','13:39'),(2009,'10c','ratazana','2','21/05/13','13:39'),(2010,'11b','ratazana','2','21/05/13','13:39'),(2011,'12i','ratazana','2','21/05/13','13:39'),(2012,'14b','ratazana','2','21/05/13','13:39'),(2028,'7m','ratazana','3','21/05/13','13:40'),(2027,'6b','ratazana','3','21/05/13','13:40'),(2026,'5b','ratazana','3','21/05/13','13:40'),(2025,'4c','ratazana','3','21/05/13','13:40'),(2024,'3h','ratazana','3','21/05/13','13:40'),(2023,'2c','ratazana','3','21/05/13','13:40'),(2022,'2c','ratazana','3','21/05/13','13:40'),(2021,'1d','ratazana','3','21/05/13','13:40'),(2029,'1d','ratazana','4','21/05/13','13:41'),(2030,'1h','ratazana','4','21/05/13','13:41'),(2031,'2e','ratazana','4','21/05/13','13:41'),(2032,'2r','ratazana','4','21/05/13','13:41'),(2033,'2u','ratazana','4','21/05/13','13:41'),(2034,'3c','ratazana','4','21/05/13','13:41'),(2035,'3d','ratazana','4','21/05/13','13:41'),(2036,'4f','ratazana','4','21/05/13','13:41'),(2037,'4h','ratazana','4','21/05/13','13:41'),(2038,'4m','ratazana','4','21/05/13','13:41'),(2039,'5e','ratazana','4','21/05/13','13:41'),(2040,'5i','ratazana','4','21/05/13','13:41'),(2041,'dec1','ratazana','4','21/05/13','13:41'),(2042,'dec2','ratazana','4','21/05/13','13:41'),(2043,'dec3','ratazana','4','21/05/13','13:41'),(5140,'4a','wender','2','06/06/13','14:31'),(4433,'14b','marcelasilva','2','05/06/13','14:31'),(4432,'12a','marcelasilva','2','05/06/13','14:31'),(4431,'11a','marcelasilva','2','05/06/13','14:31'),(4430,'10b','marcelasilva','2','05/06/13','14:31'),(4429,'9a','marcelasilva','2','05/06/13','14:31'),(4428,'6a','marcelasilva','2','05/06/13','14:31'),(4427,'4b','marcelasilva','2','05/06/13','14:31'),(4426,'2a','marcelasilva','2','05/06/13','14:31'),(4425,'15l','marcelasilva','2','05/06/13','14:31'),(4424,'15i','marcelasilva','2','05/06/13','14:31'),(4423,'15h','marcelasilva','2','05/06/13','14:31'),(4422,'15a','marcelasilva','2','05/06/13','14:31'),(4421,'13h','marcelasilva','2','05/06/13','14:31'),(4420,'8h','marcelasilva','2','05/06/13','14:31'),(4419,'8g','marcelasilva','2','05/06/13','14:31'),(4418,'7d','marcelasilva','2','05/06/13','14:31'),(4417,'7c','marcelasilva','2','05/06/13','14:31'),(4416,'7b','marcelasilva','2','05/06/13','14:31'),(4415,'5d','marcelasilva','2','05/06/13','14:31'),(5155,'5c','marcelasilva','1','06/06/13','14:41'),(5154,'5b','marcelasilva','1','06/06/13','14:41'),(5153,'5a','marcelasilva','1','06/06/13','14:41'),(5152,'6e','marcelasilva','1','06/06/13','14:41'),(5151,'4a','marcelasilva','1','06/06/13','14:41'),(5150,'3a','marcelasilva','1','06/06/13','14:41'),(5149,'2a','marcelasilva','1','06/06/13','14:41'),(5148,'1a','marcelasilva','1','06/06/13','14:41'),(5147,'0b','marcelasilva','1','06/06/13','14:41'),(4471,'dec3','wenderr','4','05/06/13','14:37'),(4470,'dec2','wenderr','4','05/06/13','14:37'),(4469,'dec1','wenderr','4','05/06/13','14:37'),(4468,'5g','wenderr','4','05/06/13','14:37'),(4467,'4i','wenderr','4','05/06/13','14:37'),(4466,'3c','wenderr','4','05/06/13','14:37'),(4465,'2e','wenderr','4','05/06/13','14:37'),(4464,'1a','wenderr','4','05/06/13','14:37'),(4508,'7c','wenderr','3','05/06/13','14:37'),(4507,'6b','wenderr','3','05/06/13','14:37'),(4506,'5b','wenderr','3','05/06/13','14:37'),(4505,'4a','wenderr','3','05/06/13','14:37'),(4504,'3a','wenderr','3','05/06/13','14:37'),(4503,'2b','wenderr','3','05/06/13','14:37'),(4502,'2b','wenderr','3','05/06/13','14:37'),(4501,'1d','wenderr','3','05/06/13','14:37'),(4500,'14a','wenderr','2','05/06/13','14:37'),(4499,'12d','wenderr','2','05/06/13','14:37'),(4498,'11a','wenderr','2','05/06/13','14:37'),(4497,'10a','wenderr','2','05/06/13','14:37'),(4496,'9a','wenderr','2','05/06/13','14:37'),(4495,'6a','wenderr','2','05/06/13','14:37'),(4494,'4a','wenderr','2','05/06/13','14:37'),(4493,'2a','wenderr','2','05/06/13','14:37'),(4492,'15c','wenderr','2','05/06/13','14:37'),(4491,'13b','wenderr','2','05/06/13','14:37'),(4490,'8c','wenderr','2','05/06/13','14:37'),(4489,'7b','wenderr','2','05/06/13','14:37'),(4488,'5c','wenderr','2','05/06/13','14:37'),(4487,'3c','wenderr','2','05/06/13','14:37'),(4486,'1a','wenderr','2','05/06/13','14:37'),(4515,'5a','wenderr','1','05/06/13','14:37'),(4514,'6a','wenderr','1','05/06/13','14:37'),(4513,'4c','wenderr','1','05/06/13','14:37'),(4512,'3a','wenderr','1','05/06/13','14:37'),(4511,'2a','wenderr','1','05/06/13','14:37'),(4510,'1a','wenderr','1','05/06/13','14:37'),(4509,'0a','wenderr','1','05/06/13','14:37'),(4209,'5e','marcelaviana','1','05/06/13','14:15'),(4208,'5b','marcelaviana','1','05/06/13','14:15'),(4207,'6b','marcelaviana','1','05/06/13','14:15'),(4206,'4a','marcelaviana','1','05/06/13','14:15'),(4205,'3a','marcelaviana','1','05/06/13','14:15'),(4204,'2b','marcelaviana','1','05/06/13','14:15'),(4203,'1a','marcelaviana','1','05/06/13','14:15'),(4202,'0b','marcelaviana','1','05/06/13','14:15'),(2921,'5d','gorila','1','29/05/13','17:59'),(2920,'6e','gorila','1','29/05/13','17:59'),(2919,'4c','gorila','1','29/05/13','17:59'),(2918,'3k','gorila','1','29/05/13','17:59'),(2917,'2b','gorila','1','29/05/13','17:59'),(2916,'1a','gorila','1','29/05/13','17:59'),(2915,'0a','gorila','1','29/05/13','17:59'),(2720,'10d','gorila','2','29/05/13','17:44'),(2719,'9d','gorila','2','29/05/13','17:44'),(2718,'6b','gorila','2','29/05/13','17:44'),(2717,'4c','gorila','2','29/05/13','17:44'),(2716,'2a','gorila','2','29/05/13','17:44'),(2715,'15l','gorila','2','29/05/13','17:44'),(2714,'15j','gorila','2','29/05/13','17:44'),(2713,'15d','gorila','2','29/05/13','17:44'),(2712,'13d','gorila','2','29/05/13','17:44'),(2711,'13c','gorila','2','29/05/13','17:44'),(2710,'13b','gorila','2','29/05/13','17:44'),(2709,'8i','gorila','2','29/05/13','17:44'),(2708,'8g','gorila','2','29/05/13','17:44'),(2707,'8f','gorila','2','29/05/13','17:44'),(2706,'8e','gorila','2','29/05/13','17:44'),(2705,'8a','gorila','2','29/05/13','17:44'),(2704,'5c','gorila','2','29/05/13','17:44'),(2703,'3n','gorila','2','29/05/13','17:44'),(2898,'7d','gorila','3','29/05/13','17:56'),(2897,'7c','gorila','3','29/05/13','17:56'),(2896,'7b','gorila','3','29/05/13','17:56'),(2895,'7a','gorila','3','29/05/13','17:56'),(2894,'6c','gorila','3','29/05/13','17:56'),(2893,'5a','gorila','3','29/05/13','17:56'),(2892,'4a','gorila','3','29/05/13','17:56'),(2891,'3g','gorila','3','29/05/13','17:56'),(2890,'2b','gorila','3','29/05/13','17:56'),(2889,'2b','gorila','3','29/05/13','17:56'),(2888,'1c','gorila','3','29/05/13','17:56'),(3095,'dec3','gorila','4','31/05/13','13:37'),(3094,'dec2','gorila','4','31/05/13','13:37'),(3093,'dec1','gorila','4','31/05/13','13:37'),(3092,'5j','gorila','4','31/05/13','13:37'),(3091,'5h','gorila','4','31/05/13','13:37'),(3090,'5g','gorila','4','31/05/13','13:37'),(3089,'4m','gorila','4','31/05/13','13:37'),(3088,'4k','gorila','4','31/05/13','13:37'),(3087,'4b','gorila','4','31/05/13','13:37'),(3086,'4a','gorila','4','31/05/13','13:37'),(3085,'3d','gorila','4','31/05/13','13:37'),(3084,'3c','gorila','4','31/05/13','13:37'),(3083,'2u','gorila','4','31/05/13','13:37'),(3079,'2d','gorila','4','31/05/13','13:37'),(3080,'2r','gorila','4','31/05/13','13:37'),(2702,'3e','gorila','2','29/05/13','17:44'),(2701,'1j','gorila','2','29/05/13','17:44'),(2700,'1b','gorila','2','29/05/13','17:44'),(2699,'1a','gorila','2','29/05/13','17:44'),(2721,'11b','gorila','2','29/05/13','17:44'),(2722,'12i','gorila','2','29/05/13','17:44'),(2723,'14a','gorila','2','29/05/13','17:44'),(3082,'2t','gorila','4','31/05/13','13:37'),(2899,'7e','gorila','3','29/05/13','17:56'),(2900,'7f','gorila','3','29/05/13','17:56'),(2901,'7g','gorila','3','29/05/13','17:56'),(2902,'7h','gorila','3','29/05/13','17:56'),(2903,'7i','gorila','3','29/05/13','17:56'),(2904,'7j','gorila','3','29/05/13','17:56'),(2905,'7k','gorila','3','29/05/13','17:56'),(2906,'7m','gorila','3','29/05/13','17:56'),(3081,'2s','gorila','4','31/05/13','13:37'),(3078,'2c','gorila','4','31/05/13','13:37'),(3077,'1h','gorila','4','31/05/13','13:37'),(3076,'1d','gorila','4','31/05/13','13:37'),(3075,'1c','gorila','4','31/05/13','13:37'),(3378,'5f','Suelen','1','01/06/13','22:31'),(3377,'5e','Suelen','1','01/06/13','22:31'),(3376,'5d','Suelen','1','01/06/13','22:31'),(3375,'6c','Suelen','1','01/06/13','22:31'),(3374,'4b','Suelen','1','01/06/13','22:31'),(3373,'3k','Suelen','1','01/06/13','22:31'),(3372,'2a','Suelen','1','01/06/13','22:31'),(3371,'1a','Suelen','1','01/06/13','22:31'),(3370,'0b','Suelen','1','01/06/13','22:31'),(3184,'9b','Suelen','2','01/06/13','22:18'),(3183,'6b','Suelen','2','01/06/13','22:18'),(3182,'4b','Suelen','2','01/06/13','22:18'),(3181,'2a','Suelen','2','01/06/13','22:18'),(3180,'15e','Suelen','2','01/06/13','22:18'),(3179,'15d','Suelen','2','01/06/13','22:18'),(3178,'15c','Suelen','2','01/06/13','22:18'),(3177,'13d','Suelen','2','01/06/13','22:18'),(3176,'8i','Suelen','2','01/06/13','22:18'),(3175,'8d','Suelen','2','01/06/13','22:18'),(3174,'8a','Suelen','2','01/06/13','22:18'),(3173,'7l','Suelen','2','01/06/13','22:18'),(3172,'7f','Suelen','2','01/06/13','22:18'),(3171,'7e','Suelen','2','01/06/13','22:18'),(3170,'7d','Suelen','2','01/06/13','22:18'),(3169,'5c','Suelen','2','01/06/13','22:18'),(3168,'3n','Suelen','2','01/06/13','22:18'),(3167,'1j','Suelen','2','01/06/13','22:18'),(3166,'1d','Suelen','2','01/06/13','22:18'),(3165,'1c','Suelen','2','01/06/13','22:18'),(3185,'10b','Suelen','2','01/06/13','22:18'),(3186,'11b','Suelen','2','01/06/13','22:18'),(3187,'12i','Suelen','2','01/06/13','22:18'),(3188,'14b','Suelen','2','01/06/13','22:18'),(3306,'7m','Suelen','3','01/06/13','22:26'),(3305,'7c','Suelen','3','01/06/13','22:26'),(3304,'7b','Suelen','3','01/06/13','22:26'),(3303,'6b','Suelen','3','01/06/13','22:26'),(3302,'5b','Suelen','3','01/06/13','22:26'),(3301,'4b','Suelen','3','01/06/13','22:26'),(3300,'3h','Suelen','3','01/06/13','22:26'),(3299,'2c','Suelen','3','01/06/13','22:26'),(3298,'2c','Suelen','3','01/06/13','22:26'),(3297,'1c','Suelen','3','01/06/13','22:26'),(3295,'dec2','Suelen','4','01/06/13','22:24'),(3294,'dec1','Suelen','4','01/06/13','22:24'),(3293,'5f','Suelen','4','01/06/13','22:24'),(3292,'5e','Suelen','4','01/06/13','22:24'),(3291,'5d','Suelen','4','01/06/13','22:24'),(3290,'4m','Suelen','4','01/06/13','22:24'),(3289,'4f','Suelen','4','01/06/13','22:24'),(3288,'3f','Suelen','4','01/06/13','22:24'),(3287,'3e','Suelen','4','01/06/13','22:24'),(3286,'3d','Suelen','4','01/06/13','22:24'),(3285,'2u','Suelen','4','01/06/13','22:24'),(3284,'2t','Suelen','4','01/06/13','22:24'),(3283,'2s','Suelen','4','01/06/13','22:24'),(3282,'2r','Suelen','4','01/06/13','22:24'),(3281,'2q','Suelen','4','01/06/13','22:24'),(3280,'2p','Suelen','4','01/06/13','22:24'),(3279,'2o','Suelen','4','01/06/13','22:24'),(3278,'2n','Suelen','4','01/06/13','22:24'),(3277,'2m','Suelen','4','01/06/13','22:24'),(3276,'2l','Suelen','4','01/06/13','22:24'),(3275,'2k','Suelen','4','01/06/13','22:24'),(3274,'2j','Suelen','4','01/06/13','22:24'),(3273,'2i','Suelen','4','01/06/13','22:24'),(3272,'2h','Suelen','4','01/06/13','22:24'),(3271,'2g','Suelen','4','01/06/13','22:24'),(3270,'2f','Suelen','4','01/06/13','22:24'),(3269,'2e','Suelen','4','01/06/13','22:24'),(3268,'2d','Suelen','4','01/06/13','22:24'),(3267,'2c','Suelen','4','01/06/13','22:24'),(3266,'2b','Suelen','4','01/06/13','22:24'),(3265,'2a','Suelen','4','01/06/13','22:24'),(3264,'1h','Suelen','4','01/06/13','22:24'),(3296,'dec3','Suelen','4','01/06/13','22:24'),(3658,'5d','wender22','1','03/06/13','16:18'),(3657,'6c','wender22','1','03/06/13','16:18'),(3656,'4b','wender22','1','03/06/13','16:18'),(3655,'3h','wender22','1','03/06/13','16:18'),(3654,'2b','wender22','1','03/06/13','16:18'),(3653,'1a','wender22','1','03/06/13','16:18'),(3652,'0b','wender22','1','03/06/13','16:18'),(5009,'3d','andrebezerra','2','05/06/13','15:48'),(3686,'5d','FelipeOliveira','1','03/06/13','17:15'),(3685,'6c','FelipeOliveira','1','03/06/13','17:15'),(3684,'4b','FelipeOliveira','1','03/06/13','17:15'),(3683,'3h','FelipeOliveira','1','03/06/13','17:15'),(3682,'2b','FelipeOliveira','1','03/06/13','17:15'),(3681,'1a','FelipeOliveira','1','03/06/13','17:15'),(3680,'0b','FelipeOliveira','1','03/06/13','17:15'),(3585,'15k','FelipeOliveira','2','03/06/13','15:46'),(3584,'15j','FelipeOliveira','2','03/06/13','15:46'),(3583,'15i','FelipeOliveira','2','03/06/13','15:46'),(3582,'15h','FelipeOliveira','2','03/06/13','15:46'),(3581,'15g','FelipeOliveira','2','03/06/13','15:46'),(3580,'15f','FelipeOliveira','2','03/06/13','15:46'),(3579,'15e','FelipeOliveira','2','03/06/13','15:46'),(3578,'15d','FelipeOliveira','2','03/06/13','15:46'),(3577,'15c','FelipeOliveira','2','03/06/13','15:46'),(3576,'15b','FelipeOliveira','2','03/06/13','15:46'),(3575,'15a','FelipeOliveira','2','03/06/13','15:46'),(3574,'13i','FelipeOliveira','2','03/06/13','15:46'),(3573,'13e','FelipeOliveira','2','03/06/13','15:46'),(3572,'8i','FelipeOliveira','2','03/06/13','15:46'),(3571,'8f','FelipeOliveira','2','03/06/13','15:46'),(3570,'8a','FelipeOliveira','2','03/06/13','15:46'),(3569,'7l','FelipeOliveira','2','03/06/13','15:46'),(3568,'5c','FelipeOliveira','2','03/06/13','15:46'),(3567,'3n','FelipeOliveira','2','03/06/13','15:46'),(3566,'3g','FelipeOliveira','2','03/06/13','15:46'),(3565,'3e','FelipeOliveira','2','03/06/13','15:46'),(3564,'3c','FelipeOliveira','2','03/06/13','15:46'),(3563,'1j','FelipeOliveira','2','03/06/13','15:46'),(3562,'1g','FelipeOliveira','2','03/06/13','15:46'),(3561,'1f','FelipeOliveira','2','03/06/13','15:46'),(3586,'15l','FelipeOliveira','2','03/06/13','15:46'),(3587,'2b','FelipeOliveira','2','03/06/13','15:46'),(3588,'4c','FelipeOliveira','2','03/06/13','15:46'),(3589,'6b','FelipeOliveira','2','03/06/13','15:46'),(3590,'9b','FelipeOliveira','2','03/06/13','15:46'),(3591,'10c','FelipeOliveira','2','03/06/13','15:46'),(3592,'11b','FelipeOliveira','2','03/06/13','15:46'),(3593,'12g','FelipeOliveira','2','03/06/13','15:46'),(3594,'14b','FelipeOliveira','2','03/06/13','15:46'),(3614,'7l','FelipeOliveira','3','03/06/13','15:49'),(3613,'7g','FelipeOliveira','3','03/06/13','15:49'),(3612,'7f','FelipeOliveira','3','03/06/13','15:49'),(3611,'6c','FelipeOliveira','3','03/06/13','15:49'),(3610,'5b','FelipeOliveira','3','03/06/13','15:49'),(3609,'4b','FelipeOliveira','3','03/06/13','15:49'),(3608,'3h','FelipeOliveira','3','03/06/13','15:49'),(3607,'2b','FelipeOliveira','3','03/06/13','15:49'),(3606,'2b','FelipeOliveira','3','03/06/13','15:49'),(3605,'1d','FelipeOliveira','3','03/06/13','15:49'),(3615,'1b','FelipeOliveira','4','03/06/13','15:54'),(3616,'2e','FelipeOliveira','4','03/06/13','15:54'),(3617,'2r','FelipeOliveira','4','03/06/13','15:54'),(3618,'3e','FelipeOliveira','4','03/06/13','15:54'),(3619,'4g','FelipeOliveira','4','03/06/13','15:54'),(3620,'5c','FelipeOliveira','4','03/06/13','15:54'),(3621,'dec1','FelipeOliveira','4','03/06/13','15:54'),(3622,'dec2','FelipeOliveira','4','03/06/13','15:54'),(3623,'dec3','FelipeOliveira','4','03/06/13','15:54'),(4198,'3a','wenderm','1','05/06/13','14:13'),(4197,'2b','wenderm','1','05/06/13','14:13'),(4196,'1a','wenderm','1','05/06/13','14:13'),(4195,'0b','wenderm','1','05/06/13','14:13'),(5130,'5b','wender','1','06/06/13','14:30'),(5129,'6c','wender','1','06/06/13','14:30'),(5128,'4a','wender','1','06/06/13','14:30'),(5127,'3k','wender','1','06/06/13','14:30'),(5126,'2b','wender','1','06/06/13','14:30'),(5125,'1a','wender','1','06/06/13','14:30'),(5124,'0a','wender','1','06/06/13','14:30'),(4148,'1f','wenderm','2','05/06/13','10:04'),(4149,'3g','wenderm','2','05/06/13','10:04'),(4150,'5e','wenderm','2','05/06/13','10:04'),(4151,'7f','wenderm','2','05/06/13','10:04'),(4152,'8e','wenderm','2','05/06/13','10:04'),(4153,'13f','wenderm','2','05/06/13','10:04'),(4154,'15e','wenderm','2','05/06/13','10:04'),(4155,'2b','wenderm','2','05/06/13','10:04'),(4156,'4b','wenderm','2','05/06/13','10:04'),(4157,'6b','wenderm','2','05/06/13','10:04'),(4158,'9a','wenderm','2','05/06/13','10:04'),(4159,'10b','wenderm','2','05/06/13','10:04'),(4160,'11b','wenderm','2','05/06/13','10:04'),(4161,'12c','wenderm','2','05/06/13','10:04'),(4162,'14b','wenderm','2','05/06/13','10:04'),(4163,'1a','wenderm','3','05/06/13','10:05'),(4164,'2a','wenderm','3','05/06/13','10:05'),(4165,'2a','wenderm','3','05/06/13','10:05'),(4166,'3b','wenderm','3','05/06/13','10:05'),(4167,'4b','wenderm','3','05/06/13','10:05'),(4168,'5b','wenderm','3','05/06/13','10:05'),(4169,'6c','wenderm','3','05/06/13','10:05'),(4170,'7d','wenderm','3','05/06/13','10:05'),(4171,'1a','wenderm','4','05/06/13','10:05'),(4172,'2c','wenderm','4','05/06/13','10:05'),(4173,'3d','wenderm','4','05/06/13','10:05'),(4174,'4f','wenderm','4','05/06/13','10:05'),(4175,'5d','wenderm','4','05/06/13','10:05'),(4176,'dec1','wenderm','4','05/06/13','10:05'),(4177,'dec2','wenderm','4','05/06/13','10:05'),(4178,'dec3','wenderm','4','05/06/13','10:05'),(4414,'5c','marcelasilva','2','05/06/13','14:31'),(4413,'3g','marcelasilva','2','05/06/13','14:31'),(4412,'3e','marcelasilva','2','05/06/13','14:31'),(4411,'3d','marcelasilva','2','05/06/13','14:31'),(4410,'1j','marcelasilva','2','05/06/13','14:31'),(4409,'1e','marcelasilva','2','05/06/13','14:31'),(4408,'1a','marcelasilva','2','05/06/13','14:31'),(4283,'1b','marcelasilva','3','05/06/13','14:22'),(4284,'2b','marcelasilva','3','05/06/13','14:22'),(4285,'2b','marcelasilva','3','05/06/13','14:22'),(4286,'3f','marcelasilva','3','05/06/13','14:22'),(4287,'4b','marcelasilva','3','05/06/13','14:22'),(4288,'5a','marcelasilva','3','05/06/13','14:22'),(4289,'6c','marcelasilva','3','05/06/13','14:22'),(4290,'7c','marcelasilva','3','05/06/13','14:22'),(4291,'7g','marcelasilva','3','05/06/13','14:22'),(4292,'7l','marcelasilva','3','05/06/13','14:22'),(4293,'1a','marcelasilva','4','05/06/13','14:24'),(4294,'1e','marcelasilva','4','05/06/13','14:24'),(4295,'1f','marcelasilva','4','05/06/13','14:24'),(4296,'1g','marcelasilva','4','05/06/13','14:24'),(4297,'2a','marcelasilva','4','05/06/13','14:24'),(4298,'2b','marcelasilva','4','05/06/13','14:24'),(4299,'2d','marcelasilva','4','05/06/13','14:24'),(4300,'2e','marcelasilva','4','05/06/13','14:24'),(4301,'2f','marcelasilva','4','05/06/13','14:24'),(4302,'2j','marcelasilva','4','05/06/13','14:24'),(4303,'2k','marcelasilva','4','05/06/13','14:24'),(4304,'2m','marcelasilva','4','05/06/13','14:24'),(4305,'2n','marcelasilva','4','05/06/13','14:24'),(4306,'2q','marcelasilva','4','05/06/13','14:24'),(4307,'2r','marcelasilva','4','05/06/13','14:24'),(4308,'2s','marcelasilva','4','05/06/13','14:24'),(4309,'3a','marcelasilva','4','05/06/13','14:24'),(4310,'3c','marcelasilva','4','05/06/13','14:24'),(4311,'3e','marcelasilva','4','05/06/13','14:24'),(4312,'4a','marcelasilva','4','05/06/13','14:24'),(4313,'4b','marcelasilva','4','05/06/13','14:24'),(4314,'4c','marcelasilva','4','05/06/13','14:24'),(4315,'4d','marcelasilva','4','05/06/13','14:24'),(4316,'4h','marcelasilva','4','05/06/13','14:24'),(4317,'4i','marcelasilva','4','05/06/13','14:24'),(4318,'5a','marcelasilva','4','05/06/13','14:24'),(4319,'5b','marcelasilva','4','05/06/13','14:24'),(4320,'5j','marcelasilva','4','05/06/13','14:24'),(4321,'dec1','marcelasilva','4','05/06/13','14:24'),(4322,'dec2','marcelasilva','4','05/06/13','14:24'),(4323,'dec3','marcelasilva','4','05/06/13','14:24'),(5139,'2b','wender','2','06/06/13','14:31'),(5138,'15a','wender','2','06/06/13','14:31'),(5137,'13a','wender','2','06/06/13','14:31'),(5136,'8h','wender','2','06/06/13','14:31'),(5135,'7a','wender','2','06/06/13','14:31'),(5134,'5a','wender','2','06/06/13','14:31'),(5133,'3n','wender','2','06/06/13','14:31'),(5132,'3a','wender','2','06/06/13','14:31'),(4847,'7e','wender','3','05/06/13','14:52'),(4846,'6a','wender','3','05/06/13','14:52'),(4845,'5a','wender','3','05/06/13','14:52'),(4844,'4a','wender','3','05/06/13','14:52'),(4843,'3h','wender','3','05/06/13','14:52'),(4842,'2a','wender','3','05/06/13','14:52'),(4841,'2a','wender','3','05/06/13','14:52'),(4840,'1c','wender','3','05/06/13','14:52'),(4770,'dec2','wender','4','05/06/13','14:47'),(4769,'dec1','wender','4','05/06/13','14:47'),(4768,'5i','wender','4','05/06/13','14:47'),(4767,'5a','wender','4','05/06/13','14:47'),(4766,'4h','wender','4','05/06/13','14:47'),(4765,'4e','wender','4','05/06/13','14:47'),(4764,'3c','wender','4','05/06/13','14:47'),(4763,'3a','wender','4','05/06/13','14:47'),(4762,'2u','wender','4','05/06/13','14:47'),(4761,'2a','wender','4','05/06/13','14:47'),(4760,'1d','wender','4','05/06/13','14:47'),(4759,'1c','wender','4','05/06/13','14:47'),(5007,'1h','andrebezerra','2','05/06/13','15:48'),(5006,'1f','andrebezerra','2','05/06/13','15:48'),(5004,'7j','andrebezerra','3','05/06/13','15:48'),(5003,'7h','andrebezerra','3','05/06/13','15:48'),(5002,'7f','andrebezerra','3','05/06/13','15:48'),(5001,'7d','andrebezerra','3','05/06/13','15:48'),(5000,'6b','andrebezerra','3','05/06/13','15:48'),(4999,'5b','andrebezerra','3','05/06/13','15:48'),(4998,'4b','andrebezerra','3','05/06/13','15:48'),(4997,'3c','andrebezerra','3','05/06/13','15:48'),(4996,'2b','andrebezerra','3','05/06/13','15:48'),(4995,'2b','andrebezerra','3','05/06/13','15:48'),(4994,'1d','andrebezerra','3','05/06/13','15:48'),(4993,'dec3','andrebezerra','4','05/06/13','15:48'),(4992,'dec2','andrebezerra','4','05/06/13','15:48'),(4991,'dec1','andrebezerra','4','05/06/13','15:48'),(4990,'5i','andrebezerra','4','05/06/13','15:48'),(4989,'5f','andrebezerra','4','05/06/13','15:48'),(4988,'4i','andrebezerra','4','05/06/13','15:48'),(4987,'4f','andrebezerra','4','05/06/13','15:48'),(4986,'3f','andrebezerra','4','05/06/13','15:48'),(4985,'3e','andrebezerra','4','05/06/13','15:48'),(4984,'3d','andrebezerra','4','05/06/13','15:48'),(4983,'2u','andrebezerra','4','05/06/13','15:48'),(4982,'2n','andrebezerra','4','05/06/13','15:48'),(4981,'2m','andrebezerra','4','05/06/13','15:48'),(4980,'2d','andrebezerra','4','05/06/13','15:48'),(4979,'2c','andrebezerra','4','05/06/13','15:48'),(4978,'1h','andrebezerra','4','05/06/13','15:48'),(4977,'1b','andrebezerra','4','05/06/13','15:48'),(5028,'14c','andrebezerra','2','05/06/13','15:48'),(5131,'1c','wender','2','06/06/13','14:31');
+/*!40000 ALTER TABLE `pesquisa` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SHOW WARNINGS;
+--
+-- Table structure for table `pesquisaquais`
+--
 
--- -----------------------------------------------------
--- Table `usuarios`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `usuarios` ;
+DROP TABLE IF EXISTS `pesquisaquais`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pesquisaquais` (
+  `idpesquisa` int(11) NOT NULL auto_increment,
+  `questao` varchar(45) default NULL,
+  `respostas` longtext,
+  `usuario` varchar(45) default NULL,
+  `parte` varchar(45) default NULL,
+  `data` varchar(45) default NULL,
+  `hora` varchar(45) default NULL,
+  PRIMARY KEY  (`idpesquisa`)
+) ENGINE=MyISAM AUTO_INCREMENT=674 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-SHOW WARNINGS;
-CREATE  TABLE IF NOT EXISTS `usuarios` (
-  `idusuario` INT(16) NOT NULL AUTO_INCREMENT ,
-  `login` VARCHAR(25) NOT NULL ,
-  `senha` VARCHAR(15) NOT NULL ,
-  `nome` VARCHAR(20) NOT NULL ,
-  `ativo` CHAR(1) NULL DEFAULT NULL ,
-  `email` VARCHAR(45) NOT NULL ,
-  `data` VARCHAR(45) NULL DEFAULT NULL ,
-  `tipo` VARCHAR(6) NULL DEFAULT NULL COMMENT 'Adm = administrador\nAvan = avançado' ,
-  `hora` VARCHAR(45) NULL DEFAULT NULL ,
-  `concluido` VARCHAR(5) NULL DEFAULT '-1' ,
-  `autenticacao` VARCHAR(45) NULL DEFAULT NULL ,
-  PRIMARY KEY (`idusuario`) )
-ENGINE = MyISAM
-AUTO_INCREMENT = 41
-DEFAULT CHARACTER SET = latin1;
+--
+-- Dumping data for table `pesquisaquais`
+--
 
-SHOW WARNINGS;
-CREATE UNIQUE INDEX `login_UNIQUE` ON `usuarios` (`login` ASC) ;
+LOCK TABLES `pesquisaquais` WRITE;
+/*!40000 ALTER TABLE `pesquisaquais` DISABLE KEYS */;
+INSERT INTO `pesquisaquais` VALUES (17,'qtdComentariosGerais','          22          ','dudu','4','10/05/13','09:13'),(29,'qtd8','2002','feliperibeiro','2','16/05/13','11:59'),(30,'qtd3','3 anos','feliperibeiro','3','16/05/13','12:00'),(31,'qtd7','taiti','feliperibeiro','3','16/05/13','12:00'),(24,'qtd7','cHICAGO','feliperibeiro','3','13/05/13','17:36'),(670,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:50'),(28,'qtd8','2003','feliperibeiro','2','16/05/13','11:58'),(33,'qtd3','5 anos','feliperibeiro','3','16/05/13','12:03'),(34,'qtd1','dados','feliperibeiro','2','16/05/13','12:05'),(36,'qtd3','10 anos','feliperibeiro','3','16/05/13','14:22'),(37,'qtd7','cHICAGO','feliperibeiro','3','16/05/13','14:22'),(38,'qtd3','Casa','wender','1','16/05/13','14:24'),(665,'qtd12','1000000000','andrebezerra','2','05/06/13','15:48'),(664,'qtd81','2015','andrebezerra','2','05/06/13','15:48'),(663,'qtd8','2003','andrebezerra','2','05/06/13','15:48'),(53,'qtd3','Casa','wender','1','16/05/13','14:53'),(625,'qtd3','11','wender','1','05/06/13','14:48'),(626,'qtd3','11','wender','1','05/06/13','14:49'),(627,'qtd3','11','wender','1','05/06/13','14:49'),(628,'qtd3','11','wender','1','05/06/13','14:50'),(629,'qtd3','11','wender','1','05/06/13','14:52'),(633,'qtd3','11','wender','1','05/06/13','14:53'),(634,'qtd3','11','wender','1','05/06/13','14:53'),(635,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:19'),(673,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:55'),(672,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:53'),(94,'qtd3','Lucilda','ratinho','1','17/05/13','16:16'),(95,'qtd3','Casa','wender','1','17/05/13','16:24'),(96,'qtd3','Casa','wender','1','17/05/13','16:25'),(97,'qtd3','Casa','wender','1','17/05/13','16:25'),(98,'qtd3','Lucilda','ratinho','1','17/05/13','16:25'),(99,'qtd3','Casa','wender','1','17/05/13','16:25'),(100,'qtd3','Casa','wender','1','17/05/13','16:26'),(101,'qtd3','Casa','wender','1','17/05/13','16:26'),(102,'qtd12','10000000','ratinho','2','17/05/13','16:26'),(103,'qtd3','Casa','wender','1','17/05/13','16:26'),(104,'qtd3','2030','ratinho','3','17/05/13','16:27'),(105,'qtd7','Argentina','ratinho','3','17/05/13','16:27'),(106,'qtdComentariosGerais','	Jorge Tinha 			             ','ratinho','4','17/05/13','16:27'),(107,'qtd1','guto','ratinho','4','17/05/13','16:27'),(108,'qtd3','Casa','wender','1','17/05/13','16:28'),(671,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:53'),(119,'qtd3','Casa','wender','1','20/05/13','17:30'),(120,'qtdComentariosGerais','			Comentarios	             ','wender9','4','21/05/13','12:06'),(121,'qtd1','Outros','wender9','2','21/05/13','12:06'),(122,'qtd3','resto','fernando','1','21/05/13','12:53'),(123,'qtd3','resto','fernando','1','21/05/13','12:53'),(124,'qtd3','coisa','fernando','1','21/05/13','12:54'),(125,'qtd1','Libia','fernando','2','21/05/13','13:00'),(126,'qtd3','resto','fernando','2','21/05/13','13:00'),(127,'qtd7','resto2','fernando','2','21/05/13','13:00'),(128,'qtd8','1999','fernando','2','21/05/13','13:00'),(129,'qtd81','2014','fernando','2','21/05/13','13:00'),(130,'qtd12','1000000000','fernando','2','21/05/13','13:00'),(131,'qtd3','3 anos','fernando','3','21/05/13','13:01'),(132,'qtd7','Libia','fernando','3','21/05/13','13:01'),(133,'qtd3','3 anos','fernando','3','21/05/13','13:01'),(134,'qtd7','Libia','fernando','3','21/05/13','13:01'),(135,'qtd3','4 anos','fernando','3','21/05/13','13:01'),(136,'qtd7','Libia','fernando','3','21/05/13','13:01'),(137,'qtd3','4 anos','fernando','3','21/05/13','13:04'),(138,'qtd7','Libia','fernando','3','21/05/13','13:04'),(360,'qtd5','livro','fernando','4','31/05/13','13:30'),(358,'qtd2','re','fernando','4','31/05/13','13:30'),(359,'qtd4','teastro','fernando','4','31/05/13','13:30'),(147,'qtd3','4 anos','fernando','3','21/05/13','13:08'),(148,'qtd7','Libia','fernando','3','21/05/13','13:08'),(149,'qtd1','Libia','fernando','2','21/05/13','13:08'),(150,'qtd3','resto','fernando','2','21/05/13','13:08'),(151,'qtd7','resto2','fernando','2','21/05/13','13:08'),(152,'qtd8','1999','fernando','2','21/05/13','13:08'),(153,'qtd81','2014','fernando','2','21/05/13','13:08'),(154,'qtd3','coisa','fernando','1','21/05/13','13:08'),(155,'qtd3','4 anos','fernando','3','21/05/13','13:23'),(156,'qtd7','Libia','fernando','3','21/05/13','13:23'),(157,'qtd1','Libia','fernando','2','21/05/13','13:26'),(158,'qtd3','resto','fernando','2','21/05/13','13:26'),(159,'qtd7','resto2','fernando','2','21/05/13','13:26'),(160,'qtd8','1999','fernando','2','21/05/13','13:26'),(161,'qtd81','2014','fernando','2','21/05/13','13:26'),(162,'qtd12','1000000000','fernando','2','21/05/13','13:26'),(163,'qtd3','EUA','ratazana','2','21/05/13','13:39'),(164,'qtd8','1970','ratazana','2','21/05/13','13:39'),(165,'qtd81','2025','ratazana','2','21/05/13','13:39'),(166,'qtd12','10000000000000000','ratazana','2','21/05/13','13:39'),(167,'qtd3','3 anos','ratazana','3','21/05/13','13:39'),(168,'qtd7','Russia','ratazana','3','21/05/13','13:39'),(169,'qtd3','3 anos','ratazana','3','21/05/13','13:40'),(170,'qtd7','Russia','ratazana','3','21/05/13','13:40'),(171,'qtdComentariosGerais','	nwhwehhfÃ§4hwÃ§hgo42johjjhojojhoj45oj3oÃ§hjuo3h			             ','ratazana','4','21/05/13','13:41'),(172,'qtd1','oba','ratazana','4','21/05/13','13:41'),(173,'qtd2','ter','ratazana','4','21/05/13','13:41'),(174,'qtd4','ponto','ratazana','4','21/05/13','13:41'),(175,'qtd5','ekle','ratazana','4','21/05/13','13:41'),(176,'qtd3','Casa','wender','1','21/05/13','16:58'),(177,'qtd3','Casa','wender','1','21/05/13','16:59'),(178,'qtd3','Casa','wender','1','21/05/13','16:59'),(179,'qtd3','Casa','wender','1','22/05/13','18:54'),(186,'qtd3','Casa','wender','1','23/05/13','16:58'),(187,'qtd3','Casa','wender','1','23/05/13','16:58'),(188,'qtd3','Casa','wender','1','23/05/13','17:06'),(189,'qtd3','Casa','wender','1','23/05/13','17:06'),(655,'qtdComentariosGerais','       ','andrebezerra','4','05/06/13','15:48'),(616,'qtd3','11','wender','1','05/06/13','14:47'),(615,'qtd3','11','wender','1','05/06/13','14:46'),(194,'qtd3','Casa','wender','1','28/05/13','09:59'),(195,'qtd3','Casa','wender','1','28/05/13','10:06'),(196,'qtd3','Casa','wender','1','28/05/13','10:10'),(203,'qtd3','Casa','wender','1','28/05/13','11:07'),(210,'qtd3','Casa','wender','1','28/05/13','14:04'),(211,'qtd3','resposta','feliperibeiro','1','28/05/13','14:34'),(212,'qtd3','resposta','feliperibeiro','1','28/05/13','14:55'),(213,'qtd3','10 anos','feliperibeiro','3','28/05/13','14:55'),(214,'qtd7','CHICAGO','feliperibeiro','3','28/05/13','14:55'),(215,'qtdComentariosGerais','				MamÃ£o jbe3bgf,3dhuifui3fhhfih             ','feliperibeiro','4','28/05/13','14:56'),(216,'qtd1','bingo','feliperibeiro','4','28/05/13','14:56'),(217,'qtd2','atividaded','feliperibeiro','4','28/05/13','14:56'),(218,'qtd3','resposta','feliperibeiro','1','28/05/13','14:58'),(219,'qtd3','Casa','wender','1','28/05/13','16:02'),(220,'qtd3','Casa','wender','1','28/05/13','16:02'),(221,'qtdComentariosGerais','tudo ok!','marcela viana','4','28/05/13','16:25'),(602,'qtd3','11','wender','1','05/06/13','14:43'),(656,'qtd1','banda','andrebezerra','4','05/06/13','15:48'),(636,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:20'),(637,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:20'),(240,'qtd3','Casa','wender','1','29/05/13','10:57'),(662,'qtd7','resposta','andrebezerra','2','05/06/13','15:48'),(265,'qtd3','fresrsr','gorila','1','29/05/13','17:28'),(266,'qtd1','hkhkhkhk','gorila','2','29/05/13','17:30'),(267,'qtd3','resto','gorila','2','29/05/13','17:30'),(268,'qtd7','URSS','gorila','2','29/05/13','17:30'),(269,'qtd8','2002','gorila','2','29/05/13','17:30'),(270,'qtd81','2020','gorila','2','29/05/13','17:30'),(271,'qtd12','10000000000000','gorila','2','29/05/13','17:30'),(272,'qtd3','5 anos','gorila','3','29/05/13','17:31'),(273,'qtd7','URSS','gorila','3','29/05/13','17:31'),(390,'qtd3','Argentina','Suelen','2','01/06/13','22:17'),(391,'qtd7','RepÃºblica do Congo','Suelen','2','01/06/13','22:17'),(392,'qtd8','2003','Suelen','2','01/06/13','22:17'),(393,'qtd81','2015','Suelen','2','01/06/13','22:17'),(331,'qtd3','fresrsr','gorila','1','29/05/13','17:53'),(332,'qtd3','6 anos','gorila','3','29/05/13','17:53'),(333,'qtd7','URSS','gorila','3','29/05/13','17:53'),(284,'qtd3','10 anos','gorila','3','29/05/13','17:34'),(285,'qtd7','URSS','gorila','3','29/05/13','17:34'),(291,'qtd3','fresrsr','gorila','1','29/05/13','17:35'),(292,'qtd3','fresrsr','gorila','1','29/05/13','17:35'),(293,'qtd3','fresrsr','gorila','1','29/05/13','17:35'),(294,'qtd3','fresrsr','gorila','1','29/05/13','17:35'),(295,'qtd3','fresrsr','gorila','1','29/05/13','17:36'),(296,'qtd1','hkhkhkhk','gorila','2','29/05/13','17:36'),(297,'qtd3','resto','gorila','2','29/05/13','17:36'),(298,'qtd8','2002','gorila','2','29/05/13','17:36'),(299,'qtd81','2020','gorila','2','29/05/13','17:36'),(300,'qtd12','10000000000000','gorila','2','29/05/13','17:36'),(301,'qtd1','hkhkhkhk','gorila','2','29/05/13','17:36'),(302,'qtd3','resto','gorila','2','29/05/13','17:36'),(303,'qtd8','2002','gorila','2','29/05/13','17:36'),(304,'qtd81','2020','gorila','2','29/05/13','17:36'),(305,'qtd12','10000000000000','gorila','2','29/05/13','17:36'),(306,'qtd1','hkhkhkhk','gorila','2','29/05/13','17:37'),(307,'qtd3','resto','gorila','2','29/05/13','17:37'),(308,'qtd8','2002','gorila','2','29/05/13','17:37'),(309,'qtd81','2020','gorila','2','29/05/13','17:37'),(310,'qtd12','10000000000000','gorila','2','29/05/13','17:37'),(334,'qtd3','10 anos','gorila','3','29/05/13','17:54'),(389,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:10'),(316,'qtd1','hkhkhkhk','gorila','2','29/05/13','17:44'),(317,'qtd3','resto','gorila','2','29/05/13','17:44'),(318,'qtd7','URSS','gorila','2','29/05/13','17:44'),(319,'qtd8','2002','gorila','2','29/05/13','17:44'),(320,'qtd81','2020','gorila','2','29/05/13','17:44'),(321,'qtd12','10000000000000','gorila','2','29/05/13','17:44'),(322,'qtd3','fresrsr','gorila','1','29/05/13','17:44'),(323,'qtd3','fresrsr','gorila','1','29/05/13','17:45'),(324,'qtd3','fresrsr','gorila','1','29/05/13','17:45'),(325,'qtd3','fresrsr','gorila','1','29/05/13','17:46'),(326,'qtd7','URSS','gorila','3','29/05/13','17:47'),(335,'qtd7','JapÃ£o','gorila','3','29/05/13','17:54'),(336,'qtd3','fresrsr','gorila','1','29/05/13','17:54'),(337,'qtd3','fresrsr','gorila','1','29/05/13','17:55'),(338,'qtd3','fresrsr','gorila','1','29/05/13','17:55'),(339,'qtd3','fresrsr','gorila','1','29/05/13','17:55'),(340,'qtd3','10 anos','gorila','3','29/05/13','17:55'),(341,'qtd7','URSS','gorila','3','29/05/13','17:55'),(342,'qtd3','10 anos','gorila','3','29/05/13','17:56'),(343,'qtd7','URSS','gorila','3','29/05/13','17:56'),(344,'qtd3','fresrsr','gorila','1','29/05/13','17:56'),(345,'qtd3','fresrsr','gorila','1','29/05/13','17:59'),(346,'qtd3','Casa','wender','1','31/05/13','11:40'),(357,'qtdComentariosGerais','EU bcbebwvnewnÃ§rnkÃ§nbgÃ§nr5			                                                    ','fernando','4','31/05/13','13:30'),(383,'qtd2','salÃ£o','gorila','4','31/05/13','13:37'),(384,'qtd4','turma','gorila','4','31/05/13','13:37'),(385,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:10'),(386,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:10'),(387,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:10'),(388,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:10'),(382,'qtd1','radio','gorila','4','31/05/13','13:37'),(381,'qtdComentariosGerais','    ','gorila','4','31/05/13','13:37'),(394,'qtd12','10000000','Suelen','2','01/06/13','22:17'),(395,'qtd1','artesanato','Suelen','2','01/06/13','22:18'),(396,'qtd7','RepÃºblica do Congo','Suelen','2','01/06/13','22:18'),(397,'qtd8','2003','Suelen','2','01/06/13','22:18'),(398,'qtd81','2015','Suelen','2','01/06/13','22:18'),(399,'qtd12','10000000','Suelen','2','01/06/13','22:18'),(400,'qtd7','USA','Suelen','3','01/06/13','22:19'),(401,'qtd7','USA','Suelen','3','01/06/13','22:20'),(657,'qtd2','artes','andrebezerra','4','05/06/13','15:48'),(429,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:31'),(428,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:30'),(427,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:30'),(416,'qtd2','brinquedo','Suelen','4','01/06/13','22:24'),(417,'qtd3','velhos','Suelen','4','01/06/13','22:24'),(418,'qtd4','ocorre em casa','Suelen','4','01/06/13','22:24'),(419,'qtd5','artigo','Suelen','4','01/06/13','22:24'),(420,'qtd3','3 anos','Suelen','3','01/06/13','22:26'),(421,'qtd7','USA','Suelen','3','01/06/13','22:26'),(422,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:28'),(423,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:29'),(424,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:29'),(425,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:29'),(426,'qtd3','Ponto de Cultura','Suelen','1','01/06/13','22:30'),(414,'qtdComentariosGerais','									Constam problemas na administraÃ§Ã£o do edital. Felipe ribeiro quebrou o celular e nÃ£o tem mais celular. 			                                       ','Suelen','4','01/06/13','22:24'),(415,'qtd1','fomento dos grupos','Suelen','4','01/06/13','22:24'),(658,'qtd3','resto','andrebezerra','4','05/06/13','15:48'),(659,'qtd4','ONG','andrebezerra','4','05/06/13','15:48'),(660,'qtd5','livro','andrebezerra','4','05/06/13','15:48'),(619,'qtdComentariosGerais','												11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111                                                       ','wender','4','05/06/13','14:47'),(667,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:49'),(668,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:49'),(669,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:50'),(661,'qtd7','Argentina','andrebezerra','3','05/06/13','15:48'),(666,'qtd3','Ponto de Cultura','andrebezerra','1','05/06/13','15:49'),(456,'qtd3','Casa','wender','1','03/06/13','09:17'),(457,'qtd3','Casa','wender','1','03/06/13','09:17'),(458,'qtd3','Casa','wender','1','03/06/13','09:18'),(467,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:33'),(468,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:36'),(469,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:37'),(470,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:37'),(471,'qtd1','rua','Felipe Oliveira','2','03/06/13','15:45'),(472,'qtd3','resta','Felipe Oliveira','2','03/06/13','15:45'),(473,'qtd7','Argentina','Felipe Oliveira','2','03/06/13','15:45'),(474,'qtd8','2003','Felipe Oliveira','2','03/06/13','15:45'),(475,'qtd81','2015','Felipe Oliveira','2','03/06/13','15:45'),(476,'qtd12','100000000','Felipe Oliveira','2','03/06/13','15:45'),(477,'qtd1','rua','Felipe Oliveira','2','03/06/13','15:46'),(478,'qtd3','resta','Felipe Oliveira','2','03/06/13','15:46'),(479,'qtd7','Argentina','Felipe Oliveira','2','03/06/13','15:46'),(480,'qtd8','2003','Felipe Oliveira','2','03/06/13','15:46'),(481,'qtd81','2015','Felipe Oliveira','2','03/06/13','15:46'),(482,'qtd12','100000000','Felipe Oliveira','2','03/06/13','15:46'),(483,'qtd3','3 anos','Felipe Oliveira','3','03/06/13','15:48'),(484,'qtd3','3 anos','Felipe Oliveira','3','03/06/13','15:49'),(485,'qtdComentariosGerais','	oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo			             ','Felipe Oliveira','4','03/06/13','15:54'),(486,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:58'),(487,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:58'),(488,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:58'),(489,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','15:59'),(490,'qtd3','fwjkfgjgfj','wender22','1','03/06/13','16:18'),(491,'qtd3','Casa','wender','1','03/06/13','17:01'),(492,'qtd3','Casa','wender','1','03/06/13','17:14'),(493,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','17:15'),(494,'qtd3','fwjkfgjgfj','Felipe Oliveira','1','03/06/13','17:15'),(507,'qtd3','Casa','wender','1','03/06/13','17:45'),(508,'qtd3','Casa','wender','1','03/06/13','17:46'),(509,'qtd3','Casa','wender','1','03/06/13','17:53'),(510,'qtd3','Casa','wender','1','03/06/13','17:55'),(511,'qtd3','Casa','wender','1','03/06/13','17:55'),(512,'qtd3','Casa','wender','1','03/06/13','17:56'),(593,'qtd3','11','wender','1','05/06/13','14:42'),(592,'qtd3','11','wender','1','05/06/13','14:42'),(591,'qtd3','11','wender','1','05/06/13','14:39'),(620,'qtd1','123144','wender','4','05/06/13','14:47'),(621,'qtd2','211321','wender','4','05/06/13','14:47'),(622,'qtd3','133','wender','4','05/06/13','14:47'),(623,'qtd4','1232443','wender','4','05/06/13','14:47'),(624,'qtd5','255345','wender','4','05/06/13','14:47'),(631,'qtd7','America do Norte','wender','3','05/06/13','14:52'),(537,'qtd3','Casa','wender','1','03/06/13','22:01'),(538,'qtd3','Casa','wender','1','03/06/13','22:05'),(539,'qtd3','Casa','wender','1','03/06/13','22:06'),(632,'qtd3','11','wender','1','05/06/13','14:53'),(630,'qtd3','5 anos','wender','3','05/06/13','14:52'),(548,'qtd3','Casa','wender','1','03/06/13','22:19'),(549,'qtd3','Casa','wender','1','03/06/13','22:19'),(550,'qtd3','11','wender','1','03/06/13','22:21'),(551,'qtd3','11','wender','1','04/06/13','08:27'),(552,'qtd3','11','wender','1','04/06/13','08:27'),(553,'qtd3','11','wender','1','04/06/13','08:27'),(554,'qtd3','11','wender','1','04/06/13','08:27'),(555,'qtd3','11','wender','1','04/06/13','08:35'),(556,'qtd3','11','wender','1','04/06/13','08:36'),(557,'qtd3','11','wender','1','04/06/13','08:36'),(558,'qtd3','11','wender','1','04/06/13','08:36'),(559,'qtd3','11','wender','1','04/06/13','08:42'),(586,'qtdComentariosGerais','o processo dessa pesquisa Ã© de suma importÃ¢ncia para os profisionais do meio artÃ­stico.  ','marcelasilva','4','05/06/13','14:24'),(589,'qtd1','SAUDE','marcelasilva','2','05/06/13','14:31'),(590,'qtdComentariosGerais','								    222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222                     ','wenderr','4','05/06/13','14:37'),(583,'qtdComentariosGerais','				             ','wenderm','4','05/06/13','10:05'),(582,'qtd3','11','wender','1','05/06/13','10:03'),(581,'qtd3','11','wender','1','05/06/13','09:49'),(580,'qtd3','11','wender','1','05/06/13','09:49'),(575,'qtd3','11','wender','1','04/06/13','09:23'),(576,'qtd3','11','wender','1','04/06/13','09:30'),(577,'qtd3','11','wender','1','05/06/13','09:46'),(578,'qtd3','11','wender','1','05/06/13','09:46');
+/*!40000 ALTER TABLE `pesquisaquais` ENABLE KEYS */;
+UNLOCK TABLES;
 
-SHOW WARNINGS;
-USE `criacao_literaria` ;
+--
+-- Table structure for table `respostas`
+--
 
+DROP TABLE IF EXISTS `respostas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `respostas` (
+  `idperguntas` int(11) NOT NULL auto_increment,
+  `formulario` varchar(45) default NULL,
+  `questoes` varchar(45) default NULL,
+  `questaovalores` varchar(255) default NULL,
+  UNIQUE KEY `idperguntas` (`idperguntas`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+--
+-- Dumping data for table `respostas`
+--
+
+LOCK TABLES `respostas` WRITE;
+/*!40000 ALTER TABLE `respostas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `respostas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuarios` (
+  `idusuario` int(16) NOT NULL auto_increment,
+  `login` varchar(25) NOT NULL,
+  `senha` varchar(32) NOT NULL,
+  `nome` varchar(20) NOT NULL,
+  `ativo` char(1) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `data` varchar(45) default NULL,
+  `tipo` varchar(6) default NULL COMMENT 'Adm = administrador\nAvan = avançado',
+  `hora` varchar(45) default NULL,
+  `concluido` varchar(5) default '-1',
+  `autenticacao` varchar(45) default NULL,
+  PRIMARY KEY  (`idusuario`,`login`),
+  UNIQUE KEY `login_UNIQUE` (`login`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`)
+) ENGINE=MyISAM AUTO_INCREMENT=72 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (0,'Mauriney','e10adc3949ba59abbe56e057f20f883e','Mauriney','0','mauriney.gonzaga@funarte.gov.br','02/05/13','adm','10:28','-1','da5hpq'),(1,'wender','57a68c1dbe07ec8cf9d4114cc941ac9d','wender','0','wendercorrea@gmail.com','02/05/13','adm','10:22','4','zvsj7u'),(5,'feliperibeiro','a623e3cfbdb0e361a07e3361f96fd6ec','feliperibeiro','0','fl.ribeiro@globo.com','03/05/13','clien','17:34','4','n4ezah'),(6,'anaclaudia','15c2018bfb3aa30db51927d41c69ea2d','anaclaudia','0','anaclaudia.funarte@gmail.com','03/05/13','clien','17:44','-1','3y9s9h'),(8,'andrebezerra','980ac217c6b51e7dc41040bec1edfec8','andrebezerra','0','andrebezerra@gmail.com','06/05/13','clien','12:34','4','imalb3'),(9,'joaobosco','a623e3cfbdb0e361a07e3361f96fd6ec','joaobosco','0','fl.ribeiro@globo.com','08/05/13',NULL,'13:15','-1','n4ezah'),(10,'anateresa','a623e3cfbdb0e361a07e3361f96fd6ec','anateresa','0','fl.ribeiro@globo.com','08/05/13',NULL,'13:19','-1','n4ezah'),(13,'lucas.lopes','c3d97dd6074c18793361fd25f95e8547','lucas.lopes','0','lucas.lopes@funarte.gov.br','08/05/13',NULL,'16:37','-1','qmtxpj'),(34,'ratinho','a623e3cfbdb0e361a07e3361f96fd6ec','ratinho','0','fl.ribeiro@globo.com','17/05/13',NULL,'16:11','4','n4ezah'),(35,'castor','a623e3cfbdb0e361a07e3361f96fd6ec','castor','0','fl.ribeiro@globo.com','17/05/13',NULL,'16:32','1','n4ezah'),(39,'fernando','a623e3cfbdb0e361a07e3361f96fd6ec','fernando','0','fl.ribeiro@globo.com','21/05/13',NULL,'12:42','4','n4ezah'),(40,'ratazana','a623e3cfbdb0e361a07e3361f96fd6ec','ratazana','0','fl.ribeiro@globo.com','21/05/13',NULL,'13:30','4','n4ezah'),(47,'marcelaviana','4e56b093e556baa9f245ea12c19986a8','marcelaviana','0',' marcela.viana@funarte.gov.br','28/05/13',NULL,'15:46','-1',NULL),(52,'jaime','a623e3cfbdb0e361a07e3361f96fd6ec','jaime','0',' fl.ribeiro@globo.com','29/05/13',NULL,'17:04','0',NULL),(53,'gorila','a623e3cfbdb0e361a07e3361f96fd6ec','gorila','0',' fl.ribeiro@globo.com','29/05/13',NULL,'17:24','4',NULL),(66,'Suelen','a623e3cfbdb0e361a07e3361f96fd6ec','Suelen','0','fl.ribeiro@globo.com','01/06/13',NULL,'22:00','4','n4ezah'),(67,'wender22','57a68c1dbe07ec8cf9d4114cc941ac9d','wender22','0','wender.correa@funarte.gov.br','03/06/13',NULL,'09:28','0',NULL),(68,'FelipeOliveira','a623e3cfbdb0e361a07e3361f96fd6ec','FelipeOliveira','0','fl.ribeiro@globo.com','03/06/13',NULL,'15:07','4','n4ezah'),(69,'wenderm','57a68c1dbe07ec8cf9d4114cc941ac9d','wenderm','0','wender.correa@funarte.gov.br','05/06/13',NULL,'09:53','4',NULL),(70,'wenderr','57a68c1dbe07ec8cf9d4114cc941ac9d','wenderr','0','wender.correa@funarte.gov.br','05/06/13',NULL,'14:14','4',NULL),(71,'marcelasilva','4e56b093e556baa9f245ea12c19986a8','marcelasilva','0','marcela.viana@funarte.gov.br','05/06/13',NULL,'14:17','4',NULL);
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-06-10  8:02:01
