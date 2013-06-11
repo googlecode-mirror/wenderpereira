@@ -302,9 +302,7 @@
           em nível mundial, englobando todos os continentes</label>
           
 	  	  <label><input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>	
-          em acordo bilateral, no caso de apenas um outro país</label>
-          
-   	  	  <label><input name="qtd7[]" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" type="checkbox" value="7m" <? if(in_array("7m", $meuArray)){ echo "checked";}?>/>	 
+          em acordo bilateral, no caso de apenas um outro país.
           Qual?
           
           <input name="qtd7quais" id="qtd7quais" class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
@@ -321,9 +319,7 @@
         </div>
       </tr>
         <br/>
-    <tr>
-    </tr>
-  </table>
+    </table>
           <div class="progress progress-danger">
           <div class="bar" style="width: 76%;">76%concluido</div>
         </div>
