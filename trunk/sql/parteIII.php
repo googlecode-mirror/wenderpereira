@@ -23,8 +23,7 @@ $questao3Quais = $_POST[qtd3quais];
 $questao4 = $_POST[qtd4];
 $questao5 = $_POST[qtd5];
 $questao6 = $_POST[qtd6];
-//$questao7Quais = $_POST[qtd7quais];
-
+$questao7Quais = $_POST[qtd7quais];
 // inserindo informaçoes
 
 if ($_POST[avancar] == "avancar") {
@@ -156,10 +155,10 @@ if ($_POST[atualizar] == "atualizar")
 									$qtdQuestao = qtd3;
 									inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 									// inserindo se não branco
-									//if(empty($questao7Quais)) {
-									//}else{
-										//$qtdQuestao = qtd7;
-										//inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
+									if(empty($questao7Quais)) {
+									}else{
+										$qtdQuestao = qtd7;
+										inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
 										//----------------------------
 										$_checkbox = $_POST['qtd7'];
 										foreach($_checkbox as $_valor){
