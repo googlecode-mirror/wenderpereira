@@ -12,7 +12,21 @@
         <!--CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/barra.css" rel="stylesheet" type="text/css" />
-        <!--_CSS -->     
+        <!--_CSS -->    
+    
+        <script>
+            function limitaTextarea(valor) {
+                quant = 620; /* Total de caracteres */
+                total = valor.length;
+
+                if(total <= quant) {
+                    resto = quant - total;
+                    document.getElementById('contador').innerHTML = resto;
+                } else {
+                    document.getElementById('qtdComentariosGerais').value = valor.substr(0,quant);
+                }
+            }
+        </script> 
 
 <?
 include "conexao.php";
@@ -415,9 +429,10 @@ include "conexao.php";
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
              <div align="center">
-             <textarea name="qtdComentariosGerais" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[650]]  maxlength="600" class="input-xxlarge" style="text-align:left;">
+             <textarea name="qtdComentariosGerais" id="qtdComentariosGerais" onkeyup="limitaTextarea(this.value)"  onkeydown="limitaTextarea(this.value)" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[650]]  maxlength="600" class="input-xxlarge" style="text-align:left;">
 				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
+                 Max: <span id="contador">250</span>
              </div>
              </div></td>
             </tr>
