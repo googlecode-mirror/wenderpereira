@@ -70,16 +70,7 @@
        <dl>
         <dt>Instruções para cadastramento:</dt>
         <dt>Passo 1:</dt>
-        <dd> Caso seja a primeira vez que esteja se cadastrando, clique em Novo Usuário e vá ao passo 2.
-        Em caso do cadastro já ter sido realizado anteriormente, entre com o nome do usuário e senha e pule para o passo 3.</dd>
-        <dt>Passo 2:</dt>
-        <dd> Escolha um nome de <i class="icon-user"></i>usuário e <i class="icon-asterisk"></i>senha. Em seguida coloque a mesma senha para confirmação,
-        bem como, preencha o campo do endereço de seu e-mail. Clique em salvar e uma mensagem será enviada para seu e-mail.
-        Ao abrir a mensagem, haverá um link de ativação. Clique neste para que seu cadastro seja autenticado. Posteriormente, 
-        entre normalmente com o nome de usuário e senha cujo cadastro foi realizado.
-        </dd>
-        <dt>Passo 3:</dt>
-        <dd> O cadastramento é realizado em 5 partes : 
+           <dd> O cadastramento é realizado em 5 partes : 
 		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a>, 
 		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a>, 
 		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a>,
@@ -92,14 +83,14 @@
         conclua esta resposta. Fique também atento porque em algumas questões há um número limitado de itens que podem ser
         marcados. Caso este tipo de pergunta seja obrigatória, de qualquer forma, o usuário deverá marcar no mínimo um item.
         </dd>
-        <dt>Passo 4:</dt>
+        <dt>Passo 2:</dt>
         <dd>Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar 
         em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a>, é obrigatório o 
         usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, 
         ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas
         salvas automaticamente.
         </dd>
-        <dt>Passo 5:</dt>
+        <dt>Passo 3:</dt>
         <dd> Após o término, clique em <a href="logout.php"><i class="icon-remove"></i>Logout</a>. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.</dd>
         </dl>
 	<div/>     

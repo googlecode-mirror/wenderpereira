@@ -83,13 +83,52 @@
         <button type="button" class="close" data-dismiss="alert">&times;</button>
          Entre com o nome de usuário e senha para acessar o sistema. <i class="icon-hand-left"></i>
         </div>
-		 <label id="erromsg" class="label-success"> </label>
-		 <label id="erro" class="label-success"> </label>
+        <label id="erromsg" class="label-success" style="color: #FFFFFF; font-style: normal; font-weight: bold"></label>
+		 <label id="erro" style="color: #FFFFFF; font-style: normal; font-weight: bold"class="label-success"> </label>
          <a href="novoUsuario.php"class="btn btn-success">Novo usuário</a>
          <a href="resetsenha.php" class="btn btn-success">Esqueceu a senha</a>
-	  <br/>
+     <br/>
     </div>
+          <br />
+       <!--Modal com instruções para cadastramento__________________________________________--> 
+       <a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Instruções para cadastramento</a>
+         <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Instruções para cadastramento</h3>
+          </div>
+         
+          <div class="modal-body">
+                    <dt>Passo 1:</dt>
+                    <dd> Caso seja a primeira vez que esteja se cadastrando, clique em <a href="novoUsuario.php"class="btn btn-success">Novo usuário</a> e vá ao passo 2. Em caso do cadastro já ter sido realizado anteriormente, entre com o nome do usuário e senha.
+                    </dd>
+                    <dt>Passo 2:</dt>
+                    <dd> Escolha um nome de <i class="icon-user"></i>usuário e <i class="icon-asterisk"></i>senha. Em seguida coloque a mesma senha para confirmação,
+                    bem como, preencha o campo do endereço de seu e-mail. Clique em salvar e uma mensagem será enviada para seu e-mail.
+                    Ao abrir a mensagem, haverá um link de ativação. Clique neste para que seu cadastro seja autenticado. Posteriormente, 
+                    entre normalmente com o nome de usuário e senha cujo cadastro foi realizado.
+                    <dt>Passo 3:</dt>
+                       <dd>
+                           Para alteração de sua senha clique no link <a href="resetsenha.php" class="btn btn-success">Esqueceu a senha</a> 
+                           &nbsp;coloque o seu <i class="icon-envelope"></i>email e clique em reset, será enviada um link para seu <i class="icon-envelope"></i>e-mail. Ao abrir a mensagem, haverá um link para o cadastro de uma nova senha.
+                       </dd>
+                       <dd>
+                       <br />
+                         <a href="novoUsuario.php"><img src="imagebox/novoUsuario.jpg" alt="" class="thumbnail inner-border" width="280" height="180"/></a>
+                       <br />
+                       <a href="resetsenha.php"><img src="imagebox/resetSenha.jpg" alt="" class="thumbnail inner-border" width="280" height="180"/></a>
+                       </dd>
+                    </dd>
+                   </dt>
+                     
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+           </div>
+        </div>
  </div> 
+  <!--FIM Modal com instruções para cadastramento___________________________________________________________-->
            <script>
                $(window).load(function () {
 				    $('#modalindex').modal({
