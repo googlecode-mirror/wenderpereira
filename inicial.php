@@ -45,16 +45,19 @@
             <p class="navbar-text pull-right">
               <a href="logout.php" class="navbar-link"><i class="icon-user"></i>sair</a>
             </p>
-            <ul class="nav">
-              <li class="active"><a href="inicial.php"><i class="icon-th-list"></i>Menu</a></li>
-			  <li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a></li>
-			  <li><a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a></li>
-			  <li><a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a></li>
-			  <li><a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Parte III</a></li>
-			  <li><a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+ 	            <ul class="nav">
+						<li class="active"><a href="inicial.php"><i class="icon-th-list"></i>Menu</a>
+						</li>
+						<li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Instru&ccedil;&otilde;es</a>
+						</li>
+						<li><a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o</a></li>
+						<li><a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Programas</a></li>
+						<li><a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Artistas</a></li>
+						<li><a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a></li>
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
         <?
 	    include "header.php";
 	    ?>
@@ -71,11 +74,11 @@
         <dt>Instruções para cadastramento:</dt>
         <dt>Passo 1:</dt>
            <dd> O cadastramento é realizado em 5 partes : 
-		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Mapeamento</a>, 
-		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Parte I</a>, 
-		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Parte II</a>,
-		<a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Parte III</a>,
-		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a>. 
+		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Respons&aacute;vel pelo preenchimento</a>, 
+		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o</a>, 
+		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Programas</a>,
+		<a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Artistas</a>,
+		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>. 
         Preencha as partes do cadastro uma a uma. Alguns campos são obrigatórios, sendo que, nestes casos, ao final da 
         perguntaaparece um asterisco (*). Em algumas questões somente é possível uma resposta. Em outras, são possíveis
         múltiplas respostas, mas fique atento às perguntas obrigatórias, onde o usuário deverá marcar pelo menos um item,
@@ -85,7 +88,7 @@
         </dd>
         <dt>Passo 2:</dt>
         <dd>Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar 
-        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Parte IV</a>, é obrigatório o 
+        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>, é obrigatório o 
         usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, 
         ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas
         salvas automaticamente.

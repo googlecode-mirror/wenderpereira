@@ -102,24 +102,24 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 0){
 		?>
 		<script language="JavaScript">
-            alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../mapeament_o.php");
+            alert("Retorne para a parte: responsavel pelo preencimento e realize o cadastro!");
+			window.location.assign("../responsavelpelopreenchiment_o.php");
             </script>
 		<?php
 
 	} elseif ($concluido == 2){
 		?>
 		<script language="JavaScript">
-            alert("Cadastramento da Parte II realizado avance para a parteIII!");
-			window.location.assign("../parte_III.php");
+            alert("Cadastramento da Parte:programas realizado avance para Parte:artistas!");
+			window.location.assign("../artistas_III.php");
             </script>
 		<?php
 
 	} elseif ($concluido == 3){
 		?>
 		<script language="JavaScript">
-              alert("Cadastramento da Parte III já foi realizado!");
-			  window.location.assign("../parte_IV.php");
+              alert("Cadastramento da Parte:artistas já foi realizado!");
+			  window.location.assign("../projetos_IV.php");
               </script>
 		<?php
 
@@ -127,7 +127,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../parte_IV.php");
+			  window.location.assign("../projetos_IV.php");
               </script>
 		<?php
 
@@ -158,8 +158,8 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("ParteII cadastrada, clique na parte III para realizar o cadastro!");
-			  window.location.assign("../parte_III.php");
+			  alert("Parte:programas cadastrada, clique na parte:artistas para realizar o cadastro!");
+			  window.location.assign("../artistas_III.php");
 	</script>
 	<?
 
@@ -245,7 +245,7 @@ if ($_POST[atualizar] == "atualizar")
 															?>
 															<script language="JavaScript">
 															 alert("Atualizado com sucesso!!");
-															 window.location.assign("../parte_III.php");
+															 window.location.assign("../artistas_III.php");
 															 </script>
 															<?
 

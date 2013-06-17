@@ -1,3 +1,4 @@
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?
 session_start();
 include "conexao.php";
@@ -98,24 +99,24 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 0){
 		?>
 <script language="JavaScript">
-            alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../mapeament_o.php");
+            alert("Retorne para o responsavel pelo preenchimento e realize o cadastro!");
+			window.location.assign("../responsavelpelopreenchiment_o.php");
             </script>
 		<?
 
 	} elseif ($concluido == 1){
 		?>
 <script language="JavaScript">
-            alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_I.php");
+    alert("Retorne para a parte:Identificação da Instituição e realize o cadastro!!");
+			window.location.assign("../identificacaodainstituicao_I.php");
             </script>
 		<?
 
 	} elseif ($concluido == 2){
 		?>
 <script language="JavaScript">
-            alert("Retorne para a parteII e realize o cadastro!!");
-			window.location.assign("../parte_II.php");
+            alert("Retorne para a parte:programas e realize o cadastro!!");
+			window.location.assign("../programas_II.php");
             </script>
 		<?
 
@@ -123,7 +124,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../parte_IV.php");
+			  window.location.assign("../projetos_IV.php");
             </script>
 		<?
 			
@@ -155,8 +156,8 @@ function atualizaconcluir(&$Login){
 	or die ("--");
 	?>
 <script language="JavaScript">
-      alert("ParteIV concluida!");
-	  window.location.assign("../parte_IV.php");
+      alert("Parte: projetos concluida!");
+	  window.location.assign("../projetos_IV.php");
       </script>
 	<?
 
@@ -236,7 +237,7 @@ if ($_POST[atualizar] == "atualizar")
 										?>
 <script language="JavaScript">
 		alert("Atualizado com sucesso!!");
-		window.location.assign("../parte_IV.php");
+		window.location.assign("../projetos_IV.php");
      </script>
 										<?
 }

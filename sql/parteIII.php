@@ -1,3 +1,4 @@
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?
 session_start();
 include "conexao.php";
@@ -63,24 +64,24 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 0){
 		?>
 		<script language="JavaScript">
-            alert("Retorne para o mapeamento e realize o cadastro!");
-			window.location.assign("../mapeament_o.php");
+            alert("Retorne para a parte responsavel pelo preenchimento e realize o cadastro!");
+			window.location.assign("../responsavelpelopreenchiment_o.php");
             </script>
 		<?
 		 
 	} elseif ($concluido == 1){
 		?>
 		<script language="JavaScript">
-            alert("Retorne para a parteI e realize o cadastro!!");
-			window.location.assign("../parte_I.php");
+		    alert("Retorne para a parte: Identificação da Instituição e realize o cadastro!!");
+			window.location.assign("../identificacaodainstituicao_I.php");
             </script>
 		<?
 
 	} elseif ($concluido == 3){
 		?>
 		<script language="JavaScript">
-            alert("Cadastramento da Parte III já foi realizado!");
-			window.location.assign("../parte_IV.php");
+            alert("Cadastramento da Parte:artistas já foi realizado!");
+			window.location.assign("../projetos_IV.php");
             </script>
 		<?
 
@@ -88,7 +89,7 @@ if ($_POST[avancar] == "avancar") {
 		?>
 		<script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../parte_IV.php");
+			  window.location.assign("../projetos_IV.php");
             </script>
 		<?php
 
@@ -118,8 +119,8 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("ParteIII cadastrada, clique na parte IV para realizar o cadastro!");
-			  window.location.assign("../parte_IV.php");
+			  alert("Parte: artistas cadastrada, clique na parte:projetos para realizar o cadastro!");
+			  window.location.assign("../projetos_IV.php");
 	</script>
 	<?
 }
@@ -167,7 +168,7 @@ if ($_POST[atualizar] == "atualizar")
 										?>
 										<script language="JavaScript">
 										alert("Atualizado com sucesso!!");
-										window.location.assign("../parte_IV.php");
+										window.location.assign("../projetos_IV.php");
 										</script>
 										<?
 

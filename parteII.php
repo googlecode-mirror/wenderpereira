@@ -91,7 +91,7 @@
   <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
     <tr>
       <td align="left" class="formu2"><div align="left">
-        <label><h4><i class="icon-plus-sign"></i> PARTE II</h4></label>
+        <label><h5><i class="icon-plus-sign"></i>PROGRAMAS</h5></label>
         <label><h5>SOBRE  OS PROGRAMAS DE RESIDÊNCIA ARTÍSTICA</h5></label>
         </div>
           <p>Um programa de residências artísticas consiste num conjunto de ações voltadas para o incentivo à experimentação, inovação, pesquisa e criação no campo das artes. Isto se dá, em geral, através do apoio (financeiro ou não) concedido a artistas que, na maior parte das vezes, saem de seu lugar de origem para realizar residências em outras localidades. A instituição pode realizar o programa de residências artísticas por meio de recursos oriundos de outros editais públicos e privados, por meio de seus próprios editais/recursos ou qualquer outra forma de financiamento direto ou indireto. Os programas podem ou não conceder apoio financeiro ao artista, podendo a instituição arcar com parte dos custos ou com a totalidade deles. Os locais de realização das residências variam conforme o programa, podendo abranger desde um município até os mais diferentes países. Os programas podem abranger uma ou mais linguagens artísticas (circo, dança, teatro, artes visuais, música, arte digital, literatura, cinema). Quanto à periodicidade, podem acontecer em períodos pré-estabelecidos, anualmente, semestralmente, etc. 
@@ -125,7 +125,7 @@
 	  <label><input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
       levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de origem do artista
-       ( ênfase na divulgação da arte (não seria difusão ou fruição))</label>
+       ( ênfase na divulgação da arte (não seria difusão ou fruição)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      

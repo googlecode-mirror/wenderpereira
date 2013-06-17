@@ -88,7 +88,7 @@
 <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr >
         <td>
-          <h4><i class="icon-plus-sign"></i> PARTE III</h4>
+          <h4><i class="icon-plus-sign"></i>ARTISTAS</h4>
           
           <label><h5>OS ARTISTAS RESIDENTES</h5></label>
 		</td>

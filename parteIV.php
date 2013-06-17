@@ -106,7 +106,7 @@ include "conexao.php";
     <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr>
         <td>
-      	 <h4><i class="icon-plus-sign"></i> PARTE IV</h4>
+      	 <h4><i class="icon-plus-sign"></i>PROJETOS</h4>
       	   <h5>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</h5>
            <div>
       	   <p>Os artistas contemplados podem realizar diversas ações durante a residência, em diversas linguagens. 

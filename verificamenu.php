@@ -20,71 +20,71 @@
 <?
 if($concluido == -1) {
 		if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}else{
-		header ("location: mapeament_o.php"); 
+		header ("location: responsavelpelopreenchiment_o.php"); 
 		}
 }elseif ($concluido == 0) {
 		if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}elseif($opcao == 0){
-			 header ("location: parte_I.php");
+			 header ("location: identificacaodainstituicao_I.php");
 		}else{
-			header ("location: parte_I.php");
+			header ("location: identificacaodainstituicao_I.php");
 		}
 }elseif ($concluido == 1) {
 		if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}elseif($opcao == 0){
-			 header ("location: parte_I.php");
+			 header ("location: identificacaodainstituicao_I.php");
 		}elseif($opcao == 1){
-			 header ("location: parte_II.php");		
+			 header ("location: programas_II.php");		
 		}else{
-			 header ("location: parte_II.php");	
+			 header ("location: programas_II.php");	
 		}
 }elseif ($concluido == 2) {
 			if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}elseif($opcao == 0){
-			 header ("location: parte_I.php");
+			 header ("location: identificacaodainstituicao_I.php");
 		}elseif($opcao == 1){
-			 header ("location: parte_II.php");		
+			 header ("location: programas_II.php");		
 		}elseif($opcao == 2){
-			 header ("location: parte_III.php");
+			 header ("location: artistas_III.php");
 		}elseif($opcao == 3){
-			 header ("location: parte_III.php");
+			 header ("location: artistas_III.php");
 		}else{
-			 header ("location: parte_III.php");
+			 header ("location: artistas_III.php");
 		}
 }elseif ($concluido == 3) {
 		if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}elseif($opcao == 0){
-			 header ("location: parte_I.php");
+			 header ("location: identificacaodainstituicao_I.php");
 		}elseif($opcao == 1){
-			 header ("location: parte_II.php");		
+			 header ("location: programas_II.php");		
 		}elseif($opcao == 2){
-			 header ("location: parte_III.php");
+			 header ("location: artistas_III.php");
 		}elseif($opcao == 3){
-			 header ("location: parte_IV.php");
+			 header ("location: projetos_IV.php");
 		}else{
-			 header ("location: parte_IV.php");
+			 header ("location: projetos_IV.php");
 		}
 }elseif ($concluido == 4) {
 			if($opcao == -1){
-			 header ("location: mapeament_o.php"); 
+			 header ("location: responsavelpelopreenchiment_o.php"); 
 		}elseif($opcao == 0){
-			 header ("location: parte_I.php");
+			 header ("location: identificacaodainstituicao_I.php");
 		}elseif($opcao == 1){
-			 header ("location: parte_II.php");		
+			 header ("location: programas_II.php");		
 		}elseif($opcao == 2){
-			 header ("location: parte_III.php");
+			 header ("location: artistas_III.php");
 		}elseif($opcao == 3){
-			 header ("location: parte_IV.php");
+			 header ("location: projetos_IV.php");
 		}elseif($opcao == 4){
-			header ("location: parte_IV.php");
+			header ("location: projetos_IV.php");
 		}else{
-			 header ("location: parte_IV.php");
+			 header ("location: projetos_IV.php");
 		}
 }else{
 			
