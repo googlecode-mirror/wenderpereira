@@ -63,12 +63,11 @@
    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
        <tr>
       <th colspan="4" align="left" scope="row">
-        <label><h4><i class="icon-plus-sign"></i> Mapeamento dos Programas  de Residências Artísticas no Brasil</h4></label>
+        <label><h4><i class="icon-plus-sign"></i>Responsável pelo preenchimento das informações:</h4></label>
         <label>
           <h5>Os campos com asterisco* são de preenchimento obrigatório:</h5>
         </label>
-         <label><h5> Responsável pelo preenchimento das informações:</h5></label>
-           </th>
+         </th>
       </tr>
       <tr>
       <th width="160" align="center" scope="row"> <label id="lblnome">Nome*:</label></th>
@@ -83,7 +82,7 @@
        </td>
       </tr>
       <tr>
-      <th align="center" scope="row"><label id="cpf">Cpf:</label></th>
+      <th align="center" scope="row"><label id="cpf">CPF:</label></th>
       <td width="151">
         <input name="txtCpf"  maxlength="14" value="<?php echo $txtCpf;?>" type="text"
         onKeyPress="Mascara('cpf', window.event.keyCode, 'document.form1.txtCpf')";/>
@@ -117,9 +116,7 @@
 			
           </th>
       </tr>
-      <tr>
-      </tr>
-  </table>
+      </table>
         <div class="progress progress-danger">
           <div class="bar" style="width: 8%;">8%concluido</div>
         </div>

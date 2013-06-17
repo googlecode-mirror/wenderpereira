@@ -1,4 +1,5 @@
-  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
   <?
       session_start();
       include "conexao.php";
@@ -30,32 +31,32 @@
 			  } elseif ($concluido == 0){
 			 ?>
              <script language="JavaScript">
-			alert("Cadastramento do mapeamento já foi realizado!");
-			window.location.assign("../parte_I.php");
+			alert("Cadastramento da parte:Responsável pelo preenchimento já foi realizado!");
+			window.location.assign("../identificacaodainstituicao_I.php");
 			 </script>
 			<?php
 				 
 			  } elseif ($concluido == 1){
 			 ?>
              <script language="JavaScript">
-                 alert("Cadastramento da Parte I já foi realizado!");
-                 window.location.assign("../parte_II.php");
+                 alert("Cadastramento da parte:Identificação da Instituição já foi realizado!");
+                 window.location.assign("../programas_II.php");
              </script>
 			<?php			  
 				 
 				} elseif ($concluido == 2){
 			 ?>
              <script language="JavaScript">
-				 alert("Cadastramento da Parte II já foi realizado!");
-				 window.location.assign("../parte_III.php");
+				 alert("Cadastramento da Parte:programas já foi realizado!");
+				 window.location.assign("../artistas_III.php");
 			 </script>
 			<?php
 			 			
 			  } elseif ($concluido == 3){
 			 ?>
              <script language="JavaScript">
-				 alert("Cadastramento da Parte III já foi realizado!");
-				 window.location.assign("../parte_IV.php");
+				 alert("Cadastramento da Parte:artistas já foi realizado!");
+				 window.location.assign("../projetos_IV.php");
 			 </script>
              <?php					  
 				 
@@ -65,14 +66,14 @@
 			 
               <script language="JavaScript">
 				  alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-				  window.location.assign("../parte_IV.php");
+				  window.location.assign("../projetos_IV.php");
 			  </script>
 			<?php 				 
 					}else{
 						//else do teste igual a parte atualizado!
 					  }
 			  }else{
-				   //else do teste se o solicitante clicou em avançar!
+				   //else do teste se o solicitante clicou em avan&ccedil;ar!
 			  }
 			  function inseremapeamento(&$nome,&$cargoInstituicao,&$cpf,&$email,&$telefone,&$Login,&$date,&$hora){
 			  $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
@@ -88,8 +89,8 @@
 			 or die ("--");
 		 ?>
 	  <script language="JavaScript">
-		  alert("parte Mapeamento cadastrada, entre na parte I para realizar o cadastro!");
-		  window.location.assign("../parte_I.php");
+		  alert("parte: responsavel pelo cadastramento cadastrada, entre na parte:Identificação da Instituição para realizar o cadastro!");
+		  window.location.assign("../identificacaodainstituicao_I.php");
 	  </script>
 	  <?
 		}
@@ -109,7 +110,7 @@
 	?>
      <script language="JavaScript">
          alert("Atualizado com sucesso!!");
-         window.location.assign("../parte_I.php");
+         window.location.assign("../identificacaodainstituicao_I.php");
      </script>
 	<?	
 	  }

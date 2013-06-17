@@ -119,8 +119,7 @@
   <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
   <tr>
   <td colspan="2">
-  <h4><i class="icon-plus-sign"></i> PARTE  I</h4>
-  <h5>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </h5>
+  <h5><i class="icon-plus-sign"></i>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </h5>
 
   <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
   </tr>

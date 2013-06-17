@@ -155,7 +155,7 @@
                                 <br />
                                 <br />
                                  A participação da sociedade será, portanto, estratégica. Por isso, a Funarte convida  instituições públicas e privadas, organizações não governamentais, pontos de cultura,
-                                 associações e outras entidades que desenvolvem programas de residência artística para preencher o mapeamento a seguir, até 10 de Setembro de 2013.
+                                 associações e outras entidades que desenvolvem programas de residência artística para preencher o mapeamento a seguir, até 24 de Setembro de 2013.
                                  <br/>                       
                                  
                                  <br/>

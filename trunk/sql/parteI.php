@@ -1,3 +1,4 @@
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?
 session_start();
 include "conexao.php";
@@ -55,24 +56,24 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		} elseif ($concluido == 1){
 			?>
 <script language="JavaScript">
-             alert("Cadastramento da Parte I já foi realizado!");
-			 window.location.assign("../parte_II.php");
+    alert("Cadastramento da Parte: Identificação da Instituição já foi realizado!");
+			 window.location.assign("../programas_II.php");
 	         </script>
 			<?php
 
 		} elseif ($concluido == 2){
 			?>
 <script language="JavaScript">
-             alert("Cadastramento da Parte II já foi realizado!");
-			 window.location.assign("../parte_III.php");
+             alert("Cadastramento da Parte:programas já foi realizado!");
+			 window.location.assign("../artistas_III.php");
              </script>
 			<?php
 
 		} elseif ($concluido == 3){
 			?>
 <script language="JavaScript">
-              alert("Cadastramento da Parte III já foi realizado!");
-			  window.location.assign("../parte_IV.php");
+              alert("Cadastramento da Parte:artistas já foi realizado!");
+			  window.location.assign("../projetos_IV.php");
               </script>
 			<?php
 
@@ -80,7 +81,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 			?>
 <script language="JavaScript">
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../parte_IV.php");
+			  window.location.assign("../projetos_IV.php");
               </script>
 			<?php
 
@@ -120,8 +121,8 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	 or die ("--");
 	 ?>
 <script language="JavaScript">
-	      alert("ParteI cadastrada, clique na parte II para realizar o cadastro!");
-	      window.location.assign("../parte_II.php");
+	      alert("ParteI cadastrada, clique na parte:programas para realizar o cadastro!");
+	      window.location.assign("../programas_II.php");
 	  </script>
 	 <?
 
@@ -166,7 +167,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	   						?>
 <script language="JavaScript">
 	    alert("Atualizado com sucesso!!");
-		window.location.assign("../parte_II.php");
+		window.location.assign("../programas_II.php");
     	</script>
 	   						<?
 	}
