@@ -15,7 +15,7 @@
 					</li>
 					<li><a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>
 					</li>
-					<li><a href="logout.php"><i class="icon-remove"></i>Logout</a>
+					<li><a href="logout.php"><i class="icon-remove"></i>Sair</a>
 					</li>
 				</ul>
 			</div>

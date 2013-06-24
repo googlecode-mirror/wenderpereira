@@ -92,7 +92,7 @@
     <tr>
       <td align="left" class="formu2"><div align="left">
         <label><h5><i class="icon-plus-sign"></i>PROGRAMAS</h5></label>
-        <label><h5>SOBRE  OS PROGRAMAS DE RESIDÊNCIA ARTÍSTICA</h5></label>
+        <label><h5>SOBRE  OS PROGRAMAS DE RESIDÊNCIAS ARTÍSTICAS</h5></label>
         </div>
           <p>Um programa de residências artísticas consiste num conjunto de ações voltadas para o incentivo à experimentação, inovação, pesquisa e criação no campo das artes. Isto se dá, em geral, através do apoio (financeiro ou não) concedido a artistas que, na maior parte das vezes, saem de seu lugar de origem para realizar residências em outras localidades. A instituição pode realizar o programa de residências artísticas por meio de recursos oriundos de outros editais públicos e privados, por meio de seus próprios editais/recursos ou qualquer outra forma de financiamento direto ou indireto. Os programas podem ou não conceder apoio financeiro ao artista, podendo a instituição arcar com parte dos custos ou com a totalidade deles. Os locais de realização das residências variam conforme o programa, podendo abranger desde um município até os mais diferentes países. Os programas podem abranger uma ou mais linguagens artísticas (circo, dança, teatro, artes visuais, música, arte digital, literatura, cinema). Quanto à periodicidade, podem acontecer em períodos pré-estabelecidos, anualmente, semestralmente, etc. 
                   <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
