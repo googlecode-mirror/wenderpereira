@@ -107,46 +107,37 @@
     (marque no máximo os 3  itens de maior importância)*</label> <br />
     <p>
       <label><input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
-      promover o intercâmbio/troca de conhecimentos entre os artistas realizadores do projeto e o público em geral ( ênfase na troca de conhecimentos) </label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Promover o intercâmbio/troca de conhecimentos entre os artistas realizadores do projeto e o público em geral ( ênfase na troca de conhecimentos) </label>
       
       <label><input name="qtd1[]" type="checkbox" value="1b" <? if(in_array("1b", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
-      produção cultural ( ênfase na produção)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Produção cultural ( ênfase na produção)</label>
     
       <label><input name="qtd1[]" type="checkbox" value="1c" <? if(in_array("1c", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      criação artística ( ênfase na criação)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Criação artística ( ênfase na criação)</label>
       
 	  <label><input name="qtd1[]" type="checkbox" value="1d" <? if(in_array("1d", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
-      experimentação e inovação em artes (ênfase na experimentação)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Experimentação e inovação em artes (ênfase na experimentação)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de origem do artista
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Levar a arte e a cultura aos locais de atuação,  promovendo a participação do público e a divulgação da arte de origem do artista
        ( ênfase na divulgação da arte (não seria difusão ou fruição)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      garantir a inclusão social de cidadãos, gerando auto-estima e aguçando o gosto pelas artes no público local contemplado pelas residências
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Garantir a inclusão social de cidadãos, gerando auto-estima e aguçando o gosto pelas artes no público local contemplado pelas residências
        (ênfase na atuação social)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1g" <? if(in_array("1g", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-      promover áreas como a educação patrimonial, a formação de guias, etc. (ênfase na preservação do patrimônio e turismo cultural)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Promover áreas como a educação patrimonial, a formação de guias, etc. (ênfase na preservação do patrimônio e turismo cultural)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1h" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-       fomentar a economia local e novos arranjos produtivos, desenvolvendo as cadeias produtivas dos setores culturais (ênfase na economia da cultura)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/> Fomentar a economia local e novos arranjos produtivos, desenvolvendo as cadeias produtivas dos setores culturais (ênfase na economia da cultura)</label>
       <label> 
 	  <input name="qtd1[]" type="checkbox" value="1i" <? if(in_array("1i", $meuArray)){ echo "checked";}?>
-      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox" />          
-      desenvolvimento e aguçamento das habilidades artísticas (ênfase na excelência da arte)</label>
+      class="validate[maxCheckbox[3],minCheckbox[1]] checkbox" /> Desenvolvimento e aguçamento das habilidades artísticas (ênfase na excelência da arte)</label>
        
 	  <label><input name="qtd1[]" type="checkbox" value="1j" id="idqtd1quais" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" <? if(in_array("1j", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
-       Outros Quais?
+       Outros. Quais?
       <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
     </p>
     <tr>
@@ -168,73 +159,60 @@
     <p>
       <label>
         <input name="qtd3[]" type="checkbox" value="3a" <? if(in_array("3a", $meuArray)){ echo "checked";}?> 
-      class="validate[minCheckbox[1]] checkbox"/>  
-por meio de editais geridos pela própria instituição</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de editais geridos pela própria instituição</label>
      
       <label>
         <input name="qtd3[]" type="checkbox" value="3b" <? if(in_array("3b", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de editais privados geridos pela própria instituição</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de editais privados geridos pela própria instituição</label>
    
       <label>
 		<input name="qtd3[]" type="checkbox" value="3c" <? if(in_array("3c", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de recursos oriundos de editais públicos externos a instituição</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de recursos oriundos de editais públicos externos a instituição</label>
     
       <label>
         <input name="qtd3[]" type="checkbox" value="3d" <? if(in_array("3d", $meuArray)){ echo "checked";}?> 
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de recursos oriundos de editais privados externos a instituição</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de recursos oriundos de editais privados externos a instituição</label>
      
       <label>
 		<input name="qtd3[]" type="checkbox" value="3e" <? if(in_array("3e", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de recursos diretos da própria instituição, não necessariamente editais</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de recursos diretos da própria instituição, não necessariamente editais</label>
       
       <label>
         <input name="qtd3[]" type="checkbox" value="3f" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de fundos públicos de cultura em nível estadual, municipal e federal</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de fundos públicos de cultura em nível estadual, municipal e federal</label>
        
       <label>
 		<input name="qtd3[]" type="checkbox" value="3g" <? if(in_array("3g", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>    
-        por meio de patrocínio, com recursos oriundos de leis de incentivo em nível estadual, federal e municipal</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de patrocínio, com recursos oriundos de leis de incentivo em nível estadual, federal e municipal</label>
        
       <label>
         <input name="qtd3[]" type="checkbox" value="3h" <? if(in_array("3h", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>    
-        por meio de empréstimos junto a instituições financeiras</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de empréstimos junto a instituições financeiras</label>
         
       <label>
 		<input name="qtd3[]" type="checkbox" value="3i" <? if(in_array("3i", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de patrocínio/financiamento direto de entidades privadas</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de patrocínio/financiamento direto de entidades privadas</label>
         
       <label>
 		<input name="qtd3[]" type="checkbox" value="3j" <? if(in_array("3j", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de organizações sociais como SENAC, SEBRAE</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de organizações sociais como SENAC, SEBRAE</label>
         
       <label>
 		<input name="qtd3[]" type="checkbox" value="3k" <? if(in_array("3k", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por intermédio do programa Cultura Viva</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por intermédio do programa Cultura Viva</label>
        
       <label>
 		<input name="qtd3[]" type="checkbox" value="3l" <? if(in_array("3l", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de recursos oriundos de órgãos internacionais como OEA, UNESCO</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de recursos oriundos de órgãos internacionais como OEA, UNESCO</label>
        
       <label>
 		<input name="qtd3[]" type="checkbox" value="3m" <? if(in_array("3m", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        por meio de Organizações não – governamentais (ONGs)</label>
+      class="validate[minCheckbox[1]] checkbox"/> Por meio de Organizações não – governamentais (ONGs)</label>
        
       <label>
 		<input name="qtd3[]" type="checkbox" value="3n" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3n", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        Outros Quais?
+        Outros. Quais?
       <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[optional,minSize[2]]" type="text" /> </label>
     </p>
     </div>
@@ -292,10 +270,6 @@ por meio de editais geridos pela própria instituição</label>
       class="validate[minCheckbox[1]] checkbox"/>  
       Região Sudeste</label>
        
-   	  <label><input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      Região Sudeste</label>
-            
       </td>
     </tr>
     <tr>
@@ -315,8 +289,8 @@ por meio de editais geridos pela própria instituição</label>
     </tr>
     <tr><td align="left" class="formu2">
       <div>
-    <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências?
-     (marque quantos itens julgar necessário):</label>
+    <label>•	Em caso de abrangência internacional, quais os continentes/ subcontinentes / blocos regionais são locais potenciais de realização das residências
+     (marque quantos itens julgar necessário)?*</label>
     <p>
       <label><input name="qtd7[]" type="checkbox" value="7a" <? if(in_array("7a", $meuArray)){ echo "checked";}?>/>
       América do Sul</label>
@@ -339,20 +313,15 @@ por meio de editais geridos pela própria instituição</label>
       <label><input name="qtd7[]" type="checkbox" value="7g" <? if(in_array("7g", $meuArray)){ echo "checked";}?>/>
       Oceania</label>
        
-      <label><input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>/>
-      países Ibero-Americanos</label>
+      <label><input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>/> Países Ibero-Americanos</label>
        
-      <label><input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>/>
-      países da União Europeia</label>
+      <label><input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>/> Países da União Europeia</label>
       
-      <label><input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>/>
-      países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
+      <label><input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>/> Países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
       
-      <label><input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/>
-      em nível mundial, englobando todos os continentes</label>
+      <label><input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/> Em nível mundial, englobando todos os continentes</label>
       
-      <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>
-      em acordo bilateral, no caso de apenas um outro país: Qual?
+      <label><input name="qtd7[]" type="checkbox" value="7l" id="idqtd7quais" onClick="javascript: textBoxClearSelecao('#idqtd7quais', '#qtd7quais');" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/> Em acordo bilateral, no caso de apenas um outro país: qual?
       <input name="qtd7quais" id="qtd7quais" value="<?php echo $meuArray1['qtd7'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
     </p>
   </div>
@@ -360,7 +329,7 @@ por meio de editais geridos pela própria instituição</label>
     </tr>
     <tr><td align="left" class="formu2">
     <div>
-    <label>• Aponte em quais anos ocorreram programas em residências artísticas* (marque quantos itens julgar necessário)</label>
+    <label>• Aponte em quais anos ocorreram programas em residências artísticas (marque quantos itens julgar necessário)*</label>
       
       <label>
 	  <input name="qtd8[]" type="checkbox" value="8a" id="idqtd8quais" onClick="javascript: textBoxClearSelecao('#idqtd8quais', '#qtd8Quais');" <? if(in_array("8a", $meuArray)){ echo "checked";}?>
@@ -409,23 +378,19 @@ por meio de editais geridos pela própria instituição</label>
     
        <label>
        <input type="radio" name="qtd9" <? if(in_array("9a", $meuArray)){ echo "checked";}?> value="9a" 
-       class="validate[required] radio" />
-       houve o programa  apenas uma vez, não tendo data para ocorrer novamente</label>
+       class="validate[required] radio" /> Houve o programa  apenas uma vez, não tendo data para ocorrer novamente</label>
        
       <label>
 	  <input type="radio" name="qtd9" <? if(in_array("9b", $meuArray)){ echo "checked";}?> value="9b" 
-      class="validate[required] radio" />
-        houve o programa apenas uma vez, porém já foi definida uma data para ocorrer novamente</label>
+      class="validate[required] radio" /> Houve o programa apenas uma vez, porém já foi definida uma data para ocorrer novamente</label>
       
       <label>
 	   <input type="radio" name="qtd9" <? if(in_array("9c", $meuArray)){ echo "checked";}?> value="9c" 
-       class="validate[required] radio" />
-       os programas aconteceram mais de uma vez, porém não tiveram periodicidade definida</label>
+       class="validate[required] radio" /> Os programas aconteceram mais de uma vez, porém não tiveram periodicidade definida</label>
       
       <label>
         <input type="radio" name="qtd9" <? if(in_array("9d", $meuArray)){ echo "checked";}?> value="9d" 
-        class="validate[required] radio" />
-        os programas aconteceram mais de uma vez e tiveram periodicidade definida</label>
+        class="validate[required] radio" /> Os programas aconteceram mais de uma vez e tiveram periodicidade definida</label>
   </div>
     </td>
     </tr>
@@ -435,30 +400,26 @@ por meio de editais geridos pela própria instituição</label>
     <p>
       <label>
         <input type="radio" name="qtd10" <? if(in_array("10a", $meuArray)){ echo "checked";}?> value="10a" 
-        class="validate[required] radio" />
-      ocorrem uma vez a cada três anos ou mais</label>
+        class="validate[required] radio" /> Ocorrem uma vez a cada três anos ou mais</label>
      
         <label>
 		<input type="radio" name="qtd10" <? if(in_array("10b", $meuArray)){ echo "checked";}?> value="10b" 
-        class="validate[required] radio" />
-        ocorrem uma vez a cada dois anos</label>
+        class="validate[required] radio" /> Ocorrem uma vez a cada dois anos</label>
       
       <label>
 		<input type="radio" name="qtd10" <? if(in_array("10c", $meuArray)){ echo "checked";}?> value="10c" 
-        class="validate[required] radio" />
-        são anuais</label>
+        class="validate[required] radio" /> São anuais</label>
 
       <label>
 		<input type="radio" name="qtd10" <? if(in_array("10d", $meuArray)){ echo "checked";}?> value="10d" 
-        class="validate[required] radio" />
-        são semestrais ou em um período inferior (a cada três meses, dois, etc.)</label>
+        class="validate[required] radio" /> São semestrais ou em um período inferior (a cada três meses, dois, etc.)</label>
         
   </div>
     </td>
     </tr>
     <tr><td align="left" class="formu2">
     <div>
-    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?(marque apenas 1 item)*
+    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista (marque apenas 1 item)• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista (marque apenas 1 item)*?
     </label>
     
         <label>
@@ -476,43 +437,39 @@ por meio de editais geridos pela própria instituição</label>
     </tr>
     <tr><td align="left" class="formu2">
     <div>
-    <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?</label>
-    
-      <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12a", $meuArray)){ echo "checked";}?> value="12a" 
+    <label>• Qual o valor gasto, em média, no total de cada programa realizado em residências artísticas (marque apenas 1 item)*?', '#qtd12Quais');" <? if(in_array("12a", $meuArray)){ echo "checked";}?> value="12a" 
       class="validate[required] radio" />
       não há valor dispendido para apoio financeiro ao artista</label>
      
+      <label><input type="radio" nam Não há valor dispendido para apoio financeiro ao artista</label>
+     
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12b", $meuArray)){ echo "checked";}?> value="12b" 
-      class="validate[required] radio" />
-      até 100.000 reais</label>
+      class="validate[required] radio" /> Até R$ 100.000 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12c", $meuArray)){ echo "checked";}?> value="12c" 
-      class="validate[required] radio" />
-        acima de 100.000 reais até 200.000 reais</label>
+      class="validate[required] radio" /> Acima de R$ 100.000 reais até R$ 200.000 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12d", $meuArray)){ echo "checked";}?> value="12d" 
-      class="validate[required] radio" />
-      acima de 200.000 reais até 400.000 reais</label>
+      class="validate[required] radio" /> Acima de R$ 200.000 reais até R$ 400.000 reais</label>
        
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12e", $meuArray)){ echo "checked";}?> value="12e" 
-      class="validate[required] radio" />
-        acima de 400.000 reais até 600.000 reais</label>
+      class="validate[required] radio" /> Acima de R$ 400.000 reais até R$ 600.000 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12f", $meuArray)){ echo "checked";}?> value="12f" 
       class="validate[required] radio" />
-        acima de 600.000 reais até 1.000.000 de reais</label>
+        acima de R$ 600.000 reais até R$ 1.000.000 de reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12g", $meuArray)){ echo "checked";}?> value="12g" 
       class="validate[required] radio" />
-        acima de 1.000.000 de reais até 2.000.000 reais</label>
+        acima de R$ 1.000.000 de reais até R$ 2.000.000 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12h", $meuArray)){ echo "checked";}?> value="12h" 
       class="validate[required] radio" />
-        acima de 2.000.000 reais até 5.000.000 reais</label>
+        acima de R$ 2.000.000 reais até R$ 5.000.000 reais</label>
       
       <label><input type="radio" name="qtd12" id="idqtd12quais" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
       class="validate[required] radio" />
-        acima de 5.000.000 de reais Qual valor?
+        acima de R$ 5.000.000 de reais Qual valor?
       <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[optional,minSize[2]]" type="text" /></label>
       
       </div>
@@ -521,49 +478,46 @@ por meio de editais geridos pela própria instituição</label>
       <tr><td height="27" align="left" class="formu2">
       <div>
       <label>• Qual o apoio financeiro concedido (em reais) para que cada artista realize a ação?
-     (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*:</label>
+     (marque mais de 1 item em caso de diferentes valores concedidos em cada programa realizado)*</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13a" <? if(in_array("13a", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      até R$ 500,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Até R$ 500,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13b" <? if(in_array("13b", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 500,00 até R$ 1.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 500,00 até R$ 1.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13c" <? if(in_array("13c", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 1.000,00 até R$ 2.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 1.000,00 até R$ 2.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13d" <? if(in_array("13d", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 2.000,00  até R$ 3.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 2.000,00  até R$ 3.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13e" <? if(in_array("13e", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 3.000,00 até R$ 5.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 3.000,00 até R$ 5.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13f" <? if(in_array("13f", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        acima de  R$ 5.000,00 até R$ 8.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de  R$ 5.000,00 até R$ 8.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13g" <? if(in_array("13g", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 10.000,00  até R$ 20.000,00 </label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 10.000,00  até R$ 20.000,00 </label>
       
       <label><input name="qtd13[]" type="checkbox" value="13h" <? if(in_array("13h", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        acima de R$ 20.000,00</label>
+      class="validate[minCheckbox[1]] checkbox"/> Acima de R$ 20.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13i" <? if(in_array("13i", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-        não há valor concedido, pois a própria  instituição é responsável por diversos itens para a realização da residência ( passagens, traslados, hospedagem, etc)</label>
+      class="validate[minCheckbox[1]] checkbox"/> Não há valor concedido, pois a própria  instituição é responsável por diversos itens para a realização da residência ( passagens, traslados, hospedagem, etc)</label>
     </div>
     </td>
     </tr>
     <tr><td align="left" class="formu2">
     <div>
-    <label>• O valor concedido já é deduzido do imposto de renda devido*?  (marque apenas 1 item):</label>
+    <label>• O valor concedido já é deduzido do imposto de r
+    </div>
+    </td>
+    </tr>
+    <tr><td align="left" class="formu2">
+    <div>
+    <label>• O valor concedido já é deduzido do imposto de renda devido  (marque apenas 1 item)*?</label>
     
       <label><input type="radio" name="qtd14" <? if(in_array("14a", $meuArray)){ echo "checked";}?> value="14a" 
       class="validate[required] radio" />
@@ -583,55 +537,45 @@ por meio de editais geridos pela própria instituição</label>
   
     <tr><td align="left" class="formu2">
     <div>
-    <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário*)</label>
-    
-     <label><input name="qtd15[]" type="checkbox" value="15a" <? if(in_array("15a", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      a instituição não arcará com nenhum dos custos, estando todos inclusos na concessão da(o) bolsa/prêmio</label>
+    <label>• Em caso de não estarem incluídos no valor concedido, a instituição arcará com quais dos itens abaixo ( marque quantos itens julgar necessário*)concessão da(o) bolsa/prêmio</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15b" <? if(in_array("15b", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      aluguel/ ocupação do espaço onde será realizada a ação</label>
+      class="valid A instituição não arcará com nenhum dos custos, estando todos inclusos na concessão da(o) bolsa/prêmio</label>
+      
+      <label><input name="qtd15[]" type="checkbox" value="15b" <? if(in_array("15b", $meuArray)){ echo "checked";}?>
+      class="validate[minCheckbox[1]] checkbox"/> Aluguel/ ocupação do espaço onde será realizada a ação</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15c" <? if(in_array("15c", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      custo do projeto</label>
+      class="validate[minCheckbox[1]] checkbox"/> Custo do projeto</label>
         
       <label><input name="qtd15[]" type="checkbox" value="15d" <? if(in_array("15d", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      alimentação</label>
+      class="validate[minCheckbox[1]] checkbox"/> Alimentação</label>
        
       <label><input name="qtd15[]" type="checkbox" value="15e" <? if(in_array("15e", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      transporte aéreo e/ou terrestre</label>
+      class="validate[minCheckbox[1]] checkbox"/> Transporte aéreo e/ou terrestre</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15f" <? if(in_array("15f", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      suporte logístico</label>
+      class="validate[minCheckbox[1]] checkbox"/> Suporte logístico</label>
        
       <label><input name="qtd15[]" type="checkbox" value="15g" <? if(in_array("15g", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      aquisição de materiais</label>
+      class="validate[minCheckbox[1]] checkbox"/> Aquisição de materiais</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15h" <? if(in_array("15h", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      contratação de pessoal</label>
+      class="validate[minCheckbox[1]] checkbox"/> Contratação de pessoal</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15i" <? if(in_array("15i", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      aluguel de equipamentos necessários</label>
+      class="validate[minCheckbox[1]] checkbox"/> luguel de equipamentos necessários</label>
+      
+      <label><input name="qtd15[]" type="checkbo Aluguel de equipamentos necessários</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15j" <? if(in_array("15j", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      divulgação</label>
+      class="validate[minCheckbox[1]] checkbox"/> Divulgação</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15k" <? if(in_array("15k", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      frete</label>
+      class="validate[minCheckbox[1]] checkbox"/> Frete</label>
       
       <label><input name="qtd15[]" type="checkbox" value="15l" <? if(in_array("15l", $meuArray)){ echo "checked";}?>
-      class="validate[minCheckbox[1]] checkbox"/>  
-      seguro de obras artísticas</label>
+      class="validate[minCheckbox[1]] checkbox"/> Seguro de obras artísticas</label>
 
   </div>
     </td>
@@ -639,9 +583,7 @@ por meio de editais geridos pela própria instituição</label>
     <tr>
     <td align="center" class="formu2">
    <div align="center">
-       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
+       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizarutton>
     </div>
     </td>
     </tr>
