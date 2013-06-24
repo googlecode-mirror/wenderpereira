@@ -158,7 +158,7 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("Parte:programas cadastrada, clique na parte:artistas para realizar o cadastro!");
+			  alert("Dados cadastrados com sucesso. Próxima etapa: Artistas.");
 			  window.location.assign("../artistas_III.php");
 	</script>
 	<?
@@ -186,10 +186,10 @@ if ($_POST[atualizar] == "atualizar")
 	foreach($_checkbox as $_valor){
 		insere($_valor,$Login,$date,$hora);
 	}
-	$_checkbox = $_POST['qtd5'];
-	foreach($_checkbox as $_valor){
-		insere($_valor,$Login,$date,$hora);
-	}
+	//$_checkbox = $_POST['qtd5'];
+	//foreach($_checkbox as $_valor){
+		//insere($_valor,$Login,$date,$hora);
+	//}
 	$_checkbox = $_POST['qtd7'];
 	foreach($_checkbox as $_valor){
 		insere($_valor,$Login,$date,$hora);

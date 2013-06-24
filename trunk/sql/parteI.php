@@ -121,7 +121,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	 or die ("--");
 	 ?>
 <script language="JavaScript">
-	      alert("ParteI cadastrada, clique na parte:programas para realizar o cadastro!");
+    alert("Dados cadastrados com sucesso. Próxima etapa: Programas.");
 	      window.location.assign("../programas_II.php");
 	  </script>
 	 <?
