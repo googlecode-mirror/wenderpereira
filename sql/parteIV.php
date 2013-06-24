@@ -4,19 +4,19 @@ session_start();
 include "conexao.php";
 connect();
 $Login  =  trim($_SESSION["login"]);
-$conluido =  $_SESSION["concluido"]; //recebe da sess„o o andamento da pesquisa
+$conluido =  $_SESSION["concluido"]; //recebe da sess√£o o andamento da pesquisa
 $date = date("d/m/y");
 $hora = date("H:i");
 
 //----------------------------
-// confirma se o form j· foi preenchido
+// confirma se o form j√° foi preenchido
 $sql = "select * from usuarios where login='$Login'";
 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 while ($array_exibir = mysql_fetch_array($Resultado))
 {
 	$_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
 }
-// inserindo informaÁoes
+// inserindo informa√ßoes
 $questao5Quais = $_POST[qtd5quais];
 $decs1 = $_POST[dec1];
 $decs2 = $_POST[dec2];
@@ -107,7 +107,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 1){
 		?>
 <script language="JavaScript">
-    alert("Retorne para a parte:IdentificaÁ„o da InstituiÁ„o e realize o cadastro!!");
+    alert("Retorne para a parte:Identifica√ß√£o da Institui√ß√£o e realize o cadastro!!");
 			window.location.assign("../identificacaodainstituicao_I.php");
             </script>
 		<?
@@ -122,9 +122,9 @@ if ($_POST[avancar] == "avancar") {
 
 	} elseif ($concluido == 4){
 		?>
-<script language="JavaScript">
-              alert("O cadatro j· foi concluÌdo, caso queira atualizar clique na parte que desejada atualizar!");
-			  window.location.assign("../projetos_IV.php");
+            <script language="JavaScript">
+                alert("O cadatro j√° foi conclu√≠do, caso queira atualizar clique na parte que desejada atualizar!");
+                window.location.assign("../projetos_IV.php");
             </script>
 		<?
 			
@@ -132,9 +132,9 @@ if ($_POST[avancar] == "avancar") {
 		//else do teste igual a parte atualizado!
 	}
 }else{
-	//else do teste se o solicitante clicou em avanÁar!
+	//else do teste se o solicitante clicou em avan√ßar!
 }
-//funÁ„o insere---------------------------------------------
+//fun√ß√£o insere---------------------------------------------
 function insere(&$resposta1,&$usuario,&$date,&$hora) {
 
 	$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)

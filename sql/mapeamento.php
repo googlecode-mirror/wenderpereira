@@ -89,7 +89,7 @@
 			 or die ("--");
 		 ?>
 	  <script language="JavaScript">
-		  alert("parte: responsavel pelo cadastramento cadastrada, entre na parte:Identificação da Instituição para realizar o cadastro!");
+	      alert("Dados cadastrados com sucesso. Próxima etapa: Identificação da Instituição.");
 		  window.location.assign("../identificacaodainstituicao_I.php");
 	  </script>
 	  <?

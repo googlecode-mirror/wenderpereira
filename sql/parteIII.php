@@ -119,7 +119,7 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("Parte: artistas cadastrada, clique na parte:projetos para realizar o cadastro!");
+			  alert("Dados cadastrados com sucesso. Próxima etapa Projetos.");
 			  window.location.assign("../projetos_IV.php");
 	</script>
 	<?
