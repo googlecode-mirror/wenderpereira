@@ -291,7 +291,7 @@ Sim</label>
   <br/>
   <input type="radio" name="qtd3" <? if(in_array("3k", $meuArray)){ echo "checked";}?> 
   value="3k" id="qtd3quais1" class="validate[required] radio" />
-  Outras Quais?</label>
+  Outras. Quais?</label>
   <input name="qtd3quais" type="text" id="qtd3quais"  class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd3'];?>" />
   <br/>
   </p>
@@ -305,7 +305,7 @@ Sim</label>
   <tr>
   <td colspan="2" align="left" class="formu2">
   <div align="left">
-  <label>• A instituição atua somente na área cultural? (marque apenas 1 item)*:</label>
+  <label>• A instituição atua somente na área cultural (marque apenas 1 item)*?</label>
 
   <label>
   <input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a" class="validate[required] radio" />
@@ -324,30 +324,23 @@ Sim</label>
   <tr>
   <td colspan="2" align="left" class="formu2">
   <div align="left">
-  <label>• Qual a fonte de recursos da instituição (marque quantos itens julgar necessário)*:</label>
+  <label>• Qual a fonte de recursos da instituição. (marque quantos itens julgar necessário)*</label>
   <br />
   <label><input name="qtd5[]" type="checkbox" value="5a" <? if (in_array("5a", $meuArray)){ echo "checked";}?> 
-  class="validate[minCheckbox[1]] checkbox"/> 
-  orçamento próprio</label>
+  class="validate[minCheckbox[1]] checkbox"/> Orçamento próprio</label>
 
-  <label><input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  transferências governamentais </label>
+  <label><input name="qtd5[]" type="checkbox" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Transferências governamentais </label>
 
   <label>
-  <input name="qtd5[]" type="checkbox" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-    fundos: municipais, estaduais e federais </label>
+  <input name="qtd5[]" type="checkbox" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Fundos: municipais, estaduais e federais </label>
   <label>
-  <input name="qtd5[]" type="checkbox" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-    patrocínio/ financiamento privado </label>
+  <input name="qtd5[]" type="checkbox" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Patrocínio/ financiamento privado </label>
   <label>
-  <input name="qtd5[]" type="checkbox" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  recursos internacionais </label>
+  <input name="qtd5[]" type="checkbox" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Recursos internacionais </label>
   <label>
-  <input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
- doações/ ajudas externas </label>
+  <input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Doações/ ajudas externas </label>
   <label>
-  <input name="qtd5[]" type="checkbox" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/>
-  outros </label>
+  <input name="qtd5[]" type="checkbox" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?> class="validate[minCheckbox[1]] checkbox"/> Outros </label>
   <br/>
   </div>
   </td>
@@ -357,28 +350,26 @@ Sim</label>
   <div align="left">
   <label> •	Qual o tamanho aproximado da instituição em termos de número de funcionários (marque apenas 1 item)*:</label>
   <label>
-  <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" class="validate[required] radio" />
-  pequeno porte ( até 5 funcionários)</label>
+  <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" class="validate[required] radio" /> Pequeno porte ( até 5 funcionários)</label>
   <label>
-  <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b" class="validate[required] radio" />
-  pequeno-médio porte ( de 6 a 20 funcionários)</label>
+  <input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b" class="validate[required] radio" /> Pequeno-médio porte ( de 6 a 20 funcionários)</label>
   <label>
-  <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c" class="validate[required] radio" />
-  médio porte ( de 21 até 50 funcionários)</label>
+  <input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c" class="validate[required] radio" /> Médio porte ( de 21 até 50 funcionários)</label>
   <label>
-  <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d" class="validate[required] radio" />
-  médio-grande porte ( de 51 até 200 funcionários)</label>
+  <input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d" class="validate[required] radio" /> Médio-grande porte ( de 51 até 200 funcionários)</label>
   <label>
   <input type="radio" name="qtd6" <? if(in_array("6e", $meuArray)){ echo "checked";}?> value="6e" class="validate[required] radio" />
   grande porte ( acima de 200 funcionários)</label>
+  </div>
+  </td>
+  </ Grande porte ( acima de 200 funcionários)</label>
   </div>
   </td>
   </tr>
   <tr>
   <td colspan="2" align="center" class="formu2">
    <div align="center">
-       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
     </div>
   </td>

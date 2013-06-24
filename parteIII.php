@@ -112,29 +112,21 @@
       <div>
        <label>Quantos artistas foram apoiados em média ao ano?</label>
          
-          <label><input type="radio" name="qtd1" <? if(in_array("1a", $meuArray)){ echo "checked";}?> value="1a" class="radio" />
-          até 5 artistas</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1a", $meuArray)){ echo "checked";}?> value="1a" class="radio" /> Até 5 artistas</label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1b", $meuArray)){ echo "checked";}?> value="1b" class="radio" />
-          acima de 5  até 10</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1b", $meuArray)){ echo "checked";}?> value="1b" class="radio" /> Acima de 5  até 10</label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1c", $meuArray)){ echo "checked";}?> value="1c" class="radio" />
-          acima de 11  até 20</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1c", $meuArray)){ echo "checked";}?> value="1c" class="radio" /> Acima de 11  até 20</label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1d", $meuArray)){ echo "checked";}?> value="1d" class="radio" />
-          acima de 21  até 30 </label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1d", $meuArray)){ echo "checked";}?> value="1d" class="radio" /> Acima de 21  até 30 </label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1e", $meuArray)){ echo "checked";}?> value="1e" class="radio" />
-          acima de 31 até 50</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1e", $meuArray)){ echo "checked";}?> value="1e" class="radio" /> Acima de 31 até 50</label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1f", $meuArray)){ echo "checked";}?> value="1f" class="radio" />
-          acima de 51 até 80</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1f", $meuArray)){ echo "checked";}?> value="1f" class="radio" /> Acima de 51 até 80</label>
           
-          <label> <input type="radio" name="qtd1" <? if(in_array("1g", $meuArray)){ echo "checked";}?> value="1g" class="radio" />
-          acima de 81 até 120 </label>
+          <label> <input type="radio" name="qtd1" <? if(in_array("1g", $meuArray)){ echo "checked";}?> value="1g" class="radio" /> Acima de 81 até 120 </label>
           
-          <label><input type="radio" name="qtd1" <? if(in_array("1h", $meuArray)){ echo "checked";}?> value="1h" class="radio" />
-          acima de 120 artistas</label>
+          <label><input type="radio" name="qtd1" <? if(in_array("1h", $meuArray)){ echo "checked";}?> value="1h" class="radio" /> Acima de 120 artistas</label>
         
       </div>
       </td>
@@ -165,36 +157,28 @@
         <label>Qual o período de duração da residência (marque apenas 1 item)* ?</label>
         
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3a", $meuArray)){ echo "checked";}?> value="3a" 
-            class="validate[required] radio" />
-            até 20 dias</label>
+            class="validate[required] radio" /> Até 20 dias</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3b", $meuArray)){ echo "checked";}?> value="3b" 
-            class="validate[required] radio" />            
-            de 21 até 30 dias ( cerca de um mês)</label>
+            class="validate[required] radio" /> De 21 até 30 dias ( cerca de um mês)</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3c", $meuArray)){ echo "checked";}?> value="3c"
-            class="validate[required] radio" />            
-            de 31 até 60 dias ( cerca de dois meses)</label>
+            class="validate[required] radio" /> De 31 até 60 dias ( cerca de dois meses)</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3d", $meuArray)){ echo "checked";}?> value="3d"
-            class="validate[required] radio" />            
-            de 61 até 90 dias ( cerca de três meses)</label>
+            class="validate[required] radio" /> De 61 até 90 dias ( cerca de três meses)</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3e", $meuArray)){ echo "checked";}?> value="3e"
-            class="validate[required] radio" />            
-            de 91 até 180 dias ( cerca de seis meses)</label>
+            class="validate[required] radio" /> De 91 até 180 dias ( cerca de seis meses)</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3f", $meuArray)){ echo "checked";}?> value="3f"
-            class="validate[required] radio" />            
-            de 181 até 365 dias ( cerca de um ano)</label>
+            class="validate[required] radio" /> De 181 até 365 dias ( cerca de um ano)</label>
             
             <label><input type="radio" name="qtd3" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3g", $meuArray)){ echo "checked";}?> value="3g"
-            class="validate[required] radio" />            
-             de 1 ano até 2 anos</label>
+            class="validate[required] radio" /> De 1 ano até 2 anos</label>
             
             <label><input type="radio" name="qtd3" id="idqtd3quais" <? if(in_array("3h", $meuArray)){ echo "checked";}?> value="3h"
-            class="validate[required] radio" />            
-            acima de 2 anos Qual período?
+            class="validate[required] radio" /> Acima de 2 anos Qual período?
             <input name="qtd3quais" id="qtd3quais" class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd3'];?>" type="text" /> </label>
             
 	  </div>
@@ -206,16 +190,13 @@
       <label>Em relação à nacionalidade dos artistas contemplados(marque apenas 1 item)?*</label>
       
       <label><input type="radio" name="qtd4" <? if(in_array("4a", $meuArray)){ echo "checked";}?> value="4a"
-      class="validate[required] radio" />      
-      apenas brasileiros</label>
+      class="validate[required] radio" /> Apenas brasileiros</label>
       
       <label><input type="radio" name="qtd4" <? if(in_array("4b", $meuArray)){ echo "checked";}?> value="4b"
-      class="validate[required] radio" />      
-        apenas estrangeiros</label>
+      class="validate[required] radio" /> Apenas estrangeiros</label>
       
       <label><input type="radio" name="qtd4" <? if(in_array("4c", $meuArray)){ echo "checked";}?> value="4c"
-      class="validate[required] radio" />      
-        ambos</label>
+      class="validate[required] radio" /> Ambos</label>
     
     </div>
         </td>
@@ -244,20 +225,16 @@
          artistas brasileiros no exterior que podem ser contemplados pelos programas(marque apenas 1 item)*</label>
         
          <label><input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a"
-   	      class="validate[required] radio" />          
-          não há residências em nível internacional</label>
+   	      class="validate[required] radio" /> Não há residências em nível internacional</label>
           
           <label><input type="radio" name="qtd6" <? if(in_array("6b", $meuArray)){ echo "checked";}?> value="6b"
-   	      class="validate[required] radio" />                      
-          o artista estrangeiro pode ser contemplado para vir fazer residência no Brasil</label>
+   	      class="validate[required] radio" /> O artista estrangeiro pode ser contemplado para vir fazer residência no Brasil</label>
           
           <label><input type="radio" name="qtd6" <? if(in_array("6c", $meuArray)){ echo "checked";}?> value="6c"
-   	      class="validate[required] radio" />                      
-          o artista brasileiro pode ser contemplado para fazer residência no exterior</label>
+   	      class="validate[required] radio" /> O artista brasileiro pode ser contemplado para fazer residência no exterior</label>
           
           <label><input type="radio" name="qtd6" <? if(in_array("6d", $meuArray)){ echo "checked";}?> value="6d"
-   	      class="validate[required] radio" />                      
-          o artista brasileiro pode fazer residência no exterior e o artista estrangeiro fazer residência no Brasil</label>
+   	      class="validate[required] radio" /> O artista brasileiro pode fazer residência no exterior e o artista estrangeiro fazer residência no Brasil</label>
           
         </div>   
         </td>
@@ -289,20 +266,15 @@
 	  	  <label><input name="qtd7[]" type="checkbox" value="7g" <? if(in_array("7g", $meuArray)){ echo "checked";}?>/>	 
           Oceania</label>
           
-	  	  <label><input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>/>	
-          países Ibero-Americanos</label>
+	  	  <label><input name="qtd7[]" type="checkbox" value="7h" <? if(in_array("7h", $meuArray)){ echo "checked";}?>/> Países Ibero-Americanos</label>
           
-	  	  <label><input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>/>	 
-          países da União Europeia</label>
+	  	  <label><input name="qtd7[]" type="checkbox" value="7i" <? if(in_array("7i", $meuArray)){ echo "checked";}?>/> Países da União Europeia</label>
           
-	  	  <label><input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>/>	
-          países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
+	  	  <label><input name="qtd7[]" type="checkbox" value="7j" <? if(in_array("7j", $meuArray)){ echo "checked";}?>/> Países do MERCOSUL- Argentina, Uruguai, e Paraguai</label>
           
-	  	  <label><input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/>	
-          em nível mundial, englobando todos os continentes</label>
+	  	  <label><input name="qtd7[]" type="checkbox" value="7k" <? if(in_array("7k", $meuArray)){ echo "checked";}?>/> Em nível mundial, englobando todos os continentes</label>
           
-	  	  <label><input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/>	
-          em acordo bilateral, no caso de apenas um outro país.
+	  	  <label><input name="qtd7[]" type="checkbox" value="7l" <? if(in_array("7l", $meuArray)){ echo "checked";}?>/> Em acordo bilateral, no caso de apenas um outro país.
           Qual?
           
           <input name="qtd7quais" id="qtd7quais" class="validate[optional,minSize[2]]" value="<?php echo $meuArray1['qtd7'];?>" type="text" />
