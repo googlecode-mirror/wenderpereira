@@ -145,20 +145,15 @@
                           </div>
                           <div class="modal-body">
                                  <p class="ui-dialog"> 
-                                     Em 2012, a Fundação Nacional de Artes realizou, em parceria com a Secretaria da Cidadania e da Diversidade Cultural do Ministério da Cultura,
-                                 o II Encontro Funarte de Políticas para as Artes que teve como foco de discussão as Interações Estéticas em Rede. Durante o evento, temas importantes
-                                 para a construção das políticas públicas para as artes foram abordados, entre eles o lugar das ocupações artísticas na difusão cultural, o papel das
-                                 redes na produção cultural, e trânsitos: deslocamentos e residências.
-                                 Assim, como um dos desdobramentos do II Encontro, a Funarte, através do Centro de Programas Integrados <abbr title="Centro de Programas Integrados">(Cepin)</abbr>, lança o Mapeamento das Residências Artísticas no Brasil.
-                                 Esta ação será fundamental para o conhecimento, análise e formulação de pesquisas que servirão de instrumento para a construção das políticas públicas
-                                 de fomento ao campo das residências artísticas em nosso país.
+                                Até o próximo dia 24 de setembro de 2013, a Fundação Nacional de Artes, através do Centro de Programas Integrados <abbr title="Centro de Programas Integrados">(Cepin)</abbr>,está realizando o Mapeamento das Residências Artísticas no Brasil, ação fundamental para o conhecimento, análise e formulação de pesquisas que servirão de instrumento para a construção das políticas públicas de fomento ao campo das residências artísticas em nosso país. 
                                 <br />
                                 <br />
-                                 A participação da sociedade será, portanto, estratégica. Por isso, a Funarte convida  instituições públicas e privadas, organizações não governamentais, pontos de cultura,
-                                 associações e outras entidades que desenvolvem programas de residência artística para preencher o mapeamento a seguir, até 24 de Setembro de 2013.
-                                 <br/>                       
-                                 
-                                 <br/>
+                                 A realização deste Mapeamento é um dos desdobramentos do II Encontro Funarte de Políticas para as Artes, realizado em 2012 pela Funarte em parceria com a Secretaria da Cidadania e da Diversidade Cultural do Ministério da Cultura, que teve como foco de discussão as Interações Estéticas em Rede. Durante o evento, temas importantes para a construção das políticas públicas para as artes foram abordados, entre eles “O lugar das ocupações artísticas na difusão cultural”, “O papel das redes na produção cultural”, e “Trânsitos: deslocamentos e residências”. 
+                                <br/>                       
+                                <br/>
+                                 A Funarte convida instituições públicas e privadas, organizações não governamentais, pontos de cultura, associações e outras entidades que desenvolvem programas de residência artística para preencher o mapeamento a seguir. 
+                                <br/>                       
+                                <br/>
 								<button type="button" class="close" data-dismiss="modal">Preencha o MAPEAMENTO AQUI.</button>
                               </p>
                              </div>

@@ -72,31 +72,18 @@
         <div class="row-fluid">
        <dl>
         <dt>Instruções para cadastramento:</dt>
-        <dt>Passo 1:</dt>
-           <dd> O cadastramento é realizado em 5 partes : 
+        <dd>1. O cadastramento é realizado em 5 partes : 
 		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Respons&aacute;vel pelo preenchimento</a>, 
 		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o</a>, 
 		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Programas</a>,
 		<a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Artistas</a>,
-		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>. 
-        Preencha as partes do cadastro uma a uma. Alguns campos são obrigatórios, sendo que, nestes casos, ao final da 
-        perguntaaparece um asterisco (*). Em algumas questões somente é possível uma resposta. Em outras, são possíveis
-        múltiplas respostas, mas fique atento às perguntas obrigatórias, onde o usuário deverá marcar pelo menos um item,
-        caso não preencha aparecerá uma mensagem, sendo que, o usuário somente poderá avançar ou atualizar seus dados, caso
-        conclua esta resposta. Fique também atento porque em algumas questões há um número limitado de itens que podem ser
-        marcados. Caso este tipo de pergunta seja obrigatória, de qualquer forma, o usuário deverá marcar no mínimo um item.
+		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>. <span>Campos marcados com asterisco (*) são de preenchimento obrigatório. Em algumas questões somente é possível uma resposta. Em outras, são possíveis múltiplas respostas. Caso haja problemas no preenchimento, aparecerá uma mensagem e o usuário só poderá avançar ou atualizar seus dados após concluir a etapa. </span>
         </dd>
-        <dt>Passo 2:</dt>
-        <dd>Após o usuário ter preenchido todas as perguntas obrigatórias em cada parte, ele deverá clicar 
-        em avançar. Esta parte estará salva. Realize o mesmo preenchimento em todas as partes. Na <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>, é obrigatório o 
-        usuário aceitar os termos do preenchimento das informações. Caso o usuário queira modificar alguma resposta em algumaparte, 
-        ele deverá retornar a ela, modificar sua resposta para, em seguida, clicar em “atualizar”, sendo as novas respostas
-        salvas automaticamente.
-        </dd>
-        <dt>Passo 3:</dt>
-        <dd> Após o término, clique em <a href="logout.php"><i class="icon-remove"></i>Logout</a>. O cadastro estará realizado Caso o usuário queira modificar algo posteriormente, ele precisará fazer novamente o login com o mesmo nome de usuário e senha, entrar na parte desejada, modificar a resposta e clicar em “atualizar”. Ao final, deverá fazer novamente o logoutpara sair da página de preenchimento. O cadastro estará atualizado. Poderá atualizar suas respostas quantas vezes forem necessárias, com o mesmo login e senha.</dd>
+        <dd><span>2.:No item <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>, é obrigatório aceitar os termos do preenchimento das informações. É possível modificar respostas a qualquer momento, sendo necessário clicar o botão “atualizar” após a alteração.</span></dd>
+        <br />
+        <dd> <span>3. Caso o usuário queira modificar algo posteriormente, precisará fazer novamente o login e atualizar a parte que deseja.Terminado o preenchimento ou a atualização clique em </span><a href="logout.php">Sair</a>.</dd>
         </dl>
-	<div/>     
+            <div/>     
      	 <hr>
 		<footer>
         <p>Funarte 2013</p>

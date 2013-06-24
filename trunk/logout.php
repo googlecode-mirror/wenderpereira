@@ -35,7 +35,7 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><font face="verdana" size="2" color="<?php echo $cor_outros_textos ?>"><center>Prezado <?php echo ($Login); ?>, o logout foi realizado com sucesso. <a href="index.php">Clique aqui<a> para realizar o Login novamente.
+<td><font face="verdana" size="2" color="<?php echo $cor_outros_textos ?>"><center><?php echo ($Login); ?>, o logout foi realizado com sucesso. <a href="index.php">Clique aqui<a> para realizar o Login novamente.
 </center></font></td>
 </tr>
 <tr>
