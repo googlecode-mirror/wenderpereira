@@ -156,7 +156,7 @@ function atualizaconcluir(&$Login){
 	or die ("--");
 	?>
 <script language="JavaScript">
-      alert("Parte: projetos concluida!");
+      alert("Cadastramento concluído!");
 	  window.location.assign("../projetos_IV.php");
       </script>
 	<?
