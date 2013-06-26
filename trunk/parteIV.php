@@ -120,8 +120,7 @@ include "conexao.php";
       </tr>
       <tr>
         <td>
-        <label>Quais as principais ações realizadas pelos artistas durante a residência </label>
-        (marque quantos itens julgar necessário)*
+        <label>Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)*</label>
         
       <label><input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
@@ -466,7 +465,7 @@ include "conexao.php";
       <br/>
     </table>
           <div class="progress progress-danger">
-          <div class="bar" style="width: 100%;">100%concluido</div>
+          <div class="bar" style="width: 100%;">100% concluído</div>
         </div>
 </form>
 </body>
