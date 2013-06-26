@@ -118,7 +118,7 @@
       </tr>
       </table>
         <div class="progress progress-danger">
-          <div class="bar" style="width: 8%;">8%concluido</div>
+          <div class="bar" style="width: 8%;">8% concluído</div>
         </div>
 </form>
 </body>
