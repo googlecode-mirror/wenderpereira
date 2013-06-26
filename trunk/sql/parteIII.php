@@ -80,7 +80,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 3){
 		?>
 		<script language="JavaScript">
-            alert("Cadastramento da Parte:artistas já foi realizado!");
+            alert("Dados cadastrados com sucesso. Próxima etapa: Artistas.");
 			window.location.assign("../projetos_IV.php");
             </script>
 		<?
