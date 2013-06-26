@@ -49,14 +49,14 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#"><i class="icon-plus-sign"></i>Mapeamento residências</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              <a href="logout.php" class="navbar-link"><i class="icon-user"></i>sair</a>
-            </p>
-           	<ul class="nav">
+				<div class="nav-collapse collapse">
+					<p class="navbar-text pull-right">
+					<a href="logout.php" class="navbar-link"><i class="icon-user"></i>sair</a>
+					</p>
+					<ul class="nav">
 						<li class="active"><a href="inicial.php"><i class="icon-th-list"></i>Menu</a>
 						</li>
-						<li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Instru&ccedil;&otilde;es</a>
+						<li><a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Respons&aacute;vel pelo preenchimento</a>
 						</li>
 						<li><a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o</a></li>
 						<li><a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Programas</a></li>
