@@ -47,7 +47,7 @@
 				} elseif ($concluido == 2){
 			 ?>
              <script language="JavaScript">
-				 alert("Cadastramento da Parte:programas já foi realizado!");
+				 alert("Cadastramento da Parte: Programas já foi realizado!");
 				 window.location.assign("../artistas_III.php");
 			 </script>
 			<?php
@@ -55,7 +55,7 @@
 			  } elseif ($concluido == 3){
 			 ?>
              <script language="JavaScript">
-				 alert("Cadastramento da Parte:artistas já foi realizado!");
+				 alert("Cadastramento da Parte: Artistas já foi realizado!");
 				 window.location.assign("../projetos_IV.php");
 			 </script>
              <?php					  
