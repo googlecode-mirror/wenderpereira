@@ -186,10 +186,10 @@ if ($_POST[atualizar] == "atualizar")
 	foreach($_checkbox as $_valor){
 		insere($_valor,$Login,$date,$hora);
 	}
-	//$_checkbox = $_POST['qtd5'];
-	//foreach($_checkbox as $_valor){
-		//insere($_valor,$Login,$date,$hora);
-	//}
+	$_checkbox = $_POST['qtd5'];
+	foreach($_checkbox as $_valor){
+		insere($_valor,$Login,$date,$hora);
+	}
 	$_checkbox = $_POST['qtd7'];
 	foreach($_checkbox as $_valor){
 		insere($_valor,$Login,$date,$hora);

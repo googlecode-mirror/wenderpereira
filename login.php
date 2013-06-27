@@ -32,7 +32,7 @@
             ?>
                <script language="JavaScript">
                 <!--
-                alert("Usuário e/ou Senha incorreta,um email com a ativação foi enviado para o seu email!");
+                alert("Usu&aacute;rio e/ou Senha incorreta,um email com a ativa&ccedil;&atilde;o foi enviado para o seu email!");
                 window.location = 'index.php';
                 //-->
                 </script>

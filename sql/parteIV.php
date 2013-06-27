@@ -157,7 +157,7 @@ function atualizaconcluir(&$Login){
 	?>
 <script language="JavaScript">
       alert("Cadastramento concluído!");
-	  window.location.assign("../projetos_IV.php");
+	  window.location.assign("../concluido.php");
       </script>
 	<?
 
@@ -237,7 +237,7 @@ if ($_POST[atualizar] == "atualizar")
 										?>
 <script language="JavaScript">
 		alert("Atualizado com sucesso!!");
-		window.location.assign("../projetos_IV.php");
+		window.location.assign("../concluido.php");
      </script>
 										<?
 }

@@ -270,7 +270,7 @@
     <tr>
       <td align="left" class="formu2">
       <label>Em caso de abrangência nacional, quando as residências puderem se desenvolver em mais de uma região geográfica
-      , quais estão envolvidas?(marque quantos itens julgar necessário)*</label>
+      , quais estão envolvidas(marque quantos itens julgar necessário)*?</label>
       
       <label><input name="qtd5[]" type="checkbox" value="5a" <? if(in_array("5a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
@@ -301,7 +301,7 @@
     <tr>
       
       <td align="left" class="formu2">
-        <label>• As residências podem ocorrer em países do exterior (marque apenas um item)?*</label>
+        <label>• As residências podem ocorrer em países do exterior (marque apenas um item)*?</label>
         
         <label>
           <input type="radio" name="qtd6" <? if(in_array("6a", $meuArray)){ echo "checked";}?> value="6a" 
