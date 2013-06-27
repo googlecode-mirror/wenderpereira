@@ -456,10 +456,6 @@ include "conexao.php";
       </tr>
       <tr>
         <td>
-        <div id="alert1" class="alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        A Funarte agradece a sua participação no preenchimento deste formulário de mapeamento. As informações prestadas serão fundamentais para a construção de políticas públicas voltadas para o fomento às residências artísticas no país. 
-        </div>
         </td>
       </tr>
       <br/>

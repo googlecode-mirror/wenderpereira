@@ -31,7 +31,7 @@
 			  } elseif ($concluido == 0){
 			 ?>
              <script language="JavaScript">
-			alert("Cadastramento da parte:Responsável pelo preenchimento já foi realizado!");
+			alert("Dados cadastrados com sucesso. Próxima etapa: Identificação da Instituição");
 			window.location.assign("../identificacaodainstituicao_I.php");
 			 </script>
 			<?php
