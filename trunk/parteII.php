@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <script src="http://code.jquery.com/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -12,8 +13,6 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/barra.css" rel="stylesheet" type="text/css" />
         <!--_CSS -->     
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <?
      include "conexao.php";
@@ -458,7 +457,7 @@
     </tr>
     <tr><td align="left" class="formu2">
     <div>
-    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista?(marque apenas 1 item)*
+    <label>• Há concessão de algum(a) prêmio/bolsa ou qualquer outra forma de apoio financeiro ao artista(marque apenas 1 item)*?
     </label>
     
         <label>
@@ -484,35 +483,35 @@
      
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12b", $meuArray)){ echo "checked";}?> value="12b" 
       class="validate[required] radio" />
-      Até R$ 100.000 reais</label>
+      Até R$ 100.00 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12c", $meuArray)){ echo "checked";}?> value="12c" 
       class="validate[required] radio" />
-       Acima de R$ 100.000 reais até R$ 200.000 reais</label>
+       Acima de R$ 100.00 reais até R$ 200.00 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12d", $meuArray)){ echo "checked";}?> value="12d" 
       class="validate[required] radio" />
-       Acima de R$ 200.000 reais até R$ 400.000 reais</label>
+       Acima de R$ 200.00 reais até R$ 400.00 reais</label>
        
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12e", $meuArray)){ echo "checked";}?> value="12e" 
       class="validate[required] radio" />
-        Acima de R$ 400.000 reais até R$ 600.000 reais</label>
+        Acima de R$ 400.00 reais até R$ 600.00 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12f", $meuArray)){ echo "checked";}?> value="12f" 
       class="validate[required] radio" />
-        Acima de R$ 600.000 reais até R$ 1.000.000 de reais</label>
+        Acima de R$ 600.00 reais até R$ 1.000.00 de reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12g", $meuArray)){ echo "checked";}?> value="12g" 
       class="validate[required] radio" />
-        Acima de R$ 1.000.000 de reais até R$ 2.000.000 reais</label>
+        Acima de R$ 1.000.00 de reais até R$ 2.000.00 reais</label>
       
       <label><input type="radio" name="qtd12" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12h", $meuArray)){ echo "checked";}?> value="12h" 
       class="validate[required] radio" />
-        Acima de R$ 2.000.000 reais até R$ 5.000.000 reais</label>
+        Acima de R$ 2.000.00 reais até R$ 5.000.00 reais</label>
       
       <label><input type="radio" name="qtd12" id="idqtd12quais" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("12i", $meuArray)){ echo "checked";}?> value="12i" 
       class="validate[required] radio" />
-        Acima de R$ 5.000.000 de reais. Qual valor?
+        Acima de R$ 5.000.00 de reais. Qual valor?
       <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['qtd12'];?>"  class="validate[optional,minSize[2]]" type="text" /></label>
       
       </div>
@@ -525,39 +524,39 @@
       
       <label><input name="qtd13[]" type="checkbox" value="13a" <? if(in_array("13a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      até R$ 500,00</label>
+      Até R$ 500,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13b" <? if(in_array("13b", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 500,00 até R$ 1.000,00</label>
+      Acima de R$ 500,00 até R$ 1.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13c" <? if(in_array("13c", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 1.000,00 até R$ 2.000,00</label>
+      Acima de R$ 1.000,00 até R$ 2.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13d" <? if(in_array("13d", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 2.000,00  até R$ 3.000,00</label>
+      Acima de R$ 2.000,00  até R$ 3.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13e" <? if(in_array("13e", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 3.000,00 até R$ 5.000,00</label>
+      Acima de R$ 3.000,00 até R$ 5.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13f" <? if(in_array("13f", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        acima de  R$ 5.000,00 até R$ 8.000,00</label>
+       Acima de  R$ 5.000,00 até R$ 8.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13g" <? if(in_array("13g", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      acima de R$ 10.000,00  até R$ 20.000,00 </label>
+      Acima de R$ 10.000,00  até R$ 20.000,00 </label>
       
       <label><input name="qtd13[]" type="checkbox" value="13h" <? if(in_array("13h", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        acima de R$ 20.000,00</label>
+       Acima de R$ 20.000,00</label>
       
       <label><input name="qtd13[]" type="checkbox" value="13i" <? if(in_array("13i", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-        não há valor concedido, pois a própria  instituição é responsável por diversos itens para a realização da residência ( passagens, traslados, hospedagem, etc)</label>
+       Não há valor concedido, pois a própria  instituição é responsável por diversos itens para a realização da residência ( passagens, traslados, hospedagem, etc)</label>
     </div>
     </td>
     </tr>
