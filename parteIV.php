@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -428,7 +427,7 @@ include "conexao.php";
              <div align="center">Comentários gerais (no máximo em dez linhas)</div>
              </label>
              <div align="center">
-             <textarea name="qtdComentariosGerais" id="qtdComentariosGerais" onkeyup="limitaTextarea(this.value)"  onkeydown="limitaTextarea(this.value)" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[650]]  maxlength="600" class="input-xxlarge" style="text-align:left;">
+             <textarea name="qtdComentariosGerais" id="qtdComentariosGerais" onkeyup="limitaTextarea(this.value)"  onkeydown="limitaTextarea(this.value)" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[620]]  maxlength="620" class="input-xxlarge" style="text-align:left;">
 				<?php echo $meuArray1['qtdComentariosGerais'];?>
              </textarea>
                  Max: <span id="contador">620</span>
