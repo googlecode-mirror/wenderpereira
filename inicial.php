@@ -74,7 +74,7 @@
         <dt>Instruções para cadastramento:</dt>
         <dd>1. O cadastramento é realizado em 5 partes : 
 		<a href="verificamenu.php?m=-1"><i class="icon-plus-sign"></i>Respons&aacute;vel pelo preenchimento</a>, 
-		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o</a>, 
+		<a href="verificamenu.php?m=0"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da institui&ccedil;&atilde;o</a>, 
 		<a href="verificamenu.php?m=1"><i class="icon-plus-sign"></i>Programas</a>,
 		<a href="verificamenu.php?m=2"><i class="icon-plus-sign"></i>Artistas</a>,
 		e <a href="verificamenu.php?m=3"><i class="icon-plus-sign"></i>Projetos</a>. <span>Campos marcados com asterisco (*) são de preenchimento obrigatório. Em algumas questões somente é possível uma resposta. Em outras, são possíveis múltiplas respostas. Caso haja problemas no preenchimento, aparecerá uma mensagem e o usuário só poderá avançar ou atualizar seus dados após concluir a etapa. </span>

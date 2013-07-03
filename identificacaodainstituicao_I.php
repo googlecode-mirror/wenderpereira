@@ -89,7 +89,7 @@ body {
 					</li>
 					<li ><a href="verificamenu.php?m=-1" id="1"><i class="icon-plus-sign"></i>Respons&aacute;vel pelo preenchimento</a>
 					</li>
-					<li class="active"><a href="verificamenu.php?m=0" id="2"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da Institui&ccedil;&atilde;o </a>
+					<li class="active"><a href="verificamenu.php?m=0" id="2"><i class="icon-plus-sign"></i>Identifica&ccedil;&atilde;o da institui&ccedil;&atilde;o </a>
 					</li>
 					<li><a href="verificamenu.php?m=1" id="3"><i class="icon-plus-sign"></i>Programas</a>
 					</li>
