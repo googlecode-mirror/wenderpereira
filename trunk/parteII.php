@@ -291,9 +291,9 @@
       class="validate[minCheckbox[1]] checkbox"/>  
       Região Sudeste</label>
        
-   	  <label><input name="qtd5[]" type="checkbox" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?>
+   	  <!--<label><input name="qtd5[]" type="checkbox" value="5f" //<? if(in_array("5f", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>  
-      Região Sudeste</label>
+      Região Sudeste</label> -->
             
       </td>
     </tr>
