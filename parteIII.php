@@ -101,7 +101,8 @@
             brasileiro realizar a residência no exterior. Os programas de residências podem não ter um intercâmbio internacional, 
             sendo realizado apenas por artistas brasileiros. Em média, os programas concedem prêmios, bolsas ou outras formas de apoio
              a um número determinado de artistas para realizarem a residência em um período de tempo pré-estabelecido.
-             O número de artistas apoiados pode variar por programa.</p>
+             O número de artistas apoiados pode variar por programa. O objetivo desta parte é conhecer a realidade dos artistas apoiados,
+			 conhecendo melhor as políticas desenvolvidas.</p>
             <h5>Os campos  com asterisco* são de preenchimento obrigatório:</h5>
         </td>
       </tr>
