@@ -1,4 +1,5 @@
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+﻿ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
 session_start();
 include "conexao.php";

@@ -1,14 +1,13 @@
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?
+Ôªø<?
 session_start();
 include "conexao.php";
 connect();
 $Login  =  trim($_SESSION["login"]);
-$conluido =  $_SESSION["concluido"]; //recebe da sess„o o andamento da pesquisa
+$conluido =  $_SESSION["concluido"]; //recebe da sess√£o o andamento da pesquisa
 $date = date("d/m/y");
 $hora = date("H:i");
 //----------------------------
-// confirma se o form j· foi preenchido
+// confirma se o form j√° foi preenchido
 $sql = "select * from usuarios where login='$Login'";
 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 while ($array_exibir = mysql_fetch_array($Resultado))
@@ -25,7 +24,7 @@ $questao4 = $_POST[qtd4];
 $questao5 = $_POST[qtd5];
 $questao6 = $_POST[qtd6];
 $questao7Quais = $_POST[qtd7quais];
-// inserindo informaÁoes
+// inserindo informa√ß√µes
 
 if ($_POST[avancar] == "avancar") {
 	if($concluido == 2)
@@ -45,12 +44,12 @@ if ($_POST[avancar] == "avancar") {
 								insere($questao5,$Login,$date,$hora);}
 								if(empty($questao2)) {}else{
 									insere($questao6,$Login,$date,$hora);}
-									// inserindo se n„o branco
+									// inserindo se n√£o branco
 									if(empty($questao3Quais)) {
 									}else{
 										$qtdQuestao = qtd3;
 										inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
-										// inserindo se n„o branco
+										// inserindo se n√£o branco
 										if(empty($questao7Quais)) {
 										}else{
 											$qtdQuestao = qtd7;
@@ -72,7 +71,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 1){
 		?>
 		<script language="JavaScript">
-		    alert("Retorne para a parte: IdentificaÁ„o da InstituiÁ„o e realize o cadastro!!");
+		    alert("Retorne para a parte: Identifica√ß√£o da Institui√ß√£o e realize o cadastro!!");
 			window.location.assign("../identificacaodainstituicao_I.php");
             </script>
 		<?
@@ -80,7 +79,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 3){
 		?>
 		<script language="JavaScript">
-            alert("Dados cadastrados com sucesso. PrÛxima etapa: Artistas.");
+            alert("Dados cadastrados com sucesso. Pr√≥xima etapa: Artistas.");
 			window.location.assign("../projetos_IV.php");
             </script>
 		<?
@@ -88,7 +87,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 4){
 		?>
 		<script language="JavaScript">
-              alert("O cadatro j· foi concluÌdo, caso queira atualizar clique na parte que desejada atualizar!");
+              alert("O cadatro j√° foi conclu√≠do, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
             </script>
 		<?php
@@ -119,7 +118,7 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("Dados cadastrados com sucesso. PrÛxima etapa Projetos.");
+			  alert("Dados cadastrados com sucesso. Pr√≥xima etapa Projetos.");
 			  window.location.assign("../projetos_IV.php");
 	</script>
 	<?
