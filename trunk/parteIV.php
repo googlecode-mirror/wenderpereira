@@ -119,7 +119,7 @@ include "conexao.php";
       </tr>
       <tr>
         <td>
-        <label>Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)*</label>
+        <label>Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)*?</label>
         
       <label><input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
@@ -158,8 +158,8 @@ include "conexao.php";
       </tr>
       <tr>
       <td><div>
-          <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas?
-          (marque quantos itens julgar necessário)*: </label>
+          <label>Quais as linguagens envolvidas nas diferentes ações desenvolvidas em residências artísticas
+          (marque quantos itens julgar necessário)*? </label>
       
             <label>
             <input name="qtd2[]" type="checkbox" value="2a" <? if(in_array("2a", $meuArray)){ echo "checked";}?>
@@ -257,7 +257,7 @@ include "conexao.php";
       </tr>
             <tr>
         <td><div>
-          <label>Qual o principal público a ser atingido pelas ações*? (marque no máximo os 3 itens mais importantes):</label>
+          <label>Qual o principal público a ser atingido pelas ações (marque no máximo os 3 itens mais importantes)*?</label>
           
             <label>
             <input type="checkbox" name="qtd3[]" value="3a" <? if(in_array("3a", $meuArray)){ echo "checked";}?>
@@ -294,7 +294,7 @@ include "conexao.php";
       </tr>
             <tr>
         <td><div>
-          <label>Onde as ações são realizadas*? (marque quantos itens julgar necessário)</label>
+          <label>Onde as ações são realizadas (marque quantos itens julgar necessário)*?</label>
         </div>
           
             <label>
@@ -366,7 +366,7 @@ include "conexao.php";
       </tr>
             <tr>
         <td>
-          <label>Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*:
+          <label>Quais os produtos são resultados das ações realizadas (marque quantos itens julgar necessário)*?
           </label>
           
           <label>
