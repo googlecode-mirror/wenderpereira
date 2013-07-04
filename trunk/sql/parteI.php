@@ -1,4 +1,5 @@
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+Ôªø <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
 session_start();
 include "conexao.php";
@@ -56,7 +57,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		} elseif ($concluido == 1){
 			?>
 <script language="JavaScript">
-    alert("Cadastramento da Parte: IdentificaÁ„o da InstituiÁ„o j· foi realizado!");
+    alert("Cadastramento da Parte: Identifica√ß√£o da Institui√ß√£o j√° foi realizado!");
 			 window.location.assign("../programas_II.php");
 	         </script>
 			<?php
@@ -64,7 +65,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		} elseif ($concluido == 2){
 			?>
 <script language="JavaScript">
-             alert("Cadastramento da Parte: Programas j· foi realizado!");
+             alert("Cadastramento da Parte: Programas j√° foi realizado!");
 			 window.location.assign("../artistas_III.php");
              </script>
 			<?php
@@ -72,7 +73,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		} elseif ($concluido == 3){
 			?>
 <script language="JavaScript">
-              alert("Dados cadastrados com sucesso. PrÛxima etapa: Artistas.");
+              alert("Dados cadastrados com sucesso. Pr√≥xima etapa: Artistas.");
 			  window.location.assign("../projetos_IV.php");
               </script>
 			<?php
@@ -80,7 +81,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		} elseif ($concluido == 4){
 			?>
 <script language="JavaScript">
-              alert("O cadatro j· foi concluÌdo, caso queira atualizar clique na parte que desejada atualizar!");
+              alert("O cadatro j√° foi conclu√≠do, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
               </script>
 			<?php
@@ -121,7 +122,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	 or die ("--");
 	 ?>
 <script language="JavaScript">
-    alert("Dados cadastrados com sucesso. PrÛxima etapa: Programas.");
+    alert("Dados cadastrados com sucesso. Pr√≥xima etapa: Programas.");
 	      window.location.assign("../programas_II.php");
 	  </script>
 	 <?

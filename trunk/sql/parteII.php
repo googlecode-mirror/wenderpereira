@@ -1,13 +1,15 @@
+Ôªø <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
 session_start();
 include "conexao.php";
 connect();
 $Login 	=  trim($_SESSION["login"]);
-$conluido =  $_SESSION["concluido"]; //recebe da sess„o o andamento da pesquisa
+$conluido =  $_SESSION["concluido"]; //recebe da sess√£o o andamento da pesquisa
 $date = date("d/m/y");
 $hora = date("H:i");
 //----------------------------
-// confirma se o form j· foi preenchido
+// confirma se o form j√° foi preenchido
 $sql = "select * from usuarios where login='$Login'";
 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 while ($array_exibir = mysql_fetch_array($Resultado))
@@ -62,7 +64,7 @@ if ($_POST[avancar] == "avancar") {
 		foreach($_checkbox as $_valor){
 			insere($_valor,$Login,$date,$hora);
 		}
-		// inserindo informaÁoes
+		// inserindo informa√ßoes
 		if(empty($questao2)) {}else{
 	  insere($questao2,$Login,$date,$hora);}
 	  if(empty($questao4)) {}else{
@@ -118,7 +120,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 3){
 		?>
 		<script language="JavaScript">
-              alert("Dados cadastrados com sucesso. PrÛxima etapa: Artistas.");
+              alert("Dados cadastrados com sucesso. Pr√≥xima etapa: Artistas.");
 			  window.location.assign("../projetos_IV.php");
               </script>
 		<?php
@@ -126,7 +128,7 @@ if ($_POST[avancar] == "avancar") {
 	} elseif ($concluido == 4){
 		?>
 		<script language="JavaScript">
-              alert("O cadatro j· foi concluÌdo, caso queira atualizar clique na parte que desejada atualizar!");
+              alert("O cadatro j√° foi conclu√≠do, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
               </script>
 		<?php
@@ -135,22 +137,22 @@ if ($_POST[avancar] == "avancar") {
 		//else do teste igual a parte atualizado!
 	}
 }else{
-	//else do teste se o solicitante clicou em avanÁar!
+	//else do teste se o solicitante clicou em avan√ßar!
 	}
-	//funÁ„o insere---------------------------------------------
+	//fun√ß√£o insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 			 VALUES ('$resposta1','$usuario','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//funÁ„o insere---------------------------------------------
+		//fun√ß√£o insere---------------------------------------------
 	}
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
 			 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//funÁ„o insere---------------------------------------------
+		//fun√ß√£o insere---------------------------------------------
 	}
 	function atualizaconcluir(&$Login){
 		$consulta = "UPDATE usuarios SET concluido='2' WHERE login='$Login';";
@@ -158,7 +160,7 @@ if ($_POST[avancar] == "avancar") {
 		or die ("--");
 		?>
 	<script language="JavaScript">
-			  alert("Dados cadastrados com sucesso. PrÛxima etapa: Artistas.");
+			  alert("Dados cadastrados com sucesso. Pr√≥xima etapa: Artistas.");
 			  window.location.assign("../artistas_III.php");
 	</script>
 	<?
@@ -206,7 +208,7 @@ if ($_POST[atualizar] == "atualizar")
 	foreach($_checkbox as $_valor){
 		insere($_valor,$Login,$date,$hora);
 	}
-	// inserindo informaÁoes
+	// inserindo informa√ß√µes
 	if(empty($questao2)) {}else{
 		insere($questao2,$Login,$date,$hora);}
 		if(empty($questao4)) {}else{
