@@ -145,7 +145,7 @@
                           </div>
                           <div class="modal-body">
                                  <p class="ui-dialog"> 
-                                Até o próximo dia 24 de setembro de 2013, a Fundação Nacional de Artes, através do Centro de Programas Integrados <abbr title="Centro de Programas Integrados">(Cepin)</abbr>está realizando o Mapeamento das Residências Artísticas no Brasil, ação fundamental para o conhecimento, análise e formulação de pesquisas que servirão de instrumento para a construção das políticas públicas de fomento ao campo das residências artísticas em nosso país. 
+                                Até o próximo dia 11 de outubro de 2013, a Fundação Nacional de Artes, através do Centro de Programas Integrados <abbr title="Centro de Programas Integrados">(Cepin)</abbr>está realizando o Mapeamento das Residências Artísticas no Brasil, ação fundamental para o conhecimento, análise e formulação de pesquisas que servirão de instrumento para a construção das políticas públicas de fomento ao campo das residências artísticas em nosso país. 
                                 <br />
                                 <br />
                                  A realização deste Mapeamento é um dos desdobramentos do II Encontro Funarte de Políticas para as Artes, realizado em 2012 pela Funarte em parceria com a Secretaria da Cidadania e da Diversidade Cultural do Ministério da Cultura, que teve como foco de discussão as Interações Estéticas em Rede. Durante o evento, temas importantes para a construção das políticas públicas para as artes foram abordados, entre eles “O lugar das ocupações artísticas na difusão cultural”, “O papel das redes na produção cultural”, e “Trânsitos: deslocamentos e residências”. 
