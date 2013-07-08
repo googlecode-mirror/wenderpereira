@@ -233,7 +233,7 @@
   <tr>
   <td colspan="2" align="left" class="formu2">
   <p>
-  <label>• A instituição tem sede própia*?:</label>
+  <label>• A instituição tem sede própria*?:</label>
   </p>
   <p>
   <label>
