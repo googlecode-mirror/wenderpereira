@@ -39,8 +39,13 @@
             <?php
         }
 
-	 $consulta = "UPDATE historico SET usuario='$_SESSION[login]',acao= 'login', data='$date',hora='$hora' WHERE usuario='$user';";
-	 echo($consulta);
-	 $resultado = mysql_query($consulta)
-	 or die ("--");
+			$consulta = "INSERT INTO historico (usuario,acao,data,hora)
+			VALUES ('$user','login','$date','$hora')";
+			$resultado = mysql_query($consulta)
+			or die (mysql_error());
+			
+			
+	// $consulta = "UPDATE historico SET usuario='$user',acao= 'login', data='$date',hora='$hora' WHERE usuario='$user';";
+	 //$resultado = mysql_query($consulta)
+	 //or die ("--");
 ?>

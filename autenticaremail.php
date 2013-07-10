@@ -29,10 +29,13 @@ or die ("Usuario autenticado com sucesso");
                 //-->
                 </script>
             <?php
+			               
+}
+
+
 $consulta1 = "INSERT INTO historico (usuario,acao,data,hora)
 VALUES ('$_GET[1425]','autenticado_email','$date','$hora')";
 $resultado1 = mysql_query($consulta1)
 or die (mysql_error());
-               
-}	
+	
 ?>
