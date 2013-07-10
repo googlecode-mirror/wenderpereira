@@ -112,6 +112,7 @@ include("paginacao/paginator.inc.php");
 	<td align="left" style="padding-left:10px; font-weight:bold;">Usuario</td>
 	<td align="left" style="padding-left:10px; font-weight:bold;">Login</td>
     <td align="left" style="padding-left:10px; font-weight:bold;">Email</td>
+    <td align="left" style="padding-left:10px; font-weight:bold;">Ativo</td>
     <td align="left" style="padding-left:10px; font-weight:bold;">Concluído</td>
     <td align="left" style="padding-left:10px; font-weight:bold;">Data</td>
     <td align="left" style="padding-left:10px; font-weight:bold;">Hora</td>
@@ -123,6 +124,7 @@ include("paginacao/paginator.inc.php");
 		  $nome = $row['nome'];
 		  $login = $row['login'];
 		  $email = $row['email'];
+          $ativo = $row['ativo'];
 		  $concluido = $row['concluido'];
 		  $data = $row['data'];
 		  $hora = $row['hora'];
@@ -141,6 +143,8 @@ include("paginacao/paginator.inc.php");
     <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
      <? echo "<a href='alunos.php?cod=$cod'>".$email."</a>"; ?></td>
+   	<td align="left" style="padding-left:10px;">
+     <? echo "<a href='alunos.php?cod=$cod'>".$ativo."</a>"; ?></td> 
    	<td align="left" style="padding-left:10px;">
      <? echo "<a href='alunos.php?cod=$cod'>".$concluido."</a>"; ?></td> 
    	<td align="left" style="padding-left:10px;">
