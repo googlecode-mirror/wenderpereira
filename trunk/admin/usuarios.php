@@ -96,7 +96,7 @@ $data = date("d/m/Y");
 </table>
 <?
 $_pagi_sql = " select * from  usuarios where nome like '%".$_POST[cons_nome]."%'
-order by data DESC";
+order by idusuario DESC";
 //quantidade de resultados por página (opcional, por padrão 20) 
 $_pagi_cuantos = 40; 
 //Incluímos o script de paginação. Este já executa a consulta automaticamente 
