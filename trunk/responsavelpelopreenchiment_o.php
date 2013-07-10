@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <noscript>
+  <meta http-equiv="Refresh" content="1; url=http://www.funarte.gov.br/mapeamento_residencias/erro1.php">
+</noscript>
 <? 
 	session_start();
 	if (empty($_SESSION["login"])){
