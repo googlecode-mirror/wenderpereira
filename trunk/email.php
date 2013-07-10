@@ -1,4 +1,4 @@
-<?
+Ôªø<?
 session_start();
 include "conexao.php";
 include "sqlInjection.php";
@@ -15,15 +15,17 @@ $Senha1		= md5(anti_sql_injection($_POST["senha1"]));
 $Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
 $Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
 $Ativacao	= "http://www.funarte.gov.br/mapeamento_residencias/autenticaremail.php?x44221715457fghsr=$Email&1425=$Login";
-$Tutorial   = "Se vocÍ clicar no link acima e ele n„o funcionar, copie e cole o URL em uma nova janela do navegador.\n
-	Se vocÍ n„o clicar no link o seu usu·rio n„o ser· ativado e vocÍ n„o conseguir· se logar ao sistema.";
+$Ip = $_SERVER['REMOTE_ADDR'];
+$Navegador = $_SERVER[HTTP_USER_AGENT];
+$Tutorial   = "Se voc√™ clicar no link acima e ele n√£o funcionar, copie e cole o URL em uma nova janela do navegador.\n
+	Se voc√™ n√£o clicar no link o seu usu√°rio n√£o ser√° ativado e voc√™ n√£o conseguir√° se logar ao sistema.";
 // Pega os valores do campo Mensagem
-$Agradecimento = "D˙vidas:cepin@funarte.gov.br \n (21)2279-8082 ";
+$Agradecimento = "D√∫vidas:cepin@funarte.gov.br \n (21)2279-8082 ";
 
 if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
 	?>
 <script>
-               alert("Senhas diferentes ou usu·rio j· existe no banco de dados!");
+               alert("Senhas diferentes ou usu√°rio j√° existe no banco de dados!");
 			   window.location = 'novoUsuario.php';
 			          </script>
 	<?php
@@ -32,15 +34,15 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
 
 
 	//-----------------------------------------------
-	//inserÁ„o
+	//inser√ß√£o
 	//-----------------------------------------------
 
-	$consulta = "INSERT INTO usuarios (login,senha,nome,ativo,email,data,hora)
+	$consulta = "INSERT INTO usuarios (login,senha,nome,ativo,email,data,hora,ip,navegador)
  VALUES 
- ('$Login','$Senha','$Nome','1','$Email','$date','$hora')";
+ ('$Login','$Senha','$Nome','1','$Email','$date','$hora','$Ip','$Navegador')";
 
 	$resultado = mysql_query($consulta)
-	or die ("Usu·rio ou senha j· existem, falha ao inserir dados!");
+	or die ("Usu√°rio ou senha j√° existem, falha ao inserir dados!");
 
 	//-----------------------------------------------
 	//Email
@@ -54,8 +56,8 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
 
 
 
-	// Vari·vel que junta os valores acima e monta o corpo do email
-	$Vai = "$Nome,\n\n Seus dados de cadastro s„o:Usu·rio: $Nome \n E-mail: $Email \n \n Para ativar o seu login clique no link abaixo!\n\n
+	// Vari√°vel que junta os valores acima e monta o corpo do email
+	$Vai = "$Nome,\n\n Seus dados de cadastro s√£o:Usu√°rio: $Nome \n E-mail: $Email \n \n Para ativar o seu login clique no link abaixo!\n\n
 	$Ativacao\n\n$Tutorial $Agradecimento \n\n";
 
 	require_once("phpmailer/class.phpmailer.php");
@@ -68,10 +70,10 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
 		$mail = new PHPMailer();
 		$mail->IsSMTP();		// Ativar SMTP
 		$mail->SMTPDebug = 0;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
-		$mail->SMTPAuth = true;		// AutenticaÁ„o ativada
+		$mail->SMTPAuth = true;		// Autentica√ß√£o ativada
 		$mail->SMTPSecure = 'ssl';	// SSL REQUERIDO pelo GMail
 		$mail->Host = 'smtp.gmail.com';	// SMTP utilizado
-		$mail->Port = 465;  		// A porta 465 dever· estar aberta em seu servidor
+		$mail->Port = 465;  		// A porta 465 dever√° estar aberta em seu servidor
 		$mail->Username = GUSER;
 		$mail->Password = GPWD;
 		$mail->SetFrom($de, $de_nome);
@@ -92,15 +94,15 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
 		}
 	}
 
-	// Insira abaixo o email que ir· receber a mensagem, o email que ir· enviar (o mesmo da vari·vel GUSER),
-	//o nome do email que envia a mensagem, o Assunto da mensagem e por ˙ltimo a vari·vel com o corpo do email.
+	// Insira abaixo o email que ir√° receber a mensagem, o email que ir√° enviar (o mesmo da vari√°vel GUSER),
+	//o nome do email que envia a mensagem, o Assunto da mensagem e por √∫ltimo a vari√°vel com o corpo do email.
 
 	if (smtpmailer($Email, '$Email', 'Nome do Enviador', $Email, $Vai)) {
 
 		?>
 <script>
  alert("A senha foi enviada para o seu email!". echo $Email."");
-	//Header("location:http://localhost:8080/"); // Redireciona para uma p·gina de obrigado.
+	//Header("location:http://localhost:8080/"); // Redireciona para uma p√°gina de obrigado.
 </script>
 		<?
 	}
