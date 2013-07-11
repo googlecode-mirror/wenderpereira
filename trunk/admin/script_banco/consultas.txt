@@ -1,0 +1,13 @@
+
+// view para visualizar informações do cadastro dos usuarios
+
+CREATE VIEW perguntaserepostas AS SELECT pesq.idpesquisa,pesq.usuario,per.parte,per.questao,
+res.respostas,res.valores,per.idpergunta,pesq.data,pesq.hora
+from pergunta per 
+INNER JOIN respostas res ON (per.questao = res.questao and per.parte = res.parte)
+INNER JOIN pesquisa pesq ON (pesq.parte = res.parte and pesq.respostas = res.respostas);
+
+// exemplo de consultas 
+
+Select * from perguntaserepostas;
+
