@@ -1,4 +1,4 @@
-<?
+﻿<?
     include "conexao.php";
 	connect();
     $date = date("d/m/y");
