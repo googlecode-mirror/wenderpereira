@@ -96,7 +96,7 @@ $data = date("d/m/Y");
 </tr>
 </table>
 <?
-$_pagi_sql = " select * from  historico where usuario like '%".$_POST[cons_nome]."%' order by data DESC";
+$_pagi_sql = " select * from  historico where usuario like '%".$_POST[cons_nome]."%' order by idhistorico DESC";
 //quantidade de resultados por página (opcional, por padrão 20) 
 $_pagi_cuantos = 40; 
 //Incluímos o script de paginação. Este já executa a consulta automaticamente 
