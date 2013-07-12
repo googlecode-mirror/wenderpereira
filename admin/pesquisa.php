@@ -153,7 +153,7 @@ include("paginacao/paginator.inc.php");
      <? echo "<a href='alunos.php?cod=$cod'>".$hora."</a>"; ?></td> 
   </tr>
 <? } ?>
-</TABLE>http://localhost/Mapeamento_residencias/admin/pesquisa.php
+</TABLE>
 <?
 	echo "<br>";			
 	echo "<br>";			
