@@ -4,11 +4,18 @@
 	connect();
     $date = date("d/m/y");
     $hora = date("H:i");	
-	
+
+
 	@session_start(); // Inicializa a sessão
 
 	$Login 	=  $_SESSION["login"];
 
+		$consulta = "INSERT INTO historico (usuario,acao,data,hora)
+		VALUES ('$Login','logout','$date','$hora')";
+		$resultado = mysql_query($consulta)
+		or die (mysql_error());
+
+	
 	session_unset();
 	session_destroy();
    ?>
@@ -29,6 +36,7 @@
 <td><center><img src="images/imagem.jpg"></center></td>
 </tr>
 <tr>
+
 <td><center><font face="verdana" size="2" color="<?php echo $cor_outros_textos ?>"><b>Logout do Sistema</b></font></center></td>
 </tr>
 <tr>
