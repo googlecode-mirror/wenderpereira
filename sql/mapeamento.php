@@ -10,11 +10,26 @@
 	  $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
       //------------------------------------------------------------------------------------
       // recebe os valores do form mapeamento
+
       $nome = trim($_POST["txtNome"]);
       $cargoInstituicao = trim($_POST["txtCargoInstituicao"]);
       $cpf = trim($_POST["txtCpf"]);
       $email = trim($_POST["txtEmail"]);
       $telefone = trim($_POST["txtTelefone"]);
+	  
+	  
+	   if(empty($Login)) {
+	   ?>
+	    <script language="JavaScript">
+		alert("Dados invalidos favor realizar o login novamente!");
+		window.location.assign("../index.php");
+		</script>
+		<?
+	   }else{
+	   
+	   }
+
+	  
 	  //------------------------------------------------------------------------------------
 	  // confirma se o form já foi preenchido
 	  	$sql = "select * from usuarios where login='$Login'";
