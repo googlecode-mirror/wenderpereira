@@ -5,7 +5,7 @@ session_start();
 include "conexao.php";
 connect();
 $Login 	=  trim($_SESSION["login"]);
-$conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
+$conluido =  $_SESSION["concluido"]; //recebe da sessÃ£o o andamento da pesquisa
 $date = date("d/m/y");
 $hora = date("H:i");
 $nomeInstituicao = trim($_POST["txtNome"]);
@@ -16,8 +16,20 @@ $unidadeFederativa = trim($_POST["cmbUnidadeFederativa"]);
 $cep = trim($_POST["txtCep"]);
 $telefone = trim($_POST["txtTelefone"]);
 $email = trim($_POST["txtEmail"]);
+
+	   if(empty($Login)) {
+	   ?>
+	    <script language="JavaScript">
+		alert("Dados invalidos favor realizar o login novamente!");
+		window.location.assign("../index.php");
+		</script>
+		<?
+	   }else{
+	   
+	   }
+
 //----------------------------------------------------
-// confirma se o form já foi preenchido
+// confirma se o form jÃ¡ foi preenchido
 $sql = "select * from usuarios where login='$Login'";
 $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 while ($array_exibir = mysql_fetch_array($Resultado)) {
@@ -31,7 +43,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	$questao6 = $_POST[qtd6];
 	if ($_POST[avancar] == "avancar") {
 		if($concluido == 0){
-			// inserindo informaçoes
+			// inserindo informaÃ§Ãµes
 			if(empty($questao0)) {}else{
 				insere($questao0,$Login,$date,$hora);}
 				if(empty($questao1)) {}else{
@@ -88,17 +100,17 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 
 		}else{ //else do teste igual a parte atualizado!
 		}
-	}else{  	//else do teste se o solicitante clicou em avançar!
+	}else{  	//else do teste se o solicitante clicou em avanÃ§ar!
 	}
-	//função insere ----------------------------------------------------------------------------------------------
+	//funÃ§Ã£o insere ----------------------------------------------------------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
 		 VALUES ('$resposta1','$usuario','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//função insere-----------------------------------------------------------------------------------------------
+		//funÃ§Ã£o insere-----------------------------------------------------------------------------------------------
 	}
-	//função insere Parte 1 --------------------------------------------------------------------------------------
+	//funÃ§Ã£o insere Parte 1 --------------------------------------------------------------------------------------
 	function inseremapeamentoparte1(&$nomeInstituicao,&$cnpj,&$endereco,&$municipio,
 	&$unidadeFederativa,&$cep,&$telefone,&$email,&$Login,&$date,&$hora){
 		$consulta = "INSERT INTO mapeamentoparteI
@@ -109,7 +121,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
 	}
-	//função insere Quais ----------------------------------------------------------------------------------------
+	//funÃ§Ã£o insere Quais ----------------------------------------------------------------------------------------
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
 		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
 		 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','1','$date','$hora')";
@@ -145,7 +157,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 		$unidadeFederativa,$cep,$telefone,$email,$Login,$date,$hora);
 
 		
-		// inserindo informaçoes-----------------------------------------------------------------------------------
+		// inserindo informaÃ§Ãµes-----------------------------------------------------------------------------------
 		if(empty($questao0)) {}else{
 			insere($questao0,$Login,$date,$hora);}
 			if(empty($questao1)) {}else{

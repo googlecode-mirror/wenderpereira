@@ -9,6 +9,17 @@ $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 $date = date("d/m/y");
 $hora = date("H:i");
 
+	   if(empty($Login)) {
+	   ?>
+	    <script language="JavaScript">
+		alert("Dados invalidos favor realizar o login novamente!");
+		window.location.assign("../index.php");
+		</script>
+		<?
+	   }else{
+	   
+	   }
+	   
 //----------------------------
 // confirma se o form já foi preenchido
 $sql = "select * from usuarios where login='$Login'";
