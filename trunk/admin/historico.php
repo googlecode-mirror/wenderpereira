@@ -78,6 +78,9 @@ $data = date("d/m/Y");
   </tr>
   <? if ($_SESSION[login] == "zezo" or $_SESSION[login] == "rose") { ?>
   <tr>
+  
+
+
   <td align="center" colspan="2">
 <!--  <br>-->
   <input type="submit" name="Salvar" value="Salvar" style="color:#000099" onKeyPress="return handleEnter(this, event)" id="at">&nbsp;	
@@ -93,6 +96,9 @@ $data = date("d/m/Y");
 <input type="text" name="cons_nome" size="40">
 </td>
 <td width="18%"><input type="submit" name="consultar" value="Consultar" /></td>
+  <fieldset>
+		<img src="graficos/acessos.php" alt="Quantidade de acessos" title="Acessos site " />
+</fieldset> 
 </tr>
 </table>
 <?
