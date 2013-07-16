@@ -11,3 +11,38 @@ INNER JOIN pesquisa pesq ON (pesq.parte = res.parte and pesq.respostas = res.res
 
 Select * from perguntaserepostas;
 
+
+
+use criacao_literaria;
+
+
+ALTER TABLE historico
+ENGINE = InnoDB;
+
+
+ALTER TABLE mapeamento
+ENGINE = InnoDB;
+
+
+ALTER TABLE mapeamentoi
+ENGINE = InnoDB;
+
+
+ALTER TABLE pergunta
+ENGINE = InnoDB;
+
+
+ALTER TABLE pesquisa
+ENGINE = InnoDB;
+
+
+ALTER TABLE pesquisaquais
+ENGINE = InnoDB;
+
+
+ALTER TABLE respostas
+ENGINE = InnoDB;
+
+
+ALTER TABLE usuarios
+ENGINE = InnoDB;
