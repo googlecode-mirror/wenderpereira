@@ -40,7 +40,8 @@ require_once '../phplot/phplot.php';
 						WHEN 23 THEN '23:00'
 						ELSE 'log'
 						END as 'intervalo', count(*) as 'acessos'
-					from pesquisa
+					from historico
+					where acao ='login'
 					group by HOUR(hora);";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
@@ -57,7 +58,7 @@ $p = new PHPlot(800, 420);
 //$p->SetDefaultTTFont('./arial.ttf');
 
 # Set the main plot title:
-$p->SetTitle('Utilização do Servidor por Hora');
+$p->SetTitle('Quantidade de logins por hora');
 
 $p->SetPrecisionY(1);
 
