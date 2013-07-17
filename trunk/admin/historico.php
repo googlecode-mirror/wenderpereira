@@ -96,8 +96,9 @@ $data = date("d/m/Y");
 <input type="text" name="cons_nome" size="40">
 </td>
 <td width="18%"><input type="submit" name="consultar" value="Consultar" /></td>
-  <fieldset>
-		<img src="graficos/acessos.php" alt="Quantidade de acessos" title="Acessos site " />
+
+<fieldset>
+		<img src="graficos/loginporhora.php" alt="Quantidade de logins por hora" title="logins site " />
 </fieldset> 
 </tr>
 </table>
