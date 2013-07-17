@@ -80,7 +80,7 @@ $data = date("d/m/Y");
   <tr>
   <td align="center" colspan="2"><br>
   <input type="submit" name="Salvar" value="Salvar" style="color:#000099" onKeyPress="return handleEnter(this, event)" id="at">&nbsp;	
-</td>
+<a href="imprimir.php"><i class="icon-remove"></i>Exportar dados</a></td>
 </tr>
 <? } ?>
 </TABLE>
@@ -153,11 +153,19 @@ include("paginacao/paginator.inc.php");
      <? echo "<a href='alunos.php?cod=$cod'>".$hora."</a>"; ?></td> 
   </tr>
 <? } ?>
-</TABLE>
+  <p>
+         <a href="../novoUsuario.php"class="btn btn-success">Novo usuário</a>
+         </p>
 <?
 	echo "<br>";			
 	echo "<br>";			
 	echo"<p style='text-align:left; padding-left:30px;'>".$_pagi_navegacion."</p>";
 ?>
+    </form>
+  
+
+  
+  
+
 </body>
 </html>
