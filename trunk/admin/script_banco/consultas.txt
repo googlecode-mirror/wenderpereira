@@ -14,35 +14,54 @@ Select * from perguntaserepostas;
 
 
 use criacao_literaria;
-
-
 ALTER TABLE historico
 ENGINE = InnoDB;
-
-
 ALTER TABLE mapeamento
 ENGINE = InnoDB;
-
-
 ALTER TABLE mapeamentoi
 ENGINE = InnoDB;
-
-
 ALTER TABLE pergunta
 ENGINE = InnoDB;
-
-
 ALTER TABLE pesquisa
 ENGINE = InnoDB;
-
-
 ALTER TABLE pesquisaquais
 ENGINE = InnoDB;
-
-
 ALTER TABLE respostas
 ENGINE = InnoDB;
-
-
 ALTER TABLE usuarios
 ENGINE = InnoDB;
+
+//-----------------------------------------------------------
+use criacao_literaria;
+SELECT * FROM criacao_literaria.historico;
+
+select Case (HOUR(hora)) 
+						WHEN 1 THEN '01:00:00 as 01:59:59'
+						WHEN 2 THEN '02:00:00 as 02:59:59'
+						WHEN 3 THEN '03:00:00 as 03:59:59'
+						WHEN 4 THEN '04:00:00 as 04:59:59'
+						WHEN 5 THEN '05:00:00 as 05:59:59'						
+						WHEN 6 THEN '06:00:00 as 06:59:59'
+						WHEN 7 THEN '07:00:00 as 07:59:59'
+						WHEN 8 THEN '08:00:00 as 08:59:59'
+						WHEN 9 THEN '09:00:00 as 09:59:59'
+						WHEN 10 THEN '10:00:00 as 10:59:59'
+						WHEN 11 THEN '11:00:00 as 11:59:59'
+						WHEN 12 THEN '12:00:00 as 12:59:59'
+						WHEN 13 THEN '13:00:00 as 13:59:59'
+						WHEN 14 THEN '14:00:00 as 14:59:59'
+						WHEN 15 THEN '15:00:00 as 15:59:59'
+						WHEN 16 THEN '16:00:00 as 16:59:59'
+						WHEN 17 THEN '17:00:00 as 17:59:59'
+						WHEN 18 THEN '18:00:00 as 18:59:59'						
+						WHEN 19 THEN '19:00:00 as 19:59:59'
+						WHEN 20 THEN '20:00:00 as 20:59:59'
+						WHEN 21 THEN '21:00:00 as 21:59:59'
+						WHEN 22 THEN '22:00:00 as 22:59:59'
+						WHEN 23 THEN '23:00:00 as 23:59:59'
+						WHEN 24 THEN '24:00:00 as 24:59:59'
+						ELSE 'Sem registro'
+						END as 'Intervalo', count(*) as 'Ligações recebida'
+from historico
+group by HOUR(hora);
+//-------------------------------------------------------------
