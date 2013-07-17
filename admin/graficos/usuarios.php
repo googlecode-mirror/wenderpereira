@@ -13,7 +13,9 @@ require_once '../phplot/phplot.php';
       connect();
 
 
- $sql = "SELECT hora,concluido,COUNT(concluido) as andamento FROM criacao_literaria.usuarios  WHERE idusuario > 100 GROUP BY concluido;";
+ $sql = "SELECT hora,concluido,COUNT(concluido) as andamento
+		FROM criacao_literaria.usuarios  
+		WHERE idusuario > 100 GROUP BY concluido;";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $data = array();
