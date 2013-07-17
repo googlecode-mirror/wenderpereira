@@ -25,48 +25,6 @@
     <td width="11" height="3"></td>'
   </tr>
 
-<!--  <tr>
-    <td width="35" height="30" bgcolor="#FFFFFF">
-    <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
-    <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-    <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="mapeamento.php">
-    <font color="#FFFFFF">&nbsp;&nbsp;Mapeamento</font></a></font></b></td>
-  </tr>-->
-
-  <!--<tr>
-    <td width="35" height="30" bgcolor="#FFFFFF">
-    <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
-    <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-    <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteI.php">
-    <font color="#FFFFFF">&nbsp;&nbsp;ParteI</font></a></font></b></td>
-  </tr>
-
-  <tr>
-    <td width="35" height="30" bgcolor="#FFFFFF">
-    <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
-    <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-    <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteII.php">
-    <font color="#FFFFFF">&nbsp;&nbsp;ParteII</font></a></font></b></td>
-  </tr>
-    <tr>
-    <td width="35" height="30" bgcolor="#FFFFFF">
-    <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
-    <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-    <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteIII.php">
-    <font color="#FFFFFF">&nbsp;&nbsp;ParteIII</font></a></font></b></td>
-  </tr>
- <tr>
-    <td width="35" height="30" bgcolor="#FFFFFF">
-    <img border="0" src="imagebox/pesquisa.png" width="30" height="30"></td>
-    <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"><b>
-    <font face="verdana" size="1">
-    <a target="principal" style="text-decoration: none" href="parteIV.php">
-    <font color="#FFFFFF">&nbsp;&nbsp;ParteIV</font></a></font></b></td>
-  </tr>-->
        
       <tr>
 <td width="35" height="30" bgcolor="#FFFFFF">
@@ -92,12 +50,22 @@
           <tr>
         <td width="35" height="30" bgcolor="#FFFFFF">
         <img border="0" src="imagebox/usuarios.png" width="30" height="30"></td>
-        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"
-        
-        ><b>
+        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF">
+           <b>
         <font face="verdana" size="1">
         <a href="pesquisa.php" target="principal" style="text-decoration: none">
         <font color="#FFFFFF">&nbsp;&nbsp;Preenchimento</font></a></font></b></td>
+        
+      </tr>
+
+              <tr>
+        <td width="35" height="30" bgcolor="#FFFFFF">
+        <img border="0" src="imagebox/usuarios.png" width="30" height="30"></td>
+        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF">
+           <b>
+        <font face="verdana" size="1">
+        <a href="graficos.php" target="principal" style="text-decoration: none">
+        <font color="#FFFFFF">&nbsp;&nbsp;Gráficos</font></a></font></b></td>
         
       </tr>
 
