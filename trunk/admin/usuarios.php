@@ -51,6 +51,10 @@ or die ("Falha na execução da consulta");
 
 <form name="form1" method="post" action="usuarios.php">
 <center>
+
+<fieldset>
+		<img src="graficos/usuarios.php" alt="Quantidade de usuarios" title="Qtd usuarios" />
+</fieldset> 
   <table border="3" align="center" style="border:groove; width:480px;">
   <tr>
   <td colspan="4" style="background-color:#999966; color:#ffffff;" align="center"><b>Usuários</b></td>
@@ -97,7 +101,7 @@ $data = date("d/m/Y");
 <?
 $_pagi_sql = " select idusuario,nome,login,email,data,hora,
 				case concluido
-					WHEN -1 THEN 'Cadastrado'
+					WHEN -1 THEN 'Não Preenchido'
 					WHEN 0 THEN 'Resposavel'
 					WHEN 1 THEN 'Identificação da Instituição'
 					WHEN 2 THEN 'Programas'
