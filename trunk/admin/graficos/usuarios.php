@@ -59,7 +59,7 @@ $p->SetPlotType('pie');
 $p->SetImageBorderType('plain');
 
 # Set a 3 line legend, and position it in the upper left corner:
- $p->SetLegend(array('-1=cadastrado','0=Resposavel pelo Preenchimento','1=Identificação da instituição','2=Programas','3=Artistas','4=Projetos'));
+ $p->SetLegend(array('-1=Não Preenchido','0=Resposavel pelo Preenchimento','1=Identificação da instituição','2=Programas','3=Artistas','4=Projetos'));
 //$p->SetLegendWorld(0.1, 95);
 
 # Turn data labels on, and all ticks and tick labels off:
