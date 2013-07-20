@@ -13,7 +13,11 @@ require_once '../phplot/phplot.php';
       connect();
 
 
- $sql = "SELECT data,COUNT(data) as total FROM criacao_literaria.historico where acao='login' GROUP BY data;";
+ $sql = "SELECT data,COUNT(data) as total FROM criacao_literaria.historico 
+		where acao='login' 
+		GROUP BY data 
+		ORDER BY data asc
+		LIMIT 12;";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $data = array();
@@ -29,7 +33,7 @@ $p = new PHPlot(800, 400);
 //$p->SetDefaultTTFont('./arial.ttf');
 
 # Set the main plot title:
-$p->SetTitle('Quantidade de logins por data');
+$p->SetTitle('Histórico 10 dias');
 
 $p->SetPrecisionY(1);
 
@@ -39,7 +43,7 @@ $p->SetDataType('text-data');
 $p->SetDataValues($data);
 
 # Select the plot type - bar chart:
-$p->SetPlotType('linepoints');
+$p->SetPlotType('lines');
 
 # Define the data range. PHPlot can do this automatically, but not as well.
 //$p->SetPlotAreaWorld(0, 0, 9, 400);
