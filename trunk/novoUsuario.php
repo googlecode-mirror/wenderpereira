@@ -87,7 +87,7 @@
    
       <label class="control-label" for="inputPassword"><i class="icon-home"></i>Email</label>
     <div class="controls">
-    <input name="email" id="email" type="email" class="validate[custom[email]] text-input" tabindex="4" size="20"/>
+    <input name="email" id="email" type="email" class="validate[required,custom[email]] text-input" tabindex="4" size="20"/>
     </div>
    
         <div class="control-label">
