@@ -56,6 +56,16 @@
 <div class="container">
 		<?
    		require "acessoInformacao.php";
+		include "conexao.php";
+		connect();
+		$date = date("d/m/y");
+		$hora = date("H:i");
+		$Ip = $_SERVER['REMOTE_ADDR'];
+		$consulta = "INSERT INTO historico (usuario,acao,data,hora)
+		VALUES ('$Ip','sistema','$date','$hora')";
+		$resultado = mysql_query($consulta);
+		
+		
 		?> 
                     <br />
                     <a href="http://www.funarte.gov.br/"> 
