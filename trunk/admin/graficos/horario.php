@@ -67,7 +67,7 @@ $p->SetDataType('text-data');
 $p->SetDataValues($data);
 
 # Select the plot type - bar chart:
-$p->SetPlotType('area');
+$p->SetPlotType('linepoints');
 
 # Define the data range. PHPlot can do this automatically, but not as well.
 //$p->SetPlotAreaWorld(0, 0, 9, 400);

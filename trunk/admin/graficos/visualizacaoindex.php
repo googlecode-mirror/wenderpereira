@@ -41,7 +41,7 @@ require_once '../phplot/phplot.php';
 						ELSE 'log'
 						END as 'intervalo', count(*) as 'acessos'
 					from historico
-					where acao ='login'
+					where acao ='sistema'
 					group by HOUR(hora);";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
@@ -58,7 +58,7 @@ $p = new PHPlot(800, 420);
 //$p->SetDefaultTTFont('./arial.ttf');
 
 # Set the main plot title:
-$p->SetTitle('Quantidade de logins por hora');
+$p->SetTitle('Quantidade de visualização pagina inicial por hora');
 
 $p->SetPrecisionY(1);
 
@@ -68,7 +68,7 @@ $p->SetDataType('text-data');
 $p->SetDataValues($data);
 
 # Select the plot type - bar chart:
-$p->SetPlotType('linepoints');
+$p->SetPlotType('area');
 
 # Define the data range. PHPlot can do this automatically, but not as well.
 //$p->SetPlotAreaWorld(0, 0, 9, 400);

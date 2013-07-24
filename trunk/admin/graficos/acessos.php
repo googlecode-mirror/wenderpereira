@@ -16,7 +16,7 @@ require_once '../phplot/phplot.php';
  $sql = "SELECT data,COUNT(data) as total FROM criacao_literaria.historico 
 		where acao='login' 
 		GROUP BY data 
-		ORDER BY data asc
+		ORDER BY idhistorico desc
 		LIMIT 12;";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
