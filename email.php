@@ -15,7 +15,7 @@ $Senha1		= md5(anti_sql_injection($_POST["senha1"]));
 $Nome		= anti_sql_injection($_POST["login"]);	// Pega o valor do campo Nome
 $Email		= anti_sql_injection($_POST["email"]);	// Pega o valor do campo Email
 
-if(empty($Email)) {
+if(empty($_POST["email"])) {
 	?>
 <script>
                alert("Email invalido");
