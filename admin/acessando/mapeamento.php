@@ -3,7 +3,46 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta charset="utf-8">
+<title>Funarte</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 123px;
+	padding-bottom: 40px;
+}
+
+.sidebar-nav {
+	padding: 9px 0;
+}
+</style>
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" href="ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+	href="ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+	href="ico/apple-touch-icon-57-precomposed.png">
+</head>
+
+
+
+
 
 <?
 	include "conexao.php";
@@ -52,10 +91,10 @@
 	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
 	</script>
 	<script>
-		jQuery(document).ready(function(){
-			// binds form submission and fields to the validation engine
-			jQuery("#form1").validationEngine();
-		});
+	    jQuery(document).ready(function () {
+	        // binds form submission and fields to the validation engine
+	        jQuery("#form1").validationEngine();
+	    });
 	</script>
     <script src="js/jsValidate.js" type="text/javascript"></script> 
 
@@ -67,6 +106,7 @@
   <br/>
    <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
        <tr>
+	   
       <th colspan="4" align="left" scope="row">
         <label><h4><i class="icon-plus-sign"></i>Responsável pelo preenchimento das informações:</h4></label>
         <label>
@@ -113,12 +153,27 @@
       </tr>
       <tr>
       <th colspan="4" align="left" scope="row">
-<!--              <div align="center">
-               <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+          <div align="center">
+		<!--
+		  <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
-              </div>-->
-
+          -->
+		  <ul class="pager">
+		  <li class="previous">
+			<a href="../usuarios.php">Usuarios</a>
+		  </li>
+ 		 </ul>
+		  
+		    <ul class="breadcrumb">
+			  <li  class="active"><a href="mapeamento.php?aces=<?php echo $Login;?>"></a>Responsável pelo preenchimento <span class="divider">/</span></li>
+			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			</ul>
+			
+			</div>
 			
           </th>
       </tr>

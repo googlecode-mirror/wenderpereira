@@ -30,7 +30,11 @@
 <?
 include "conexao.php";
 	connect();
-	  $Login 	=  trim($_SESSION["login"]);
+	  	  	if(empty($_GET["aces"])) {
+			}else{
+			$Login = ($_GET["aces"]);
+			}
+			
 	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
 	  
 	  	$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
@@ -105,6 +109,13 @@ include "conexao.php";
     <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif;">
       <tr>
         <td>
+	    <ul class="breadcrumb">
+			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
+			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteiv.php?aces=<?php echo $Login;?>"></a>Projetos</li>
+			</ul>
       	 <h4><i class="icon-plus-sign"></i>PROJETOS</h4>
       	   <h5>SOBRE OS PROJETOS DE RESIDÊNCIAS ARTÍSTICAS</h5>
            <div>
@@ -445,11 +456,28 @@ include "conexao.php";
       <tr>
         <td>
           <div>
-           <div align="center">
-               <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+		  
+          <div align="center">
+		<!--
+		  <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
-            </div>
+          -->
+		  
+		 <ul class="pager">
+		  <li class="previous">
+			<a href="../usuarios.php">Usuarios</a>
+		  </li>
+ 		 </ul>
+		    <ul class="breadcrumb">
+			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
+			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteiv.php?aces=<?php echo $Login;?>"></a>Projetos</li>
+			</ul>
+			
+			</div>
           </div>      
           </td>
       </tr>
