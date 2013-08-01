@@ -17,7 +17,10 @@
 <?
      include "conexao.php";
       connect();
-	  $Login 	=  trim($_SESSION["login"]);
+	  	if(empty($_GET["aces"])) {
+		}else{
+		$Login = ($_GET["aces"]);
+		}
    ?>
    <?  function getArray(&$Login){
    	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='2';";
@@ -90,6 +93,13 @@
   <table width="98%" align="center" class="table table-hover" cellpadding="2" cellspacing="2" style="font-family: Verdana, Geneva, sans-serif; font-size: 14px;">
     <tr>
       <td align="left" class="formu2"><div align="left">
+	    <ul class="breadcrumb">
+			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
+			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteii.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
+			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			</ul>
         <label><h5><i class="icon-plus-sign"></i>PROGRAMAS</h5></label>
         <label><h5>SOBRE  OS PROGRAMAS DE RESIDÊNCIAS ARTÍSTICAS</h5></label>
         </div>
@@ -637,11 +647,26 @@
     </tr>
     <tr>
     <td align="center" class="formu2">
-   <div align="center">
-       <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
-       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
-    </div>
+          <div align="center">
+		<!--
+		  <button type="submit" name="atualizar" value="atualizar"  class="btn btn-info"><i class="icon-refresh icon-white"></i> atualizar</button>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <button type="submit" name="avancar" value="avancar"  class="btn btn-success" onkeypress="return handleEnter(this, event);"><i class="icon-arrow-right icon-white"></i> avancar</button>
+          -->
+		<ul class="pager">
+		  <li class="previous">
+			<a href="../usuarios.php">Usuarios</a>
+		  </li>
+ 		 </ul>
+		    <ul class="breadcrumb">
+			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
+			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteii.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
+			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			</ul>
+			
+			</div>
     </td>
     </tr>
     </table>

@@ -114,8 +114,8 @@ $_pagi_sql = " select idusuario,nome,login,email,data,hora,
 				END as ativo
 				from
 			    usuarios 
-				where nome like '%".$_POST[cons_nome]."%'
-				order by idusuario DESC";
+				where concluido ='4' and nome like '%".$_POST[cons_nome]."%'
+				 order by idusuario DESC";
 			
 //quantidade de resultados por página (opcional, por padrão 20) 
 $_pagi_cuantos = 40; 
@@ -156,21 +156,21 @@ include("paginacao/paginator.inc.php");
 	<img src=\"imagebox/excluir.jpg\" alt=\"Excluir\" height=\"16\" border=\"0\"></a></td>"; ?>
 <? } else { echo "<td></td>"; } ?>
 	<td align="left" style="padding-left:10px;">
-	<? echo "<a href='alunos.php?cod=$cod'>".$cod."</a>"; ?></td>
+	<? echo "<a href='acessando/mapeamento.php?aces=$login'>".$cod."</a>"; ?></td>
 	<td align="left" style="padding-left:10px;">
-    <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
+    <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
-    <? echo "<a href='alunos.php?cod=$cod'>".$login."</a>"; ?></td>
+    <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$login."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
-     <? echo "<a href='alunos.php?cod=$cod'>".$email."</a>"; ?></td>
+     <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$email."</a>"; ?></td>
    	<td align="left" style="padding-left:10px;">
-     <? echo "<a href='alunos.php?cod=$cod'>".$ativo."</a>"; ?></td> 
+     <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$ativo."</a>"; ?></td> 
    	<td align="left" style="padding-left:10px;">
-     <? echo "<a href='alunos.php?cod=$cod'>".$concluido."</a>"; ?></td> 
+     <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$concluido."</a>"; ?></td> 
    	<td align="left" style="padding-left:10px;">
-     <? echo "<a href='alunos.php?cod=$cod'>".$data."</a>"; ?></td> 
+     <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$data."</a>"; ?></td> 
    	<td align="left" style="padding-left:10px;">
-     <? echo "<a href='alunos.php?cod=$cod'>".$hora."</a>"; ?></td> 
+     <? echo "<a href='acessando/mapeamento.php?aces=$login'>".$hora."</a>"; ?></td> 
   </tr>
 <? } ?>
 </TABLE>
