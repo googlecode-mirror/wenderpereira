@@ -23,7 +23,7 @@
     <meta name="author" content="wender corrêa">
 
 	<?
-    include "conexao.php";
+    include "../conexao.php";
     connect();
 	
 	if(empty($_GET["aces"])) {
