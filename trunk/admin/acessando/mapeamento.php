@@ -45,7 +45,7 @@ body {
 
 
 <?
-	include "conexao.php";
+	include "../conexao.php";
 	connect();
 	//$Login = trim($_SESSION["login"]);
 	
