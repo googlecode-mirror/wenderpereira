@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap-alert.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-alert.js"></script>
         <!--_JS -->
         <!--CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../../css/barra.css" rel="stylesheet" type="text/css" />
         <!--_CSS -->     
 
 <?
@@ -95,10 +95,10 @@
       <td align="left" class="formu2"><div align="left">
 	    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="parteii.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
-			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li><a href="parteI.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteII.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
+			  <li><a href="parteIII.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
         <label><h5><i class="icon-plus-sign"></i>PROGRAMAS</h5></label>
         <label><h5>SOBRE  OS PROGRAMAS DE RESIDÊNCIAS ARTÍSTICAS</h5></label>
@@ -658,12 +658,12 @@
 			<a href="../usuarios.php">Usuarios</a>
 		  </li>
  		 </ul>
-		    <ul class="breadcrumb">
+	    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="parteii.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
-			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li><a href="parteI.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteII.php?aces=<?php echo $Login;?>"></a>Programas <span class="divider">/</span></li>
+			  <li><a href="parteIII.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
 			
 			</div>

@@ -4,12 +4,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap-alert.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-alert.js"></script>
         <!--_JS -->
         <!--CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../../css/barra.css" rel="stylesheet" type="text/css" />
         <!--_CSS -->     
 
  <?
@@ -50,13 +50,13 @@
     }
     $meuArray1 = getArray1($Login);
  ?>
-    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
+    <link rel="stylesheet" href="../../css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="../../css/template.css" type="text/css"/>
+	<script src="../../js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
+	<script src="../../js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
 	</script>
-	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+	<script src="../../js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
 	</script>
 	<script>
 		jQuery(document).ready(function(){
@@ -93,10 +93,10 @@
         <td>
 		    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
-			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="parteiii.php?aces=<?php echo $Login;?>"></a>Artistas <span class="divider">/</span></li>
-			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li><a href="parteI.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteII.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteIII.php?aces=<?php echo $Login;?>"></a>Artistas <span class="divider">/</span></li>
+			  <li><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
           <h4><i class="icon-plus-sign"></i>ARTISTAS</h4>
           
@@ -335,13 +335,12 @@
 			<a href="../usuarios.php">Usuarios</a>
 		  </li>
  		 </ul>
-		  
 		    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
-			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="parteiii.php?aces=<?php echo $Login;?>"></a>Artistas <span class="divider">/</span></li>
-			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li><a href="parteI.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteII.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li class="active"><a href="parteIII.php?aces=<?php echo $Login;?>"></a>Artistas <span class="divider">/</span></li>
+			  <li><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
 			
 			</div>

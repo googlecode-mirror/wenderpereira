@@ -8,12 +8,12 @@
   <head>
 
         <script src="http://code.jquery.com/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/bootstrap-alert.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/bootstrap-alert.js"></script>
         <!--_JS -->
         <!--CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="css/barra.css" rel="stylesheet" type="text/css" />
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../../css/barra.css" rel="stylesheet" type="text/css" />
         <!--_CSS -->      
 
     <meta charset="utf-8">
@@ -80,11 +80,11 @@
     $meuArray1 = getArray1($Login);
     ?>
 <title>Funarte - Portal das Artes</title>
-    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">	</script>
-	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">	</script>
+    <link rel="stylesheet" href="../../css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="../../css/template.css" type="text/css"/>
+	<script src="../../js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="../../js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">	</script>
+	<script src="../../js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">	</script>
 <script>
 	   
 		jQuery(document).ready(function(){
@@ -92,8 +92,8 @@
 			jQuery("#form1").validationEngine();
 		});
 </script>
-<script src="js/jsValidate.js" type="text/javascript"></script> 
-  <script src="js/ajax.js" type="text/javascript"></script>  
+<script src="../../js/jsValidate.js" type="text/javascript"></script> 
+  <script src="../../js/ajax.js" type="text/javascript"></script>  
 <script>
 	function MarcarCheckBoxClique(campo){
 	if(document.getElementById([campo]).checked == true){
@@ -127,10 +127,10 @@
   <td colspan="2">
 		    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="partei.php?aces=<?php echo $Login;?>"></a>Identificação da instituição <span class="divider">/</span></li>
-			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
-			  <li ><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li class="active"><a href="parteI.php?aces=<?php echo $Login;?>"></a>Identificação da instituição <span class="divider">/</span></li>
+			  <li><a href="parteII.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIII.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li ><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
   <h5><i class="icon-plus-sign"></i>IDENTIFICAÇÃO  DA INSTITUIÇÃO REALIZADORA DO PROGRAMA DE RESIDENCIA ARTÍSTICA </h5>
 
@@ -399,10 +399,10 @@ Sim</label>
  		 </ul>
 		    <ul class="breadcrumb">
 			  <li><a href="mapeamento.php?aces=<?php echo $Login;?>">Responsável pelo preenchimento</a> <span class="divider">/</span></li>
-			  <li class="active"><a href="partei.php?aces=<?php echo $Login;?>"></a>Identificação da instituição <span class="divider">/</span></li>
-			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
-			  <li ><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			  <li class="active"><a href="parteI.php?aces=<?php echo $Login;?>"></a>Identificação da instituição <span class="divider">/</span></li>
+			  <li><a href="parteII.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIII.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li ><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
 			</ul>
 			
 			</div>

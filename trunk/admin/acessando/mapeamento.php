@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Le styles -->
-<link href="css/bootstrap.css" rel="stylesheet">
+<link href="../../css/bootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
 	padding-top: 123px;
@@ -21,7 +21,7 @@ body {
 	padding: 9px 0;
 }
 </style>
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<link href="../../css/bootstrap-responsive.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -69,10 +69,10 @@ body {
 		$txtEmail = ($array_exibir['email']);
 	}
 ?>
-   <script src="js/jsValidate.js" type="text/javascript"></script>
-   <script src="js/jquery-1.6.2.js" type="text/javascript"></script>
-   <script src="js/jquery.validate.js" type="text/javascript"></script>
-   <script src="js/jsvalidarMapemaneto.js" type="text/javascript"></script>
+   <script src="../../js/jsValidate.js" type="text/javascript"></script>
+   <script src="../../js/jquery-1.6.2.js" type="text/javascript"></script>
+   <script src="../../js/jquery.validate.js" type="text/javascript"></script>
+   <script src="../../js/jsvalidarMapemaneto.js" type="text/javascript"></script>
 	 <style type="text/css">
       /* Estilizar os alertas */
       label.error{
@@ -82,13 +82,13 @@ body {
            }
       </style>
       
-    <link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
-	<link rel="stylesheet" href="css/template.css" type="text/css"/>
-	<script src="js/jquery-1.8.2.min.js" type="text/javascript">
+    <link rel="stylesheet" href="../../css/validationEngine.jquery.css" type="text/css"/>
+	<link rel="stylesheet" href="../../css/template.css" type="text/css"/>
+	<script src="../../js/jquery-1.8.2.min.js" type="text/javascript">
 	</script>
-	<script src="js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
+	<script src="../../js/languages/jquery.validationEngine-pt_BR.js" type="text/javascript" charset="utf-8">
 	</script>
-	<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
+	<script src="../../js/jquery.validationEngine.js" type="text/javascript" charset="utf-8">
 	</script>
 	<script>
 	    jQuery(document).ready(function () {
@@ -96,18 +96,25 @@ body {
 	        jQuery("#form1").validationEngine();
 	    });
 	</script>
-    <script src="js/jsValidate.js" type="text/javascript"></script> 
+    <script src="../../js/jsValidate.js" type="text/javascript"></script> 
 
 <title>Funarte - Portal das Artes</title>
 </head>
 <body>
 <form id="form1" name="form1" method="post" action="sql/mapeamento.php">
  <div>
-  <br/>
-   <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
+     <table width="98%" class="table table-hover" align="center" cellpadding="2" cellspacing="2" style="font-family: Verdana;">
        <tr>
 	   
       <th colspan="4" align="left" scope="row">
+	  		<ul class="breadcrumb">
+			  <li  class="active"><a href="mapeamento.php?aces=<?php echo $Login;?>"></a>Responsável pelo preenchimento <span class="divider">/</span></li>
+			  <li><a href="parteI.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
+			  <li><a href="parteII.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIII.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
+			  <li><a href="parteIV.php?aces=<?php echo $Login;?>">Projetos</a></li>
+			</ul>
+			
         <label><h4><i class="icon-plus-sign"></i>Responsável pelo preenchimento das informações:</h4></label>
         <label>
           <h5>Os campos com asterisco* são de preenchimento obrigatório:</h5>
@@ -164,15 +171,7 @@ body {
 			<a href="../usuarios.php">Usuarios</a>
 		  </li>
  		 </ul>
-		  
-		    <ul class="breadcrumb">
-			  <li  class="active"><a href="mapeamento.php?aces=<?php echo $Login;?>"></a>Responsável pelo preenchimento <span class="divider">/</span></li>
-			  <li><a href="partei.php?aces=<?php echo $Login;?>">Identificação da instituição</a> <span class="divider">/</span></li>
-			  <li><a href="parteii.php?aces=<?php echo $Login;?>">Programas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiii.php?aces=<?php echo $Login;?>">Artistas</a> <span class="divider">/</span></li>
-			  <li><a href="parteiv.php?aces=<?php echo $Login;?>">Projetos</a></li>
-			</ul>
-			
+
 			</div>
 			
           </th>
