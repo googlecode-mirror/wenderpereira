@@ -53,7 +53,7 @@ or die ("Falha na execução da consulta");
 <center>
 
 <fieldset>
-		<img src="graficos/usuarios.php" alt="Quantidade de usuarios" title="Qtd usuarios" />
+		<!--<img src="graficos/usuarios.php" alt="Quantidade de usuarios" title="Qtd usuarios" />-->
 </fieldset> 
   <table border="3" align="center" style="border:groove; width:480px;">
   <tr>
