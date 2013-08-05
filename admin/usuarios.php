@@ -114,7 +114,7 @@ $_pagi_sql = " select idusuario,nome,login,email,data,hora,
 				END as ativo
 				from
 			    usuarios 
-				where concluido ='4' and nome like '%".$_POST[cons_nome]."%'
+				where nome like '%".$_POST[cons_nome]."%'
 				 order by idusuario DESC";
 			
 //quantidade de resultados por página (opcional, por padrão 20) 

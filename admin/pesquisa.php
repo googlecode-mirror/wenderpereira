@@ -59,6 +59,7 @@ or die ("Falha na execução da consulta");
 $data = date("d/m/Y");
 ?>
   <tr>
+  
     <td align="left" style="padding-left:10px;">Nome:</td>
     <td align="left">
 	<input type="text" size="40" name="nome" value="" />
@@ -74,13 +75,15 @@ $data = date("d/m/Y");
   <td align="left" style="padding-left:10px;">Senha:</td>
   <td align="left">
   <input type="text" size="40" name="senha" value="" />
+  <br/>
+  <a href="imprimir.php"><i class="icon-remove"></i>Exportar todos os dados do Mapeamento</a>
   </td>
   </tr>
   <? if ($_SESSION[login] == "wender" or $_SESSION[login] == "wender") { ?>
   <tr>
   <td align="center" colspan="2"><br>
   <input type="submit" name="Salvar" value="Salvar" style="color:#000099" onKeyPress="return handleEnter(this, event)" id="at">&nbsp;	
-<a href="imprimir.php"><i class="icon-remove"></i>Exportar dados</a></td>
+<!--<a href="imprimir.php"><i class="icon-remove"></i>Exportar dados</a></td>-->
 </tr>
 <? } ?>
 </TABLE>
