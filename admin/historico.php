@@ -103,7 +103,11 @@ $data = date("d/m/Y");
 </tr>
 </table>
 <?
-$_pagi_sql = " select * from  historico where usuario like '%".$_POST[cons_nome]."%' order by idhistorico DESC";
+$_pagi_sql = " select * from  historico where usuario like '%".$_POST[cons_nome]."%' 
+					and acao <> 'sistema' 
+					and acao <> 'autenticado_email' 
+						order by idhistorico DESC";
+						
 //quantidade de resultados por página (opcional, por padrão 20) 
 $_pagi_cuantos = 40; 
 //Incluímos o script de paginação. Este já executa a consulta automaticamente 
@@ -131,7 +135,7 @@ include("paginacao/paginator.inc.php");
 		  
 ?>
   <tr>
-<? if ($_SESSION[login] == "zezo" or $_SESSION[login] == "rose") { ?>
+<? if ($_SESSION[login] == "wender" or $_SESSION[login] == "wender") { ?>
     <? echo "<td align=\"center\"><a href=\"#\" onClick=\"excluir('". $cod . "')\">
 	<img src=\"imagebox/excluir.jpg\" alt=\"Excluir\" height=\"16\" border=\"0\"></a></td>"; ?>
 <? } else { echo "<td></td>"; } ?>
