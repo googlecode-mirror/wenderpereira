@@ -1,9 +1,14 @@
 
+
+
 <head>
 <meta http-equiv="refresh" content="35;URL=http://www.funarte.gov.br/mapeamento_residencias/admin/graficos.php"> 
 </head>
 <fieldset>
-		<img src="graficos/acessos.php" alt="Quantidade de acessos por dia" title="Acessos site " />
+		<img src="graficos/totalEstado.php" alt="Total por Estado" title="Total por Estado" />
+</fieldset> 
+<fieldset>
+		<img src="graficos/acessos.php" alt="Quantidade de acessos por dia" title="Acessos por dia " />
 </fieldset> 
 <fieldset>
 		<img src="graficos/visualizacaoindex.php" alt="Quantidade de visualização pagina inicial por hora a partir 24/07/2013" title="Quantidade de visualização pagina inicial por hora a partir 24/07/2013" />
