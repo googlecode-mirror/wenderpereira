@@ -1,0 +1,268 @@
+CREATE DATABASE  IF NOT EXISTS `criacao_literaria1` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `criacao_literaria1`;
+-- MySQL dump 10.13  Distrib 5.5.16, for Win32 (x86)
+--
+-- Host: localhost    Database: criacao_literaria1
+-- ------------------------------------------------------
+-- Server version	5.5.8-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `historico`
+--
+
+DROP TABLE IF EXISTS `historico`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `historico` (
+  `idhistorico` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(45) NOT NULL DEFAULT 'Acessodeslogado',
+  `acao` varchar(45) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `hora` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idhistorico`,`usuario`),
+  KEY `fk_historico_usuarios1_idx` (`usuario`),
+  CONSTRAINT `fk_historico_usuarios1` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`login`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=787 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `historico`
+--
+
+LOCK TABLES `historico` WRITE;
+/*!40000 ALTER TABLE `historico` DISABLE KEYS */;
+/*!40000 ALTER TABLE `historico` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mapeamento`
+--
+
+DROP TABLE IF EXISTS `mapeamento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mapeamento` (
+  `idmapeamento` int(11) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `cargointituicao` varchar(45) NOT NULL,
+  `cpf` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `telefone` varchar(45) DEFAULT NULL,
+  `preenchido` char(1) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `hora` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='	';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mapeamento`
+--
+
+LOCK TABLES `mapeamento` WRITE;
+/*!40000 ALTER TABLE `mapeamento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mapeamento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `mapeamentopartei`
+--
+
+DROP TABLE IF EXISTS `mapeamentopartei`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mapeamentopartei` (
+  `idmapeamento` int(11) NOT NULL,
+  `nomeintituicao` varchar(45) NOT NULL,
+  `cnpj` varchar(45) DEFAULT NULL,
+  `endereco` varchar(80) NOT NULL,
+  `municipio` varchar(45) NOT NULL,
+  `unidadefederativa` varchar(45) DEFAULT NULL,
+  `cep` varchar(18) NOT NULL,
+  `telefone` varchar(45) DEFAULT NULL,
+  `email` varchar(58) DEFAULT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `preenchido` varchar(1) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `hora` char(45) DEFAULT NULL,
+  PRIMARY KEY (`usuario`),
+  UNIQUE KEY `usuario_UNIQUE` (`usuario`)
+) ENGINE=MyISAM AUTO_INCREMENT=237 DEFAULT CHARSET=latin1 COMMENT='	';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mapeamentopartei`
+--
+
+LOCK TABLES `mapeamentopartei` WRITE;
+/*!40000 ALTER TABLE `mapeamentopartei` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mapeamentopartei` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pergunta`
+--
+
+DROP TABLE IF EXISTS `pergunta`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pergunta` (
+  `idpergunta` int(11) NOT NULL AUTO_INCREMENT,
+  `questao` varchar(45) DEFAULT NULL,
+  `parte` varchar(45) DEFAULT NULL,
+  `pergunta` varchar(255) DEFAULT NULL,
+  `observacao` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idpergunta`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pergunta`
+--
+
+LOCK TABLES `pergunta` WRITE;
+/*!40000 ALTER TABLE `pergunta` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pergunta` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pesquisa`
+--
+
+DROP TABLE IF EXISTS `pesquisa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pesquisa` (
+  `idpesquisa` int(11) unsigned NOT NULL,
+  `respostas` varchar(45) DEFAULT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `parte` varchar(45) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `hora` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`usuario`),
+  KEY `fk_pesquisa_usuarios_idx` (`usuario`),
+  CONSTRAINT `fk_pesquisa_usuarios` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`login`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pesquisa`
+--
+
+LOCK TABLES `pesquisa` WRITE;
+/*!40000 ALTER TABLE `pesquisa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pesquisa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pesquisaquais`
+--
+
+DROP TABLE IF EXISTS `pesquisaquais`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pesquisaquais` (
+  `idpesquisa` int(11) NOT NULL AUTO_INCREMENT,
+  `questao` varchar(45) DEFAULT NULL,
+  `respostas` longtext NOT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `parte` varchar(45) DEFAULT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `hora` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idpesquisa`,`usuario`),
+  KEY `fk_pesquisaquais_usuarios1_idx` (`usuario`),
+  CONSTRAINT `fk_pesquisaquais_usuarios1` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`login`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=265 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pesquisaquais`
+--
+
+LOCK TABLES `pesquisaquais` WRITE;
+/*!40000 ALTER TABLE `pesquisaquais` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pesquisaquais` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `respostas`
+--
+
+DROP TABLE IF EXISTS `respostas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `respostas` (
+  `idperguntas` int(11) NOT NULL AUTO_INCREMENT,
+  `parte` varchar(45) DEFAULT NULL,
+  `questao` varchar(45) DEFAULT NULL,
+  `valores` varchar(255) DEFAULT NULL,
+  UNIQUE KEY `idperguntas` (`idperguntas`)
+) ENGINE=InnoDB AUTO_INCREMENT=231 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `respostas`
+--
+
+LOCK TABLES `respostas` WRITE;
+/*!40000 ALTER TABLE `respostas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `respostas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usuarios`
+--
+
+DROP TABLE IF EXISTS `usuarios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuarios` (
+  `idusuario` int(16) NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) NOT NULL,
+  `senha` varchar(32) NOT NULL,
+  `nome` varchar(20) NOT NULL,
+  `ativo` char(1) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `data` varchar(45) DEFAULT NULL,
+  `tipo` varchar(6) DEFAULT NULL COMMENT 'Adm = administrador\nAvan = avançado',
+  `hora` varchar(45) DEFAULT NULL,
+  `concluido` varchar(5) DEFAULT '-1',
+  `autenticacao` varchar(45) DEFAULT NULL,
+  `ip` varchar(45) DEFAULT NULL,
+  `navegador` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idusuario`,`login`),
+  UNIQUE KEY `login_UNIQUE` (`login`),
+  UNIQUE KEY `nome_UNIQUE` (`nome`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=322 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+LOCK TABLES `usuarios` WRITE;
+/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-07-18 11:52:05
