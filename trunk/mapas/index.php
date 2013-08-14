@@ -73,7 +73,7 @@
 						 while ($array_exibir = mysql_fetch_array($Resultado)) {
 						
 							?>
-							addMarker('<?echo str_replace("'","",$array_exibir['endereco']);?><?echo ($array_exibir['unidadefederativa']); ?>','<img src="icons/m1.png" /><br/><b>Instituição: </b><?echo ($array_exibir['nomeintituicao']); ?><br/><b>Endereço: </b><?echo ($array_exibir['endereco']); ?><br/><b>Municipio: </b><?echo ($array_exibir['municipio']); ?><br/><b>CNPJ: </b><?echo ($array_exibir['cnpj']); ?><br/><b> Email:</b> <?echo ($array_exibir['email']); ?><br/><b>Telefone:</b> <?echo ($array_exibir['telefone']); ?>');
+							addMarker('<?echo str_replace("'","",$array_exibir['endereco']);?><?echo ($array_exibir['unidadefederativa']); ?>','<img src="icons/m2.png" /><br/><b>Instituição: </b><?echo ($array_exibir['nomeintituicao']); ?><br/><b>Endereço: </b><?echo ($array_exibir['endereco']); ?><br/><b>Municipio: </b><?echo ($array_exibir['municipio']); ?><br/><b>CNPJ: </b><?echo ($array_exibir['cnpj']); ?><br/><b> Email:</b> <?echo ($array_exibir['email']); ?><br/><b>Telefone:</b> <?echo ($array_exibir['telefone']); ?>');
 							<?
 						}
 					?>
