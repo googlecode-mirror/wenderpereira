@@ -13,7 +13,7 @@ require_once '../phplot/phplot.php';
       connect();
 
 
- $sql = "SELECT unidadefederativa,COUNT(unidadefederativa) as total FROM criacao_literaria.mapeamentopartei 
+ $sql = "SELECT unidadefederativa,COUNT(unidadefederativa) as total FROM mapeamentoparteI 
 		 where unidadefederativa <>''  
 		 GROUP by unidadefederativa 
 		 order by total desc;";
