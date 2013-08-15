@@ -2,6 +2,15 @@
 	include "../conexao.php";
 	connect();
 ?>
+<?
+
+if(empty($_GET["m"])) {
+}else{
+$unidadeFederativa = ($_GET["m"]);
+}
+
+
+?>    
 
 <!DOCTYPE html>
 <html>
@@ -65,10 +74,10 @@
                 window.onload = function () 
 			{ //Definir o centro do mapa [endereço + elm div]
 				<?
-					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='rj';";
+					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='$unidadeFederativa';";
 						$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 						?>
-						initMap('PR - Brasil', 'map');
+						initMap('<? echo $unidadeFederativa ?> - Brasil', 'map');
 						<?
 						 while ($array_exibir = mysql_fetch_array($Resultado)) {
 						
