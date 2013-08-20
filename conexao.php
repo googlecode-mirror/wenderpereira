@@ -3,7 +3,7 @@ error_reporting(0);
 function connect(){
 	$host = "localhost:3306";   	//host do mysql
 	$user = "root";        //usuário mysql
-	$pass = "";     		//senha mysql
+	$pass = "root";     		//senha mysql
 	$banco = "criacao_literaria";//nome do banco de dados
 	$conn = mysql_connect($host,$user,$pass);
 	$db = mysql_select_db($banco,$conn);
