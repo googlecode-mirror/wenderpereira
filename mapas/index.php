@@ -3,13 +3,17 @@
 	connect();
 ?>
 <?
-
-if(empty($_GET["m"])) {
-}else{
-$unidadeFederativa = ($_GET["m"]);
-}
-
-
+if(empty($_POST[cmbUnidadeFederativa])) 
+  {
+       if(empty($_GET["m"])) {
+       }else{
+       $unidadeFederativa = ($_GET["m"]);
+      }
+  }
+  else{
+     $unidadeFederativa = ( $_POST[cmbUnidadeFederativa]);
+      
+ }
 ?>    
 
 <!DOCTYPE html>
@@ -28,51 +32,42 @@ $unidadeFederativa = ($_GET["m"]);
     <!-- Le styles -->
     </head>
     <body>
+        <form name="form1" id="form1" method="post"  action="index.php">
         <div class="container_12">
             <div class="grid_12">
-                <div class="map" id="map" style="height: 450px; width: 100%;"></div>
+                <div class="map" id="map" style="height: 550px; width: 100%;"></div>
             </div>
            <div class="grid_10">
                 <div class="grid_4 push_4">
                     <br />
-					
 					<select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
-					  <option value="AC">AC</option>
-					  <option value="AL">AL</option>
-					  <option value="AM">AM</option>
-					  <option value="AP">AP</option>
-					  <option value="BA">BA</option>
-					  <option value="CE">CE</option>
-					  <option value="DF">DF</option>
-					  <option value="ES">ES</option>
-					  <option value="GO">GO</option>
-					  <option value="MA">MA</option>
-					  <option value="MG">MG</option>
-					  <option value="MS">MS</option>
-					  <option value="MT">MT</option>
-					  <option value="PA">PA</option>
-					  <option value="PB">PB</option>
-					  <option value="PE">PE</option>
-					  <option value="PI">PI</option>
-					  <option value="PR">PR</option>
-					  <option value="RJ">RJ</option>
-					  <option value="RN">RN</option>
-					  <option value="RO">RO</option>
-					  <option value="RR">RR</option>
-					  <option value="RS">RS</option>
-					  <option value="SC">SC</option>
-					  <option value="SE">SE</option>
-					  <option value="SP">SP</option>
-					  <option value="TO">TO</option>
-					  </select>
-					<br />
-				    <br />
+                        <option value=""><? echo $unidadeFederativa ?></option>
+						<?
+						 $sql = "SELECT unidadefederativa,COUNT(unidadefederativa) as total FROM mapeamentoparteI 
+							 where unidadefederativa <>''  
+							 GROUP by unidadefederativa 
+							 order by total desc;";
+						   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
+						   $i=0;
+						   $data = array();
+						   while ($array_exibir = mysql_fetch_array($Resultado)) 
+						   {
+							?><option value="<?echo $array_exibir['unidadefederativa']?>"><? echo $array_exibir['unidadefederativa']?> Total:<? echo $array_exibir['total']?></option><?
+							$i++;
+						   }
+						?>
+						
+					  </select>&nbsp;
+                    <br />
+                    <input id="Text2" type="text" />
+				    <button type="submit" name="buscar" value="buscar">Buscar</button>
+                    <br />
                 </div>
-            </div>
+                </div>
         <script>
             $(function(){
                 window.onload = function () 
-			{ //Definir o centro do mapa [endereço + elm div]
+			{ //Definir o centro do mapa [endereï¿½o + elm div]
 				<?
 					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='$unidadeFederativa';";
 						$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
@@ -89,6 +84,7 @@ $unidadeFederativa = ($_GET["m"]);
 			   }
             })
         </script>
+       </form>
 
     </body>
 </html>
