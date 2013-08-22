@@ -18,10 +18,10 @@ function initMapCep(cep,num,elm)
                     div: elm,
                     lat: lat,
                     lng: lng,
-                    scrollwheel: false,
+                    scrollwheel: true,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     streetViewControl: true,
-                    zoom: 6
+                    zoom: 8
                 })
                 map.setCenter(lat, lng);
             }
@@ -41,10 +41,10 @@ function initMap(address,elm)
                     div: elm,
                     lat: lat,
                     lng: lng,
-                    scrollwheel: false,
+                    scrollwheel: true,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     streetViewControl: true,
-                    zoom: 6
+                    zoom: 7
                 })
                 map.setCenter(lat, lng);
             }
@@ -81,7 +81,7 @@ function addMarker(address,html)
 			}
 			else{
 				sleep++;
-				//console.log( sleep + ' * 200 -> ' + sleep * 200)
+				console.log( sleep + ' * 200 -> ' + sleep * 200)
 				setTimeout(function(){
 					addMarker(address,html)
 				}, sleep * 200)	
