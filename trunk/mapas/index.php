@@ -26,6 +26,23 @@ if(empty($_POST[cmbUnidadeFederativa]))
         <script src="js/markers.js" type="text/javascript"></script>
         <link href="css/main.css" rel="stylesheet" />
 		
+		 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+ 
+		<script type="text/javascript" language="javascript">
+		function buscar_cidades(){
+			  var estado = $('#cmbUnidadeFederativa').val();  //codigo do estado escolhido
+			  //se encontrou o estado
+			  if(estado){
+				var url = 'ajax_buscar_cidades.php?estado='+estado;  //caminho do arquivo php que irá buscar as cidades no BD
+				$.get(url, function(dataReturn) {
+				  $('#load_cidades').html(dataReturn);  //coloco na div o retorno da requisicao
+				});
+			  }
+			}
+		</script>
+		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -35,12 +52,12 @@ if(empty($_POST[cmbUnidadeFederativa]))
         <form name="form1" id="form1" method="post"  action="index.php">
         <div class="container_12">
             <div class="grid_12">
-                <div class="map" id="map" style="height: 550px; width: 100%;"></div>
+                <div class="map" id="map" style="height: 500px; width: 100%;"></div>
             </div>
            <div class="grid_10">
                 <div class="grid_4 push_4">
                     <br />
-					<select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
+						<select id="cmbUnidadeFederativa" name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa" onchange="buscar_cidades()">
                         <option value=""><? echo $unidadeFederativa ?></option>
 						<?
 						 $sql = "SELECT unidadefederativa,COUNT(unidadefederativa) as total FROM mapeamentoparteI 
@@ -58,10 +75,46 @@ if(empty($_POST[cmbUnidadeFederativa]))
 						?>
 						
 					  </select>&nbsp;
+					  
+					  
+					  
                     <br />
                     <input id="Text2" type="text" />
 				    <button type="submit" name="buscar" value="buscar">Buscar</button>
                     <br />
+
+					
+					
+					
+					
+					
+				<table width="300" border="0" align="center" cellpadding="2" cellspacing="1">
+				  <tr>
+					<div id="load_cidades">
+					<label>Cidades:</label>
+					<select name="cidade" id="cidade">
+					  <option value="">Selecione o estado</option>
+					</select>
+					</div>
+	    		  </tr>
+		  	    </table>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
                 </div>
                 </div>
         <script>
