@@ -1,7 +1,8 @@
+
 <?
 include "../conexao.php";
 connect();
-	
+
 $estado = $_GET['estado'];  //codigo do estado passado por parametro
 $sql = "SELECT endereco,municipio FROM mapeamentopartei where unidadefederativa='$estado'";
 
@@ -15,10 +16,11 @@ $sql = "SELECT endereco,municipio FROM mapeamentopartei where unidadefederativa=
 	$i++;
 	}
 ?>
-<label>Cidades:</label>
+<!--<label>Cidades:</label>-->
 <select name="cidade" id="cidade">
   <?php foreach($arrCidades as $value => $nome){
     echo "<option value='{$value}'>{$nome}</option>";
   }
 ?>
 </select>
+
