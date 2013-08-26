@@ -40,6 +40,7 @@ if(empty($_POST[cmbUnidadeFederativa]))
 				  $('#load_cidades').html(dataReturn);  //coloco na div o retorno da requisicao
 				});
 			  }
+
 			}
 		</script>
 		
@@ -69,58 +70,35 @@ if(empty($_POST[cmbUnidadeFederativa]))
 						   $data = array();
 						   while ($array_exibir = mysql_fetch_array($Resultado)) 
 						   {
-							?><option value="<?echo $array_exibir['unidadefederativa']?>"><? echo $array_exibir['unidadefederativa']?> Total:<? echo $array_exibir['total']?></option><?
+							?>
+							<option value="<?echo $array_exibir['unidadefederativa']?>">
+							<? echo strtoupper($array_exibir['unidadefederativa'])?> Total:<? echo strtoupper($array_exibir['total'])?>
+							</option><?
 							$i++;
 						   }
 						?>
-						
-					  </select>&nbsp;
-					  
-					  
-					  
-                    <br />
-                    <input id="Text2" type="text" />
-				    <button type="submit" name="buscar" value="buscar">Buscar</button>
-                    <br />
-
-					
-					
-					
-					
-					
+				
+		 		   </select>&nbsp;
+		        <br />
 				<table width="300" border="0" align="center" cellpadding="2" cellspacing="1">
 				  <tr>
 					<div id="load_cidades">
-					<label>Cidades:</label>
+					<!--<label>Cidades:</label>-->
 					<select name="cidade" id="cidade">
 					  <option value="">Selecione o estado</option>
 					</select>
 					</div>
 	    		  </tr>
 		  	    </table>
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
-					
+				<button type="submit" name="buscar" value="buscar">Buscar</button>
                 </div>
+				
                 </div>
+
         <script>
             $(function(){
                 window.onload = function () 
-			{ //Definir o centro do mapa [endere�o + elm div]
+			{ //Definir o centro do mapa [endereço + elm div]
 				<?
 					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='$unidadeFederativa';";
 						$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
@@ -137,8 +115,7 @@ if(empty($_POST[cmbUnidadeFederativa]))
 			   }
             })
         </script>
-       </form>
-
+		</form>
     </body>
 </html>
 
