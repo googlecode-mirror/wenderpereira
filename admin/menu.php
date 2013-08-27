@@ -36,6 +36,17 @@
         <a href="historico.php" target="principal" style="text-decoration: none">
         <font color="#FFFFFF">&nbsp;&nbsp;Histórico acesso</font></a></font></b></td>
       </tr>
+	        <tr>
+        <td width="35" height="30" bgcolor="#FFFFFF">
+        <img border="0" src="imagebox/usuarios.png" width="30" height="30"></td>
+        <td height="30" colspan="3" bgcolor="#999966" style="border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF"
+        
+        ><b>
+        <font face="verdana" size="1">
+        <a href="mapeamento.php" target="principal" style="text-decoration: none">
+        <font color="#FFFFFF">&nbsp;&nbsp;Responsavel</font></a></font></b></td>
+        
+      </tr>
       <tr>
         <td width="35" height="30" bgcolor="#FFFFFF">
         <img border="0" src="imagebox/usuarios.png" width="30" height="30"></td>
