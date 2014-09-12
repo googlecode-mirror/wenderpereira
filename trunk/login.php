@@ -3,9 +3,10 @@
 	connect();
     $date = date("d/m/y");
     $hora = date("H:i");
-	
-	if (!isset($_SESSION)) session_start();
 
+    @session_start(); // Inicializa a sess�o
+    
+	
     $user = trim($_POST["login"]);
     $pwd  = md5(trim($_POST["senha"]));
 	$Email = trim($_POST["txtEmail"]);
@@ -31,7 +32,7 @@
             ?>
                <script language="JavaScript">
                 <!--
-                alert("Usuário e/ou Senha incorreta,um email com a ativavação foi enviado para o seu email!");
+                alert("Usu&aacute;rio e/ou Senha incorreta,um email com a ativa&ccedil;&atilde;o foi enviado para o seu email!");
                 window.location = 'index.php';
                 //-->
                 </script>
@@ -41,7 +42,10 @@
 			$consulta = "INSERT INTO historico (usuario,acao,data,hora)
 			VALUES ('$user','login','$date','$hora')";
 			$resultado = mysql_query($consulta)
-			or die("Query invalida: " . mysql_error());
+			or die (mysql_error());
 			
-
+			
+	// $consulta = "UPDATE historico SET usuario='$user',acao= 'login', data='$date',hora='$hora' WHERE usuario='$user';";
+	 //$resultado = mysql_query($consulta)
+	 //or die ("--");
 ?>

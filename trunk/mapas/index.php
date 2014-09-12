@@ -1,5 +1,5 @@
 ﻿<?php 
-	include "../conexao.php";
+	include "conexao.php";
 	connect();
 ?>
 <?
@@ -26,24 +26,6 @@ if(empty($_POST[cmbUnidadeFederativa]))
         <script src="js/markers.js" type="text/javascript"></script>
         <link href="css/main.css" rel="stylesheet" />
 		
-		 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-		 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
- 
-		<script type="text/javascript" language="javascript">
-		function buscar_cidades(){
-			  var estado = $('#cmbUnidadeFederativa').val();  //codigo do estado escolhido
-			  //se encontrou o estado
-			  if(estado){
-				var url = 'ajax_buscar_cidades.php?estado='+estado;  //caminho do arquivo php que irá buscar as cidades no BD
-				$.get(url, function(dataReturn) {
-				  $('#load_cidades').html(dataReturn);  //coloco na div o retorno da requisicao
-				});
-			  }
-
-			}
-		</script>
-		
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -53,52 +35,45 @@ if(empty($_POST[cmbUnidadeFederativa]))
         <form name="form1" id="form1" method="post"  action="index.php">
         <div class="container_12">
             <div class="grid_12">
-                <div class="map" id="map" style="height: 500px; width: 100%;"></div>
+                <div class="map" id="map" style="height: 550px; width: 100%;"></div>
             </div>
            <div class="grid_10">
                 <div class="grid_4 push_4">
                     <br />
-						<select id="cmbUnidadeFederativa" name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa" onchange="buscar_cidades()">
+					<select name="cmbUnidadeFederativa" size="1" id="idcmbUnidadeFederativa">
                         <option value=""><? echo $unidadeFederativa ?></option>
 						<?
-						 $sql = "SELECT unidadefederativa,COUNT(unidadefederativa) as total FROM mapeamentoparteI 
-							 where unidadefederativa <>''  
-							 GROUP by unidadefederativa 
-							 order by total desc;";
+						 $sql = "SELECT  
+      unidadefederativa,
+      COUNT(unidadefederativa) as total
+FROM 
+mapeamentoparteI,
+usuarios
+WHERE usuarios.login = mapeamentoparteI.usuario
+and concluido = '4'
+GROUP by
+     unidadefederativa ORDER BY total desc";
 						   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 						   $i=0;
 						   $data = array();
 						   while ($array_exibir = mysql_fetch_array($Resultado)) 
 						   {
-							?>
-							<option value="<?echo $array_exibir['unidadefederativa']?>">
-							<? echo strtoupper($array_exibir['unidadefederativa'])?> Total:<? echo strtoupper($array_exibir['total'])?>
-							</option><?
+							?><option value="<?echo $array_exibir['unidadefederativa']?>"><? echo $array_exibir['unidadefederativa']?> Total:<? echo $array_exibir['total']?></option><?
 							$i++;
 						   }
 						?>
-				
-		 		   </select>&nbsp;
-		        <br />
-				<table width="300" border="0" align="center" cellpadding="2" cellspacing="1">
-				  <tr>
-					<div id="load_cidades">
-					<!--<label>Cidades:</label>-->
-					<select name="cidade" id="cidade">
-					  <option value="">Selecione o estado</option>
-					</select>
-					</div>
-	    		  </tr>
-		  	    </table>
-				<button type="submit" name="buscar" value="buscar">Buscar</button>
+						
+					  </select>&nbsp;
+                    <br />
+                   <!-- <input id="Text2" type="text" />-->
+				    <button type="submit" name="buscar" value="buscar">Buscar</button>
+                    <br />
                 </div>
-				
                 </div>
-
         <script>
             $(function(){
                 window.onload = function () 
-			{ //Definir o centro do mapa [endereço + elm div]
+			{ //Definir o centro do mapa [endere�o + elm div]
 				<?
 					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='$unidadeFederativa';";
 						$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
@@ -115,7 +90,8 @@ if(empty($_POST[cmbUnidadeFederativa]))
 			   }
             })
         </script>
-		</form>
+       </form>
+
     </body>
 </html>
 
