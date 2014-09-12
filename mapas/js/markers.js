@@ -18,53 +18,16 @@ function initMapCep(cep,num,elm)
                     div: elm,
                     lat: lat,
                     lng: lng,
-					draggable: true,
                     scrollwheel: true,
-					overviewMapControl:true,
-					panControl:true,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     streetViewControl: true,
                     zoom: 8
                 })
                 map.setCenter(lat, lng);
-				
             }
         }
-    });
-	
+    });       
 }
-
-function initMapCep(cep,num,elm)
-{
-    address = getAddr(cep,num);
-    GMaps.geocode({
-        address: address,
-        callback: function(results, status) {            
-            if (status == 'OK') {
-                var latlng = results[0].geometry.location;
-                lat = latlng.lat();
-                lng = latlng.lng()
-                map = new GMaps({
-                    div: elm,
-                    lat: lat,
-                    lng: lng,
-					draggable: true,
-                    scrollwheel: true,
-					overviewMapControl:true,
-					panControl:true,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    streetViewControl: true,
-                    zoom: 8
-                })
-                map.setCenter(lat, lng);
-				
-            }
-        }
-    });
-	
-}
-
-
 function initMap(address,elm)
 {
     GMaps.geocode({
@@ -78,9 +41,6 @@ function initMap(address,elm)
                     div: elm,
                     lat: lat,
                     lng: lng,
-					draggable: true,
-					panControl:true,
-					overviewMapControl:true,
                     scrollwheel: true,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     streetViewControl: true,

@@ -61,9 +61,9 @@
 		$date = date("d/m/y");
 		$hora = date("H:i");
 		$Ip = $_SERVER['REMOTE_ADDR'];
-		$consulta = "INSERT INTO historico (usuario,acao,data,hora)
-		VALUES ('$Ip','sistema','$date','$hora')";
-		$resultado = mysql_query($consulta);
+		//$consulta = "INSERT INTO historico (usuario,acao,data,hora)
+		//VALUES ('$Ip','sistema','$date','$hora')";
+		//$resultado = mysql_query($consulta);
 		
 		
 		?> 
