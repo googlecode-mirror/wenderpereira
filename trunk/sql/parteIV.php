@@ -1,9 +1,9 @@
 ﻿ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
-session_start();
 include "conexao.php";
 connect();
+session_start();
 $Login  =  trim($_SESSION["login"]);
 $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 $date = date("d/m/y");
@@ -149,7 +149,7 @@ if ($_POST[avancar] == "avancar") {
 //função insere---------------------------------------------
 function insere(&$resposta1,&$id_usuario,&$date,&$hora) {
 
-	$consulta = "INSERT INTO pesquisa (id_reposta,id_usuario,id_parte,data,hora)
+	$consulta = "INSERT INTO pesquisa (id_resposta,id_usuario,id_parte,data,hora)
          VALUES ('$resposta1','$usuario','4','$date','$hora')";;
 	 
 	$resultado = mysql_query($consulta)
@@ -157,7 +157,7 @@ function insere(&$resposta1,&$id_usuario,&$date,&$hora) {
 }
 
 function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-	$consulta = "INSERT INTO pesquisaquais (questao,id_reposta,id_usuario,id_parte,data,hora)
+	$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
                  VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','4','$date','$hora')";
 	$resultado = mysql_query($consulta)
 	or die (mysql_error());

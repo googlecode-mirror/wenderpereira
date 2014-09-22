@@ -1,9 +1,10 @@
 ﻿ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
-session_start();
+
 include "conexao.php";
 connect();
+session_start();
 $Login 	=  trim($_SESSION["login"]);
 $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 $date = date("d/m/y");
