@@ -1,7 +1,7 @@
 ﻿<?
-session_start();
 include "conexao.php";
 connect();
+session_start();
 $Login  =  trim($_SESSION["login"]);
 $conluido =  $_SESSION["concluido"]; //recebe da sessão o andamento da pesquisa
 $date = date("d/m/y");
