@@ -49,7 +49,7 @@ if (empty($Email) OR empty($Autenticacao)) {
 	alert("A senha foi alterada clique em ok e efetue o login!");
 	window.location = 'index.php';
 	</script>
-	<?php
+	<?
 	}
 	?>
 

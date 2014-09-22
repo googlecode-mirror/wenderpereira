@@ -4,7 +4,7 @@
     $date = date("d/m/y");
     $hora = date("H:i");
 
-    @session_start(); // Inicializa a sessão
+    @session_start(); // Inicializa a sessï¿½o
     
 	
     $user = trim($_POST["login"]);
@@ -36,7 +36,7 @@
                 window.location = 'index.php';
                 //-->
                 </script>
-            <?php
+         <?
         }
 
 			$consulta = "INSERT INTO historico (usuario,acao,data,hora)

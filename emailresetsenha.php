@@ -28,7 +28,7 @@
 	
 	
 	// Pega os valores do campo Mensagem
-	$Agradecimento = "Dúvidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
+	$Agradecimento = "Dï¿½vidas: \n\n cepin@funarte.gov.br \n (21)2279-8082 ";
 	
 	if (empty($Email)) {
 	?>
@@ -36,7 +36,7 @@
                alert("Campo de email vazio!");
 			   window.location = 'resetsenha.php';
 			          </script>
-	<?php
+	<?
       } else 
    {
 
@@ -55,9 +55,9 @@
 	 
 	  
 
-$Vai = "$Nome,\n\n Seus dados de cadastro são \n\n Usuário: $Nome \n \n E-mail: $Email \n\n
-Para realizar o reset de sua senha clique no link abaixo e digite o codigo de autenticação:$Autenticacao\n
-		\n Link de ativação: $Ativacao\n \n\n $Agradecimento";
+$Vai = "$Nome,\n\n Seus dados de cadastro sï¿½o \n\n Usuï¿½rio: $Nome \n \n E-mail: $Email \n\n
+Para realizar o reset de sua senha clique no link abaixo e digite o codigo de autenticaï¿½ï¿½o:$Autenticacao\n
+		\n Link de ativaï¿½ï¿½o: $Ativacao\n \n\n $Agradecimento";
 
 require_once("phpmailer/class.phpmailer.php");
 
@@ -69,10 +69,10 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 	$mail = new PHPMailer();
 	$mail->IsSMTP();		// Ativar SMTP
 	$mail->SMTPDebug = 0;		// Debugar: 1 = erros e mensagens, 2 = mensagens apenas
-	$mail->SMTPAuth = true;		// Autenticação ativada
+	$mail->SMTPAuth = true;		// Autenticaï¿½ï¿½o ativada
 	$mail->SMTPSecure = 'ssl';	// SSL REQUERIDO pelo GMail
 	$mail->Host = 'smtp.gmail.com';	// SMTP utilizado
-	$mail->Port = 465;  		// A porta 465 deverá estar aberta em seu servidor
+	$mail->Port = 465;  		// A porta 465 deverï¿½ estar aberta em seu servidor
 	$mail->Username = GUSER;
 	$mail->Password = GPWD;
 	$mail->SetFrom($de, $de_nome);
@@ -88,7 +88,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
                alert("A senha foi enviada para o seu email!");
 			   window.location = 'index.php';
              </script>
-			<?php
+			<?
 		return true;
 	}
 }
@@ -98,7 +98,7 @@ function smtpmailer($para, $de, $de_nome, $assunto, $corpo) {
 ?>
 <script>
  alert("A senha foi enviada para o seu email!". echo $Email."");
-	//Header("location:http://localhost:8080/"); // Redireciona para uma página de obrigado.
+	//Header("location:http://localhost:8080/"); // Redireciona para uma pï¿½gina de obrigado.
 </script>
 <?
 }
