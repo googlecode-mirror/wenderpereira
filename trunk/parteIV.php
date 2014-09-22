@@ -33,19 +33,19 @@ include "conexao.php";
 	  $Login 	=  trim($_SESSION["login"]);
 	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
 	  
-	  	$sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
+	  	$sql = "select * from pesquisaquais Where id_usuario= '$Login' and id_parte ='4';";
 		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
   		 while ($array_exibir = mysql_fetch_array($Resultado)) {
-			$qtdComentariosGerais = ($array_exibir['respostas']);
+			$qtdComentariosGerais = ($array_exibir['id_resposta']);
 		}
    ?>
    <?  function getArray(&$Login){
-   	   $sql = "select * from pesquisa Where usuario= '$Login' and parte ='4';";
+   	   $sql = "select * from pesquisa Where id_usuario= '$Login' and id_parte ='4';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $resposta = array();
 	   while ($array_exibir = mysql_fetch_array($Resultado)) {
-		$resposta[$i] = ($array_exibir['respostas']);
+		$resposta[$i] = ($array_exibir['id_resposta']);
 		$i++;
 	    }
    	    return $resposta;
@@ -53,13 +53,13 @@ include "conexao.php";
      	$meuArray = getArray($Login);
 	?>
 	<? function getArray1(&$Login){
-    $sql = "select * from pesquisaquais Where usuario= '$Login' and parte ='4';";
+    $sql = "select * from pesquisaquais Where id_usuario= '$Login' and id_parte ='4';";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
     $i=0;
     
     $resposta1 = array();
     while ($array_exibir = mysql_fetch_array($Resultado)) {
-        $resposta1[$array_exibir['questao']] = $array_exibir['respostas'];
+        $resposta1[$array_exibir['questao']] = $array_exibir['id_resposta'];
         $i++;
     }
     return $resposta1;
@@ -121,38 +121,38 @@ include "conexao.php";
         <td>
         <label>Quais as principais ações realizadas pelos artistas durante a residência (marque quantos itens julgar necessário)*?</label>
         
-      <label><input name="qtd1[]" type="checkbox" value="1a" <? if(in_array("1a", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="184" <? if(in_array("184", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Pesquisa</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1b" <? if(in_array("1b", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="185" <? if(in_array("185", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Intervenção urbana</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1c" <? if(in_array("1c", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="186" <? if(in_array("186", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Cursos</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1d" <? if(in_array("1d", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="187" <? if(in_array("187", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Feiras</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1e" <? if(in_array("1e", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="188" <? if(in_array("188", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Festivais/mostras</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1f" <? if(in_array("1f", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="189" <? if(in_array("189", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Exposições</label>
     
-      <label><input name="qtd1[]" type="checkbox" value="1g" <? if(in_array("1g", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" type="checkbox" value="190" <? if(in_array("190", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Apresentações artísticas ( bandas de música, circo, etc.)</label>
     
-      <label><input name="qtd1[]" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" type="checkbox" value="1h" id="idqtd1quais" <? if(in_array("1h", $meuArray)){ echo "checked";}?>
+      <label><input name="qtd1[]" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" type="checkbox" value="191" id="idqtd1quais" <? if(in_array("191", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Outros. Quais?
-      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['qtd1'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['192'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
   
       </td>
       </tr>
@@ -162,96 +162,96 @@ include "conexao.php";
           (marque quantos itens julgar necessário)*? </label>
       
             <label>
-            <input name="qtd2[]" type="checkbox" value="2a" <? if(in_array("2a", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="193" <? if(in_array("193", $meuArray)){ echo "checked";}?>
              class="validate[minCheckbox[1]] checkbox"/>
              Artesanato</label>
       
-            <label><input name="qtd2[]" type="checkbox" value="2b" <? if(in_array("2b", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="194" <? if(in_array("194", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Teatro</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2c" <? if(in_array("2c", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="195" <? if(in_array("195", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Dança</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2d" <? if(in_array("2d", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="196" <? if(in_array("196", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Circo</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2e" <? if(in_array("2e", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="197" <? if(in_array("197", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Bandas de música</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2f" <? if(in_array("2f", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="198" <? if(in_array("198", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Música Erudita</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2g" <? if(in_array("2g", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="199" <? if(in_array("199", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Música Popular</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2h" <? if(in_array("2h", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="200" <? if(in_array("200", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Artes visuais</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2i" <? if(in_array("2i", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="201" <? if(in_array("201", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Fotografia</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2j" <? if(in_array("2j", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="202" <? if(in_array("202", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Audiovisual</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2k" <? if(in_array("2k", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="203" <? if(in_array("203", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Jogos eletrônicos</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2l" <? if(in_array("2l", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="204" <? if(in_array("204", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Literatura</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2m" <? if(in_array("2m", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="205" <? if(in_array("205", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Patrimônio material</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2n" <? if(in_array("2n", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="206" <? if(in_array("206", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Patrimônio imaterial</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2o" <? if(in_array("2o", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="207" <? if(in_array("207", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Museus</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2p" <? if(in_array("2p", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="208" <? if(in_array("208", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Cultura popular/ manifestações tradicionais</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2q" <? if(in_array("2q", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="209" <? if(in_array("209", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Cultura digital/ arte e tecnologia ( programação de linguagens digitais)</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2r" <? if(in_array("2r", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="210" <? if(in_array("210", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Design</label>
             
             <label>
-            <input name="qtd2[]" type="checkbox" value="2s" <? if(in_array("2s", $meuArray)){ echo "checked";}?>
+            <input name="qtd2[]" type="checkbox" value="211" <? if(in_array("211", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Moda</label>
             
-            <label><input name="qtd2[]" type="checkbox" value="2t" <? if(in_array("2t", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" value="212" <? if(in_array("212", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Artes integradas ( projetos com múltiplas linguagens artísticas)</label>
             
-            <label><input name="qtd2[]" type="checkbox" id="idqtd2quais" onClick="javascript: textBoxClearSelecao('#idqtd2quais', '#qtd2quais');" value="2u" <? if(in_array("2u", $meuArray)){ echo "checked";}?>
+            <label><input name="qtd2[]" type="checkbox" id="idqtd2quais" onClick="javascript: textBoxClearSelecao('#idqtd2quais', '#qtd2quais');" value="213" <? if(in_array("213", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>
               Outras. Quais?
-            <input name="qtd2quais" id="qtd2quais" value="<?php echo $meuArray1['qtd2'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+            <input name="qtd2quais" id="qtd2quais" value="<?php echo $meuArray1['214'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
           
         </div></td>
       </tr>
@@ -260,35 +260,35 @@ include "conexao.php";
           <label>Qual o principal público a ser atingido pelas ações (marque no máximo os 3 itens mais importantes)*?</label>
           
             <label>
-            <input type="checkbox" name="qtd3[]" value="3a" <? if(in_array("3a", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd3[]" value="215" <? if(in_array("215", $meuArray)){ echo "checked";}?>
             class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
             Cidadãos locais</label>
           
             <label>
-            <input type="checkbox" name="qtd3[]" value="3b" <? if(in_array("3b", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd3[]" value="216" <? if(in_array("216", $meuArray)){ echo "checked";}?>
             class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>
             Artistas</label>
             
             <label>
-            <input type="checkbox" name="qtd3[]" value="3c" <? if(in_array("3c", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd3[]" value="217" <? if(in_array("217", $meuArray)){ echo "checked";}?>
               class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               Produtores culturais</label>
             
             <label>
-              <input type="checkbox" name="qtd3[]" value="3d" <? if(in_array("3d", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd3[]" value="218" <? if(in_array("218", $meuArray)){ echo "checked";}?>
               class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               Estudantes</label>
             
             <label>
-              <input type="checkbox" name="qtd3[]" value="3e" <? if(in_array("3e", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd3[]" value="219" <? if(in_array("219", $meuArray)){ echo "checked";}?>
               class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               Pesquisadores</label>
             
             <label>
-              <input type="checkbox" name="qtd3[]" value="3f" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("3f", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd3[]" value="220" id="idqtd3quais" onClick="javascript: textBoxClearSelecao('#idqtd3quais', '#qtd3quais');" <? if(in_array("220", $meuArray)){ echo "checked";}?>
               class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>              
               Outros. Quais?
-            <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['qtd3'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+            <input name="qtd3quais" id="qtd3quais" value="<?php echo $meuArray1['221'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
                     
         </div></td>
       </tr>
@@ -298,70 +298,70 @@ include "conexao.php";
         </div>
           
             <label>
-            <input type="checkbox" name="qtd4[]" value="4a" <? if(in_array("4a", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd4[]" value="222" <? if(in_array("222", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>              
             Na sede da instituição organizadora do programa</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4b" <? if(in_array("4b", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="223" <? if(in_array("223", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Teatros</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4c" <? if(in_array("4c", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="224" <? if(in_array("224", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Centros culturais/ espaços multiuso</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4d" <? if(in_array("4d", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="225" <? if(in_array("225", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Cinemas</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4e" <? if(in_array("4e", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="226" <? if(in_array("226", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Galerias de arte</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4f" <? if(in_array("4f", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="227" <? if(in_array("227", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Museus</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4g" <? if(in_array("4g", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="228" <? if(in_array("228", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Em outros equipamentos culturais como bibliotecas públicas</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4h" <? if(in_array("4h", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="229" <? if(in_array("229", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Ocorrem em locais pertencentes a fundações municipais, secretarias de cultura, etc.</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4i" <? if(in_array("4i", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="230" <? if(in_array("230", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Ocorrem  locais abertos como praças e ruas</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4j" <? if(in_array("4j", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="231" <? if(in_array("231", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Ocorrem em instituições de ensino, como escolas e creches.</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4k" <? if(in_array("4k", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="232" <? if(in_array("232", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Ocorrem em locais vinculados a práticas esportivas como ginásios poliesportivos</label>
             
             <label>
-              <input type="checkbox" name="qtd4[]" value="4l" <? if(in_array("4l", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" name="qtd4[]" value="233" <? if(in_array("233", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Ocorrem em Pontos/ Pontões de Cultura</label>
             
             <label>
-              <input type="checkbox" id="idqtd4quais" name="qtd4[]" onClick="javascript: textBoxClearSelecao('#idqtd4quais', '#idqtd4quais');" value="4m" <? if(in_array("4m", $meuArray)){ echo "checked";}?>
+              <input type="checkbox" id="idqtd4quais" name="qtd4[]" onClick="javascript: textBoxClearSelecao('#idqtd4quais', '#idqtd4quais');" value="234" <? if(in_array("234", $meuArray)){ echo "checked";}?>
               class="validate[minCheckbox[1]] checkbox"/>              
               Outros. Quais?
-            <input name="qtd4quais" id="qtd4quais" value="<?php echo $meuArray1['qtd4'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+            <input name="qtd4quais" id="qtd4quais" value="<?php echo $meuArray1['235'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
           </td>
       </tr>
             <tr>
@@ -370,55 +370,55 @@ include "conexao.php";
           </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5a" <? if(in_array("5a", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="236" <? if(in_array("236", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>
             Vídeos / DVDs e gravações </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5b" <? if(in_array("5b", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="237" <? if(in_array("237", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Filmes </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5c" <? if(in_array("5c", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="238" <? if(in_array("238", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Livro </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5d" <? if(in_array("5d", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="239" <? if(in_array("239", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Instrumentos musicais </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5e" <? if(in_array("5e", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="240" <? if(in_array("240", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Pinturas, esculturas, gravuras </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5f" <? if(in_array("5f", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="241" <? if(in_array("241", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Bens artesanais </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5g" <? if(in_array("5g", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="242" <? if(in_array("242", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Produção de cenografia / figurino </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5h" <? if(in_array("5h", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="243" <? if(in_array("243", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Publicações (artigo, catálogo,etc.) </label>
           
           <label>
-            <input type="checkbox" name="qtd5[]" value="5j" <? if(in_array("5j", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" value="244" <? if(in_array("244", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Vídeos / DVDs e gravações </label>
           
             <label>
-            <input type="checkbox" name="qtd5[]" id="idqtd5quais" onClick="javascript: textBoxClearSelecao('#idqtd5quais', '#qtd5quais');" value="5i" <? if(in_array("5i", $meuArray)){ echo "checked";}?>
+            <input type="checkbox" name="qtd5[]" id="idqtd5quais" onClick="javascript: textBoxClearSelecao('#idqtd5quais', '#qtd5quais');" value="245" <? if(in_array("245", $meuArray)){ echo "checked";}?>
             class="validate[minCheckbox[1]] checkbox"/>            
             Outros Quais?
-           <input name="qtd5quais" id="qtd5quais" value="<?php echo $meuArray1['qtd5'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+           <input name="qtd5quais" id="qtd5quais" value="<?php echo $meuArray1['246'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
           </td>
           </tr>
            <tr>

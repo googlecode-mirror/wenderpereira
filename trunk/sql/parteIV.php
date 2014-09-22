@@ -147,9 +147,9 @@ if ($_POST[avancar] == "avancar") {
 	//else do teste se o solicitante clicou em avançar!
 }
 //função insere---------------------------------------------
-function insere(&$resposta1,&$usuario,&$date,&$hora) {
+function insere(&$resposta1,&$id_usuario,&$date,&$hora) {
 
-	$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
+	$consulta = "INSERT INTO pesquisa (id_reposta,id_usuario,id_parte,data,hora)
          VALUES ('$resposta1','$usuario','4','$date','$hora')";;
 	 
 	$resultado = mysql_query($consulta)
@@ -157,7 +157,7 @@ function insere(&$resposta1,&$usuario,&$date,&$hora) {
 }
 
 function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-	$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
+	$consulta = "INSERT INTO pesquisaquais (questao,id_reposta,id_usuario,id_parte,data,hora)
                  VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','4','$date','$hora')";
 	$resultado = mysql_query($consulta)
 	or die (mysql_error());
@@ -179,11 +179,11 @@ function atualizaconcluir(&$Login){
 if ($_POST[atualizar] == "atualizar")
 {
 
-	$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='4'";
+	$sql = "Delete FROM pesquisa Where id_usuario='$Login' and id_parte ='4'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 		
-	$sql1 = "Delete FROM pesquisaquais Where usuario='$Login' and parte ='4'";
+	$sql1 = "Delete FROM pesquisaquais Where id_usuario='$Login' and id_parte ='4'";
 	$resultado1 = mysql_query($sql1)
 	or die (mysql_error());
 		

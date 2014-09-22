@@ -119,7 +119,7 @@ if ($_POST[avancar] == "avancar") {
             alert("Retorne para a parte: responsavel pelo preencimento e realize o cadastro!");
 			window.location.assign("../responsavelpelopreenchiment_o.php");
             </script>
-		<?php
+		<?
 
 	} elseif ($concluido == 2){
 		?>
@@ -127,7 +127,7 @@ if ($_POST[avancar] == "avancar") {
             alert("Cadastramento da Parte:programas realizado avance para Parte:artistas!");
 			window.location.assign("../artistas_III.php");
             </script>
-		<?php
+		<?
 
 	} elseif ($concluido == 3){
 		?>
@@ -135,7 +135,7 @@ if ($_POST[avancar] == "avancar") {
               alert("Dados cadastrados com sucesso. Próxima etapa: Artistas.");
 			  window.location.assign("../projetos_IV.php");
               </script>
-		<?php
+		<?
 
 	} elseif ($concluido == 4){
 		?>
@@ -143,7 +143,7 @@ if ($_POST[avancar] == "avancar") {
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
               </script>
-		<?php
+		<?
 
 	}else{
 		//else do teste igual a parte atualizado!
@@ -153,14 +153,14 @@ if ($_POST[avancar] == "avancar") {
 	}
 	//função insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisa (id_reposta,id_usuario,id_parte,data,hora)
 			 VALUES ('$resposta1','$usuario','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
 		//função insere---------------------------------------------
 	}
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisaquais (questao,id_reposta,id_usuario,id_parte,data,hora)
 			 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','2','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
@@ -182,11 +182,11 @@ if ($_POST[avancar] == "avancar") {
 <?
 if ($_POST[atualizar] == "atualizar")
 {
-	$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='2'";
+	$sql = "Delete FROM pesquisa Where id_usuario='$Login' and id_parte ='2'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 	
-	$sql = "Delete FROM pesquisaquais Where usuario='$Login' and parte ='2'";
+	$sql = "Delete FROM pesquisaquais Where id_usuario='$Login' and id_parte ='2'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 	

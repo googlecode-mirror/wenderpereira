@@ -72,7 +72,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
     alert("Cadastramento da Parte: Identificação da Instituição já foi realizado!");
 			 window.location.assign("../programas_II.php");
 	         </script>
-			<?php
+			<?
 
 		} elseif ($concluido == 2){
 			?>
@@ -80,7 +80,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
              alert("Cadastramento da Parte: Programas já foi realizado!");
 			 window.location.assign("../artistas_III.php");
              </script>
-			<?php
+			<?
 
 		} elseif ($concluido == 3){
 			?>
@@ -88,7 +88,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
               alert("Dados cadastrados com sucesso. Próxima etapa: Artistas.");
 			  window.location.assign("../projetos_IV.php");
               </script>
-			<?php
+			<?
 
 		} elseif ($concluido == 4){
 			?>
@@ -96,7 +96,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
               alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
               </script>
-			<?php
+			<?
 
 		}else{ //else do teste igual a parte atualizado!
 		}
@@ -104,7 +104,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	}
 	//função insere ----------------------------------------------------------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisa (id_resposta,id_usuario,id_parte,data,hora)
 		 VALUES ('$resposta1','$usuario','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
@@ -113,8 +113,8 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	//função insere Parte 1 --------------------------------------------------------------------------------------
 	function inseremapeamentoparte1(&$nomeInstituicao,&$cnpj,&$endereco,&$municipio,
 	&$unidadeFederativa,&$cep,&$telefone,&$email,&$Login,&$date,&$hora){
-		$consulta = "INSERT INTO mapeamentoparteI
-		(nomeintituicao,cnpj,endereco,municipio,unidadefederativa,cep,telefone,email,usuario,preenchido,data,hora)
+		$consulta = "INSERT INTO mapeamentopartei
+		(nomeintituicao,cnpj,endereco,municipio,unidadefederativa,cep,telefone,email,id_usuario,preenchido,data,hora)
 		VALUES
 		('$nomeInstituicao', '$cnpj', '$endereco', '$municipio', '$unidadeFederativa',
 		 '$cep', '$telefone', '$email', '$Login', '1', '$date', '$hora')";
@@ -123,7 +123,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	}
 	//função insere Quais ----------------------------------------------------------------------------------------
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
 		 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
@@ -145,11 +145,11 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	if ($_POST[atualizar] == "atualizar")
 	{
 		$unidadeFederativa = $_POST["cmbUnidadeFederativa"];
-		$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='1'";
+		$sql = "Delete FROM pesquisa Where id_usuario='$Login' and id_parte ='1'";
 		$resultado = mysql_query($sql)
 		or die (mysql_error());
 
-		$sql1 = "Delete FROM mapeamentoparteI Where usuario='$Login' and preenchido ='1'";
+		$sql1 = "Delete FROM mapeamentoparteI Where id_usuario='$Login' and preenchido ='1'";
 		$resultado1 = mysql_query($sql1)
 		or die (mysql_error());
 

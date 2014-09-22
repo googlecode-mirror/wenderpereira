@@ -49,7 +49,7 @@
 			alert("Dados cadastrados com sucesso. Próxima etapa: Identificação da Instituição");
 			window.location.assign("../identificacaodainstituicao_I.php");
 			 </script>
-			<?php
+			<?
 				 
 			  } elseif ($concluido == 1){
 			 ?>
@@ -57,7 +57,7 @@
                  alert("Cadastramento da parte:Identificação da Instituição já foi realizado!");
                  window.location.assign("../programas_II.php");
              </script>
-			<?php			  
+			<?			  
 				 
 				} elseif ($concluido == 2){
 			 ?>
@@ -65,7 +65,7 @@
 				 alert("Cadastramento da Parte: Programas já foi realizado!");
 				 window.location.assign("../artistas_III.php");
 			 </script>
-			<?php
+			<?
 			 			
 			  } elseif ($concluido == 3){
 			 ?>
@@ -73,7 +73,7 @@
 				 alert("Cadastramento da Parte: Artistas já foi realizado!");
 				 window.location.assign("../projetos_IV.php");
 			 </script>
-             <?php					  
+             <?					  
 				 
 			  } elseif ($concluido == 4){
 				
@@ -83,7 +83,7 @@
 				  alert("O cadatro já foi concluído, caso queira atualizar clique na parte que desejada atualizar!");
 				  window.location.assign("../projetos_IV.php");
 			  </script>
-			<?php 				 
+			<? 				 
 					}else{
 						//else do teste igual a parte atualizado!
 					  }

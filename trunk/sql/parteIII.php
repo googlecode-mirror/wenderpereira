@@ -102,24 +102,24 @@ if ($_POST[avancar] == "avancar") {
               alert("O cadatro j√° foi conclu√≠do, caso queira atualizar clique na parte que desejada atualizar!");
 			  window.location.assign("../projetos_IV.php");
             </script>
-		<?php
+		<?
 
 	}else{
 		//else do teste igual a parte atualizado!
 	}
 }else{
-		//else do teste se o solicitante clicou em avanÁar!
+		//else do teste se o solicitante clicou em avanÔøΩar!
 	}
-	//funÁ„o insere---------------------------------------------
+	//funÔøΩÔøΩo insere---------------------------------------------
 	function insere(&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisa (respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisa (id_resposta,id_usuario,id_parte,data,hora)
 					 VALUES ('$resposta1','$usuario','3','$date','$hora')";;
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
-		//funÁ„o insere---------------------------------------------
+		//funÔøΩÔøΩo insere---------------------------------------------
 	}
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisaquais (questao,respostas,usuario,parte,data,hora)
+		$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
 					 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','3','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
@@ -139,11 +139,11 @@ if ($_POST[avancar] == "avancar") {
 <?
 if ($_POST[atualizar] == "atualizar")
 {
-	$sql = "Delete FROM pesquisa Where usuario='$Login' and parte ='3'";
+	$sql = "Delete FROM pesquisa Where id_usuario='$Login' and id_parte ='3'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 	
-	$sql = "Delete FROM pesquisaquais Where usuario='$Login' and parte ='3'";
+	$sql = "Delete FROM pesquisaquais Where id_usuario='$Login' and id_parte ='3'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 		
@@ -161,12 +161,12 @@ if ($_POST[atualizar] == "atualizar")
 							insere($questao5,$Login,$date,$hora);}
 							if(empty($questao2)) {}else{
 								insere($questao6,$Login,$date,$hora);}
-								// inserindo se n„o branco
+								// inserindo se nÔøΩo branco
 								if(empty($questao3Quais)) {
 								}else{
 									$qtdQuestao = qtd3;
 									inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
-									// inserindo se n„o branco
+									// inserindo se nÔøΩo branco
 									if(empty($questao7Quais)) {
 									}else{
 										$qtdQuestao = qtd7;

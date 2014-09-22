@@ -11,7 +11,7 @@ $hora = date("H:i");
 if (empty($Email) OR empty($Login)) {
     ?>
 	   <script language="JavaScript">
-	       alert("Acesso não autorizado!");
+	       alert("Acesso nï¿½o autorizado!");
 	       window.location = 'index.php';
         </script>
 <?
@@ -24,11 +24,11 @@ or die ("Usuario autenticado com sucesso");
             ?>
                <script language="JavaScript">
                 <!--
-                alert("Usuário autenticado!");
+                alert("Usuï¿½rio autenticado!");
                 window.location = 'index.php';
                 //-->
                 </script>
-            <?php
+            <?
 $consulta1 = "INSERT INTO historico (usuario,acao,data,hora)
 VALUES ('$_GET[1425]','autenticado_email','$date','$hora')";
 $resultado1 = mysql_query($consulta1)

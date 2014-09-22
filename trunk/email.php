@@ -21,7 +21,7 @@ if(empty($_POST["email"])) {
                alert("Email invalido");
 			   window.location = 'novoUsuario.php';
 			          </script>
-	<?php
+	<?
 }else{
 
 }
@@ -40,7 +40,7 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
                alert("Senhas diferentes ou usuário já existe no banco de dados!");
 			   window.location = 'novoUsuario.php';
 			          </script>
-	<?php
+	<?
 } else
 {
 
@@ -101,7 +101,7 @@ if (empty($Login) OR empty($Senha) OR $Senha != $Senha1) {
                alert("A senha foi enviada para o seu email!");
 			   window.location = 'index.php';
              </script>
-			<?php
+			<?
 			return true;
 		}
 	}
