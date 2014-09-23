@@ -223,7 +223,7 @@ if ($_POST[atualizar] == "atualizar")
 				insere($decs3,$Login,$date,$hora);}
 				//------------------------------------------------------
 				if(empty($qtdComentarios)) {}else{
-					$qtdQuestao = qtdComentariosGerais;
+					$qtdQuestao = 248;
 					inserequais($qtdQuestao,$qtdComentarios,$Login,$date,$hora);}
 					//------------------------------------------------------
 					if(empty($questao1Quais)) {
