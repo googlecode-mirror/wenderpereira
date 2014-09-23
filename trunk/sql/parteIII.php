@@ -31,11 +31,11 @@ while ($array_exibir = mysql_fetch_array($Resultado))
 $questao1 = $_POST[qtd1];
 $questao2 = $_POST[qtd2];
 $questao3 = $_POST[qtd3];
-$questao3Quais = $_POST[qtd3quais];
+$questao3Quais = $_POST[qtd3quais]; //161
 $questao4 = $_POST[qtd4];
 $questao5 = $_POST[qtd5];
 $questao6 = $_POST[qtd6];
-$questao7Quais = $_POST[qtd7quais];
+$questao7Quais = $_POST[qtd7quais]; //183
 // inserindo informações
 
 if ($_POST[avancar] == "avancar") {
@@ -164,12 +164,12 @@ if ($_POST[atualizar] == "atualizar")
 								// inserindo se n�o branco
 								if(empty($questao3Quais)) {
 								}else{
-									$qtdQuestao = qtd3;
+									$qtdQuestao = 161;
 									inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 									// inserindo se n�o branco
 									if(empty($questao7Quais)) {
 									}else{
-										$qtdQuestao = qtd7;
+										$qtdQuestao = 183;
 										inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
 										//----------------------------
 										$_checkbox = $_POST['qtd7'];
