@@ -147,7 +147,7 @@
 	  <label><input name="qtd1[]" type="checkbox" value="43" id="idqtd1quais" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" <? if(in_array("43", $meuArray)){ echo "checked";}?>
       class="validate[maxCheckbox[3],minCheckbox[1]] checkbox"/>      
        Outros. Quais?
-      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['44'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['43'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
     </p>
     <tr>
     <td align="left" class="formu2">
@@ -509,7 +509,7 @@
       <label><input type="radio" name="qtd12" id="idqtd12quais" onClick="javascript: textBoxClearSelecao('#idqtd12quais', '#qtd12Quais');" <? if(in_array("121", $meuArray)){ echo "checked";}?> value="121" 
       class="validate[required] radio" />
         Acima de R$ 5.000.00 de reais. Qual valor?
-      <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['122'];?>"  class="validate[optional,minSize[2]]" type="text" /></label>
+      <input name="qtd12Quais" id="qtd12Quais" value="<?php echo $meuArray1['121'];?>"  class="validate[optional,minSize[2]]" type="text" /></label>
       
       </div>
       </td>
