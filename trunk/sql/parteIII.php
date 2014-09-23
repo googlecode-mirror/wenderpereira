@@ -59,12 +59,12 @@ if ($_POST[avancar] == "avancar") {
 									// inserindo se não branco
 									if(empty($questao3Quais)) {
 									}else{
-										$qtdQuestao = qtd3;
+										$qtdQuestao = 161;
 										inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 										// inserindo se não branco
 										if(empty($questao7Quais)) {
 										}else{
-											$qtdQuestao = qtd7;
+											$qtdQuestao = 183;
 											inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
 											//----------------------------
 											$_checkbox = $_POST['qtd7'];

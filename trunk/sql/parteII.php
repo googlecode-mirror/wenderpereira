@@ -94,23 +94,23 @@ if ($_POST[avancar] == "avancar") {
 	  						if(empty($questao14)) {}else{
 	  							insere($questao14,$Login,$date,$hora);}
 	  							if(empty($questao1Quais)) {}else{
-	  								$qtdQuestao = qtd1;
+	  								$qtdQuestao = 43;
 	  								inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}
 	  								if(empty($questao3Quais)) {}else{
-	  									$qtdQuestao = qtd3;
+	  									$qtdQuestao = 61;
 	  									inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 	  									if(empty($questao7Quais)) {}else{
-	  										$qtdQuestao = qtd7;
+	  										$qtdQuestao = 85;
 	  										inserequais($qtdQuestao,$questao7Quais,$Login,$date,$hora);}
 	  										if(empty($questao8Quais)) {}else{
-	  											$qtdQuestao = qtd8;
+	  											$qtdQuestao = 95;
 	  											inserequais($qtdQuestao,$questao8Quais,$Login,$date,$hora);}
 	  												
 	  											if(empty($questao8Quais1)) {}else{
-	  												$qtdQuestao = qtd81;
+	  												$qtdQuestao = 96;
 	  												inserequais($qtdQuestao,$questao8Quais1,$Login,$date,$hora);}
 	  												if(empty($questao12Quais)) {}else{
-	  													$qtdQuestao = qtd12;
+	  													$qtdQuestao = 121;
 	  													inserequais($qtdQuestao,$questao12Quais,$Login,$date,$hora);}
 	  													atualizaconcluir($Login);
 	} elseif ($concluido == 0){
