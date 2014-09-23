@@ -28,18 +28,12 @@
         </script> 
 
 <?
-include "conexao.php";
-	connect();
-	  $Login 	=  trim($_SESSION["login"]);
-	  $_POST[qtdComentariosGerais] = $qtdComentariosGerais;
-	  
-	  	$sql = "select * from pesquisaquais Where id_usuario= '$Login' and id_parte ='4';";
-		$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-  		 while ($array_exibir = mysql_fetch_array($Resultado)) {
-			$qtdComentariosGerais = ($array_exibir['id_resposta']);
-		}
+      include "conexao.php";
+      connect();
+	  @session_start();
+	  $Login = trim($_SESSION["login"]);
    ?>
-      <?  function getArray(&$Login){
+   <?  function getArray(&$Login){
 	   $sql = "select * from pesquisa Where id_usuario= '$Login' and id_parte ='4';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
@@ -52,6 +46,7 @@ include "conexao.php";
       	}
      	$meuArray = getArray($Login);
   ?>
+  
 	<? function getArray1(&$Login){
     $sql = "select * from pesquisaquais Where id_usuario= '$Login' and id_parte ='4';";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
