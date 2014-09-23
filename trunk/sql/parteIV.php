@@ -147,14 +147,14 @@ if ($_POST[avancar] == "avancar") {
 	//else do teste se o solicitante clicou em avançar!
 }
 //função insere---------------------------------------------
-function insere(&$resposta1,&$id_usuario,&$date,&$hora) {
-
-	$consulta = "INSERT INTO pesquisa (id_resposta,id_usuario,id_parte,data,hora)
-         VALUES ('$resposta1','$usuario','4','$date','$hora')";;
-	 
-	$resultado = mysql_query($consulta)
-	or die (mysql_error());
-}
+	//fun��o insere---------------------------------------------
+	function insere(&$resposta1,&$usuario,&$date,&$hora) {
+		$consulta = "INSERT INTO pesquisa (id_resposta,id_usuario,id_parte,data,hora)
+					 VALUES ('$resposta1','$usuario','4','$date','$hora')";;
+		$resultado = mysql_query($consulta)
+		or die (mysql_error());
+		//fun��o insere---------------------------------------------
+	}
 
 function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
 	$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
