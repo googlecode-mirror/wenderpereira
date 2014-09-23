@@ -172,7 +172,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	   			if(empty($questao4)) {}else{
 	   				insere($questao6,$Login,$date,$hora);}
 	   				if(empty($questao3Quais)) {}else{
-	   					$qtdQuestao = qtd3;
+	   					$qtdQuestao = 18;
 	   					inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 	   					//inserindo do check box ---------------------------------------------------------------------------------
 	   					$_checkbox = $_POST['qtd5'];

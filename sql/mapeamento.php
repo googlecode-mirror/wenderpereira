@@ -91,7 +91,7 @@
 				   //else do teste se o solicitante clicou em avan&ccedil;ar!
 			  }
 			  function inseremapeamento(&$nome,&$cargoInstituicao,&$cpf,&$email,&$telefone,&$Login,&$date,&$hora){
-			  $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
+			  $consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,id_usuario,preenchido,data,hora)
 			   VALUES 
 			  ('$nome','$cargoInstituicao','$cpf','$email','$telefone','$Login','1','$date','$hora')";
 			  $resultado = mysql_query($consulta)
@@ -113,11 +113,11 @@
     <?
      if ($_POST[atualizar] == "atualizar") { 
 	 
-	$sql = "Delete FROM mapeamento Where usuario='$_SESSION[login]'";
+	$sql = "Delete FROM mapeamento Where id_usuario='$_SESSION[login]'";
 	$resultado = mysql_query($sql)
 	or die (mysql_error());
 	 
-			$consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,usuario,preenchido,data,hora)
+			$consulta = "INSERT INTO mapeamento (nome,cargointituicao,cpf,email,telefone,id_usuario,preenchido,data,hora)
 			   VALUES 
 			  ('$nome','$cargoInstituicao','$cpf','$email','$telefone','$Login','1','$date','$hora')";
 			  $resultado = mysql_query($consulta)
