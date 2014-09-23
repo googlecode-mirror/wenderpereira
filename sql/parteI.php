@@ -39,7 +39,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	$questao1 = $_POST[qtd1];
 	$questao2 = $_POST[qtd2];
 	$questao3 = $_POST[qtd3];
-	$questao3Quais = $_POST[qtd3quais];
+	$questao3Quais = $_POST[qtd3quais];//18
 	$questao4 = $_POST[qtd4];
 	$questao6 = $_POST[qtd6];
 	if ($_POST[avancar] == "avancar") {
@@ -58,7 +58,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 								if(empty($questao4)) {}else{
 									insere($questao6,$Login,$date,$hora);}
 									if(empty($questao3Quais)) {}else{
-										$qtdQuestao = qtd3;
+										$qtdQuestao = 18;
 										inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 										//inserindo do check box
 										$_checkbox = $_POST['qtd5'];
