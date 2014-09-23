@@ -49,7 +49,7 @@ if(empty($_POST[cmbUnidadeFederativa]))
 FROM 
 mapeamentoparteI,
 usuarios
-WHERE usuarios.login = mapeamentoparteI.usuario
+WHERE usuarios.login = mapeamentoparteI.id_usuario
 and concluido = '4'
 GROUP by
      unidadefederativa ORDER BY total desc";
@@ -75,7 +75,7 @@ GROUP by
                 window.onload = function () 
 			{ //Definir o centro do mapa [endere�o + elm div]
 				<?
-					$sql = "SELECT * FROM mapeamentoparteI where unidadefederativa='$unidadeFederativa';";
+					$sql = "SELECT * FROM mapeamentopartei where unidadefederativa='$unidadeFederativa';";
 						$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 						?>
 						initMap('<? echo $unidadeFederativa ?> - Brasil', 'map');
