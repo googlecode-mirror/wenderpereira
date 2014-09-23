@@ -30,7 +30,7 @@
 <?
       include "conexao.php";
       connect();
-	  @session_start();
+	//  @session_start();
 	  $Login = trim($_SESSION["login"]);
    ?>
    <?  function getArray(&$Login){

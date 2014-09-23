@@ -13,7 +13,7 @@
 	$date = date("d/m/y");
 	$hora = date("H:i");
 
-    $sQuery = "select login, senha
+    $sQuery = "select login, senha, id_usuario
                from usuarios
                where  login = '" . $user . "' and senha = '" . $pwd . "' and ativo = '0'";
 	
@@ -25,6 +25,7 @@
 			$line = mysql_fetch_array($oUser);
             $_SESSION["login"] = $line['login'];
             $_SESSION["senha"] = $line['senha'];
+			$_SESSION["idusuario"] = $line['id_usuario'];
             echo "<script>window.location='inicial.php'</script>";
 			}         
          else 

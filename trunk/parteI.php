@@ -25,7 +25,7 @@
     <?
     include "conexao.php";
     connect();
-    @session_start();
+  //  @session_start();
     $Login = trim($_SESSION["login"]);
     $_POST[txtNome] = $txtNome;
     $_POST[txtCnpj] = $txtCnpj;
