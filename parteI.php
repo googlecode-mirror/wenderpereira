@@ -169,7 +169,7 @@
   <td>
   <label>• Endereço*:</label>
   </td>
-  <td><input name="txtEndereco" "id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
+  <td><input name="txtEndereco" id="idFrmEndereco" value="<?php echo $txtEndereco;?>" type="text" size="84" class="validate[required] text-input"/>		       
   </td>
   </tr>
   <tr>
