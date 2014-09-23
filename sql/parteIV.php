@@ -29,16 +29,16 @@ while ($array_exibir = mysql_fetch_array($Resultado))
 	$_SESSION["concluido"] = $concluido = ($array_exibir['concluido']);
 }
 // inserindo informaçoes
-$questao5Quais = $_POST[qtd5quais];
-$decs1 = $_POST[dec1];
+$questao5Quais = $_POST[qtd5quais]; //246
+$decs1 = $_POST[dec1]; //247
 $decs2 = $_POST[dec2];
 $decs3 = $_POST[dec3];
-$questao1Quais = $_POST[qtd1quais];
-$questao2Quais = $_POST[qtd2quais];
-$questao3Quais = $_POST[qtd3quais];
-$questao4Quais = $_POST[qtd4quais];
-$questao5Quais = $_POST[qtd5quais];
-$qtdComentarios = strip_tags($_POST[qtdComentariosGerais]);
+$questao1Quais = $_POST[qtd1quais];// 191
+$questao2Quais = $_POST[qtd2quais];//214
+$questao3Quais = $_POST[qtd3quais];//221
+$questao4Quais = $_POST[qtd4quais];//235
+$questao5Quais = $_POST[qtd5quais];//246
+$qtdComentarios = strip_tags($_POST[qtdComentariosGerais]);//248
 ?>
 <?
 if ($_POST[avancar] == "avancar") {
@@ -83,12 +83,12 @@ if ($_POST[avancar] == "avancar") {
 					insere($decs3,$Login,$date,$hora);}
 					//------------------------------------------------------
 					if(empty($qtdComentarios)) {}else{
-						$qtdQuestao = qtdComentariosGerais;
+						$qtdQuestao = 248;
 						inserequais($qtdQuestao,$qtdComentarios,$Login,$date,$hora);}
 						//------------------------------------------------------
 						if(empty($questao1Quais)) {
 						}else{
-							$qtdQuestao = qtd1;
+							$qtdQuestao = 192;
 							inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}
 							if(empty($questao2Quais)) {
 							}else{
@@ -104,7 +104,7 @@ if ($_POST[avancar] == "avancar") {
 										inserequais($qtdQuestao,$questao4Quais,$Login,$date,$hora);}
 										if(empty($questao5Quais)) {
 										}else{
-											$qtdQuestao = qtd5;
+											$qtdQuestao = 246;
 											inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
 
 											atualizaconcluir($Login);
@@ -228,23 +228,23 @@ if ($_POST[atualizar] == "atualizar")
 					//------------------------------------------------------
 					if(empty($questao1Quais)) {
 					}else{
-						$qtdQuestao = qtd1;
+						$qtdQuestao = 191;
 						inserequais($qtdQuestao,$questao1Quais,$Login,$date,$hora);}
 						if(empty($questao2Quais)) {
 						}else{
-							$qtdQuestao = qtd2;
+							$qtdQuestao = 214;
 							inserequais($qtdQuestao,$questao2Quais,$Login,$date,$hora);}
 							if(empty($questao3Quais)) {
 							}else{
-								$qtdQuestao = qtd3;
+								$qtdQuestao = 221;
 								inserequais($qtdQuestao,$questao3Quais,$Login,$date,$hora);}
 								if(empty($questao4Quais)) {
 								}else{
-									$qtdQuestao = qtd4;
+									$qtdQuestao = 235;
 									inserequais($qtdQuestao,$questao4Quais,$Login,$date,$hora);}
 									if(empty($questao5Quais)) {
 									}else{
-										$qtdQuestao = qtd5;
+										$qtdQuestao = 246;
 										inserequais($qtdQuestao,$questao5Quais,$Login,$date,$hora);}
 										?>
 <script language="JavaScript">
