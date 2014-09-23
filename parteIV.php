@@ -149,7 +149,8 @@ include "conexao.php";
       class="validate[minCheckbox[1]] checkbox"/>      
       Apresentações artísticas ( bandas de música, circo, etc.)</label>
     
-      <label><input name="qtd1[]" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" type="checkbox" value="191" id="idqtd1quais" <? if(in_array("191", $meuArray)){ echo "checked";}?>
+      <label>
+          <input name="qtd1[]" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" type="checkbox" value="191" id="idqtd1quais" <? if(in_array("191", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Outros. Quais?
       <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['192'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
@@ -428,7 +429,7 @@ include "conexao.php";
              </label>
              <div align="center">
              <textarea name="qtdComentariosGerais" id="qtdComentariosGerais" onkeyup="limitaTextarea(this.value)"  onkeydown="limitaTextarea(this.value)" dir="ltr" lang="pt-br" cols="20" rows="10" validate[max[620]]  maxlength="620" class="input-xxlarge" style="text-align:left;">
-				<?php echo $meuArray1['qtdComentariosGerais'];?>
+				<?php echo $meuArray1['248'];?>
              </textarea>
                  Max: <span id="contador">620</span>
              </div>
