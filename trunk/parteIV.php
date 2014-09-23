@@ -39,8 +39,8 @@ include "conexao.php";
 			$qtdComentariosGerais = ($array_exibir['id_resposta']);
 		}
    ?>
-   <?  function getArray(&$Login){
-   	   $sql = "select * from pesquisa Where id_usuario= '$Login' and id_parte ='4';";
+      <?  function getArray(&$Login){
+	   $sql = "select * from pesquisa Where id_usuario= '$Login' and id_parte ='4';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $resposta = array();
@@ -51,7 +51,7 @@ include "conexao.php";
    	    return $resposta;
       	}
      	$meuArray = getArray($Login);
-	?>
+  ?>
 	<? function getArray1(&$Login){
     $sql = "select * from pesquisaquais Where id_usuario= '$Login' and id_parte ='4';";
     $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
@@ -153,7 +153,7 @@ include "conexao.php";
           <input name="qtd1[]" onClick="javascript: textBoxClearSelecao('#idqtd1quais', '#qtd1quais');" type="checkbox" value="191" id="idqtd1quais" <? if(in_array("191", $meuArray)){ echo "checked";}?>
       class="validate[minCheckbox[1]] checkbox"/>      
       Outros. Quais?
-      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['192'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
+      <input name="qtd1quais" id="qtd1quais" value="<?php echo $meuArray1['191'];?>" class="validate[optional,minSize[2]]" type="text" /></label>
   
       </td>
       </tr>
