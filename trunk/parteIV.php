@@ -436,7 +436,7 @@ include "conexao.php";
             </tr>
                   <tr>
                     <td><div><br />
-                      <label><input type="radio" name="dec1" <?php if($_POST['dec1']=="dec1") echo "checked";?> value="dec1" 
+                      <label><input type="radio" name="dec1" <?php if($_POST['247']=="247") echo "checked";?> value="247" 
                       class="validate[required] radio"/> 
                       Declaro que as informações aqui prestadas são verdadeiras, e estar ciente de que as informações aqui prestadas são públicas, em atendimento a Lei de Acesso à Informação nº 12.527/2011, resguardadas aquelas de caráter pessoal. Autorizo a Funarte a utilizar as informações aqui prestadas para fins de mapeamento, pesquisa, análise e construção de políticas para o campo das residências artísticas.
                       </label>

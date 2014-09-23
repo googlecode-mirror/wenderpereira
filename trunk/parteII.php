@@ -15,12 +15,13 @@
         <!--_CSS -->     
 
 <?
-     include "conexao.php";
+      include "conexao.php";
       connect();
-       @session_start();
+	  @session_start();
 	  $Login = trim($_SESSION["login"]);
    ?>
    <?  function getArray(&$Login){
+	   $sql = "select * from pesquisa Where id_usuario= '$Login' and id_parte ='2';";
 	   $Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
 	   $i=0;
 	   $resposta = array();
