@@ -21,6 +21,7 @@
 }
 
 #barra-brasil .barra ul li {
+list-style: none outside none;
     float: left;
     padding-left: 0px;
 }
