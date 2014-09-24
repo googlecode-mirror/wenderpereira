@@ -1,7 +1,7 @@
 
 <?
 	session_start();
-	include "conexao.php";
+	include "../conexao.php";
 	connect();
 	$Login 	=  $_SESSION["login"]; //recebe a sessão do login
 	
