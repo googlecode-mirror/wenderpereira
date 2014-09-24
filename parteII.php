@@ -41,7 +41,7 @@
     
     $resposta1 = array();
     while ($array_exibir = mysql_fetch_array($Resultado)) {
-        $resposta1[$array_exibir['questao']] = $array_exibir['id_resposta'];
+        $resposta1[$array_exibir['id_resposta']] = $array_exibir['resposta'];
         $i++;
     }
     return $resposta1;
