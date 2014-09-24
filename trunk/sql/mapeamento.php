@@ -2,7 +2,7 @@
  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
   <?
       session_start();
-      include "conexao.php";
+	  include "../conexao.php";
       connect();
 	  $date = date("d/m/y");
 	  $hora = date("H:i");

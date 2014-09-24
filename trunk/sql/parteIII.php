@@ -1,5 +1,5 @@
 ﻿<?
-include "conexao.php";
+include "../conexao.php";
 connect();
 session_start();
 $Login  =  trim($_SESSION["login"]);
@@ -119,7 +119,7 @@ if ($_POST[avancar] == "avancar") {
 		//fun��o insere---------------------------------------------
 	}
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
+		$consulta = "INSERT INTO pesquisaquais (id_resposta,resposta,id_usuario,id_parte,data,hora)
 					 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','3','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());

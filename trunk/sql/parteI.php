@@ -2,7 +2,8 @@
  <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
 <?
 
-include "conexao.php";
+include "../conexao.php";
+
 connect();
 session_start();
 $Login 	=  trim($_SESSION["login"]);
@@ -124,7 +125,7 @@ while ($array_exibir = mysql_fetch_array($Resultado)) {
 	}
 	//função insere Quais ----------------------------------------------------------------------------------------
 	function inserequais(&$qtdQuestao,&$resposta1,&$usuario,&$date,&$hora) {
-		$consulta = "INSERT INTO pesquisaquais (questao,id_resposta,id_usuario,id_parte,data,hora)
+		$consulta = "INSERT INTO pesquisaquais (id_resposta,resposta,id_usuario,id_parte,data,hora)
 		 VALUES ('$qtdQuestao','$resposta1','$_SESSION[login]','1','$date','$hora')";
 		$resultado = mysql_query($consulta)
 		or die (mysql_error());
