@@ -55,6 +55,7 @@ connect();
 										vpr.id_parte,
 										vpr.id_pergunta,
 										id_resposta,
+										vpr.respostas,
 										vpr.valores,
 										vpr.pergunta,
 										COUNT(*) as total
@@ -120,7 +121,7 @@ $valprod = urlencode($array_exibir['id_pergunta'])
 	<td><?php echo $array_exibir['id_parte'] ?></td>
 	<td><?php echo $array_exibir['id_pergunta'] ?></td>
 	<td><?php echo $array_exibir['pergunta'] ?></td>
-	<td><?php echo $array_exibir['valores'] ?></td>
+	<td><?php echo $array_exibir['respostas'] ?> - <?php echo $array_exibir['valores'] ?></td>
 	<td><?php echo $array_exibir['total'] ?></td>
 	<td><a href="addempenho.php?modo=parc&idempenho=<? echo $valprod ?>"><i class="icon-pencil"></i></a></td>
 </tr>
