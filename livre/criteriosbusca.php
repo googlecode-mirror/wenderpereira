@@ -32,7 +32,7 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="L" size="28">
+				<select name="Coluna" id="L" size="24">
 					<option value="<?php echo $txtcodsetor;?>">
 					<? echo $txtsetor ?>
 					</option>
@@ -65,7 +65,7 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="C" class="span9" size="28">
+				<select name="Coluna" id="C" class="span10" size="24">
 					<option  value="<?php echo $txtcodsetor;?>">
 					<? echo $txtsetor ?>
 					</option>
@@ -100,7 +100,7 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="C" class="span9" size="3">
+				<select name="Coluna" id="C" class="span10" size="3">
 				<option value="id_parte" selected="">Parte</option>
 				<option value="id_pergunta">Pergunta</option>
 				<option value="id_repostas">Respostas</option>
