@@ -1,6 +1,6 @@
-﻿<?php 
-	include "../conexao.php";
-	connect();
+﻿<?
+error_reporting(0);
+ini_set("display_errors", 0 );
 ?>
 <?
 if(empty($_POST[cmbUnidadeFederativa])) 
@@ -15,7 +15,6 @@ if(empty($_POST[cmbUnidadeFederativa]))
       
  }
 ?>    
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,6 +34,7 @@ if(empty($_POST[cmbUnidadeFederativa]))
 	<frameset framespacing="0" border="0" frameborder="0" rows="72,*">
 	<frame name="faixa" scrolling="no" noresize target="conteudo" src="../livre/superior.php">
 	<img src="../imagebox/header.jpg" alt="Intranet Funarte" name="n00000001" width="100%" border="0" id="n00000001" />
+
 	<? include "mapas.php"; ?>
 	
  </frameset>
