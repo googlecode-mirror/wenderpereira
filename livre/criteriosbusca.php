@@ -25,16 +25,16 @@ connect();
 	});
 </script>
 
-<form name="form1" id="form1" method="post" action="livre/usuarioinsert.php">
+<form name="form1" id="form1" method="post" action="buscapersonalizada.php">
 <div class="span12">
 <div class="span3">
      <label for="L"><b>Unidade Federativa</b></label>
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="L" size="24">
-					<option value="<?php echo $txtcodsetor;?>">
-					<? echo $txtsetor ?>
+				<select name="unidadeFederativa" id="L" size="24">
+					<option value="<?php echo $txtUnidadeFederativa;?>">
+					<? echo $txtUnidadeFederativa ?>
 					</option>
 					<?
 					$sql = "SELECT distinct map.unidadefederativa
@@ -65,8 +65,8 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="C" class="span10" size="24">
-					<option  value="<?php echo $txtcodsetor;?>">
+				<select name="pergunta" id="idtxtPergunta" class="span10" size="24">
+					<option  value="<?php echo $txtPergunta;?>">
 					<? echo $txtsetor ?>
 					</option>
 					<?
@@ -100,7 +100,7 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="Coluna" id="C" class="span10" size="3">
+				<select name="agruparpor" id="ixtxtagruparpor" class="span10" size="3">
 				<option value="id_parte" selected="">Parte</option>
 				<option value="id_pergunta">Pergunta</option>
 				<option value="id_repostas">Respostas</option>
