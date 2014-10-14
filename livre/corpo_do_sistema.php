@@ -21,7 +21,7 @@
 		<a  href="http://www.funarte.gov.br/mapeamento_residencias/mapas/">
 		<img src="../images/mapas.jpg" class="img-circle"   />
 		</a>
-          <h4>Georreferenciamento</h4>
+          <h4>Georeferenciamento</h4>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="http://www.funarte.gov.br/mapeamento_residencias/mapas/">Ver Mapas »</a></p>
         </div><!-- /.span4 -->
