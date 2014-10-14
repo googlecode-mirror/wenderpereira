@@ -24,10 +24,9 @@ connect();
     jQuery("#form1").validationEngine();
 	});
 </script>
-
 <form name="form1" id="form1" method="post" action="buscapersonalizada.php">
 <div class="span12">
-<div class="span3">
+<div id="load_cidades" name="load_cidades"class="span3">
      <label for="L"><b>Unidade Federativa</b></label>
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
@@ -60,6 +59,7 @@ connect();
 					?>
 				</select>
  </div>
+
  <div class="span3">
      <label for="L"><b>Pergunta</b></label>
      <!--==============================================================================
@@ -89,21 +89,6 @@ connect();
 					$i++;
 					}
 					?>
-				</select>
- </div>
- </div>
-  <div class="span12">
-  <div class="span3">
-   </div>
-<div class="span3">
-     <label for="L"><b>Agrupar por</b></label>
-     <!--==============================================================================
-        COMBO-BOX COM OS PEDIDOS EM ABERTO
-        ===========================================================================-->
-				<select name="agruparpor" id="ixtxtagruparpor" class="span10" size="3">
-				<option value="id_parte" selected="">Parte</option>
-				<option value="id_pergunta">Pergunta</option>
-				<option value="id_repostas">Respostas</option>
 				</select>
  </div>
  </div>

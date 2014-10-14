@@ -42,23 +42,6 @@ connect();
 			$consulta = ($_GET["consulta"]);
 		}
 		?>
-		<label>Refinar Consulta</label>
-		<select class="validate[required]" name="cmbfornecedor" onchange="location.href = 'listagemperguntas.php?consulta=' + this.value;"
-					id="Select1">
-					<option value="">
-					
-					</option>
-					<option value="01">
-					Parte 1
-					</option>
-					<option value="02">
-					Parte 2
-					</option>
-					<option value="03">
-					Parte 3
-					</option>
-					
-		</select>
 		<?
 		$sqlResultadoprodutospedido = "SELECT 
 										vpr.id_parte,
@@ -84,19 +67,10 @@ connect();
 					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." AND id_pergunta ='".$pergunta."'";
 					
 					}
+						
+					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC ";
 					
-					if ($consulta == "0") {		
-					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC";
-					}
-					if ($consulta == "01") {		
-					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." AND vpr.id_parte = 1 GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC ";
-					}
-					if ($consulta == "02") {		
-					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido."  AND vpr.id_parte = 2 GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC ";
-					}
-					if ($consulta == "03") {		
-					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." AND vpr.id_parte = 3 GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC ";
-					}
+					
 		mysql_query("SET NAMES 'utf8'");
 		mysql_query('SET character_set_connection=utf8');
 		mysql_query('SET character_set_client=utf8');
@@ -168,7 +142,7 @@ $valprod = urlencode($array_exibir['id_pergunta'])
 	<td><?php echo $array_exibir['pergunta'] ?></td>
 	<td><?php echo $array_exibir['respostas'] ?> - <?php echo $array_exibir['valores'] ?></td>
 	<td><?php echo $array_exibir['total'] ?></td>
-	<td><a href="addempenho.php?modo=parc&idempenho=<? echo $valprod ?>"><i class="icon-pencil"></i></a></td>
+	
 </tr>
 <?
 $i++;
