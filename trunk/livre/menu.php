@@ -11,7 +11,7 @@
 			<div class="well sidebar-nav">
 				<ul class="nav nav-list">
 					<li class="active" id="0">
-					<a target="principal" href="../mapas/index2.php"  ><i class="icon-th-list"></i>Instru&ccedil;&otilde;es</a>
+					<a target="principal" href="index.php"  ><i class="icon-th-list"></i>Instru&ccedil;&otilde;es</a>
 					</li>
 					<li><a target="principal" href="criteriosbusca.php" id="2"><i class="icon-plus-sign"></i>Busca refinada</a>
 					</li>
