@@ -26,7 +26,15 @@ connect();
 </script>
 <form name="form1" id="form1" method="post" action="buscapersonalizada.php">
 <div class="span12">
+</br>
+	<div class="alert alert-info">
+	  <button type="button" class="close" data-dismiss="alert">×</button>
+	  <h4>Ajuda!</h4>
+		Selecione as opções que você visualizar e clique em mostrar...
+	</div>
+
 <div id="load_cidades" name="load_cidades"class="span3">
+
      <label for="L"><b>Unidade Federativa</b></label>
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
@@ -93,10 +101,12 @@ connect();
  </div>
  </div>
 </br>
+
 <div class="span12">
+<hr>
 	<div align="center">
-    <input class="mostra" name="mostra" type="submit" value="Mostra">
-    <input class="limpa" name="limpa" type="reset" value="Limpa">
+    <input class="btn btn-success" name="mostra" type="submit" value="Mostra">
+    <input class="btn" type="reset" value="Limpa">
 	</div>
  </div>	
 	<script src="bootstrap/js/bootstrap-dropdown.js"></script>
