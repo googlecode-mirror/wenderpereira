@@ -110,7 +110,6 @@ connect();
 					<td style="background-color: #049cdb; color: #FFFFFF;"><b>Pergunta</b></td>
 					<td style="background-color: #049cdb; color: #FFFFFF;"><b>Nome</b></td>
 					<td style="background-color: #049cdb; color: #FFFFFF;"><b>Marcações usuário</b>
-					<td style="background-color: #049cdb; color: #FFFFFF;"><i class="icon-pencil icon-white"></i></td>
 					</tr>
 				<? } ?>
 <?
@@ -123,7 +122,6 @@ $valprod = urlencode($array_exibir['id_pergunta'])
 	<td><?php echo $array_exibir['pergunta'] ?></td>
 	<td><?php echo $array_exibir['respostas'] ?> - <?php echo $array_exibir['valores'] ?></td>
 	<td><?php echo $array_exibir['total'] ?></td>
-	<td><a href="addempenho.php?modo=parc&idempenho=<? echo $valprod ?>"><i class="icon-pencil"></i></a></td>
 </tr>
 <?
 $i++;
