@@ -65,7 +65,7 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="pergunta" id="idtxtPergunta" class="span10" size="24">
+				<select name="pergunta" id="idtxtPergunta" class="span9" size="24">
 					<option  value="<?php echo $txtPergunta;?>">
 					<? echo $txtsetor ?>
 					</option>
