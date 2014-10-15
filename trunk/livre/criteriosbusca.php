@@ -4,27 +4,6 @@ include "../conexao2.php";
 $conn = connect2();
 @session_start(); // Inicializa a sessão
 ?>
-<!--=============================================================
-	BUSCA AJAX
-	=============================================================-->
-<script	src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-<!--=============================================================
-	SCRIPT JQUEY VALIDATION
-	=============================================================-->
-<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" />
-<link rel="stylesheet" href="css/template.css" type="text/css" />
-<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-<script	src="js/languages/jquery.validationEngine-pt_BR.js"	type="text/javascript" charset="utf-8"></script>
-<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
-<script	src="js/jsValidate.js" type="text/javascript"></script>
-<!--=============================================================
-	SCRIPT JQUEY VALIDATION
-	=============================================================-->
-<script>
-    jQuery(document).ready(function () {  // binds form submission and fields to the validation engine
-    jQuery("#form1").validationEngine();
-	});
-</script>
 <form name="form1" id="form1" method="post" action="buscapersonalizada.php">
 <div class="span12">
 </br>
@@ -104,6 +83,27 @@ $conn = connect2();
     <input class="btn" type="reset" value="Limpa">
 	</div>
  </div>	
+ <!--=============================================================
+	BUSCA AJAX
+	=============================================================-->
+<script	src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<!--=============================================================
+	SCRIPT JQUEY VALIDATION
+	=============================================================-->
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css" />
+<link rel="stylesheet" href="css/template.css" type="text/css" />
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script	src="js/languages/jquery.validationEngine-pt_BR.js"	type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+<script	src="js/jsValidate.js" type="text/javascript"></script>
+<!--=============================================================
+	SCRIPT JQUEY VALIDATION
+	=============================================================-->
+<script>
+    jQuery(document).ready(function () {  // binds form submission and fields to the validation engine
+    jQuery("#form1").validationEngine();
+	});
+</script>
 	<script src="bootstrap/js/bootstrap-dropdown.js"></script>
 	<script src="bootstrap/js/bootstrap-collapse.js"></script>
 	</div>
