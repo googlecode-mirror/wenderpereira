@@ -12,7 +12,7 @@ $conn = connect2();
 	  <h4>Ajuda!</h4>
 		Selecione as opções que você visualizar e clique em mostrar...
 	</div>
-
+<div class="span12">
 <div id="load_cidades" name="load_cidades"class="span3">
 
      <label for="L"><b>Unidade Federativa</b></label>
