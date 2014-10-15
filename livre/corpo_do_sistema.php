@@ -3,12 +3,14 @@
   include "header.php";
   connect();
 ?>
+
+
+
 <H4>Mapeamento de Residências</H4>
-<div align="center" >
-<img src="../images/seminario.jpg" class="img-polaroid"   />
-</div>
-</br>
-<div class="row">
+<div width="100%" align="center">
+ 	<img src="../images/seminario.jpg"align="center" class="img-polaroid"   />
+<div width="span12">
+	</br>
         <div class="span4" align="center">
 		<a href="http://www.funarte.gov.br/mapeamento_residencias/">
 		<img src="../images/mapeamento.jpg" class="img-circle"    />
@@ -33,10 +35,14 @@
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="http://www.funarte.gov.br/mapeamento_residencias/livre/listagemperguntas.php">Visualizar »</a></p>
         </div><!-- /.span4 -->
+		<div class="span12" align="center">
+		<?  include "footer.php"; ?>
+		 </div><!-- /.span4 -->
       </div>
 </div>
-</div>
 
-<? include "footer.php" ?>
+</fieldset>
+
+
 </body>
 </html>

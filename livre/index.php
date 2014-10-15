@@ -20,17 +20,19 @@ $hora= gmdate("H:i" ,time()-(3570*2));
 <head>
 <title>FUNARTE</title>
 </head>
-<frameset framespacing="0" border="0" frameborder="0" rows="72,*">
+<frameset framespacing="0" border="0" frameborder="0" rows="90,*">
   <frame name="faixa" scrolling="no" noresize target="conteudo" src="superior.php">
-  <frameset cols="260,*">
+  <frameset cols="220,*">
     <frame name="conteudo" target="principal" src="menu.php" scrolling="auto">
     <frame name="principal" src="corpo_do_sistema.php" scrolling="auto">
   </frameset>
   <noframes>
+  <? include "footer.php" ?>
   <body>
 
   <p>Esta página usa quadros mas seu navegador não aceita quadros.</p>
   </body>
   </noframes>
 </frameset>
+
 </html>
