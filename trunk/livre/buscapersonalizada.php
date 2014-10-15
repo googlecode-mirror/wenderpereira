@@ -1,6 +1,6 @@
 ﻿<? include "header.php"; 
-include "../conexao.php";
-connect();
+include "../conexao2.php";
+$conn = connect2();
  @session_start(); // Inicializa a sess䯍
        if(empty($_POST["unidadeFederativa"])) { }else{
        $unidadeFederativa = $_POST["unidadeFederativa"];
@@ -71,12 +71,12 @@ connect();
 					$sqlResultadoprodutospedido = $sqlResultadoprodutospedido." GROUP BY id_resposta ORDER BY id_pergunta,id_resposta ASC ";
 					
 					
-		mysql_query("SET NAMES 'utf8'");
-		mysql_query('SET character_set_connection=utf8');
-		mysql_query('SET character_set_client=utf8');
-		mysql_query('SET character_set_results=utf8');
-		$Resultadoprodutospedido = mysql_query($sqlResultadoprodutospedido) or die("Erro: " . mysql_error());
-		$totalconsult = mysql_num_rows($Resultadoprodutospedido);
+		mysqli_query("SET NAMES 'utf8'");
+		mysqli_query('SET character_set_connection=utf8');
+		mysqli_query('SET character_set_client=utf8');
+		mysqli_query('SET character_set_results=utf8');
+		$Resultadoprodutospedido = mysqli_query($conn,$sqlResultadoprodutospedido) or die("Erro: " . mysqli_error());
+		$totalconsult = mysqli_num_rows($Resultadoprodutospedido);
 		if ($totalconsult < 1) {
 			?>
 			<!-- total de resultados da consulta -->
@@ -120,7 +120,7 @@ connect();
 					</tr>
 				<? } ?>
 <?
-while ($array_exibir = mysql_fetch_array($Resultadoprodutospedido)) {
+while ($array_exibir = mysqli_fetch_array($Resultadoprodutospedido)) {
 $valprod = urlencode($array_exibir['id_pergunta'])
 ?><!-- Inicio da formação dos links para exibir a consulta -->
 <tr>
@@ -139,9 +139,9 @@ $valprod = urlencode($array_exibir['id_pergunta'])
 		}
 
 	?>
-	<td><?php echo $array_exibir['pergunta'] ?></td>
-	<td><?php echo $array_exibir['respostas'] ?> - <?php echo $array_exibir['valores'] ?></td>
-	<td><?php echo $array_exibir['total'] ?></td>
+	<td><?php echo utf8_encode ($array_exibir['pergunta']) ?></td>
+	<td><?php echo utf8_encode ($array_exibir['respostas']) ?> - <?php echo utf8_encode($array_exibir['valores']) ?></td>
+	<td><?php echo utf8_encode ($array_exibir['total']) ?></td>
 	
 </tr>
 <?
