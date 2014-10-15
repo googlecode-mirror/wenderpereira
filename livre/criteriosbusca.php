@@ -1,7 +1,8 @@
-﻿<? include "header.php"; 
-include "../conexao.php";
-connect();
- @session_start(); // Inicializa a sess䯍
+﻿<? 
+include "header.php"; 
+include "../conexao2.php";
+$conn = connect2();
+@session_start(); // Inicializa a sessão
 ?>
 <!--=============================================================
 	BUSCA AJAX
@@ -39,33 +40,30 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="unidadeFederativa" id="L" size="24">
-					<option value="<?php echo $txtUnidadeFederativa;?>">
-					<? echo $txtUnidadeFederativa ?>
-					</option>
-					<?
-					$sql = "SELECT distinct map.unidadefederativa
-							FROM 
-							mapeamentopartei map
-							WHERE map.unidadefederativa != ''";
-					mysql_query("SET NAMES 'utf8'");
-					mysql_query('SET character_set_connection=utf8');
-					mysql_query('SET character_set_client=utf8');
-					mysql_query('SET character_set_results=utf8');
-					$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-					$i=0;
-					$data = array();
-					while ($array_exibir = mysql_fetch_array($Resultado))
-					{					
-					?>
-					<option value="<?echo $array_exibir['unidadefederativa']?>">
-					<? echo ($array_exibir['unidadefederativa'])?>
-					</option>
-					<?
-					$i++;
-					}
-					?>
-				</select>
+	<select name="unidadeFederativa" id="L" size="24">
+	<option value="<?php echo $txtUnidadeFederativa;?>">
+	<? echo $txtUnidadeFederativa ?>
+	</option>
+	<?	
+	$sql = "SELECT distinct map.unidadefederativa
+                FROM 
+                mapeamentopartei map
+                WHERE map.unidadefederativa != ''";
+	$Resultado = mysqli_query($conn,$sql)or die(mysqli_error());
+	$numrow = mysqli_num_rows($Resultado);
+	if($numrow > 0)
+	{
+        while($array_exibir=mysqli_fetch_array($Resultado))
+        {
+        ?>
+        <option value="<?echo $array_exibir['unidadefederativa']?>">
+        <? echo ($array_exibir['unidadefederativa'])?>
+        </option>
+        <?
+        }
+        }
+        ?>
+	</select>
  </div>
 
  <div class="span3">
@@ -73,31 +71,28 @@ connect();
      <!--==============================================================================
         COMBO-BOX COM OS PEDIDOS EM ABERTO
         ===========================================================================-->
-				<select name="pergunta" id="idtxtPergunta" class="span9" size="24">
-					<option  value="<?php echo $txtPergunta;?>">
-					<? echo $txtsetor ?>
-					</option>
-					<?
-					$sql = "SELECT * FROM pergunta;";
-					mysql_query("SET NAMES 'utf8'");
-					mysql_query('SET character_set_connection=utf8');
-					mysql_query('SET character_set_client=utf8');
-					mysql_query('SET character_set_results=utf8');
-					$Resultado = mysql_query($sql) or die("Erro: " . mysql_error());
-					$i=0;
-					$data = array();
-					while ($array_exibir = mysql_fetch_array($Resultado))
-					{
-						?>
-					<option value="<?echo $array_exibir['id_pergunta']?>">
-					<? echo ($array_exibir['id_pergunta'])?>-
-					<? echo ($array_exibir['pergunta'])?>
-					</option>
-					<?
-					$i++;
-					}
-					?>
-				</select>
+	<select name="pergunta" id="idtxtPergunta" class="span9" size="24">
+	<option  value="<?php echo $txtPergunta;?>">
+	<? echo $txtsetor ?>
+	</option>
+	<?
+	$sql = "SELECT * FROM pergunta;";
+	$Resultado = mysqli_query($conn,$sql)or die(mysqli_error());
+	$numrow = mysqli_num_rows($Resultado);
+	if($numrow > 0)
+	{
+       while($array_exibir=mysqli_fetch_array($Resultado))
+        {
+        ?>
+        <option value="<?echo $array_exibir['id_pergunta']?>">
+        <? echo ($array_exibir['id_pergunta'])?>-
+        <? echo (utf8_encode ($array_exibir['pergunta']))?>
+        </option>
+        <?
+        }
+        }
+        ?>     
+</select>                               
  </div>
  </div>
 </br>
