@@ -48,5 +48,5 @@ if(empty($_POST[cmbUnidadeFederativa]))
     </body>
 
 </html>
-<? include "../livre/footer.php"; ?>
+
  

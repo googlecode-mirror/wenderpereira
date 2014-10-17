@@ -79,7 +79,8 @@
             })
         </script>
        </form>
-
+	   </br>
+<? include "../livre/footer.php"; ?>
     </body>
 </html>
 
